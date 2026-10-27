@@ -38,6 +38,20 @@ For a work queue, I would monitor message age as well as count. Ten messages stu
 
 **Review:** asynchronous processing improves decoupling, but adds states and failure modes to handle.
 
+## Worked example: work finished, message returns
+
+A consumer creates and stores a thumbnail, then loses connectivity before acknowledging. The message can return. Creating a new output each time causes duplicates.
+
+Use stable identifiers and consistent checks or updates. Consider competing consumers and which operations are atomic.
+
+## Incoming pressure and ordering
+
+If arrival exceeds processing, backlog grows. More consumers, admission limits, or work changes may help, but the database could be the bottleneck.
+
+Do not assume ordering across every service and configuration. Identify the required ordering unit and supporting capabilities.
+
+**Exercise:** reprocess failed messages without duplicate documents or losing error history. Explain measurements needed before replaying thousands of messages.
+
 ---
 
 [Contents](README.md) · [Other language](../es/11-messaging.md) · [Previous](10-architecture.md) · [Next](12-devops.md)

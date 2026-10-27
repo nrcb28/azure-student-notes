@@ -22,3 +22,31 @@ The original repository informed the topics and format. Microsoft links are refe
 - GitHub Actions OIDC with Azure: https://learn.microsoft.com/azure/developer/github/connect-from-azure-openid-connect
 - Azure CLI: https://learn.microsoft.com/cli/azure/
 - Training and certifications: https://learn.microsoft.com/credentials/
+
+## Certification reference check / Revisión de referencias de certificación
+
+Checked / Consultado: **2026-10-27**. The official English study guides were read for the area structure, published weightings, and effective objective dates. Technical scenarios and explanations are independently written. This does not claim that every product feature was tested or every subobjective fully covered.
+
+Se leyeron las guías oficiales inglesas para estructura de áreas, pesos y fechas de objetivos. Las explicaciones y escenarios son propios. No se afirma que todas las funciones se hayan probado ni que cada subobjetivo esté cubierto exhaustivamente.
+
+| Exam | Objectives effective / Objetivos desde | Source / Fuente |
+|---|---|---|
+| AZ-900 | 2026-07-20 | [Study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900) |
+| AZ-104 | 2026-04-17 | [Study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104) |
+| AZ-305 | 2026-04-17 | [Study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-305) |
+| AZ-400 | 2026-07-27 | [Study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-400) |
+
+Certification prerequisites / Requisitos de certificación:
+- [Azure Solutions Architect Expert](https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/)
+- [DevOps Engineer Expert](https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/)
+
+Technical references consulted / Referencias técnicas consultadas:
+- [Storage redundancy](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy)
+- [Network security groups](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview)
+- [App Service VNet integration](https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration)
+- [GitHub OIDC](https://docs.github.com/en/actions/concepts/security/openid-connect)
+- [Azure Pipelines resource approvals and checks](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops)
+
+Localised exam versions can follow a different update schedule. Recheck the objectives for the language and date you select.
+
+Las versiones localizadas pueden actualizarse en otro calendario. Comprueba los objetivos del idioma y fecha elegidos.

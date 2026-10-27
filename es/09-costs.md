@@ -37,6 +37,20 @@ Apagar desde el sistema operativo puede dejar una VM asignada. Al desasignarla d
 
 **Repaso:** ¿sin peticiones significa sin coste? Depende del servicio y del plan.
 
+## Ejemplo de comparación sin inventar tarifas
+
+Para una alternativa A y otra B, modelaría coste como capacidad base más consumo más datos y operación. Después variaría horas, tráfico y retención.
+
+Una opción puede ganar con uso estable y perder con uso ocasional. Añadir recuperación regional también cambia almacenamiento, red y pruebas. La arquitectura barata sin cumplir requisitos no es una comparación válida.
+
+## Higiene del laboratorio
+
+Al terminar, revisar grupos y recursos creados. Una VM eliminada puede dejar discos o direcciones según opciones y procedimiento. En otros servicios, revisar planes, registros y retención.
+
+La facturación puede tardar en reflejar cambios. Conservar evidencias de eliminación ayuda a distinguir coste residual de recursos que siguen activos.
+
+**Ejercicio:** prepara tres escenarios, bajo, esperado y alto, sin poner cifras de precio no verificadas. Enumera las unidades a medir y qué parte de la factura cambia en cada uno.
+
 ---
 
 [Índice](README.md) · [Otro idioma](../en/09-costs.md) · [Anterior](08-observability.md) · [Siguiente](10-architecture.md)

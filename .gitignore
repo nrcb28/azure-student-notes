@@ -10,3 +10,7 @@
 *.bicepparam
 *.log
 .DS_Store
+
+# Python local caches
+__pycache__/
+*.py[cod]

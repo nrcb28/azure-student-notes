@@ -42,6 +42,20 @@ Si la API no llega a la base de datos:
 
 **Error frecuente:** abrir todos los puertos para que funcione y olvidarse de cerrarlos.
 
+## Ejemplo resuelto: privado en el dibujo, público en la conexión
+
+Se crea un private endpoint, pero el portátil sigue resolviendo el nombre a una dirección pública. La aplicación puede continuar entrando por la ruta pública si sigue habilitada, o fallar si se deshabilita sin preparar la resolución privada.
+
+El diagnóstico empieza por consultar qué dirección obtiene el cliente y si dispone de una ruta hacia ella. Después se revisa el acceso del servicio. No cambiaría el código para usar una IP fija sin estudiar nombres y certificados.
+
+## NSG y aplicación
+
+Un NSG permite un puerto; no demuestra que haya un proceso escuchando. Un firewall del sistema operativo o una configuración de la aplicación también puede bloquear.
+
+Con NSG en subred e interfaz, revisar reglas efectivas. Un número de prioridad menor se evalúa antes, y los filtros son con estado.
+
+**Ejercicio:** dibujar ida y vuelta entre una VM local, VPN, VNet y un servicio privado. Marca DNS, rutas, filtros y autenticación como comprobaciones diferentes.
+
 ---
 
 [Índice](README.md) · [Otro idioma](../en/05-networking.md) · [Anterior](04-storage.md) · [Siguiente](06-identity.md)

@@ -43,6 +43,20 @@ An Azure certification does not automatically make our application compliant. Da
 
 **Review:** a rule restricting regions belongs in Policy, not in a tag.
 
+## Worked example: moving from audit to compliance
+
+A university finds resources outside approved regions. A policy with the Deny effect can block incompatible requests, but does not move existing resources.
+
+First identify resources, owners, and justified exceptions. Plan changes and verify effects. Exemptions need reasons and review dates rather than permanent bypasses.
+
+## Operational ownership
+
+Every recommendation should end in a decision: fix, temporarily accept, or investigate. Findings without owners do not change risk.
+
+A technical property check does not independently prove formal compliance across processes and data.
+
+**Exercise:** design environment-tag and region policies. Explain scope, effect, existing resources, exceptions, and what happens when a required service exists only elsewhere.
+
 ---
 
 [Contents](README.md) · [Other language](../es/07-governance.md) · [Previous](06-identity.md) · [Next](08-observability.md)

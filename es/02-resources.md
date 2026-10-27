@@ -33,6 +33,20 @@ Los bloqueos de administración pueden prevenir cambios o eliminaciones accident
 
 **Repaso:** ¿la ubicación del grupo obliga a ubicar allí la VM? No.
 
+## Ejemplo de ciclo de vida
+
+La web y su almacenamiento de pruebas se crean y eliminan juntos. Tiene sentido agruparlos. Una red compartida por varios proyectos puede necesitar un grupo y responsables propios: borrarla con una aplicación afectaría a otras.
+
+Las etiquetas pueden identificar propietario y entorno, pero hay que mantenerlas. No asumas que las de un grupo aparecen automáticamente en cada recurso.
+
+## Qué comprobar antes de mover un recurso
+
+Comprobaría si el tipo permite el movimiento, sus dependencias, el destino y los permisos. Los identificadores pueden cambiar y las automatizaciones que los usan necesitan revisión. Cambiar de región no equivale a cambiar de grupo.
+
+Los bloqueos y políticas del destino también pueden influir. Un ensayo o validación previa reduce sorpresas, pero no justifica prometer una operación sin impacto para cualquier recurso.
+
+**Ejercicio:** la universidad solicita separar el gasto de dos facultades sin romper una red compartida. Propón una estructura y explica qué separa facturación, administración y ciclo de vida.
+
 ---
 
 [Índice](README.md) · [Otro idioma](../en/02-resources.md) · [Anterior](01-fundamentals.md) · [Siguiente](03-compute.md)

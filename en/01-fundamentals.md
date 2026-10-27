@@ -33,6 +33,20 @@ Public cloud provides a vendor's services. Private cloud dedicates infrastructur
 
 **Review:** is adding more CPU horizontal scaling? No, it is vertical.
 
+## Worked example: adding instances is not the entire fix
+
+We have two API instances and a database with limited connections. Doubling the API could increase pressure on the database. Measure connections, query duration, CPU, and waiting time before scaling.
+
+If the API keeps files on local disk, another instance may not find them. Horizontal scaling calls for suitable shared storage and a review of sessions and background work.
+
+Compare behaviour before and after under representative load. Checking that four instances exist verifies deployed capacity, not user improvement.
+
+### Cost versus control
+
+A VM's hourly price may look lower than a managed alternative. Include patching, backups, monitoring, and recovery effort. Managed services can save work but have capacity minimums and relevant limits.
+
+**Exercise:** change the requirement from a standard API to an application installing custom drivers. Explain why platform choice changes even with the same users.
+
 ---
 
 [Contents](README.md) · [Other language](../es/01-fundamentals.md) · [Next](02-resources.md)

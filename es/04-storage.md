@@ -37,6 +37,20 @@ Preferir identidades y permisos de datos adecuados. Si se utilizan SAS, limitar 
 
 **Repaso:** redundancia y backup cubren riesgos distintos. Una eliminación puede propagarse entre réplicas.
 
+## Ejemplo resuelto: borrar un apunte
+
+Un usuario elimina un documento por error. Las réplicas pueden reflejar ese borrado. Para recuperarlo necesitamos una función o copia que conserve un estado anterior, con retención suficiente y procedimiento conocido.
+
+Si recuperamos solo el PDF, puede faltar su entrada de metadatos. La recuperación debe mantener coherencia entre objeto y base de datos. Diseñaría un identificador estable y una forma de reconciliar ambos.
+
+## Rendimiento y seguridad
+
+Un tamaño de base mayor no arregla siempre una consulta sin índice. Mediría filas leídas, planes, duración y concurrencia. En objetos, revisar operaciones y patrón de lectura antes de cambiar de nivel.
+
+Una URL con SAS puede conceder acceso a quien la tenga. Limitar permisos, duración y distribución; no tratarla como un enlace público inofensivo.
+
+**Ejercicio:** definir cómo recuperarías un documento borrado hace diez días. Indica qué configuración previa necesitarías, qué metadatos restaurarías y cómo comprobarías permisos después.
+
 ---
 
 [Índice](README.md) · [Otro idioma](../en/04-storage.md) · [Anterior](03-compute.md) · [Siguiente](05-networking.md)

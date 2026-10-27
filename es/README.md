@@ -4,6 +4,12 @@
 
 Estos apuntes están escritos para entender Azure desde el punto de vista de alguien que estudia informática. Primero la idea, luego la comparación y después una decisión para una aplicación de apuntes de clase. No se atribuyen experiencias o certificaciones que no se han demostrado.
 
+## Guías por certificación
+
+[AZ-900 · AZ-104 · AZ-305 · AZ-400](../certifications/es/README.md)
+
+Guías extensas con áreas de estudio, ejemplos razonados y bancos de casos. Los capítulos generales de abajo también se han ampliado con diagnóstico y ejercicios.
+
 ## Índice
 
 1. [Fundamentos de nube](01-fundamentals.md)

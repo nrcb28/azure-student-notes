@@ -42,6 +42,20 @@ If the API cannot reach the database:
 
 **Common mistake:** opening every port to make it work and forgetting to close them.
 
+## Worked example: private on the diagram, public in use
+
+A private endpoint exists, but the laptop still resolves the service name to a public address. Traffic may continue publicly if allowed, or fail if public access is disabled before private resolution works.
+
+First inspect the address returned to the client and its route. Then check service access settings. Avoid hard-coding an IP without considering names and certificates.
+
+## NSG versus application
+
+An allowed port does not prove a process is listening. Guest firewalls and application settings can also block connections.
+
+With subnet and interface NSGs, inspect effective rules. Lower priority numbers are evaluated first, and filtering is stateful.
+
+**Exercise:** draw both directions between an on-premises VM, VPN, VNet, and private service. Separate DNS, routing, filtering, and authentication checks.
+
 ---
 
 [Contents](README.md) · [Other language](../es/05-networking.md) · [Previous](04-storage.md) · [Next](06-identity.md)

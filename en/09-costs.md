@@ -37,6 +37,20 @@ Shutting down from the operating system can leave a VM allocated. Deallocation s
 
 **Review:** does zero traffic mean zero cost? It depends on the service and plan.
 
+## Compare options without inventing rates
+
+Model alternatives A and B as baseline capacity plus consumption, data, and operations. Vary running hours, traffic, and retention.
+
+One option can win for steady use and lose for occasional use. Regional recovery changes storage, networking, and testing. A cheaper design that fails requirements is not a valid equivalent.
+
+## Lab hygiene
+
+Inspect created groups and resources afterward. Depending on deletion options, removing a VM may leave disks or addresses. Review plans, registries, and retained data elsewhere.
+
+Billing can lag behind changes. Deletion evidence helps distinguish residual charges from still-running resources.
+
+**Exercise:** define low, expected, and high scenarios without unverified prices. List measured units and which cost components vary.
+
 ---
 
 [Contents](README.md) · [Other language](../es/09-costs.md) · [Previous](08-observability.md) · [Next](10-architecture.md)

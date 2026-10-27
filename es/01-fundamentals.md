@@ -33,6 +33,20 @@ La nube pública ofrece servicios de un proveedor. Una nube privada dedica infra
 
 **Repaso:** ¿añadir más CPU es escalado horizontal? No, es vertical.
 
+## Ejemplo resuelto: un pico no se arregla solo con instancias
+
+Tenemos dos instancias de API y una base que solo admite un número limitado de conexiones. Duplicar la API podría aumentar la presión sobre esa base. Antes de escalar, mediría conexiones, duración de consultas, CPU y tiempos de espera.
+
+Si la API guarda archivos en su disco local, otra instancia puede no encontrarlos. Para escalar horizontalmente, movería esos archivos a almacenamiento compartido adecuado y revisaría sesiones y trabajos en segundo plano.
+
+La prueba debe comparar antes y después con una carga representativa. Si solo comprobamos que hay cuatro instancias, hemos verificado capacidad desplegada, no mejora para el usuario.
+
+### Coste frente a control
+
+Una VM puede parecer más barata por hora que una solución administrada. Añadiría al cálculo actualizaciones, copias, monitorización y tiempo de recuperación. La opción administrada puede ahorrar trabajo, pero también tener mínimos de capacidad o límites relevantes.
+
+**Ejercicio:** cambia el requisito de una API estándar por una aplicación que instala controladores propios. Explica por qué tu elección de plataforma cambia aunque los usuarios sean los mismos.
+
 ---
 
 [Índice](README.md) · [Otro idioma](../en/01-fundamentals.md) · [Siguiente](02-resources.md)

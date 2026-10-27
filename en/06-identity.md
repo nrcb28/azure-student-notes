@@ -39,6 +39,20 @@ The API gets a managed identity with data permissions limited to the required co
 
 **Review:** successful authentication does not grant administrative permissions.
 
+## Worked example: access seems impossible to remove
+
+We remove Reader directly from a resource, but the user still sees it. Group membership or another inherited assignment may provide access.
+
+Inspect account, tenant, direct assignments, groups, and inherited permissions. Consider propagation and existing sessions. Removing one assignment does not remove all access.
+
+## Directory roles and Azure roles
+
+Managing Entra users and administering VMs use different authorisation mechanisms and scopes. Do not grant broad directory permissions to solve blob access.
+
+Workload identities need review too. Managed identity removes a stored credential under our management, but excessive permissions remain excessive.
+
+**Exercise:** define access for a student reading personal documents and a thumbnail worker. Explain application checks and each component's Azure permissions.
+
 ---
 
 [Contents](README.md) · [Other language](../es/06-identity.md) · [Previous](05-networking.md) · [Next](07-governance.md)

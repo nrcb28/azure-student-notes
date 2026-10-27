@@ -43,6 +43,20 @@ Que Azure disponga de una certificación no convierte automáticamente nuestra a
 
 **Repaso:** una regla que limita regiones pertenece a Policy, no a una etiqueta.
 
+## Ejemplo resuelto: pasar de auditoría a cumplimiento
+
+Una universidad descubre recursos en regiones no aprobadas. Asignar una denegación puede impedir nuevos cambios incompatibles, pero no mueve automáticamente todos los recursos existentes.
+
+Primero identificaría recursos, responsables y excepciones justificadas. Después planificaría cambios y verificaría efectos. Una exención debe tener motivo y revisión; no convertirla en un bypass permanente.
+
+## Responsabilidad operativa
+
+Cada recomendación debería terminar en una decisión: corregir, aceptar temporalmente o investigar. Registrar un hallazgo sin responsable no cambia el riesgo.
+
+Conviene distinguir evidencia técnica de cumplimiento formal. Una política puede comprobar una propiedad del recurso, pero no demuestra por sí sola que todos los procesos y datos cumplen obligaciones aplicables.
+
+**Ejercicio:** escribe una regla para exigir environment y otra para limitar regiones. Explica ámbito, efecto, recursos existentes y excepción. Después indica qué harías si la regla bloquea un servicio que solo está disponible en otra región.
+
 ---
 
 [Índice](README.md) · [Otro idioma](../en/07-governance.md) · [Anterior](06-identity.md) · [Siguiente](08-observability.md)

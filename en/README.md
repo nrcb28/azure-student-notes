@@ -4,6 +4,12 @@
 
 These notes explain Azure from a computer science student's perspective. First the idea, then the comparison, then a decision for a class notes application. They do not claim unverified personal experience or certifications.
 
+## Certification guides
+
+[AZ-900 · AZ-104 · AZ-305 · AZ-400](../certifications/en/README.md)
+
+Detailed guides with study areas, reasoned examples, and case banks. The general chapters below also include expanded troubleshooting and exercises.
+
 ## Contents
 
 1. [Cloud fundamentals](01-fundamentals.md)

@@ -15,3 +15,9 @@ Esta adaptación resume y reescribe el material; lo organiza por conceptos en lu
 No endorsement by the original author or Microsoft is implied. Personal exam results and experience from the original author are not attributed to the owner of this repository.
 
 No se implica respaldo del autor original ni de Microsoft. Los resultados de exámenes y experiencias del autor original no se atribuyen al propietario de este repositorio.
+
+## Certification expansion / Ampliación por certificación
+
+Added independently written AZ-900, AZ-104, AZ-305, and AZ-400 guides in Spanish and English, original case banks, an ADR template, and a networking lab. Official Microsoft Learn guides inform the exam structure; Microsoft is not the author or sponsor of these notes.
+
+Se añaden guías propias de AZ-900, AZ-104, AZ-305 y AZ-400 en español e inglés, casos originales, plantilla ADR y práctica de redes. Las guías oficiales de Microsoft Learn informan la estructura; Microsoft no es autor ni patrocinador de estos apuntes.

@@ -39,6 +39,20 @@ La API recibe una identidad administrada con permiso de datos limitado al conten
 
 **Repaso:** autenticarse correctamente no concede permisos de administración.
 
+## Ejemplo resuelto: permiso que parece no desaparecer
+
+Quitamos una asignación Reader de un recurso y el usuario todavía lo ve. Puede tener acceso mediante un grupo o una asignación heredada de otro ámbito.
+
+Antes de asumir un fallo, identificaría la cuenta y el tenant usados, asignaciones directas, grupos y permisos heredados. También tendría en cuenta propagación y sesiones existentes. Quitar una asignación no equivale a quitar todas.
+
+## Roles de directorio y roles de Azure
+
+Administrar usuarios en Entra ID y administrar una VM son tareas autorizadas mediante mecanismos y ámbitos distintos. No concedería un rol de directorio amplio para solucionar un acceso a un blob.
+
+Las identidades de carga necesitan revisión igual que las humanas. Una identidad administrada evita una credencial guardada por nosotros, pero un permiso excesivo sigue siendo excesivo.
+
+**Ejercicio:** define dos accesos para la app: estudiante que lee sus documentos y proceso que genera miniaturas. Explica qué comprueba la aplicación y qué permiso necesita cada componente en Azure.
+
 ---
 
 [Índice](README.md) · [Otro idioma](../en/06-identity.md) · [Anterior](05-networking.md) · [Siguiente](07-governance.md)

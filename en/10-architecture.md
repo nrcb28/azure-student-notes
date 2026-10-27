@@ -47,6 +47,27 @@ The Well-Architected Framework covers reliability, security, cost optimisation, 
 
 **Review:** replication does not remove the need to test restoration.
 
+## Worked example: recovery is more than copying
+
+The database is restored, but the API still points to the old server and the worker lacks permissions on new storage. Data exists while service remains down.
+
+The runbook needs configuration, identities, DNS, networking, dependencies, and verification. Include decision ownership and communication.
+
+## Minimal ADR
+
+Record a decision in one page:
+
+1. Context and measurable requirement.
+2. Considered options.
+3. Choice and reason.
+4. Consequences and limits.
+5. Validation evidence.
+6. Review condition.
+
+This is useful memory rather than paperwork for its own sake.
+
+**Exercise:** halve the budget while retaining RTO and RPO. Explain alternatives to investigate and which objectives must be revalidated.
+
 ---
 
 [Contents](README.md) · [Other language](../es/10-architecture.md) · [Previous](09-costs.md) · [Next](11-messaging.md)

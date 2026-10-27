@@ -34,6 +34,20 @@ Empezaría por App Service si el runtime encaja. Si ya tenemos una imagen de con
 
 **Repaso:** usar Docker no obliga a desplegar Kubernetes.
 
+## Despliegue correcto, aplicación incorrecta
+
+La plataforma inicia el contenedor, pero la aplicación escucha en otro puerto o tarda más de lo previsto en arrancar. El despliegue puede crear recursos y aun así dejar el servicio sin atender peticiones.
+
+Comprobaría puerto, proceso, logs de inicio, configuración y comprobaciones de salud. Después validaría una petición que recorra las dependencias reales.
+
+## Imagen y configuración
+
+Separar imagen de configuración permite utilizar el mismo artefacto en varios entornos. Los secretos no deberían incorporarse a una capa de imagen: pueden permanecer en su historial aunque otro paso borre el archivo.
+
+Fijar una versión ayuda a reproducir un problema. Usar latest en todos los despliegues hace más difícil saber qué código y dependencias se ejecutaban.
+
+**Decisión razonada:** si solo necesitamos ejecutar una tarea ocasional empaquetada como contenedor, un clúster permanente puede añadir mantenimiento innecesario. Revisa arranque, duración, conectividad y plan antes de elegir una alternativa.
+
 ---
 
 [Índice](README.md) · [Otro idioma](../en/03-compute.md) · [Anterior](02-resources.md) · [Siguiente](04-storage.md)

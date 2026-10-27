@@ -44,6 +44,22 @@ Volver atrás el código no revierte necesariamente una migración de base de da
 
 **Repaso:** un pipeline verde no demuestra por sí solo que la aplicación funciona para el usuario.
 
+## Ejemplo resuelto: rollback que no recupera
+
+Publicamos código que elimina una columna y después encontramos un fallo. Volver a la imagen anterior no reconstruye los datos ni la estructura esperada.
+
+Una estrategia compatible añade primero, migra después y retira cuando ya no hay dependencias. Hay que probar convivencia entre versiones y conservar recuperación apropiada.
+
+## Cadena de confianza
+
+El código del pipeline también es código sensible. Revisar quién lo modifica, qué permisos obtiene y qué entradas controla un PR. Un runner propio persistente puede conservar archivos o credenciales entre ejecuciones.
+
+Promover un artefacto identificado reduce diferencias entre pruebas y producción. Las etiquetas mutables y herramientas no fijadas dificultan reproducir lo probado.
+
+**Ejercicio:** define una entrega con prueba significativa, artefacto versionado, entorno de pruebas, autorización para producción y condición de rollback. Relaciona cada resultado con el commit de origen.
+
+Para verificar la documentación localmente, ejecuta python tools/check_docs.py desde la raíz del repositorio.
+
 ---
 
 [Índice](README.md) · [Otro idioma](../en/12-devops.md) · [Anterior](11-messaging.md) · [Siguiente](13-laboratorios.md)

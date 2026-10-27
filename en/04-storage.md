@@ -37,6 +37,20 @@ Prefer identities and suitable data permissions. If using SAS tokens, restrict p
 
 **Review:** redundancy and backups address different risks. A deletion can propagate between replicas.
 
+## Worked example: deleting notes
+
+A user deletes a document accidentally. Replicas may reflect that deletion. Recovery needs a feature or copy retaining an earlier state, sufficient retention, and a known procedure.
+
+Recovering only the PDF may leave metadata missing. Maintain consistency between the object and database using stable identifiers and reconciliation.
+
+## Performance and security
+
+Larger database capacity does not always fix an unindexed query. Inspect rows read, plans, duration, and concurrency. For objects, examine operations and read patterns before changing tiers.
+
+A SAS URL can grant access to whoever holds it. Limit permissions, lifetime, and distribution.
+
+**Exercise:** recover a document deleted ten days ago. State the prior configuration, metadata recovery, and permission checks required.
+
 ---
 
 [Contents](README.md) · [Other language](../es/04-storage.md) · [Previous](03-compute.md) · [Next](05-networking.md)

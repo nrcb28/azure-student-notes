@@ -33,6 +33,20 @@ Management locks can prevent accidental changes or deletion. They do not replace
 
 **Review:** must a VM use its resource group's region? No.
 
+## Lifecycle example
+
+The test website and its storage are created and removed together, so grouping them makes sense. A network shared by several projects may need separate ownership and a separate group: deleting it with one application would affect others.
+
+Tags can identify owners and environments but require maintenance. Do not assume group tags automatically appear on every resource.
+
+## Before moving a resource
+
+Check resource-type support, dependencies, destination, and permissions. Identifiers may change, affecting automation. Changing regions is not equivalent to changing groups.
+
+Destination locks and policies can also matter. Validation reduces surprises but does not establish universally impact-free moves.
+
+**Exercise:** two faculties need separate spending without breaking shared networking. Propose boundaries for billing, administration, and lifecycle.
+
 ---
 
 [Contents](README.md) · [Other language](../es/02-resources.md) · [Previous](01-fundamentals.md) · [Next](03-compute.md)

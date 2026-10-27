@@ -47,6 +47,20 @@ I would prioritise sustained failures or user-relevant latency over constant ale
 
 **Review:** low CPU usage does not rule out a slow database.
 
+## Worked example: averages hide problems
+
+Nine requests take 100 ms and one takes ten seconds. The mean poorly represents the person waiting ten seconds. Inspect distributions, percentiles, and volume without overinterpreting tiny samples.
+
+Compare versions with request count, routes, and time window in mind. Fewer errors alongside disappearing traffic may be bad news.
+
+## Observability costs
+
+Maximum-verbosity logging can increase costs and expose data. Choose categories, suitable sampling, retention, and access.
+
+OpenTelemetry can support consistent instrumentation. Runtime and integration matter; old SDK examples need support checks.
+
+**Exercise:** define document upload success, latency, and processing-time signals. Specify thresholds, windows, and actions rather than relying only on CPU.
+
 ---
 
 [Contents](README.md) · [Other language](../es/08-observability.md) · [Previous](07-governance.md) · [Next](09-costs.md)

@@ -34,6 +34,20 @@ I would start with App Service if its runtime fits. If we already have a contain
 
 **Review:** using Docker does not require deploying Kubernetes.
 
+## Successful deployment, broken application
+
+The platform starts a container, but the application listens on a different port or starts too slowly. Resource creation can succeed while requests fail.
+
+Check ports, processes, startup logs, configuration, and health checks. Then validate a request across real dependencies.
+
+## Image and configuration
+
+Separating image from configuration supports promoting one artifact between environments. Do not embed secrets in image layers: later file deletion may leave them in history.
+
+Version pinning helps reproduce problems. Using latest everywhere makes the running code and dependencies harder to identify.
+
+**Reasoned choice:** an occasional containerised task may not justify a permanent cluster. Check startup, duration, connectivity, and plan constraints when evaluating alternatives.
+
 ---
 
 [Contents](README.md) · [Other language](../es/03-compute.md) · [Previous](02-resources.md) · [Next](04-storage.md)

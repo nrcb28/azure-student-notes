@@ -38,6 +38,20 @@ En una cola de trabajo, monitorizaría la antigüedad de los mensajes además de
 
 **Repaso:** la asincronía mejora el desacoplamiento, pero añade estados y fallos que gestionar.
 
+## Ejemplo resuelto: el trabajo terminó, pero el mensaje vuelve
+
+El consumidor genera una miniatura y guarda el archivo. Antes de confirmar, pierde conexión. El sistema puede volver a entregar el mensaje. Si el proceso crea un resultado nuevo cada vez, aparecen duplicados.
+
+Una solución utiliza identificador estable y comprueba o actualiza de forma consistente el resultado. Hay que diseñar qué ocurre si dos consumidores compiten y qué parte de la operación es atómica.
+
+## Presión de entrada y orden
+
+Si entran más tareas de las que salen, la cola crece. Puede hacer falta escalar consumidores, limitar entrada o cambiar el trabajo, pero el cuello de botella podría ser la base de datos.
+
+El orden de procesamiento no debe suponerse para cualquier servicio y configuración. Si importa, identificar la unidad de orden y las capacidades necesarias.
+
+**Ejercicio:** diseña el reprocesamiento de mensajes fallidos sin duplicar documentos ni perder el historial del error. Explica qué medirías antes de reintroducir miles de mensajes.
+
 ---
 
 [Índice](README.md) · [Otro idioma](../en/11-messaging.md) · [Anterior](10-architecture.md) · [Siguiente](12-devops.md)

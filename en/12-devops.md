@@ -44,6 +44,22 @@ Rolling back code does not necessarily reverse a database migration. Design comp
 
 **Review:** a green pipeline alone does not prove the application works for users.
 
+## Worked example: rollback does not recover service
+
+New code removes a column, then fails. Returning to the previous image does not recreate lost data or expected schema.
+
+A compatible strategy adds first, migrates later, and removes structures after dependencies disappear. Test coexistence between versions and retain recovery options.
+
+## Chain of trust
+
+Pipeline code is sensitive too. Review who changes it, its permissions, and PR-controlled inputs. Persistent self-hosted runners can retain files or credentials between runs.
+
+Promoting an identified artifact reduces test-to-production differences. Mutable tags and unpinned tools hinder reproduction.
+
+**Exercise:** define delivery with a meaningful test, versioned artifact, test environment, production authorisation, and rollback condition. Link results to the source commit.
+
+Run python tools/check_docs.py from the repository root to verify documentation locally.
+
 ---
 
 [Contents](README.md) · [Other language](../es/12-devops.md) · [Previous](11-messaging.md) · [Next](13-laboratorios.md)
