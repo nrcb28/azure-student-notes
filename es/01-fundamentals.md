@@ -1,0 +1,38 @@
+# Fundamentos de nube
+
+La nube permite solicitar cómputo, almacenamiento y otros servicios mediante interfaces de software. Por debajo siguen existiendo servidores, redes y discos. Lo que cambia es quién los opera y cómo accedemos a ellos.
+
+## Lo que conviene distinguir
+
+- **Escalabilidad:** capacidad de aumentar o reducir recursos.
+- **Elasticidad:** adaptación de los recursos a la demanda, normalmente automatizada.
+- **Alta disponibilidad:** reducir interrupciones mediante redundancia y mecanismos de recuperación.
+- **Recuperación ante desastres:** restaurar el servicio tras un incidente grave.
+- **Escalado vertical:** más capacidad en una instancia.
+- **Escalado horizontal:** más instancias.
+
+Una aplicación con estado guardado solo en memoria puede fallar al repartir peticiones entre varias instancias. Antes de escalar, hay que mirar cómo gestiona sesiones, archivos y conexiones.
+
+## IaaS, PaaS y SaaS
+
+| Modelo | Qué administramos | Ejemplo |
+|---|---|---|
+| IaaS | Sistema operativo, aplicaciones, datos y configuración | Virtual Machines |
+| PaaS | Aplicación, datos y configuración disponible | App Service |
+| SaaS | Usuarios, datos y opciones del producto | Microsoft 365 |
+
+Microsoft se encarga de la infraestructura física. El cliente sigue teniendo responsabilidades sobre sus datos, identidades y configuración, incluso en SaaS.
+
+## Pública, privada e híbrida
+
+La nube pública ofrece servicios de un proveedor. Una nube privada dedica infraestructura a una organización. Una solución híbrida integra infraestructura local o privada con nube pública.
+
+**Caso de clase:** si el objetivo es publicar una API, PaaS puede ahorrarnos la instalación del servidor. Si la práctica exige configurar Linux, una VM tiene más sentido.
+
+**Error frecuente:** pensar que nube significa barato. La flexibilidad ayuda, pero hay que medir el uso.
+
+**Repaso:** ¿añadir más CPU es escalado horizontal? No, es vertical.
+
+---
+
+[Índice](README.md) · [Otro idioma](../en/01-fundamentals.md) · [Siguiente](02-resources.md)

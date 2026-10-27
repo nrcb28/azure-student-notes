@@ -1,0 +1,12 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+.azure/
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
+*.bicepparam
+*.log
+.DS_Store
