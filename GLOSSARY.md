@@ -1,5 +1,7 @@
 # Glosario bilingüe / Bilingual glossary
 
+[Six-language glossary / Glosario en seis idiomas](GLOSSARY-multilingual.md)
+
 | English | Español | Idea |
 |---|---|---|
 | Workload | Carga de trabajo | Aplicación y recursos necesarios / Application and required resources |

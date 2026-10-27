@@ -1,5 +1,7 @@
 # Azure without the confusion
 
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+
 [Español](../es/README.md) · [English](../en/README.md) · [Home](../README.md)
 
 These notes explain Azure from a computer science student's perspective. First the idea, then the comparison, then a decision for a class notes application. They do not claim unverified personal experience or certifications.

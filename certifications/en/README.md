@@ -1,5 +1,7 @@
 # Azure certification routes
 
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+
 [Home](../../README.md) · [Español](../es/README.md) · [English](../en/README.md)
 
 These guides organise study around the work expected in each exam. The general chapters remain useful foundations; these add configuration, scenarios, decisions, and review routes.

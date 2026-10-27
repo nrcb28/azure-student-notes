@@ -1,5 +1,7 @@
 # Rutas de certificación Azure
 
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+
 [Inicio](../../README.md) · [Español](../es/README.md) · [English](../en/README.md)
 
 Aquí los temas se estudian según el trabajo que se espera en cada examen. Las guías generales siguen sirviendo de base; estas añaden configuración, escenarios, decisiones y una ruta de repaso.

@@ -1,5 +1,7 @@
 # Azure sin tanto lío
 
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+
 [Español](../es/README.md) · [English](../en/README.md) · [Inicio](../README.md)
 
 Estos apuntes están escritos para entender Azure desde el punto de vista de alguien que estudia informática. Primero la idea, luego la comparación y después una decisión para una aplicación de apuntes de clase. No se atribuyen experiencias o certificaciones que no se han demostrado.

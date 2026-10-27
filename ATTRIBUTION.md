@@ -21,3 +21,9 @@ No se implica respaldo del autor original ni de Microsoft. Los resultados de ex�
 Added independently written AZ-900, AZ-104, AZ-305, and AZ-400 guides in Spanish and English, original case banks, an ADR template, and a networking lab. Official Microsoft Learn guides inform the exam structure; Microsoft is not the author or sponsor of these notes.
 
 Se añaden guías propias de AZ-900, AZ-104, AZ-305 y AZ-400 en español e inglés, casos originales, plantilla ADR y práctica de redes. Las guías oficiales de Microsoft Learn informan la estructura; Microsoft no es autor ni patrocinador de estos apuntes.
+
+## Additional language editions / Ediciones adicionales
+
+Added adapted Italian, German, French, and Russian study editions. Explanations and navigation are localised; code and Azure identifiers are preserved. These editions are more compact than the Spanish and English source editions. All adaptation and attribution requirements remain under CC BY 4.0; no endorsement or certified translation is implied.
+
+Se añaden versiones de estudio adaptadas en italiano, alemán, francés y ruso, más compactas que las ediciones española e inglesa. Se localizan explicaciones y navegación, manteniendo código e identificadores. Se conserva la atribución y CC BY 4.0, sin sugerir respaldo ni traducción certificada.
