@@ -1,6 +1,6 @@
 # Архитектура и восстановление
 
-[Содержание](README.md) · [[object Object]](../certifications/ru/README.md)
+[Содержание](README.md) · [Сертификации](../certifications/ru/README.md)
 
 Архитектура начинается с пользователей, данных, требований, бюджета и возможностей команды. Больше сервисов не означает лучшее решение.
 
@@ -17,3 +17,9 @@ RTO — целевое время восстановления; RPO — допу
 ---
 
 [Назад](09-costs.md) · [Далее](11-messaging.md) · [English](../en/10-architecture.md)
+
+## Дополнение Microsoft Learn · landing
+
+Landing zones организуют удостоверения, подключения, администрирование и управление. У платформы и нагрузок могут быть разные владельцы. Акселератор не заменяет требования.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-landing)

@@ -1,6 +1,6 @@
 # Azure понятным языком
 
-[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 Адаптированное русское издание со всеми учебными направлениями, объяснениями и примерами. Дополнительные подробности есть в расширенных испанском и английском изданиях. Это не заверенный перевод и не официальная программа.
 
@@ -21,7 +21,7 @@
 13. [Практика](13-laboratorios.md)
 14. [Повторение](14-repaso.md)
 
-## [object Object]
+## Сертификации
 
 [AZ-900 · AZ-104 · AZ-305 · AZ-400](../certifications/ru/README.md)
 
@@ -32,3 +32,5 @@
 Независимые учебные материалы. Области и веса основаны на официальных английских руководствах, проверенных 27 октября 2026 года; перепроверь их перед экзаменом. Нет гарантии сдачи и нет официальных или закрытых экзаменационных вопросов.
 
 CC BY 4.0 · [undergroundwires/Azure-in-bullet-points](https://github.com/undergroundwires/Azure-in-bullet-points) · [Attribution](../ATTRIBUTION.md)
+
+15. [Дополнение Microsoft Learn](15-microsoft-learn.md)

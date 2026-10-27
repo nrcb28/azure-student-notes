@@ -1,6 +1,6 @@
 # Fondamenti del cloud
 
-[Indice](README.md) · [[object Object]](../certifications/it/README.md)
+[Indice](README.md) · [Certificazioni](../certifications/it/README.md)
 
 Il cloud permette di richiedere risorse tramite software. I server esistono ancora: cambia chi li gestisce. Non significa né costo zero né manutenzione zero.
 

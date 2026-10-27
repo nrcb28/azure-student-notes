@@ -1,6 +1,6 @@
-# [object Object] · Azure
+# Сертификации · Azure
 
-[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [Главная](../../README.md) · [Содержание](../../ru/README.md)
 
@@ -20,3 +20,7 @@
 Для Expert-сертификаций проверь предварительные требования на официальных страницах. AZ-303 и AZ-304 являются историческими экзаменами; архитектурные темы здесь сгруппированы вокруг AZ-305.
 
 [Sources](../../SOURCES.md) · [License / Attribution](../../ATTRIBUTION.md)
+
+## Дополнение Microsoft Learn
+
+[Дополнение Microsoft Learn](../../ru/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)

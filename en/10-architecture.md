@@ -71,3 +71,9 @@ This is useful memory rather than paperwork for its own sake.
 ---
 
 [Contents](README.md) · [Other language](../es/10-architecture.md) · [Previous](09-costs.md) · [Next](11-messaging.md)
+
+## Microsoft Learn expansion · landing
+
+Landing zones organise identity, connectivity, management, and governance foundations for workloads. Platform and application teams can have different responsibilities. Accelerators provide starting points, not replacements for organisational requirements.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-landing)

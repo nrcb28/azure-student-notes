@@ -1,0 +1,112 @@
+{
+  "reviewed": "2026-10-27",
+  "languages": [
+    "es",
+    "en",
+    "it",
+    "de",
+    "fr",
+    "ru",
+    "ja",
+    "zh"
+  ],
+  "topics": [
+    {
+      "id": "sas",
+      "title": "Storage: user delegation SAS",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli",
+      "chapters": [
+        "04-storage",
+        "06-identity"
+      ],
+      "exams": [
+        "AZ-104"
+      ]
+    },
+    {
+      "id": "dns",
+      "title": "Private endpoint DNS",
+      "url": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns",
+      "chapters": [
+        "05-networking"
+      ],
+      "exams": [
+        "AZ-104",
+        "AZ-305"
+      ]
+    },
+    {
+      "id": "policy",
+      "title": "Policy remediation",
+      "url": "https://learn.microsoft.com/en-us/azure/governance/policy/how-to/remediate-resources",
+      "chapters": [
+        "07-governance"
+      ],
+      "exams": [
+        "AZ-104",
+        "AZ-305"
+      ]
+    },
+    {
+      "id": "dcr",
+      "title": "Azure Monitor data collection rules",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/data-collection/data-collection-rule-overview",
+      "chapters": [
+        "08-observability"
+      ],
+      "exams": [
+        "AZ-104",
+        "AZ-400"
+      ]
+    },
+    {
+      "id": "whatif",
+      "title": "Bicep what-if",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-what-if",
+      "chapters": [
+        "12-devops"
+      ],
+      "exams": [
+        "AZ-104",
+        "AZ-400"
+      ]
+    },
+    {
+      "id": "slots",
+      "title": "App Service deployment slots",
+      "url": "https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots",
+      "chapters": [
+        "03-compute",
+        "12-devops"
+      ],
+      "exams": [
+        "AZ-104",
+        "AZ-400"
+      ]
+    },
+    {
+      "id": "landing",
+      "title": "Azure landing zones",
+      "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/",
+      "chapters": [
+        "02-resources",
+        "10-architecture"
+      ],
+      "exams": [
+        "AZ-900",
+        "AZ-305"
+      ]
+    },
+    {
+      "id": "checks",
+      "title": "Azure Pipelines approvals and checks",
+      "url": "https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops",
+      "chapters": [
+        "12-devops"
+      ],
+      "exams": [
+        "AZ-400"
+      ]
+    }
+  ]
+}

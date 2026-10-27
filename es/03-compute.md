@@ -51,3 +51,9 @@ Fijar una versión ayuda a reproducir un problema. Usar latest en todos los desp
 ---
 
 [Índice](README.md) · [Otro idioma](../en/03-compute.md) · [Anterior](02-resources.md) · [Siguiente](04-storage.md)
+
+## Ampliación desde Microsoft Learn · slots
+
+Un deployment slot tiene su propio hostname y ejecuta una aplicación. Copiar ajustes no equivale a clonar contenido, red privada o todas las dependencias. Durante el swap se aplican pasos de preparación y calentamiento.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-slots)

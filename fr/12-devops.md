@@ -1,6 +1,6 @@
 # DevOps et infrastructure comme code
 
-[Sommaire](README.md) · [[object Object]](../certifications/fr/README.md)
+[Sommaire](README.md) · [Certifications](../certifications/fr/README.md)
 
 DevOps rapproche développement et exploitation pour livrer des changements fiables. CI intègre avec compilation et contrôles. La livraison continue maintient prêt à publier ; le déploiement continu publie automatiquement selon critères.
 
@@ -17,3 +17,21 @@ Un runner privilégié ne doit pas exécuter indistinctement du code non fiable.
 ---
 
 [Précédent](11-messaging.md) · [Suivant](13-laboratorios.md) · [English](../en/12-devops.md)
+
+## Approfondissement Microsoft Learn · whatif
+
+What-if prévoit des changements sans les appliquer. Droits, dépendances et expressions peuvent limiter l'analyse. Un résultat incomplet ne prouve pas l'absence de changements.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-what-if) · [Approfondissement Microsoft Learn](15-microsoft-learn.md#learn-whatif)
+
+## Approfondissement Microsoft Learn · slots
+
+Un slot possède son hostname et exécute une application. Copier les paramètres ne clone ni contenu, ni réseau privé, ni toutes les dépendances. Le swap comprend préparation et préchauffage.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots) · [Approfondissement Microsoft Learn](15-microsoft-learn.md#learn-slots)
+
+## Approfondissement Microsoft Learn · checks
+
+Les responsables des ressources Azure Pipelines administrent approvals et checks hors du YAML. Une étape doit satisfaire les contrôles des ressources qu'elle consomme.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) · [Approfondissement Microsoft Learn](15-microsoft-learn.md#learn-checks)

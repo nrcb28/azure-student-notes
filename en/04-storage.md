@@ -54,3 +54,9 @@ A SAS URL can grant access to whoever holds it. Limit permissions, lifetime, and
 ---
 
 [Contents](README.md) · [Other language](../es/04-storage.md) · [Previous](03-compute.md) · [Next](05-networking.md)
+
+## Microsoft Learn expansion · sas
+
+A Blob user delegation SAS is signed using a delegation key obtained through Entra ID. Issuing one requires permission to obtain that key; possessing a blob URL does not grant that permission. Design the signature and access constraints together.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-sas)

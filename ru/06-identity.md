@@ -1,6 +1,6 @@
 # Удостоверения и безопасность
 
-[Содержание](README.md) · [[object Object]](../certifications/ru/README.md)
+[Содержание](README.md) · [Сертификации](../certifications/ru/README.md)
 
 Entra ID управляет удостоверениями. Аутентификация проверяет, кто мы; авторизация определяет разрешённые действия. MFA усиливает вход, но не выдаёт права на документы.
 
@@ -17,3 +17,9 @@ Azure RBAC объединяет удостоверение, роль и обла
 ---
 
 [Назад](05-networking.md) · [Далее](07-governance.md) · [English](../en/06-identity.md)
+
+## Дополнение Microsoft Learn · sas
+
+User delegation SAS для Blob использует ключ делегирования, полученный через Entra ID. Для получения ключа нужны права; знания URL недостаточно.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-sas)

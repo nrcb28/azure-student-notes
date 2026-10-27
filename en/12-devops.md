@@ -63,3 +63,21 @@ Run python tools/check_docs.py from the repository root to verify documentation 
 ---
 
 [Contents](README.md) · [Other language](../es/12-devops.md) · [Previous](11-messaging.md) · [Next](13-laboratorios.md)
+
+## Microsoft Learn expansion · whatif
+
+What-if predicts changes without applying them. It has permission requirements and analytical limits; dependencies or expressions can prevent evaluation of part of a deployment. Incomplete output does not establish that no changes exist.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-what-if) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-whatif)
+
+## Microsoft Learn expansion · slots
+
+A deployment slot has its own hostname and runs an application. Copying settings does not clone content, private networking, or every dependency. Swaps include preparation and warm-up steps.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-slots)
+
+## Microsoft Learn expansion · checks
+
+Azure Pipelines resource owners administer approvals and checks outside pipeline YAML. A stage must satisfy checks on its resources before starting. Author-controlled conditions are not equivalent separation of responsibility.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-checks)

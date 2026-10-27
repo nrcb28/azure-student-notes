@@ -1,6 +1,6 @@
 # Azure sans se compliquer la vie
 
-[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 Édition française adaptée couvrant tous les parcours avec explications, exemples et cas propres. Les éditions espagnole et anglaise proposent des approfondissements supplémentaires. Ce n'est ni une traduction certifiée ni un programme officiel.
 
@@ -21,7 +21,7 @@
 13. [Travaux pratiques](13-laboratorios.md)
 14. [Révision](14-repaso.md)
 
-## [object Object]
+## Certifications
 
 [AZ-900 · AZ-104 · AZ-305 · AZ-400](../certifications/fr/README.md)
 
@@ -32,3 +32,5 @@
 Guides indépendants. Domaines et pondérations issus des guides officiels anglais consultés le 27 octobre 2026 ; à revérifier avant l'examen. Aucune garantie de réussite et aucune question officielle ou confidentielle.
 
 CC BY 4.0 · [undergroundwires/Azure-in-bullet-points](https://github.com/undergroundwires/Azure-in-bullet-points) · [Attribution](../ATTRIBUTION.md)
+
+15. [Approfondissement Microsoft Learn](15-microsoft-learn.md)

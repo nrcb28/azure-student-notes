@@ -1,6 +1,6 @@
 # Risorse e disponibilità
 
-[Indice](README.md) · [[object Object]](../certifications/it/README.md)
+[Indice](README.md) · [Certificazioni](../certifications/it/README.md)
 
 Una sottoscrizione delimita amministrazione, quote e fatturazione. I gruppi di gestione applicano governo a più sottoscrizioni. Un gruppo di risorse raccoglie elementi con un ciclo di vita correlato. Il tenant Entra è la directory delle identità, non un normale contenitore di risorse.
 
@@ -15,3 +15,9 @@ Prima di spostare risorse controlliamo supporto, dipendenze, autorizzazioni e id
 ---
 
 [Precedente](01-fundamentals.md) · [Successivo](03-compute.md) · [English](../en/02-resources.md)
+
+## Approfondimento Microsoft Learn · landing
+
+Le landing zone organizzano identità, connettività, gestione e governo. Piattaforma e carichi possono avere responsabili distinti; un acceleratore non sostituisce i requisiti.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Approfondimento Microsoft Learn](15-microsoft-learn.md#learn-landing)

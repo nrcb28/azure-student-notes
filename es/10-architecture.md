@@ -71,3 +71,9 @@ No hace falta convertirlo en burocracia: ayuda a recordar por qué se eligió al
 ---
 
 [Índice](README.md) · [Otro idioma](../en/10-architecture.md) · [Anterior](09-costs.md) · [Siguiente](11-messaging.md)
+
+## Ampliación desde Microsoft Learn · landing
+
+Una landing zone organiza fundamentos de identidad, conectividad, administración y gobierno para alojar cargas. Los equipos de plataforma y aplicación pueden tener responsabilidades diferentes. Un acelerador aporta un punto de partida, no sustituye los requisitos de la organización.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-landing)

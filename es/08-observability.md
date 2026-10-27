@@ -64,3 +64,9 @@ OpenTelemetry puede ayudar a instrumentar señales de forma consistente. Su conf
 ---
 
 [Índice](README.md) · [Otro idioma](../en/08-observability.md) · [Anterior](07-governance.md) · [Siguiente](09-costs.md)
+
+## Ampliación desde Microsoft Learn · dcr
+
+Las data collection rules describen recogida y encaminamiento en escenarios compatibles. Pueden incluir transformaciones para filtrar o modificar datos antes del destino. No todas las señales usan el mismo camino; no hay que confundir DCR con una sustitución universal de diagnostic settings.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-monitor/data-collection/data-collection-rule-overview) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-dcr)

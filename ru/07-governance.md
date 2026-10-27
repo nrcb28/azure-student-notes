@@ -1,6 +1,6 @@
 # Управление и соответствие требованиям
 
-[Содержание](README.md) · [[object Object]](../certifications/ru/README.md)
+[Содержание](README.md) · [Сертификации](../certifications/ru/README.md)
 
 RBAC определяет, кто может выполнять действие; Policy задаёт условия для ресурсов. Пользователь с правом создания VM может получить отказ из-за ограничения региона.
 
@@ -15,3 +15,9 @@ Defender for Cloud и Sentinel решают разные задачи. Серт�
 ---
 
 [Назад](06-identity.md) · [Далее](08-observability.md) · [English](../en/07-governance.md)
+
+## Дополнение Microsoft Learn · policy
+
+Remediation применяет modify или deployIfNotExists к существующим ресурсам через удостоверение назначения и его права. Изменение определения не обновляет автоматически все разрешения.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/governance/policy/how-to/remediate-resources) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-policy)

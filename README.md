@@ -1,6 +1,6 @@
 # Azure sin tanto lío · Azure without the confusion
 
-[Español](es/README.md) · [English](en/README.md) · [Italiano](it/README.md) · [Deutsch](de/README.md) · [Français](fr/README.md) · [Русский](ru/README.md)
+[Español](es/README.md) · [English](en/README.md) · [Italiano](it/README.md) · [Deutsch](de/README.md) · [Français](fr/README.md) · [Русский](ru/README.md) · [日本語](ja/README.md) · [简体中文](zh/README.md)
 
 Apuntes de Azure para estudiantes de informática. Explicaciones cortas, decisiones razonadas y prácticas pequeñas para entender lo que estamos desplegando.
 
@@ -9,6 +9,14 @@ Azure study notes for computer science students. Short explanations, practical d
 **[Leer en español](es/README.md) · [Read in English](en/README.md)**
 
 **Certificaciones / Certifications: [Español](certifications/es/README.md) · [English](certifications/en/README.md)**
+
+## Microsoft Learn: nueva ampliación / New expansion
+
+Ocho temas con explicaciones reescritas, fuentes directas y casos propios, disponibles en los ocho idiomas e integrados también en los capítulos y certificaciones.
+
+Eight topics with rewritten explanations, direct sources, and original cases, available in all eight languages and integrated into chapters and exam routes.
+
+[Fuentes verificadas / Source register](LEARN-SOURCES.md) · [Español](es/15-microsoft-learn.md) · [日本語](ja/15-microsoft-learn.md) · [简体中文](zh/15-microsoft-learn.md)
 
 ## Idiomas / Languages
 
@@ -20,12 +28,14 @@ Azure study notes for computer science students. Short explanations, practical d
 | Deutsch | [Deutsch](de/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/de/README.md) |
 | Français | [Français](fr/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/fr/README.md) |
 | Русский | [Русский](ru/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/ru/README.md) |
+| 日本語 | [日本語](ja/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/ja/README.md) |
+| 简体中文 | [简体中文](zh/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/zh/README.md) |
 
-Las nuevas versiones italiana, alemana, francesa y rusa son adaptaciones de estudio más compactas: incluyen los doce temas, prácticas, repaso y las cuatro certificaciones. Español e inglés mantienen los desarrollos más extensos. [Detalles de las ediciones](LOCALIZATION.md).
+Las versiones italiana, alemana, francesa, rusa, japonesa y china son adaptaciones de estudio más compactas: incluyen los doce temas, prácticas, repaso y las cuatro certificaciones. Español e inglés mantienen los desarrollos más extensos. [Detalles de las ediciones](LOCALIZATION.md).
 
-The Italian, German, French, and Russian editions are more compact study adaptations covering all twelve topics, labs, review, and the four certification routes. Spanish and English retain the longer explanations. [Edition details](LOCALIZATION.md).
+The Italian, German, French, Russian, Japanese, and Chinese editions are more compact study adaptations covering all twelve topics, labs, review, and the four certification routes. Spanish and English retain the longer explanations. [Edition details](LOCALIZATION.md).
 
-[Glosario en seis idiomas / Six-language glossary](GLOSSARY-multilingual.md).
+[Glosario en ocho idiomas / Eight-language glossary](GLOSSARY-multilingual.md).
 
 ## Certificaciones con más detalle / Detailed certification guides
 
@@ -36,9 +46,9 @@ The Italian, German, French, and Russian editions are more compact study adaptat
 | AZ-305 · Infrastructure Solutions | [Guía](certifications/es/AZ-305.md) | [Guide](certifications/en/AZ-305.md) |
 | AZ-400 · DevOps Solutions | [Guía](certifications/es/AZ-400.md) | [Guide](certifications/en/AZ-400.md) |
 
-Cada guía desarrolla conceptos, decisiones, diagnóstico, práctica y repaso. Hay 10 casos de certificación por examen y por idioma: 240 casos en los seis idiomas. Las referencias de objetivos y pesos se comprobaron el 27 de octubre de 2026; consulta las páginas oficiales antes de reservar un examen.
+Cada guía desarrolla conceptos, decisiones, diagnóstico, práctica y repaso. Hay 10 casos de certificación por examen y por idioma: 320 casos en los ocho idiomas. Las referencias de objetivos y pesos se comprobaron el 27 de octubre de 2026; consulta las páginas oficiales antes de reservar un examen.
 
-Each guide develops concepts, decisions, troubleshooting, practice, and review. There are ten certification cases per exam and language: 240 cases across six languages. Objective dates and weightings were checked on 27 October 2026; consult official pages before booking an exam.
+Each guide develops concepts, decisions, troubleshooting, practice, and review. There are ten certification cases per exam and language: 320 cases across eight languages. Objective dates and weightings were checked on 27 October 2026; consult official pages before booking an exam.
 
 ## Qué hay aquí / What's inside
 
@@ -46,8 +56,8 @@ Each guide develops concepts, decisions, troubleshooting, practice, and review. 
 - 12 chapters in each language: fundamentals, resources, compute, storage, networking, identity, governance, observability, costs, architecture, messaging, and DevOps.
 - Un caso común: una aplicación universitaria para compartir apuntes.
 - A running example: a university app for sharing course notes.
-- Prácticas con Azure CLI y Bicep, preguntas con respuestas y un glosario bilingüe.
-- Azure CLI and Bicep labs, questions with answers, and a bilingual glossary.
+- Prácticas con Azure CLI y Bicep, preguntas con respuestas y un glosario multilingüe.
+- Azure CLI and Bicep labs, questions with answers, and a multilingual glossary.
 
 ## Cómo usarlo / How to use it
 

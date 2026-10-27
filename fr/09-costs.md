@@ -1,6 +1,6 @@
 # Coûts et optimisation
 
-[Sommaire](README.md) · [[object Object]](../certifications/fr/README.md)
+[Sommaire](README.md) · [Certifications](../certifications/fr/README.md)
 
 La facture peut inclure capacité, données, opérations, réseau, journaux, sauvegardes et licences. Les tarifs dépendent notamment de la région et du contrat : éviter les chiffres fixes non vérifiés.
 

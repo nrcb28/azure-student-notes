@@ -1,6 +1,6 @@
 # Сообщения и события
 
-[Содержание](README.md) · [[object Object]](../certifications/ru/README.md)
+[Содержание](README.md) · [Сертификации](../certifications/ru/README.md)
 
 Очередь разделяет отправку и обработку. Storage Queues подходят простым задачам, Service Bus предоставляет очереди и темы, Event Grid распространяет события, Event Hubs принимает крупные потоки. Это не взаимозаменяемые решения.
 

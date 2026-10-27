@@ -1,6 +1,6 @@
 # Kosten und Optimierung
 
-[Inhalt](README.md) · [[object Object]](../certifications/de/README.md)
+[Inhalt](README.md) · [Zertifizierungen](../certifications/de/README.md)
 
 Die Rechnung umfasst gegebenenfalls Kapazität, Daten, Operationen, Netzwerk, Protokolle, Sicherungen und Lizenzen. Preise hängen von Region und Vertrag ab; ungeprüfte Festpreise helfen nicht.
 

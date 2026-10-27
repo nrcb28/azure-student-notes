@@ -1,6 +1,6 @@
 # Messaggi ed eventi
 
-[Indice](README.md) · [[object Object]](../certifications/it/README.md)
+[Indice](README.md) · [Certificazioni](../certifications/it/README.md)
 
 Una coda disaccoppia invio e lavorazione. Storage Queues serve code semplici; Service Bus offre code e topic; Event Grid distribuisce eventi; Event Hubs acquisisce flussi su larga scala. Non sono sostituti automatici.
 

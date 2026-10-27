@@ -50,3 +50,11 @@ Technical references consulted / Referencias técnicas consultadas:
 Localised exam versions can follow a different update schedule. Recheck the objectives for the language and date you select.
 
 Las versiones localizadas pueden actualizarse en otro calendario. Comprueba los objetivos del idioma y fecha elegidos.
+
+## Microsoft Learn expansion / Ampliación Microsoft Learn
+
+Eight articles were opened and read on 2026-10-27. The source register maps each article to chapters and exams. Explanations and original cases are adapted into all eight languages. Source review does not establish Azure deployment testing.
+
+Se consultaron ocho artículos el 27 de octubre de 2026. El registro relaciona fuentes, capítulos y exámenes. La ampliación se adapta a los ocho idiomas. La consulta no implica pruebas de despliegue.
+
+[Source register / Registro](LEARN-SOURCES.md)

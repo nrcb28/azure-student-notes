@@ -1,8 +1,8 @@
 # Azure sin tanto lío
 
-[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
-[Español](../es/README.md) · [English](../en/README.md) · [Inicio](../README.md)
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 Estos apuntes están escritos para entender Azure desde el punto de vista de alguien que estudia informática. Primero la idea, luego la comparación y después una decisión para una aplicación de apuntes de clase. No se atribuyen experiencias o certificaciones que no se han demostrado.
 
@@ -49,3 +49,5 @@ No hace falta memorizar todos los servicios. Al terminar cada capítulo, intenta
 Guía conceptual ampliada; no cubre por completo AZ-900, AZ-104, AZ-305 ni AZ-400. Para certificarte, consulta los objetivos actuales en Microsoft Learn. Las opciones de servicio, licencias y regiones pueden cambiar.
 
 Adaptación de undergroundwires/Azure-in-bullet-points bajo CC BY 4.0. [Atribución y cambios](../ATTRIBUTION.md).
+
+15. [Ampliación desde Microsoft Learn](15-microsoft-learn.md)

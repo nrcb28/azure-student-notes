@@ -1,6 +1,6 @@
 # Calcul et conteneurs
 
-[Sommaire](README.md) · [[object Object]](../certifications/fr/README.md)
+[Sommaire](README.md) · [Certifications](../certifications/fr/README.md)
 
 Une VM convient au contrôle du système ; App Service aux applications web compatibles ; Functions au code déclenché par événement. Container Instances et Container Apps exécutent des conteneurs sans administrer directement un cluster Kubernetes. AKS se justifie lorsque les besoins compensent sa complexité opérationnelle.
 
@@ -15,3 +15,9 @@ Séparons image et configuration. Les secrets ne doivent pas entrer dans les cou
 ---
 
 [Précédent](02-resources.md) · [Suivant](04-storage.md) · [English](../en/03-compute.md)
+
+## Approfondissement Microsoft Learn · slots
+
+Un slot possède son hostname et exécute une application. Copier les paramètres ne clone ni contenu, ni réseau privé, ni toutes les dépendances. Le swap comprend préparation et préchauffage.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots) · [Approfondissement Microsoft Learn](15-microsoft-learn.md#learn-slots)

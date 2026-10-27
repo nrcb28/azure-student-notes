@@ -1,24 +1,20 @@
 # Language editions / Ediciones de idioma
 
-| Edition | General chapters | Certification routes |
-|---|---|---|
-| Español | [Index](es/README.md) | [Index](certifications/es/README.md) |
-| English | [Index](en/README.md) | [Index](certifications/en/README.md) |
-| Italiano | [Indice](it/README.md) | [Indice](certifications/it/README.md) |
-| Deutsch | [Inhalt](de/README.md) | [Inhalt](certifications/de/README.md) |
-| Français | [Sommaire](fr/README.md) | [Sommaire](certifications/fr/README.md) |
-| Русский | [Содержание](ru/README.md) | [Содержание](certifications/ru/README.md) |
+| Language | Notes | Certifications | Microsoft Learn |
+|---|---|---|---|
+| Español | [Index](es/README.md) | [Index](certifications/es/README.md) | [Expansion](es/15-microsoft-learn.md) |
+| English | [Index](en/README.md) | [Index](certifications/en/README.md) | [Expansion](en/15-microsoft-learn.md) |
+| Italiano | [Index](it/README.md) | [Index](certifications/it/README.md) | [Expansion](it/15-microsoft-learn.md) |
+| Deutsch | [Index](de/README.md) | [Index](certifications/de/README.md) | [Expansion](de/15-microsoft-learn.md) |
+| Français | [Index](fr/README.md) | [Index](certifications/fr/README.md) | [Expansion](fr/15-microsoft-learn.md) |
+| Русский | [Index](ru/README.md) | [Index](certifications/ru/README.md) | [Expansion](ru/15-microsoft-learn.md) |
+| 日本語 | [Index](ja/README.md) | [Index](certifications/ja/README.md) | [Expansion](ja/15-microsoft-learn.md) |
+| 简体中文 | [Index](zh/README.md) | [Index](certifications/zh/README.md) | [Expansion](zh/15-microsoft-learn.md) |
 
-The four additional editions are adapted, more compact study versions. They cover the twelve general topics, labs, review, four exam routes, case banks, and ADR templates. The Spanish and English editions retain additional extended explanations. They are not certified translations or official Microsoft curricula.
+The Italian, German, French, Russian, Japanese, and Simplified Chinese editions are adapted, more compact study versions. Spanish and English retain longer background explanations. All eight editions contain the same new Microsoft Learn topic set, linked into the relevant chapters and exam routes. No edition is a certified translation or an official Microsoft syllabus.
 
-Las cuatro ediciones añadidas son versiones de estudio adaptadas y más compactas. Incluyen los doce temas generales, prácticas, repaso, cuatro rutas de examen, casos y plantillas ADR. Las ediciones española e inglesa conservan explicaciones adicionales más extensas. No son traducciones certificadas ni temarios oficiales de Microsoft.
+Las ediciones italiana, alemana, francesa, rusa, japonesa y china simplificada son adaptaciones de estudio más compactas. Español e inglés conservan explicaciones previas más extensas. Los ocho idiomas incluyen los mismos nuevos temas de Microsoft Learn, integrados en capítulos y rutas. No son traducciones certificadas ni temarios oficiales.
 
-Azure product names, exam identifiers, paths, Bash commands, and parameters are preserved. Lab command blocks match the English source exactly. Explanatory prose and navigation are localised; source URLs and code comments may remain in English.
+Product names, commands and parameters are preserved. Newly adapted lab command blocks match English exactly, including comments. Existing Spanish examples contain localised comments. All labs are unverified in Azure; local structural and Bash syntax checks are separate from deployment tests.
 
-Los nombres de productos, exámenes, rutas, comandos y parámetros se conservan. Los bloques de comandos coinciden exactamente con la fuente inglesa. Se localizan las explicaciones y navegación; las fuentes y comentarios de código pueden permanecer en inglés.
-
-Reference facts are inherited from the 2026-10-27 English guide check recorded in [SOURCES.md](SOURCES.md). Localised Microsoft exams may have a different update schedule. These notes do not claim every subobjective is exhaustively covered or that Azure deployment tests have been performed.
-
-Las referencias proceden de la revisión inglesa del 27 de octubre de 2026 registrada en las fuentes. Los exámenes localizados pueden actualizarse en otro calendario. No se afirma cobertura exhaustiva ni ejecución de despliegues en Azure.
-
-Attribution and CC BY 4.0 remain applicable: [ATTRIBUTION.md](ATTRIBUTION.md).
+[Sources](LEARN-SOURCES.md) · [Attribution](ATTRIBUTION.md)

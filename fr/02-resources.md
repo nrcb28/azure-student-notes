@@ -1,6 +1,6 @@
 # Ressources et disponibilité
 
-[Sommaire](README.md) · [[object Object]](../certifications/fr/README.md)
+[Sommaire](README.md) · [Certifications](../certifications/fr/README.md)
 
 Un abonnement délimite administration, quotas et facturation. Les groupes d'administration appliquent une gouvernance commune à plusieurs abonnements. Les groupes de ressources rassemblent des éléments ayant un cycle de vie lié. Le tenant Entra est un annuaire d'identités, pas un conteneur de ressources ordinaire.
 
@@ -15,3 +15,9 @@ Avant de déplacer une ressource, vérifions prise en charge, dépendances, droi
 ---
 
 [Précédent](01-fundamentals.md) · [Suivant](03-compute.md) · [English](../en/02-resources.md)
+
+## Approfondissement Microsoft Learn · landing
+
+Les landing zones organisent identité, connectivité, administration et gouvernance. Plateforme et applications peuvent avoir des responsables distincts. Un accélérateur ne remplace pas les exigences.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Approfondissement Microsoft Learn](15-microsoft-learn.md#learn-landing)

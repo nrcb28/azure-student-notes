@@ -1,6 +1,6 @@
 # Architettura e recupero
 
-[Indice](README.md) · [[object Object]](../certifications/it/README.md)
+[Indice](README.md) · [Certificazioni](../certifications/it/README.md)
 
 Un progetto parte da utenti, dati, requisiti, budget e capacità operativa. Più servizi non significa progetto migliore.
 
@@ -17,3 +17,9 @@ Progettiamo timeout, retry progressivi, idempotenza e gestione dei guasti parzia
 ---
 
 [Precedente](09-costs.md) · [Successivo](11-messaging.md) · [English](../en/10-architecture.md)
+
+## Approfondimento Microsoft Learn · landing
+
+Le landing zone organizzano identità, connettività, gestione e governo. Piattaforma e carichi possono avere responsabili distinti; un acceleratore non sostituisce i requisiti.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Approfondimento Microsoft Learn](15-microsoft-learn.md#learn-landing)

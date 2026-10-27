@@ -1,6 +1,6 @@
 # Speicher und Daten
 
-[Inhalt](README.md) · [[object Object]](../certifications/de/README.md)
+[Inhalt](README.md) · [Zertifizierungen](../certifications/de/README.md)
 
 Blob Storage speichert Objekte wie PDFs, Azure Files bietet Dateifreigaben, Managed Disks unterstützen VMs. Relationale Datenbanken verwalten Beziehungen und Transaktionen. JSON als Austauschformat erzwingt keine Dokumentdatenbank.
 
@@ -17,3 +17,9 @@ SAS-Token sind Zugangsdaten. Begrenze Berechtigungen und Gültigkeit. Unterschei
 ---
 
 [Zurück](03-compute.md) · [Weiter](05-networking.md) · [English](../en/04-storage.md)
+
+## Microsoft-Learn-Vertiefung · sas
+
+Eine Blob User Delegation SAS verwendet einen mit Entra ID beschafften Delegierungsschlüssel. Dessen Anforderung benötigt Rechte; eine bekannte URL genügt nicht.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Microsoft-Learn-Vertiefung](15-microsoft-learn.md#learn-sas)

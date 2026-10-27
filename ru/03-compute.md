@@ -1,6 +1,6 @@
 # Вычисления и контейнеры
 
-[Содержание](README.md) · [[object Object]](../certifications/ru/README.md)
+[Содержание](README.md) · [Сертификации](../certifications/ru/README.md)
 
 VM подходит для контроля ОС, App Service — для совместимого веб-приложения, Functions — для кода по событиям. Container Instances и Container Apps запускают контейнеры без самостоятельного сопровождения кластера Kubernetes. AKS нужен, когда требования оправдывают Kubernetes и эксплуатационные затраты.
 
@@ -15,3 +15,9 @@ VM подходит для контроля ОС, App Service — для сов�
 ---
 
 [Назад](02-resources.md) · [Далее](04-storage.md) · [English](../en/03-compute.md)
+
+## Дополнение Microsoft Learn · slots
+
+У слота есть hostname и действующее приложение. Копирование настроек не клонирует содержимое, частную сеть и все зависимости. Swap включает подготовку и прогрев.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-slots)

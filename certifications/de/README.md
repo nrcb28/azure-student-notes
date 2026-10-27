@@ -1,6 +1,6 @@
-# [object Object] · Azure
+# Zertifizierungen · Azure
 
-[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [Start](../../README.md) · [Inhalt](../../de/README.md)
 
@@ -20,3 +20,7 @@ Bearbeitete deutsche Ausgabe mit allen Lernpfaden, eigenen Erklärungen und Fäl
 Bei Expert-Zertifizierungen die Voraussetzungen auf offiziellen Seiten prüfen. AZ-303 und AZ-304 sind historische Prüfungen; Architekturthemen werden hier unter AZ-305 eingeordnet.
 
 [Sources](../../SOURCES.md) · [License / Attribution](../../ATTRIBUTION.md)
+
+## Microsoft-Learn-Vertiefung
+
+[Microsoft-Learn-Vertiefung](../../de/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)

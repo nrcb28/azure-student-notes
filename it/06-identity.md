@@ -1,6 +1,6 @@
 # Identità e sicurezza
 
-[Indice](README.md) · [[object Object]](../certifications/it/README.md)
+[Indice](README.md) · [Certificazioni](../certifications/it/README.md)
 
 Entra ID gestisce identità. Autenticazione significa dimostrare chi siamo; autorizzazione decide cosa possiamo fare. MFA rafforza la prima, non concede accesso ai documenti.
 
@@ -17,3 +17,9 @@ La nostra app deve verificare il proprietario di ogni documento: essere autentic
 ---
 
 [Precedente](05-networking.md) · [Successivo](07-governance.md) · [English](../en/06-identity.md)
+
+## Approfondimento Microsoft Learn · sas
+
+Una user delegation SAS per Blob usa una chiave di delegazione ottenuta con Entra ID. Servono i diritti per ottenerla; conoscere l'URL non basta.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Approfondimento Microsoft Learn](15-microsoft-learn.md#learn-sas)

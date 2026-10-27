@@ -1,6 +1,6 @@
 # Rutas de certificación Azure
 
-[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [Inicio](../../README.md) · [Español](../es/README.md) · [English](../en/README.md)
 
@@ -46,3 +46,7 @@ AZ-900, AZ-104, AZ-305 y AZ-400 son códigos de examen. Las certificaciones asoc
 Revisión de referencias: 27 de octubre de 2026. Se comprobaron títulos, áreas, pesos y fechas de objetivos de las guías oficiales inglesas. Los desarrollos técnicos son explicaciones propias y no una transcripción exhaustiva de todos sus subobjetivos. Las versiones localizadas y las futuras actualizaciones pueden diferir. No se garantiza aprobar ni se presenta cada práctica como desplegada en Azure.
 
 Los exámenes AZ-303 y AZ-304 del repositorio de referencia son históricos. Su contenido de arquitectura se reorganiza aquí alrededor de AZ-305 y de los capítulos de arquitectura, sin presentarlos como rutas actuales. Otras certificaciones no se dan por cubiertas.
+
+## Ampliación desde Microsoft Learn
+
+[Ampliación desde Microsoft Learn](../../es/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)

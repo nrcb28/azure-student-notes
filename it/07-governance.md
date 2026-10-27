@@ -1,6 +1,6 @@
 # Governo e conformità
 
-[Indice](README.md) · [[object Object]](../certifications/it/README.md)
+[Indice](README.md) · [Certificazioni](../certifications/it/README.md)
 
 RBAC stabilisce chi può agire; Policy stabilisce condizioni delle risorse. Una persona autorizzata a creare VM può essere bloccata da una regola sulle regioni.
 
@@ -15,3 +15,9 @@ Defender for Cloud e Sentinel rispondono a esigenze diverse. Una certificazione 
 ---
 
 [Precedente](06-identity.md) · [Successivo](08-observability.md) · [English](../en/07-governance.md)
+
+## Approfondimento Microsoft Learn · policy
+
+La remediation applica modify o deployIfNotExists alle risorse esistenti utilizzando identità e permessi dell'assegnazione. Una modifica della definizione non aggiorna automaticamente ogni autorizzazione.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/governance/policy/how-to/remediate-resources) · [Approfondimento Microsoft Learn](15-microsoft-learn.md#learn-policy)

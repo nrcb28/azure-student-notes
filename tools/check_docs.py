@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Check repository documents without network access or Azure execution.
 
-Checks relative file links, balanced fenced blocks, six-language file parity,
+Checks relative file links, balanced fenced blocks, eight-language file parity,
 required certification material, and Bash syntax. Does not validate remote URLs,
 Markdown anchor fragments, Bicep compilation, or Azure deployment behaviour.
 """
 from pathlib import Path
 import re
+import json
 import shutil
 import subprocess
 import sys
@@ -24,6 +25,8 @@ def check(root):
     for document in documents:
         text = document.read_text(encoding="utf-8")
         relative = document.relative_to(root)
+        if "[object Object]" in text:
+            errors.append(f"{relative}: unresolved generated label")
         lines = text.splitlines()
         fence = None
         prose = []
@@ -59,7 +62,7 @@ def check(root):
             path = unquote(target.split("#", 1)[0])
             if path and not (document.parent / path).exists():
                 errors.append(f"{relative}: missing linked file: {target}")
-    languages = ("es", "en", "it", "de", "fr", "ru")
+    languages = ("es", "en", "it", "de", "fr", "ru", "ja", "zh")
     for parent in (root, root / "certifications"):
         expected = {p.name for p in (parent / "en").glob("*.md")}
         for lang in languages:
@@ -76,7 +79,7 @@ def check(root):
                     errors.append(f"Missing certification file: {path.relative_to(root)}")
     # Newly adapted editions preserve English command blocks, including comments.
     # Existing Spanish examples have their own localised comments.
-    for lang in ("it", "de", "fr", "ru"):
+    for lang in ("it", "de", "fr", "ru", "ja", "zh"):
         for path in ("en/13-laboratorios.md", "certifications/en/network-lab.md"):
             source = root / path
             target = root / path.replace("/en/", f"/{lang}/") if "/en/" in path else root / path.replace("en/", f"{lang}/", 1)
@@ -87,6 +90,30 @@ def check(root):
             actual = re.findall(pattern, target.read_text(encoding="utf-8"), re.S)
             if actual != expected:
                 errors.append(f"{target.relative_to(root)}: lab commands differ from English")
+    # Verify the new source-backed topic set in every edition.
+    manifest_path = root / "tools/learn_topics.json"
+    if not manifest_path.is_file():
+        errors.append("Missing Learn topic manifest")
+    else:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        for lang in languages:
+            module = root / lang / "15-microsoft-learn.md"
+            if not module.is_file():
+                errors.append(f"Missing Learn expansion: {lang}")
+                continue
+            text = module.read_text(encoding="utf-8")
+            for topic in manifest["topics"]:
+                anchor = f'learn-{topic["id"]}'
+                if f'id="{anchor}"' not in text or topic["url"] not in text:
+                    errors.append(f"{lang}: missing Learn topic or source: {topic['id']}")
+                for chapter in topic["chapters"]:
+                    target = root / lang / f"{chapter}.md"
+                    if not target.is_file() or f"15-microsoft-learn.md#{anchor}" not in target.read_text(encoding="utf-8"):
+                        errors.append(f"{lang}: topic not integrated into {chapter}: {topic['id']}")
+                for exam in topic["exams"]:
+                    target = root / "certifications" / lang / f"{exam}.md"
+                    if not target.is_file() or f"15-microsoft-learn.md#{anchor}" not in target.read_text(encoding="utf-8"):
+                        errors.append(f"{lang}: topic not integrated into {exam}: {topic['id']}")
     if not bash:
         print("Bash not installed: shell syntax checks skipped.")
     print(f"{len(documents)} Markdown files, {links} relative links, {shell_blocks} Bash blocks.")

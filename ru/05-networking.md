@@ -1,6 +1,6 @@
 # Сети и подключения
 
-[Содержание](README.md) · [[object Object]](../certifications/ru/README.md)
+[Содержание](README.md) · [Сертификации](../certifications/ru/README.md)
 
 VNet — виртуальная сеть, подсети делят её адресное пространство. NSG фильтруют трафик с учётом состояния соединений. DNS разрешает имена. Разрешённый порт не доказывает, что процесс его слушает.
 
@@ -17,3 +17,9 @@ Load Balancer работает с TCP/UDP, Application Gateway — с регио
 ---
 
 [Назад](04-storage.md) · [Далее](06-identity.md) · [English](../en/05-networking.md)
+
+## Дополнение Microsoft Learn · dns
+
+Клиент должен разрешать имя сервиса в IP private endpoint. Создание интерфейса не настраивает все DNS-серверы. Рекомендуемая зона зависит от сервиса.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-dns)

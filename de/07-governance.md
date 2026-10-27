@@ -1,6 +1,6 @@
 # Governance und Compliance
 
-[Inhalt](README.md) · [[object Object]](../certifications/de/README.md)
+[Inhalt](README.md) · [Zertifizierungen](../certifications/de/README.md)
 
 RBAC bestimmt, wer handeln darf; Policy bestimmt Bedingungen für Ressourcen. Ein berechtigter VM-Administrator kann durch eine Regionsrichtlinie eingeschränkt werden.
 
@@ -15,3 +15,9 @@ Defender for Cloud und Sentinel erfüllen unterschiedliche Aufgaben. Die Zertifi
 ---
 
 [Zurück](06-identity.md) · [Weiter](08-observability.md) · [English](../en/07-governance.md)
+
+## Microsoft-Learn-Vertiefung · policy
+
+Korrekturaufgaben wenden modify oder deployIfNotExists auf vorhandene Ressourcen an. Sie verwenden Identität und Rechte der Zuweisung. Eine Definitionsänderung aktualisiert nicht automatisch jede Berechtigung.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/governance/policy/how-to/remediate-resources) · [Microsoft-Learn-Vertiefung](15-microsoft-learn.md#learn-policy)

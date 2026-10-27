@@ -1,6 +1,6 @@
 # Reti e connettività
 
-[Indice](README.md) · [[object Object]](../certifications/it/README.md)
+[Indice](README.md) · [Certificazioni](../certifications/it/README.md)
 
 Una VNet è una rete virtuale; le subnet ne dividono gli indirizzi. Gli NSG filtrano traffico con stato. DNS risolve nomi. Una porta consentita non dimostra che un processo stia ascoltando.
 
@@ -17,3 +17,9 @@ Load Balancer lavora con TCP/UDP; Application Gateway con traffico web regionale
 ---
 
 [Precedente](04-storage.md) · [Successivo](06-identity.md) · [English](../en/05-networking.md)
+
+## Approfondimento Microsoft Learn · dns
+
+Il client deve risolvere il nome del servizio verso l'IP del private endpoint. Creare l'interfaccia non configura ogni resolver; le zone dipendono dal servizio.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns) · [Approfondimento Microsoft Learn](15-microsoft-learn.md#learn-dns)

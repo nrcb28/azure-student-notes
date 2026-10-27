@@ -54,3 +54,9 @@ Una URL con SAS puede conceder acceso a quien la tenga. Limitar permisos, duraci
 ---
 
 [Índice](README.md) · [Otro idioma](../en/04-storage.md) · [Anterior](03-compute.md) · [Siguiente](05-networking.md)
+
+## Ampliación desde Microsoft Learn · sas
+
+Una user delegation SAS para Blob se firma mediante una clave de delegación obtenida con Entra ID. Emitirla requiere permisos para obtener esa clave; tener un enlace de un blob no concede ese derecho. La firma y las restricciones de acceso deben diseñarse conjuntamente.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-sas)

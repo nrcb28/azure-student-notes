@@ -59,3 +59,9 @@ With subnet and interface NSGs, inspect effective rules. Lower priority numbers 
 ---
 
 [Contents](README.md) · [Other language](../es/05-networking.md) · [Previous](04-storage.md) · [Next](06-identity.md)
+
+## Microsoft Learn expansion · dns
+
+Clients must resolve the service name to the private endpoint address. Creating a private interface does not configure every resolver. Recommended zones depend on the service; indiscriminately replacing an entire public zone can break resolution.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-dns)

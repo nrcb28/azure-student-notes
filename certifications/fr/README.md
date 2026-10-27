@@ -1,6 +1,6 @@
-# [object Object] · Azure
+# Certifications · Azure
 
-[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [Accueil](../../README.md) · [Sommaire](../../fr/README.md)
 
@@ -20,3 +20,7 @@ Guides indépendants. Domaines et pondérations issus des guides officiels angla
 Pour les certifications Expert, vérifier les prérequis sur les pages officielles. AZ-303 et AZ-304 sont historiques ; les notions d'architecture sont organisées ici autour d'AZ-305.
 
 [Sources](../../SOURCES.md) · [License / Attribution](../../ATTRIBUTION.md)
+
+## Approfondissement Microsoft Learn
+
+[Approfondissement Microsoft Learn](../../fr/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)

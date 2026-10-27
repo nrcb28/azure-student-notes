@@ -1,6 +1,6 @@
 # Nachrichten und Ereignisse
 
-[Inhalt](README.md) · [[object Object]](../certifications/de/README.md)
+[Inhalt](README.md) · [Zertifizierungen](../certifications/de/README.md)
 
 Warteschlangen entkoppeln Senden und Verarbeiten. Storage Queues eignet sich für einfache Aufgaben, Service Bus bietet Queues und Topics, Event Grid verteilt Ereignisse, Event Hubs nimmt große Ereignisströme auf. Sie sind nicht beliebig austauschbar.
 

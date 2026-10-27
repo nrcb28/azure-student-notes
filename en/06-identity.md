@@ -56,3 +56,9 @@ Workload identities need review too. Managed identity removes a stored credentia
 ---
 
 [Contents](README.md) · [Other language](../es/06-identity.md) · [Previous](05-networking.md) · [Next](07-governance.md)
+
+## Microsoft Learn expansion · sas
+
+A Blob user delegation SAS is signed using a delegation key obtained through Entra ID. Issuing one requires permission to obtain that key; possessing a blob URL does not grant that permission. Design the signature and access constraints together.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-sas)

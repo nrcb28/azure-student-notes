@@ -1,6 +1,6 @@
 # DevOps и инфраструктура как код
 
-[Содержание](README.md) · [[object Object]](../certifications/ru/README.md)
+[Содержание](README.md) · [Сертификации](../certifications/ru/README.md)
 
 DevOps объединяет разработку и эксплуатацию для надёжных изменений. CI интегрирует с проверками и сборкой. Непрерывная доставка сохраняет готовность к выпуску, непрерывное развёртывание публикует автоматически по условиям.
 
@@ -17,3 +17,21 @@ Bicep описывает ресурсы Azure; Terraform хранит состо
 ---
 
 [Назад](11-messaging.md) · [Далее](13-laboratorios.md) · [English](../en/12-devops.md)
+
+## Дополнение Microsoft Learn · whatif
+
+What-if прогнозирует изменения без применения. Права, зависимости и выражения могут ограничить анализ. Неполный результат не доказывает отсутствие изменений.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-what-if) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-whatif)
+
+## Дополнение Microsoft Learn · slots
+
+У слота есть hostname и действующее приложение. Копирование настроек не клонирует содержимое, частную сеть и все зависимости. Swap включает подготовку и прогрев.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-slots)
+
+## Дополнение Microsoft Learn · checks
+
+В Azure Pipelines владельцы ресурсов управляют approvals и checks вне YAML. До этапа должны пройти проверки используемых ресурсов.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-checks)

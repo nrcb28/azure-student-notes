@@ -60,3 +60,9 @@ Conviene distinguir evidencia técnica de cumplimiento formal. Una política pue
 ---
 
 [Índice](README.md) · [Otro idioma](../en/07-governance.md) · [Anterior](06-identity.md) · [Siguiente](08-observability.md)
+
+## Ampliación desde Microsoft Learn · policy
+
+Las tareas de remediación aplican las operaciones de modify o el despliegue de deployIfNotExists a recursos existentes. Utilizan la identidad administrada de la asignación y sus permisos. Cambiar una definición no actualiza automáticamente todos los permisos asociados.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/governance/policy/how-to/remediate-resources) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-policy)

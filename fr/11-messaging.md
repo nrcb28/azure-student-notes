@@ -1,6 +1,6 @@
 # Messages et événements
 
-[Sommaire](README.md) · [[object Object]](../certifications/fr/README.md)
+[Sommaire](README.md) · [Certifications](../certifications/fr/README.md)
 
 Une file découple envoi et traitement. Storage Queues sert les tâches simples ; Service Bus propose files et topics ; Event Grid distribue des événements ; Event Hubs ingère de grands flux. Ils ne sont pas interchangeables.
 

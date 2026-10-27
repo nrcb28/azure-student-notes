@@ -59,3 +59,9 @@ Con NSG en subred e interfaz, revisar reglas efectivas. Un número de prioridad 
 ---
 
 [Índice](README.md) · [Otro idioma](../en/05-networking.md) · [Anterior](04-storage.md) · [Siguiente](06-identity.md)
+
+## Ampliación desde Microsoft Learn · dns
+
+El cliente debe resolver el nombre del servicio a la IP del private endpoint. Crear la interfaz privada no configura por sí solo todos los resolutores. La zona recomendada depende del servicio; no conviene reemplazar indiscriminadamente una zona pública completa.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-dns)

@@ -64,3 +64,9 @@ OpenTelemetry can support consistent instrumentation. Runtime and integration ma
 ---
 
 [Contents](README.md) · [Other language](../es/08-observability.md) · [Previous](07-governance.md) · [Next](09-costs.md)
+
+## Microsoft Learn expansion · dcr
+
+Data collection rules describe collection and routing in supported scenarios. Transformations can filter or modify data before its destination. Signals do not all use the same pipeline; DCRs are not a universal replacement for diagnostic settings.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-monitor/data-collection/data-collection-rule-overview) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-dcr)

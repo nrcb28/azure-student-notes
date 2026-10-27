@@ -1,6 +1,6 @@
 # Comprendre le cloud
 
-[Sommaire](README.md) · [[object Object]](../certifications/fr/README.md)
+[Sommaire](README.md) · [Certifications](../certifications/fr/README.md)
 
 Le cloud permet de demander des ressources par logiciel. Les serveurs existent toujours : c'est la répartition de leur administration qui change. Cela ne garantit ni gratuité ni absence de maintenance.
 

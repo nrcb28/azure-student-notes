@@ -1,6 +1,6 @@
 # Architektur und Wiederherstellung
 
-[Inhalt](README.md) · [[object Object]](../certifications/de/README.md)
+[Inhalt](README.md) · [Zertifizierungen](../certifications/de/README.md)
 
 Architektur beginnt mit Nutzern, Daten, Anforderungen, Budget und Betriebskompetenz. Mehr Dienste bedeuten nicht automatisch bessere Qualität.
 
@@ -17,3 +17,9 @@ Plane Zeitlimits, gestaffelte Wiederholungen, Idempotenz und Teilausfälle. Wied
 ---
 
 [Zurück](09-costs.md) · [Weiter](11-messaging.md) · [English](../en/10-architecture.md)
+
+## Microsoft-Learn-Vertiefung · landing
+
+Landing Zones organisieren Identität, Konnektivität, Verwaltung und Governance. Plattform und Workloads können verschiedene Eigentümer haben; Beschleuniger ersetzen keine Anforderungen.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Microsoft-Learn-Vertiefung](15-microsoft-learn.md#learn-landing)

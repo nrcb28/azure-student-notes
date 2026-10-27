@@ -1,6 +1,6 @@
 # Supervision et diagnostic
 
-[Sommaire](README.md) · [[object Object]](../certifications/fr/README.md)
+[Sommaire](README.md) · [Certifications](../certifications/fr/README.md)
 
 Métriques, journaux et traces éclairent des aspects différents. Azure Monitor fournit des capacités de supervision ; Application Insights observe les applications ; Log Analytics interroge les journaux disponibles avec KQL.
 
@@ -17,3 +17,9 @@ Ne pas journaliser tokens ou documents entiers. Rétention et détail influencen
 ---
 
 [Précédent](07-governance.md) · [Suivant](09-costs.md) · [English](../en/08-observability.md)
+
+## Approfondissement Microsoft Learn · dcr
+
+Les data collection rules décrivent collecte et routage dans les scénarios compatibles. Des transformations peuvent filtrer ou modifier les données avant destination. Elles ne remplacent pas universellement diagnostic settings.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-monitor/data-collection/data-collection-rule-overview) · [Approfondissement Microsoft Learn](15-microsoft-learn.md#learn-dcr)

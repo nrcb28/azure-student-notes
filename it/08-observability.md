@@ -1,6 +1,6 @@
 # Monitoraggio e diagnosi
 
-[Indice](README.md) · [[object Object]](../certifications/it/README.md)
+[Indice](README.md) · [Certificazioni](../certifications/it/README.md)
 
 Metriche, log e tracce raccontano aspetti diversi. Azure Monitor raccoglie capacità di osservazione; Application Insights segue applicazioni; Log Analytics interroga i log disponibili con KQL.
 
@@ -17,3 +17,9 @@ Non registriamo token o documenti completi. Retention e verbosità influenzano c
 ---
 
 [Precedente](07-governance.md) · [Successivo](09-costs.md) · [English](../en/08-observability.md)
+
+## Approfondimento Microsoft Learn · dcr
+
+Le data collection rules descrivono raccolta e instradamento negli scenari compatibili; possono trasformare o filtrare dati prima della destinazione. Non sostituiscono universalmente diagnostic settings.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-monitor/data-collection/data-collection-rule-overview) · [Approfondimento Microsoft Learn](15-microsoft-learn.md#learn-dcr)

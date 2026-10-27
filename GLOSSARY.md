@@ -1,6 +1,6 @@
 # Glosario bilingüe / Bilingual glossary
 
-[Six-language glossary / Glosario en seis idiomas](GLOSSARY-multilingual.md)
+[Eight-language glossary / Glosario en ocho idiomas](GLOSSARY-multilingual.md)
 
 | English | Español | Idea |
 |---|---|---|

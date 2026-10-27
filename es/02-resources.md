@@ -50,3 +50,9 @@ Los bloqueos y políticas del destino también pueden influir. Un ensayo o valid
 ---
 
 [Índice](README.md) · [Otro idioma](../en/02-resources.md) · [Anterior](01-fundamentals.md) · [Siguiente](03-compute.md)
+
+## Ampliación desde Microsoft Learn · landing
+
+Una landing zone organiza fundamentos de identidad, conectividad, administración y gobierno para alojar cargas. Los equipos de plataforma y aplicación pueden tener responsabilidades diferentes. Un acelerador aporta un punto de partida, no sustituye los requisitos de la organización.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-landing)

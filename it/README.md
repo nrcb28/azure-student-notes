@@ -1,6 +1,6 @@
 # Azure senza troppa confusione
 
-[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 Edizione adattata in italiano: copre tutti i percorsi del progetto con spiegazioni, esempi e casi propri. Per approfondimenti ulteriori sono disponibili anche le edizioni estese in spagnolo e inglese. Non è una traduzione certificata né un programma ufficiale.
 
@@ -21,7 +21,7 @@ Edizione adattata in italiano: copre tutti i percorsi del progetto con spiegazio
 13. [Laboratori](13-laboratorios.md)
 14. [Ripasso](14-repaso.md)
 
-## [object Object]
+## Certificazioni
 
 [AZ-900 · AZ-104 · AZ-305 · AZ-400](../certifications/it/README.md)
 
@@ -32,3 +32,5 @@ Edizione adattata in italiano: copre tutti i percorsi del progetto con spiegazio
 Guide di studio indipendenti. Obiettivi e pesi derivano dalle guide ufficiali inglesi consultate il 27 ottobre 2026; ricontrollali prima dell'esame. Non garantiscono il superamento e non contengono domande ufficiali o riservate.
 
 CC BY 4.0 · [undergroundwires/Azure-in-bullet-points](https://github.com/undergroundwires/Azure-in-bullet-points) · [Attribution](../ATTRIBUTION.md)
+
+15. [Approfondimento Microsoft Learn](15-microsoft-learn.md)

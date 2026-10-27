@@ -27,3 +27,9 @@ Se añaden guías propias de AZ-900, AZ-104, AZ-305 y AZ-400 en español e ingl�
 Added adapted Italian, German, French, and Russian study editions. Explanations and navigation are localised; code and Azure identifiers are preserved. These editions are more compact than the Spanish and English source editions. All adaptation and attribution requirements remain under CC BY 4.0; no endorsement or certified translation is implied.
 
 Se añaden versiones de estudio adaptadas en italiano, alemán, francés y ruso, más compactas que las ediciones española e inglesa. Se localizan explicaciones y navegación, manteniendo código e identificadores. Se conserva la atribución y CC BY 4.0, sin sugerir respaldo ni traducción certificada.
+
+## Microsoft Learn additions and Asian editions
+
+Credit: Microsoft and Microsoft Learn contributors for the documentation identified in [LEARN-SOURCES.md](LEARN-SOURCES.md). Changes: paraphrase, reorganisation, translation, and original university-app scenarios. Japanese and Simplified Chinese study editions are added. Original project attribution remains applicable. No official status, endorsement, certified translation, or warranties are implied.
+
+Se atribuyen las nuevas referencias a Microsoft y los colaboradores de Microsoft Learn. Se añaden paráfrasis, reorganización, traducciones y ejemplos propios, además de ediciones en japonés y chino simplificado. Se mantiene la atribución del proyecto original, sin respaldo oficial ni garantías.

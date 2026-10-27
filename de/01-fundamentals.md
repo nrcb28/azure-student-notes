@@ -1,6 +1,6 @@
 # Cloud-Grundlagen
 
-[Inhalt](README.md) · [[object Object]](../certifications/de/README.md)
+[Inhalt](README.md) · [Zertifizierungen](../certifications/de/README.md)
 
 In der Cloud fordern wir Rechenleistung, Speicher und Dienste über Software an. Die Server verschwinden nicht; ihre Verwaltung wird anders verteilt. Cloud bedeutet weder automatisch günstig noch wartungsfrei.
 

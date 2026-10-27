@@ -1,6 +1,6 @@
 # Identität und Sicherheit
 
-[Inhalt](README.md) · [[object Object]](../certifications/de/README.md)
+[Inhalt](README.md) · [Zertifizierungen](../certifications/de/README.md)
 
 Entra ID verwaltet Identitäten. Authentifizierung prüft, wer wir sind; Autorisierung legt erlaubte Aktionen fest. MFA stärkt die Anmeldung und vergibt keine Dokumentberechtigungen.
 
@@ -17,3 +17,9 @@ Unsere App muss den Zugriff auf jedes Dokument prüfen. Angemeldete Studierende 
 ---
 
 [Zurück](05-networking.md) · [Weiter](07-governance.md) · [English](../en/06-identity.md)
+
+## Microsoft-Learn-Vertiefung · sas
+
+Eine Blob User Delegation SAS verwendet einen mit Entra ID beschafften Delegierungsschlüssel. Dessen Anforderung benötigt Rechte; eine bekannte URL genügt nicht.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Microsoft-Learn-Vertiefung](15-microsoft-learn.md#learn-sas)

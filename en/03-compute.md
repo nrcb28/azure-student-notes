@@ -51,3 +51,9 @@ Version pinning helps reproduce problems. Using latest everywhere makes the runn
 ---
 
 [Contents](README.md) · [Other language](../es/03-compute.md) · [Previous](02-resources.md) · [Next](04-storage.md)
+
+## Microsoft Learn expansion · slots
+
+A deployment slot has its own hostname and runs an application. Copying settings does not clone content, private networking, or every dependency. Swaps include preparation and warm-up steps.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-slots)

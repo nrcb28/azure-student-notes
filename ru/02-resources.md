@@ -1,6 +1,6 @@
 # Ресурсы и доступность
 
-[Содержание](README.md) · [[object Object]](../certifications/ru/README.md)
+[Содержание](README.md) · [Сертификации](../certifications/ru/README.md)
 
 Подписка задаёт границы управления, квот и выставления счетов. Группы управления позволяют применять общие правила к нескольким подпискам. Группа ресурсов объединяет объекты со связанным жизненным циклом. Тенант Entra — каталог удостоверений, а не обычный контейнер ресурсов.
 
@@ -15,3 +15,9 @@
 ---
 
 [Назад](01-fundamentals.md) · [Далее](03-compute.md) · [English](../en/02-resources.md)
+
+## Дополнение Microsoft Learn · landing
+
+Landing zones организуют удостоверения, подключения, администрирование и управление. У платформы и нагрузок могут быть разные владельцы. Акселератор не заменяет требования.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-landing)

@@ -1,8 +1,8 @@
 # Azure without the confusion
 
-[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md)
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
-[Español](../es/README.md) · [English](../en/README.md) · [Home](../README.md)
+[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 These notes explain Azure from a computer science student's perspective. First the idea, then the comparison, then a decision for a class notes application. They do not claim unverified personal experience or certifications.
 
@@ -49,3 +49,5 @@ You do not need to memorise every service. After each chapter, explain why you w
 An expanded conceptual guide; it does not fully cover AZ-900, AZ-104, AZ-305, or AZ-400. For certification, check current Microsoft Learn objectives. Service options, licences, and regions may change.
 
 Adapted from undergroundwires/Azure-in-bullet-points under CC BY 4.0. [Attribution and changes](../ATTRIBUTION.md).
+
+15. [Microsoft Learn expansion](15-microsoft-learn.md)

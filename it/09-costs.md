@@ -1,6 +1,6 @@
 # Costi e ottimizzazione
 
-[Indice](README.md) · [[object Object]](../certifications/it/README.md)
+[Indice](README.md) · [Certificazioni](../certifications/it/README.md)
 
 La fattura comprende capacità, dati, operazioni, rete, log, copie e licenze applicabili. Le tariffe dipendono da regione e contratto: non usiamo prezzi fissi non verificati.
 

@@ -63,3 +63,21 @@ Para verificar la documentación localmente, ejecuta python tools/check_docs.py 
 ---
 
 [Índice](README.md) · [Otro idioma](../en/12-devops.md) · [Anterior](11-messaging.md) · [Siguiente](13-laboratorios.md)
+
+## Ampliación desde Microsoft Learn · whatif
+
+What-if anticipa cambios sin aplicarlos. Tiene requisitos de permisos y límites de análisis; ciertas dependencias o expresiones pueden impedir evaluar partes del despliegue. Un resultado incompleto no demuestra ausencia de cambios.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-what-if) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-whatif)
+
+## Ampliación desde Microsoft Learn · slots
+
+Un deployment slot tiene su propio hostname y ejecuta una aplicación. Copiar ajustes no equivale a clonar contenido, red privada o todas las dependencias. Durante el swap se aplican pasos de preparación y calentamiento.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-slots)
+
+## Ampliación desde Microsoft Learn · checks
+
+En Azure Pipelines, los responsables de recursos administran approvals y checks fuera del YAML de la pipeline. Antes de una etapa deben satisfacerse los controles de sus recursos. Una condición escrita por el autor no equivale a esa separación de responsabilidades.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-checks)

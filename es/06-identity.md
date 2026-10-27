@@ -56,3 +56,9 @@ Las identidades de carga necesitan revisión igual que las humanas. Una identida
 ---
 
 [Índice](README.md) · [Otro idioma](../en/06-identity.md) · [Anterior](05-networking.md) · [Siguiente](07-governance.md)
+
+## Ampliación desde Microsoft Learn · sas
+
+Una user delegation SAS para Blob se firma mediante una clave de delegación obtenida con Entra ID. Emitirla requiere permisos para obtener esa clave; tener un enlace de un blob no concede ese derecho. La firma y las restricciones de acceso deben diseñarse conjuntamente.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-sas)

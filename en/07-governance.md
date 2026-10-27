@@ -60,3 +60,9 @@ A technical property check does not independently prove formal compliance across
 ---
 
 [Contents](README.md) · [Other language](../es/07-governance.md) · [Previous](06-identity.md) · [Next](08-observability.md)
+
+## Microsoft Learn expansion · policy
+
+Remediation tasks apply modify operations or deployIfNotExists deployments to existing resources. They use the assignment's managed identity and permissions. Changing a definition does not automatically update every associated permission.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/governance/policy/how-to/remediate-resources) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-policy)

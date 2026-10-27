@@ -1,6 +1,6 @@
 # Хранение и данные
 
-[Содержание](README.md) · [[object Object]](../certifications/ru/README.md)
+[Содержание](README.md) · [Сертификации](../certifications/ru/README.md)
 
 Blob Storage хранит объекты, например PDF; Azure Files предоставляет файловые ресурсы; Managed Disks используются VM. Реляционная БД поддерживает связи и транзакции. Обмен JSON не обязывает выбирать документную БД.
 
@@ -17,3 +17,9 @@ SAS — средство доступа, которое нужно защища�
 ---
 
 [Назад](03-compute.md) · [Далее](05-networking.md) · [English](../en/04-storage.md)
+
+## Дополнение Microsoft Learn · sas
+
+User delegation SAS для Blob использует ключ делегирования, полученный через Entra ID. Для получения ключа нужны права; знания URL недостаточно.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-sas)

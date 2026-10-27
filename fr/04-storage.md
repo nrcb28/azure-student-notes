@@ -1,6 +1,6 @@
 # Stockage et données
 
-[Sommaire](README.md) · [[object Object]](../certifications/fr/README.md)
+[Sommaire](README.md) · [Certifications](../certifications/fr/README.md)
 
 Blob Storage conserve des objets comme les PDF ; Azure Files fournit des partages ; Managed Disks sert aux VM. Une base relationnelle gère relations et transactions. Échanger du JSON ne force pas le choix d'une base documentaire.
 
@@ -17,3 +17,9 @@ Les SAS sont des informations d'accès sensibles : limiter droits et durée. Dis
 ---
 
 [Précédent](03-compute.md) · [Suivant](05-networking.md) · [English](../en/04-storage.md)
+
+## Approfondissement Microsoft Learn · sas
+
+Une user delegation SAS pour Blob utilise une clé de délégation obtenue avec Entra ID. Son émission exige des droits ; connaître l'URL ne suffit pas.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Approfondissement Microsoft Learn](15-microsoft-learn.md#learn-sas)

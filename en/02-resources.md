@@ -50,3 +50,9 @@ Destination locks and policies can also matter. Validation reduces surprises but
 ---
 
 [Contents](README.md) · [Other language](../es/02-resources.md) · [Previous](01-fundamentals.md) · [Next](03-compute.md)
+
+## Microsoft Learn expansion · landing
+
+Landing zones organise identity, connectivity, management, and governance foundations for workloads. Platform and application teams can have different responsibilities. Accelerators provide starting points, not replacements for organisational requirements.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-landing)

@@ -1,6 +1,6 @@
 # Réseaux et connectivité
 
-[Sommaire](README.md) · [[object Object]](../certifications/fr/README.md)
+[Sommaire](README.md) · [Certifications](../certifications/fr/README.md)
 
 Un VNet est un réseau virtuel, divisé en sous-réseaux. Les NSG filtrent avec état. DNS résout les noms. Autoriser un port ne prouve pas qu'un processus écoute.
 
@@ -17,3 +17,9 @@ Load Balancer traite TCP/UDP ; Application Gateway le web régional ; Front Door
 ---
 
 [Précédent](04-storage.md) · [Suivant](06-identity.md) · [English](../en/05-networking.md)
+
+## Approfondissement Microsoft Learn · dns
+
+Le client doit résoudre le nom du service vers l'IP du private endpoint. L'interface seule ne configure pas tous les résolveurs. La zone recommandée dépend du service.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns) · [Approfondissement Microsoft Learn](15-microsoft-learn.md#learn-dns)

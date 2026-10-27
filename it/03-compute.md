@@ -1,6 +1,6 @@
 # Calcolo e contenitori
 
-[Indice](README.md) · [[object Object]](../certifications/it/README.md)
+[Indice](README.md) · [Certificazioni](../certifications/it/README.md)
 
 Sceglierei una VM per controllare il sistema operativo, App Service per una web app compatibile, Functions per codice attivato da eventi. Container Instances e Container Apps permettono di eseguire contenitori senza amministrare direttamente un cluster Kubernetes. AKS serve quando i requisiti giustificano Kubernetes e il suo lavoro operativo.
 
@@ -15,3 +15,9 @@ Separiamo immagine e configurazione; non inseriamo segreti nei layer. Una versio
 ---
 
 [Precedente](02-resources.md) · [Successivo](04-storage.md) · [English](../en/03-compute.md)
+
+## Approfondimento Microsoft Learn · slots
+
+Uno slot ha hostname e applicazione propri. Copiare impostazioni non clona contenuto, rete privata e tutte le dipendenze. Lo swap comprende preparazione e riscaldamento.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots) · [Approfondimento Microsoft Learn](15-microsoft-learn.md#learn-slots)

@@ -1,6 +1,6 @@
 # Archiviazione e dati
 
-[Indice](README.md) · [[object Object]](../certifications/it/README.md)
+[Indice](README.md) · [Certificazioni](../certifications/it/README.md)
 
 Blob Storage conserva oggetti come PDF; Azure Files offre condivisioni; Managed Disks supporta VM. Un database relazionale gestisce relazioni e transazioni. Il fatto che un'API scambi JSON non impone un database documentale.
 
@@ -17,3 +17,9 @@ Le SAS sono credenziali: limitiamo permessi e durata. Separiamo accesso amminist
 ---
 
 [Precedente](03-compute.md) · [Successivo](05-networking.md) · [English](../en/04-storage.md)
+
+## Approfondimento Microsoft Learn · sas
+
+Una user delegation SAS per Blob usa una chiave di delegazione ottenuta con Entra ID. Servono i diritti per ottenerla; conoscere l'URL non basta.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Approfondimento Microsoft Learn](15-microsoft-learn.md#learn-sas)

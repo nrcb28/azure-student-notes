@@ -1,6 +1,6 @@
 # Мониторинг и диагностика
 
-[Содержание](README.md) · [[object Object]](../certifications/ru/README.md)
+[Содержание](README.md) · [Сертификации](../certifications/ru/README.md)
 
 Метрики, журналы и трассировки показывают разные стороны работы. Azure Monitor предоставляет мониторинг, Application Insights наблюдает приложения, Log Analytics запрашивает доступные журналы через KQL.
 
@@ -17,3 +17,9 @@
 ---
 
 [Назад](07-governance.md) · [Далее](09-costs.md) · [English](../en/08-observability.md)
+
+## Дополнение Microsoft Learn · dcr
+
+Data collection rules описывают сбор и маршрутизацию в поддерживаемых сценариях. Преобразования могут фильтровать или менять данные до назначения. Это не универсальная замена diagnostic settings.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-monitor/data-collection/data-collection-rule-overview) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-dcr)
