@@ -58,3 +58,11 @@ Eight articles were opened and read on 2026-10-27. The source register maps each
 Se consultaron ocho artículos el 27 de octubre de 2026. El registro relaciona fuentes, capítulos y exámenes. La ampliación se adapta a los ocho idiomas. La consulta no implica pruebas de despliegue.
 
 [Source register / Registro](LEARN-SOURCES.md)
+
+## Further practical expansion / Continuación práctica
+
+Four additional Microsoft Learn articles were reviewed on 2026-10-27: Blob soft delete, Retry pattern, RBAC troubleshooting, and Key Vault soft delete. Rewritten explanations, original cases and review procedures are integrated in all eight language editions. The source register now tracks twelve topics. No new Azure deployment tests are claimed.
+
+Se revisaron cuatro artículos adicionales sobre recuperación, reintentos y permisos. El registro reúne doce temas, con casos y procedimientos en los ocho idiomas. No se atribuyen nuevas pruebas en Azure.
+
+[Sources / Fuentes](LEARN-SOURCES.md)

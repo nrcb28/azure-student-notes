@@ -23,3 +23,9 @@ SAS-Token sind Zugangsdaten. Begrenze Berechtigungen und Gültigkeit. Unterschei
 Eine Blob User Delegation SAS verwendet einen mit Entra ID beschafften Delegierungsschlüssel. Dessen Anforderung benötigt Rechte; eine bekannte URL genügt nicht.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Microsoft-Learn-Vertiefung](15-microsoft-learn.md#learn-sas)
+
+## Blob-Wiederherstellung nach Schutzebene
+
+Soft Delete bewahrt gelöschte Objekte während der Aufbewahrung. Es schützt allein weder die Löschung des Containers noch des gesamten Kontos. Diese Risiken getrennt behandeln.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [Blob-Wiederherstellung nach Schutzebene](15-microsoft-learn.md#learn-blob-recovery)

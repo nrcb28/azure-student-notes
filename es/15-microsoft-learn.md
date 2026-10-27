@@ -87,3 +87,51 @@ En Azure Pipelines, los responsables de recursos administran approvals y checks 
 ---
 
 [Source register](../LEARN-SOURCES.md) · [Attribution](../ATTRIBUTION.md)
+
+<a id="learn-blob-recovery"></a>
+
+## 9. Recuperar blobs: elegir el nivel de protección
+
+La eliminación temporal de blobs conserva objetos eliminados durante la retención configurada. No protege por sí sola una eliminación del contenedor o de toda la cuenta. Hay que distinguir objeto, contenedor y servicio, y preparar protección para cada riesgo.
+
+**Caso:** una estudiante elimina el contenedor de apuntes. Saber que los blobs tenían soft delete no demuestra que podamos recuperar el contenedor. Antes del incidente debemos comprobar la protección de contenedores y otras opciones de copia adecuadas al escenario.
+
+**Procedimiento de estudio:** identifica qué se borró, cuándo ocurrió, qué retención existía y con qué identidad se restaurará. Recupera en un entorno controlado cuando sea posible, verifica contenido y permisos, y reconcilia metadatos de la base. Documenta qué queda fuera de protección. Activar una función después del borrado no equivale a haber conservado el estado anterior.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview)
+
+<a id="learn-retry"></a>
+
+## 10. Reintentos: no repetir cualquier fallo
+
+Un retry ayuda frente a fallos transitorios; no corrige credenciales inválidas ni una solicitud mal construida. Debe tener intentos y tiempos acotados. Revisar los reintentos que ya realiza el SDK evita multiplicarlos entre capas.
+
+**Caso:** el procesador registra un documento, pero pierde la respuesta. Repetir puede crear otro registro si la operación no es idempotente. Usaría un identificador estable y una comprobación consistente del resultado.
+
+**Diseño:** clasifica el fallo, respeta las indicaciones de espera del servicio cuando correspondan y define un plazo total. Separa fallos iniciales recuperados de agotamiento de intentos. Registra información útil sin secretos. Si varias capas repiten, calcula el número real de solicitudes y el efecto sobre la dependencia. Una tormenta de reintentos puede empeorar la saturación en lugar de mejorar disponibilidad.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
+
+<a id="learn-rbac-diagnosis"></a>
+
+## 11. Diagnóstico de RBAC con evidencia
+
+Poder administrar un recurso no implica poder conceder roles ni acceder a sus datos. Para crear asignaciones se requiere la acción correspondiente en el ámbito adecuado, y pueden existir condiciones que limiten qué roles o identidades se permiten.
+
+**Caso:** el botón de asignar rol está deshabilitado. Antes de pedir Owner, confirmaría cuenta, tenant, ámbito y capacidad de asignación. Un rol muy amplio puede ocultar la causa y dejar privilegios permanentes.
+
+**Lista de trabajo:** anota operación fallida, identidad efectiva, recurso y ámbito; revisa asignaciones directas y heredadas, grupos y condiciones; distingue plano de administración y de datos. Considera propagación o renovación de credenciales según el caso. Prueba de nuevo la operación mínima que falló, no una acción distinta. Guarda la evidencia que explique por qué se concedió o negó el acceso.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting)
+
+<a id="learn-vault-recovery"></a>
+
+## 12. Recuperar Key Vault no restaura todas las integraciones
+
+Soft delete permite recuperar el almacén y objetos compatibles dentro de su periodo. Recuperar un almacén eliminado no recupera automáticamente determinadas integraciones, como asignaciones RBAC y suscripciones Event Grid, que deben revisarse y recrearse cuando corresponda.
+
+**Caso:** el vault reaparece, pero la API no puede leer su secreto. El nombre visible no prueba que los permisos y dependencias estén recuperados. Revisaría identidad, acceso y configuración de la aplicación.
+
+**Runbook:** inventaría objetos y consumidores, configura protección y responsabilidades antes del incidente, distingue recuperar de purgar, y valida una petición completa después. No uses purge como limpieza improvisada: elimina la posibilidad de recuperar el objeto purgado cuando está permitido. Comprueba también las protecciones y restricciones que pueden impedir purgar. La prueba termina cuando el consumidor autorizado funciona, no al ver el recurso en el portal.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)

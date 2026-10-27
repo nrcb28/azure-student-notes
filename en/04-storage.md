@@ -60,3 +60,9 @@ A SAS URL can grant access to whoever holds it. Limit permissions, lifetime, and
 A Blob user delegation SAS is signed using a delegation key obtained through Entra ID. Issuing one requires permission to obtain that key; possessing a blob URL does not grant that permission. Design the signature and access constraints together.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-sas)
+
+## Blob recovery: choose the protection level
+
+Blob soft delete retains deleted objects for the configured period. It does not by itself protect deletion of the container or entire account. Distinguish object, container, and account risks and prepare appropriate protection.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [Blob recovery: choose the protection level](15-microsoft-learn.md#learn-blob-recovery)

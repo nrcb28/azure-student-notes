@@ -35,3 +35,9 @@ Un slot possède son hostname et exécute une application. Copier les paramètre
 Les responsables des ressources Azure Pipelines administrent approvals et checks hors du YAML. Une étape doit satisfaire les contrôles des ressources qu'elle consomme.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) · [Approfondissement Microsoft Learn](15-microsoft-learn.md#learn-checks)
+
+## Retries bornés et idempotence
+
+Les retries aident les pannes transitoires, pas des identifiants invalides ou une requête incorrecte. Borner tentatives et durée totale, vérifier les retries déjà intégrés aux SDK.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Retries bornés et idempotence](15-microsoft-learn.md#learn-retry)

@@ -81,3 +81,9 @@ Un deployment slot tiene su propio hostname y ejecuta una aplicación. Copiar aj
 En Azure Pipelines, los responsables de recursos administran approvals y checks fuera del YAML de la pipeline. Antes de una etapa deben satisfacerse los controles de sus recursos. Una condición escrita por el autor no equivale a esa separación de responsabilidades.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-checks)
+
+## Reintentos: no repetir cualquier fallo
+
+Un retry ayuda frente a fallos transitorios; no corrige credenciales inválidas ni una solicitud mal construida. Debe tener intentos y tiempos acotados. Revisar los reintentos que ya realiza el SDK evita multiplicarlos entre capas.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Reintentos: no repetir cualquier fallo](15-microsoft-learn.md#learn-retry)

@@ -87,3 +87,51 @@ Les responsables des ressources Azure Pipelines administrent approvals et checks
 ---
 
 [Source register](../LEARN-SOURCES.md) · [Attribution](../ATTRIBUTION.md)
+
+<a id="learn-blob-recovery"></a>
+
+## 9. Récupérer les blobs selon le niveau
+
+La suppression réversible conserve les objets pendant la rétention configurée. Elle ne protège pas seule la suppression du conteneur ou du compte. Séparer ces risques.
+
+**Cas :** le conteneur des cours disparaît. La protection des blobs ne démontre pas sa récupération. Vérifier auparavant protection des conteneurs et sauvegardes adaptées.
+
+**Procédure :** identifier objet, date, rétention déjà active et identité de restauration. Contrôler contenu et droits, puis réconcilier les métadonnées. Activer après l'incident ne conserve pas rétroactivement l'ancien état.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview)
+
+<a id="learn-retry"></a>
+
+## 10. Retries bornés et idempotence
+
+Les retries aident les pannes transitoires, pas des identifiants invalides ou une requête incorrecte. Borner tentatives et durée totale, vérifier les retries déjà intégrés aux SDK.
+
+**Cas :** document enregistré, réponse perdue. Recommencer peut dupliquer l'enregistrement. Utiliser identifiant stable et contrôle cohérent du résultat.
+
+**Procédure :** classifier, respecter les délais indiqués lorsque pertinents et définir une échéance. Distinguer récupération et épuisement, sans journaliser de secrets. Calculer les requêtes réelles si plusieurs couches répètent. Une tempête de retries peut aggraver la saturation.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
+
+<a id="learn-rbac-diagnosis"></a>
+
+## 11. Diagnostiquer RBAC avec des preuves
+
+Administrer une ressource ne donne pas automatiquement attribution des rôles ou lecture des données. Action et étendue appropriées sont nécessaires ; des conditions peuvent limiter rôles et destinataires.
+
+**Cas :** bouton d'attribution désactivé. Vérifier compte, tenant, étendue et droit avant de demander Owner.
+
+**Procédure :** relever action, identité effective et ressource. Examiner groupes, attributions directes et héritées, conditions, plans de gestion et données. Considérer propagation et renouvellement d'authentification. Retester l'opération minimale en échec et expliquer le résultat.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting)
+
+<a id="learn-vault-recovery"></a>
+
+## 12. Récupérer Key Vault et ses intégrations
+
+La suppression réversible permet de récupérer pendant la rétention. Restaurer le vault ne recrée pas automatiquement certaines intégrations, notamment attributions RBAC et abonnements Event Grid.
+
+**Cas :** vault visible, API incapable de lire. Vérifier identité, droits et configuration des consommateurs.
+
+**Procédure :** inventorier objets et dépendances, préparer protection avant incident, distinguer restauration et purge. Ne pas improviser une purge : lorsqu'elle est permise, elle retire la possibilité de récupérer l'objet purgé. Contrôler protections et restrictions. Valider une requête complète et autorisée.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)

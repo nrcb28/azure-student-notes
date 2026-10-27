@@ -15,3 +15,9 @@ Surveiller âge et nombre des messages. Ajouter des consommateurs ne résout pas
 ---
 
 [Précédent](10-architecture.md) · [Suivant](12-devops.md) · [English](../en/11-messaging.md)
+
+## Retries bornés et idempotence
+
+Les retries aident les pannes transitoires, pas des identifiants invalides ou une requête incorrecte. Borner tentatives et durée totale, vérifier les retries déjà intégrés aux SDK.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Retries bornés et idempotence](15-microsoft-learn.md#learn-retry)

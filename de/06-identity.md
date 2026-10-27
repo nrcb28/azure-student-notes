@@ -23,3 +23,15 @@ Unsere App muss den Zugriff auf jedes Dokument prüfen. Angemeldete Studierende 
 Eine Blob User Delegation SAS verwendet einen mit Entra ID beschafften Delegierungsschlüssel. Dessen Anforderung benötigt Rechte; eine bekannte URL genügt nicht.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Microsoft-Learn-Vertiefung](15-microsoft-learn.md#learn-sas)
+
+## RBAC anhand von Nachweisen prüfen
+
+Ressourcenverwaltung gewährt nicht automatisch Rollenzuweisung oder Datenzugriff. Passende Aktion und Bereich sind erforderlich; Bedingungen können Rollen und Empfänger beschränken.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting) · [RBAC anhand von Nachweisen prüfen](15-microsoft-learn.md#learn-rbac-diagnosis)
+
+## Key Vault samt Abhängigkeiten wiederherstellen
+
+Soft Delete ermöglicht Wiederherstellung innerhalb der Aufbewahrung. Der wiederhergestellte Vault stellt Integrationen wie RBAC-Zuweisungen und Event-Grid-Abonnements nicht automatisch wieder her.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) · [Key Vault samt Abhängigkeiten wiederherstellen](15-microsoft-learn.md#learn-vault-recovery)

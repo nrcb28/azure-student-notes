@@ -87,3 +87,51 @@ In Azure Pipelines i responsabili delle risorse amministrano approvals e checks 
 ---
 
 [Source register](../LEARN-SOURCES.md) · [Attribution](../ATTRIBUTION.md)
+
+<a id="learn-blob-recovery"></a>
+
+## 9. Recupero dei blob: distinguere i livelli
+
+Soft delete conserva gli oggetti eliminati durante la retention configurata. Non protegge da sola la cancellazione del contenitore o dell'intero account. Separiamo questi rischi.
+
+**Caso:** viene eliminato il contenitore degli appunti. La protezione dei singoli blob non dimostra che il contenitore sia recuperabile. Verifichiamo in anticipo protezione dei contenitori e copie adeguate.
+
+**Procedura:** identificare oggetto, momento, retention già attiva e identità di recupero. Verificare contenuto e permessi, poi riconciliare i metadati. Attivare la funzione dopo l'incidente non significa aver conservato lo stato precedente.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview)
+
+<a id="learn-retry"></a>
+
+## 10. Retry con limiti e idempotenza
+
+I retry aiutano guasti transitori, non credenziali errate o richieste invalide. Limitiamo tentativi e tempo totale e controlliamo quelli già effettuati dagli SDK.
+
+**Caso:** il documento viene registrato ma si perde la risposta. Ripetere può duplicarlo. Servono identificatore stabile e verifica coerente.
+
+**Procedura:** classificare il guasto, rispettare indicazioni di attesa applicabili, fissare scadenza totale e registrare esaurimento dei tentativi senza segreti. Calcolare le richieste reali se più livelli ripetono. Una tempesta di retry può peggiorare la saturazione.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
+
+<a id="learn-rbac-diagnosis"></a>
+
+## 11. Diagnosticare RBAC con prove
+
+Amministrare risorse non concede automaticamente assegnazione di ruoli o accesso ai dati. Servono azione e ambito adeguati; condizioni possono limitare ruoli e destinatari.
+
+**Caso:** pulsante di assegnazione disabilitato. Verificare account, tenant, ambito e permesso prima di chiedere Owner.
+
+**Procedura:** annotare azione, identità effettiva e risorsa. Esaminare gruppi, assegnazioni dirette ed ereditate, condizioni e piano dati o gestione. Considerare propagazione e aggiornamento credenziali. Riprovare l'operazione minima fallita e conservare la spiegazione del risultato.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting)
+
+<a id="learn-vault-recovery"></a>
+
+## 12. Recuperare Key Vault e le dipendenze
+
+Soft delete consente recupero entro retention. Ripristinare il vault non ricrea automaticamente integrazioni come assegnazioni RBAC e sottoscrizioni Event Grid.
+
+**Caso:** il vault riappare ma l'API non legge il segreto. Controllare identità, permessi e configurazione dei consumatori.
+
+**Procedura:** inventariare oggetti e dipendenze, preparare protezione prima dell'incidente, distinguere recupero e purge. Non usare purge come pulizia improvvisata: dove consentita elimina la possibilità di recuperare l'oggetto. Verificare protezioni e restrizioni. Concludere con una richiesta completa del consumatore autorizzato.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)

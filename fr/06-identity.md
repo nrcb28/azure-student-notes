@@ -23,3 +23,15 @@ L'application doit contrôler l'accès à chaque document, même pour un étudia
 Une user delegation SAS pour Blob utilise une clé de délégation obtenue avec Entra ID. Son émission exige des droits ; connaître l'URL ne suffit pas.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Approfondissement Microsoft Learn](15-microsoft-learn.md#learn-sas)
+
+## Diagnostiquer RBAC avec des preuves
+
+Administrer une ressource ne donne pas automatiquement attribution des rôles ou lecture des données. Action et étendue appropriées sont nécessaires ; des conditions peuvent limiter rôles et destinataires.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting) · [Diagnostiquer RBAC avec des preuves](15-microsoft-learn.md#learn-rbac-diagnosis)
+
+## Récupérer Key Vault et ses intégrations
+
+La suppression réversible permet de récupérer pendant la rétention. Restaurer le vault ne recrée pas automatiquement certaines intégrations, notamment attributions RBAC et abonnements Event Grid.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) · [Récupérer Key Vault et ses intégrations](15-microsoft-learn.md#learn-vault-recovery)

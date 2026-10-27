@@ -13,3 +13,9 @@
 ---
 
 [←](10-architecture.md) · [→](12-devops.md) · [English](../en/11-messaging.md)
+
+## 制限付きの再試行と冪等性
+
+再試行は一時的な障害向けで、無効な資格情報や要求を直しません。回数と総時間を制限し、SDK 内部の再試行も確認します。
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [制限付きの再試行と冪等性](15-microsoft-learn.md#learn-retry)

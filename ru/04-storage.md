@@ -23,3 +23,9 @@ SAS — средство доступа, которое нужно защища�
 User delegation SAS для Blob использует ключ делегирования, полученный через Entra ID. Для получения ключа нужны права; знания URL недостаточно.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-sas)
+
+## Восстановление Blob по уровню защиты
+
+Обратимое удаление сохраняет объекты в течение настроенного срока. Само по себе оно не защищает удаление контейнера или всего аккаунта. Эти риски различаются.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [Восстановление Blob по уровню защиты](15-microsoft-learn.md#learn-blob-recovery)

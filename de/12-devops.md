@@ -35,3 +35,9 @@ Ein Slot hat eigenen Hostnamen und laufende Anwendung. Kopierte Einstellungen kl
 Azure-Pipelines-Ressourcenverantwortliche verwalten Approvals und Checks außerhalb der YAML-Datei. Vor einer Stage müssen die Prüfungen ihrer Ressourcen erfüllt sein.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) · [Microsoft-Learn-Vertiefung](15-microsoft-learn.md#learn-checks)
+
+## Begrenzte, idempotente Wiederholungen
+
+Retries helfen vorübergehenden Fehlern, nicht falschen Zugangsdaten oder ungültigen Anfragen. Versuche und Gesamtdauer begrenzen, vorhandene SDK-Wiederholungen berücksichtigen.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Begrenzte, idempotente Wiederholungen](15-microsoft-learn.md#learn-retry)

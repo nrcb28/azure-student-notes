@@ -55,3 +55,9 @@ Do not assume ordering across every service and configuration. Identify the requ
 ---
 
 [Contents](README.md) · [Other language](../es/11-messaging.md) · [Previous](10-architecture.md) · [Next](12-devops.md)
+
+## Retries: do not repeat every failure
+
+Retries help transient failures, not invalid credentials or malformed requests. Bound attempts and total duration. Inspect built-in SDK retries to avoid multiplying them across layers.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Retries: do not repeat every failure](15-microsoft-learn.md#learn-retry)

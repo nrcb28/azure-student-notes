@@ -23,3 +23,9 @@ Les SAS sont des informations d'accès sensibles : limiter droits et durée. Dis
 Une user delegation SAS pour Blob utilise une clé de délégation obtenue avec Entra ID. Son émission exige des droits ; connaître l'URL ne suffit pas.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Approfondissement Microsoft Learn](15-microsoft-learn.md#learn-sas)
+
+## Récupérer les blobs selon le niveau
+
+La suppression réversible conserve les objets pendant la rétention configurée. Elle ne protège pas seule la suppression du conteneur ou du compte. Séparer ces risques.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [Récupérer les blobs selon le niveau](15-microsoft-learn.md#learn-blob-recovery)

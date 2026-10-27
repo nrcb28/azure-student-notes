@@ -55,3 +55,9 @@ El orden de procesamiento no debe suponerse para cualquier servicio y configurac
 ---
 
 [Índice](README.md) · [Otro idioma](../en/11-messaging.md) · [Anterior](10-architecture.md) · [Siguiente](12-devops.md)
+
+## Reintentos: no repetir cualquier fallo
+
+Un retry ayuda frente a fallos transitorios; no corrige credenciales inválidas ni una solicitud mal construida. Debe tener intentos y tiempos acotados. Revisar los reintentos que ya realiza el SDK evita multiplicarlos entre capas.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Reintentos: no repetir cualquier fallo](15-microsoft-learn.md#learn-retry)

@@ -15,3 +15,9 @@ Eine Nachricht kann erneut erscheinen, obwohl ihre Arbeit fertig war, aber die B
 ---
 
 [Zurück](10-architecture.md) · [Weiter](12-devops.md) · [English](../en/11-messaging.md)
+
+## Begrenzte, idempotente Wiederholungen
+
+Retries helfen vorübergehenden Fehlern, nicht falschen Zugangsdaten oder ungültigen Anfragen. Versuche und Gesamtdauer begrenzen, vorhandene SDK-Wiederholungen berücksichtigen.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Begrenzte, idempotente Wiederholungen](15-microsoft-learn.md#learn-retry)

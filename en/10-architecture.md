@@ -77,3 +77,21 @@ This is useful memory rather than paperwork for its own sake.
 Landing zones organise identity, connectivity, management, and governance foundations for workloads. Platform and application teams can have different responsibilities. Accelerators provide starting points, not replacements for organisational requirements.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-landing)
+
+## Blob recovery: choose the protection level
+
+Blob soft delete retains deleted objects for the configured period. It does not by itself protect deletion of the container or entire account. Distinguish object, container, and account risks and prepare appropriate protection.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [Blob recovery: choose the protection level](15-microsoft-learn.md#learn-blob-recovery)
+
+## Retries: do not repeat every failure
+
+Retries help transient failures, not invalid credentials or malformed requests. Bound attempts and total duration. Inspect built-in SDK retries to avoid multiplying them across layers.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Retries: do not repeat every failure](15-microsoft-learn.md#learn-retry)
+
+## Recovering Key Vault does not restore every integration
+
+Soft delete supports recovery of vaults and supported objects during retention. Recovering a deleted vault does not automatically restore certain integrations such as RBAC assignments and Event Grid subscriptions; review and recreate them where needed.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) · [Recovering Key Vault does not restore every integration](15-microsoft-learn.md#learn-vault-recovery)

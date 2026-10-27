@@ -23,3 +23,9 @@ Le SAS sono credenziali: limitiamo permessi e durata. Separiamo accesso amminist
 Una user delegation SAS per Blob usa una chiave di delegazione ottenuta con Entra ID. Servono i diritti per ottenerla; conoscere l'URL non basta.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Approfondimento Microsoft Learn](15-microsoft-learn.md#learn-sas)
+
+## Recupero dei blob: distinguere i livelli
+
+Soft delete conserva gli oggetti eliminati durante la retention configurata. Non protegge da sola la cancellazione del contenitore o dell'intero account. Separiamo questi rischi.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [Recupero dei blob: distinguere i livelli](15-microsoft-learn.md#learn-blob-recovery)

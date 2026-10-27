@@ -62,3 +62,15 @@ Las identidades de carga necesitan revisión igual que las humanas. Una identida
 Una user delegation SAS para Blob se firma mediante una clave de delegación obtenida con Entra ID. Emitirla requiere permisos para obtener esa clave; tener un enlace de un blob no concede ese derecho. La firma y las restricciones de acceso deben diseñarse conjuntamente.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-sas)
+
+## Diagnóstico de RBAC con evidencia
+
+Poder administrar un recurso no implica poder conceder roles ni acceder a sus datos. Para crear asignaciones se requiere la acción correspondiente en el ámbito adecuado, y pueden existir condiciones que limiten qué roles o identidades se permiten.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting) · [Diagnóstico de RBAC con evidencia](15-microsoft-learn.md#learn-rbac-diagnosis)
+
+## Recuperar Key Vault no restaura todas las integraciones
+
+Soft delete permite recuperar el almacén y objetos compatibles dentro de su periodo. Recuperar un almacén eliminado no recupera automáticamente determinadas integraciones, como asignaciones RBAC y suscripciones Event Grid, que deben revisarse y recrearse cuando corresponda.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) · [Recuperar Key Vault no restaura todas las integraciones](15-microsoft-learn.md#learn-vault-recovery)

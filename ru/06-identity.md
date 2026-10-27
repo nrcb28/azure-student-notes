@@ -23,3 +23,15 @@ Azure RBAC объединяет удостоверение, роль и обла
 User delegation SAS для Blob использует ключ делегирования, полученный через Entra ID. Для получения ключа нужны права; знания URL недостаточно.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-sas)
+
+## Диагностика RBAC по свидетельствам
+
+Управление ресурсом не выдаёт автоматически назначение ролей и доступ к данным. Нужны действие и область, а условия могут ограничивать роли и получателей.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting) · [Диагностика RBAC по свидетельствам](15-microsoft-learn.md#learn-rbac-diagnosis)
+
+## Восстановление Key Vault и зависимостей
+
+Обратимое удаление позволяет вернуть объекты в течение хранения. Возврат vault не восстанавливает автоматически некоторые интеграции, включая RBAC и подписки Event Grid.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) · [Восстановление Key Vault и зависимостей](15-microsoft-learn.md#learn-vault-recovery)

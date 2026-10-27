@@ -19,3 +19,9 @@ LRS 在本地复制，ZRS 跨可用区复制。GRS/GZRS 的跨区域复制是异
 Blob user delegation SAS 使用通过 Entra ID 获取的委派密钥。获取密钥需要权限，知道 URL 并不足以签发。
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Microsoft Learn 补充内容](15-microsoft-learn.md#learn-sas)
+
+## 区分 Blob 的保护层级
+
+软删除在已配置的保留期内保存被删除对象，但本身不保护容器或整个账户的删除。这些风险必须分别设计。
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [区分 Blob 的保护层级](15-microsoft-learn.md#learn-blob-recovery)

@@ -23,3 +23,21 @@ Plane Zeitlimits, gestaffelte Wiederholungen, Idempotenz und Teilausfälle. Wied
 Landing Zones organisieren Identität, Konnektivität, Verwaltung und Governance. Plattform und Workloads können verschiedene Eigentümer haben; Beschleuniger ersetzen keine Anforderungen.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Microsoft-Learn-Vertiefung](15-microsoft-learn.md#learn-landing)
+
+## Blob-Wiederherstellung nach Schutzebene
+
+Soft Delete bewahrt gelöschte Objekte während der Aufbewahrung. Es schützt allein weder die Löschung des Containers noch des gesamten Kontos. Diese Risiken getrennt behandeln.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [Blob-Wiederherstellung nach Schutzebene](15-microsoft-learn.md#learn-blob-recovery)
+
+## Begrenzte, idempotente Wiederholungen
+
+Retries helfen vorübergehenden Fehlern, nicht falschen Zugangsdaten oder ungültigen Anfragen. Versuche und Gesamtdauer begrenzen, vorhandene SDK-Wiederholungen berücksichtigen.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Begrenzte, idempotente Wiederholungen](15-microsoft-learn.md#learn-retry)
+
+## Key Vault samt Abhängigkeiten wiederherstellen
+
+Soft Delete ermöglicht Wiederherstellung innerhalb der Aufbewahrung. Der wiederhergestellte Vault stellt Integrationen wie RBAC-Zuweisungen und Event-Grid-Abonnements nicht automatisch wieder her.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) · [Key Vault samt Abhängigkeiten wiederherstellen](15-microsoft-learn.md#learn-vault-recovery)

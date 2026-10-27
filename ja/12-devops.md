@@ -31,3 +31,9 @@ Slot には独自の名前と実行中のアプリがあります。設定コピ
 Azure Pipelines のリソース所有者は YAML 外で approvals と checks を管理します。段階開始前に利用リソースの検査を満たす必要があります。
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) · [Microsoft Learn の補足](15-microsoft-learn.md#learn-checks)
+
+## 制限付きの再試行と冪等性
+
+再試行は一時的な障害向けで、無効な資格情報や要求を直しません。回数と総時間を制限し、SDK 内部の再試行も確認します。
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [制限付きの再試行と冪等性](15-microsoft-learn.md#learn-retry)

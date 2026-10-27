@@ -107,6 +107,57 @@
       "exams": [
         "AZ-400"
       ]
+    },
+    {
+      "id": "blob-recovery",
+      "title": "Blob soft delete",
+      "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview",
+      "chapters": [
+        "04-storage",
+        "10-architecture"
+      ],
+      "exams": [
+        "AZ-104",
+        "AZ-305"
+      ]
+    },
+    {
+      "id": "retry",
+      "title": "Retry pattern",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/retry",
+      "chapters": [
+        "10-architecture",
+        "11-messaging",
+        "12-devops"
+      ],
+      "exams": [
+        "AZ-305",
+        "AZ-400"
+      ]
+    },
+    {
+      "id": "rbac-diagnosis",
+      "title": "Troubleshoot Azure RBAC",
+      "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting",
+      "chapters": [
+        "06-identity"
+      ],
+      "exams": [
+        "AZ-104"
+      ]
+    },
+    {
+      "id": "vault-recovery",
+      "title": "Key Vault soft delete and recovery",
+      "url": "https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview",
+      "chapters": [
+        "06-identity",
+        "10-architecture"
+      ],
+      "exams": [
+        "AZ-104",
+        "AZ-305"
+      ]
     }
   ]
 }

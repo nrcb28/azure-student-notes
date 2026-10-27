@@ -15,3 +15,9 @@ Monitoriamo età e quantità della coda. Aggiungere consumer non aiuta se il col
 ---
 
 [Precedente](10-architecture.md) · [Successivo](12-devops.md) · [English](../en/11-messaging.md)
+
+## Retry con limiti e idempotenza
+
+I retry aiutano guasti transitori, non credenziali errate o richieste invalide. Limitiamo tentativi e tempo totale e controlliamo quelli già effettuati dagli SDK.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Retry con limiti e idempotenza](15-microsoft-learn.md#learn-retry)

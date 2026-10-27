@@ -77,3 +77,21 @@ No hace falta convertirlo en burocracia: ayuda a recordar por qué se eligió al
 Una landing zone organiza fundamentos de identidad, conectividad, administración y gobierno para alojar cargas. Los equipos de plataforma y aplicación pueden tener responsabilidades diferentes. Un acelerador aporta un punto de partida, no sustituye los requisitos de la organización.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-landing)
+
+## Recuperar blobs: elegir el nivel de protección
+
+La eliminación temporal de blobs conserva objetos eliminados durante la retención configurada. No protege por sí sola una eliminación del contenedor o de toda la cuenta. Hay que distinguir objeto, contenedor y servicio, y preparar protección para cada riesgo.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [Recuperar blobs: elegir el nivel de protección](15-microsoft-learn.md#learn-blob-recovery)
+
+## Reintentos: no repetir cualquier fallo
+
+Un retry ayuda frente a fallos transitorios; no corrige credenciales inválidas ni una solicitud mal construida. Debe tener intentos y tiempos acotados. Revisar los reintentos que ya realiza el SDK evita multiplicarlos entre capas.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Reintentos: no repetir cualquier fallo](15-microsoft-learn.md#learn-retry)
+
+## Recuperar Key Vault no restaura todas las integraciones
+
+Soft delete permite recuperar el almacén y objetos compatibles dentro de su periodo. Recuperar un almacén eliminado no recupera automáticamente determinadas integraciones, como asignaciones RBAC y suscripciones Event Grid, que deben revisarse y recrearse cuando corresponda.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) · [Recuperar Key Vault no restaura todas las integraciones](15-microsoft-learn.md#learn-vault-recovery)

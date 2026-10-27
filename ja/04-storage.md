@@ -19,3 +19,9 @@ LRS はローカル、ZRS はゾーン間で複製します。GRS/GZRS の地域
 Blob の user delegation SAS は、Entra ID で取得する委任キーを使います。取得権限が必要で、URL を知っているだけでは発行できません。
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Microsoft Learn の補足](15-microsoft-learn.md#learn-sas)
+
+## Blob の保護レベルを分ける
+
+論理削除は設定済みの保持期間中に削除オブジェクトを保存します。それだけでコンテナーやアカウント全体の削除を保護するわけではありません。
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [Blob の保護レベルを分ける](15-microsoft-learn.md#learn-blob-recovery)

@@ -87,3 +87,51 @@ Azure Pipelines のリソース所有者は YAML 外で approvals と checks を
 ---
 
 [Source register](../LEARN-SOURCES.md) · [Attribution](../ATTRIBUTION.md)
+
+<a id="learn-blob-recovery"></a>
+
+## 9. Blob の保護レベルを分ける
+
+論理削除は設定済みの保持期間中に削除オブジェクトを保存します。それだけでコンテナーやアカウント全体の削除を保護するわけではありません。
+
+**例：**ノートのコンテナーを削除した場合、Blob の保護だけで復旧可能とは言えません。事前にコンテナー保護と必要なバックアップを確認します。
+
+**手順：**対象、時刻、すでに設定されていた保持、復旧用 ID を特定します。内容と権限を検証し DB メタデータと照合します。削除後に有効化しても、以前の状態が保存されていたことにはなりません。
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview)
+
+<a id="learn-retry"></a>
+
+## 10. 制限付きの再試行と冪等性
+
+再試行は一時的な障害向けで、無効な資格情報や要求を直しません。回数と総時間を制限し、SDK 内部の再試行も確認します。
+
+**例：**文書保存後に応答が消えると、繰り返しで重複する可能性があります。安定した ID と整合的な結果確認が必要です。
+
+**手順：**原因を分類し、適用される待機指示と期限を定めます。回復と回数超過を分け、秘密は記録しません。多層の再試行による実要求数を計算します。再試行の集中は過負荷を悪化させ得ます。
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
+
+<a id="learn-rbac-diagnosis"></a>
+
+## 11. 証拠に基づく RBAC 診断
+
+リソース管理はロール付与やデータアクセスと同じではありません。適切な操作と範囲が必要で、条件が付与先やロールを制限する場合があります。
+
+**例：**割り当てボタンが無効なら、Owner を求める前にアカウント、テナント、範囲、割り当て権限を確認します。
+
+**手順：**失敗操作、実 ID、リソースを記録します。グループ、直接と継承、条件、管理面とデータ面を確認します。反映と認証更新も考え、失敗した最小操作を再検査して理由を残します。
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting)
+
+<a id="learn-vault-recovery"></a>
+
+## 12. Key Vault と依存先の復旧
+
+論理削除は保持期間内の復旧を支援します。Vault を戻しても RBAC 割り当てや Event Grid サブスクリプションなどが自動復旧するわけではありません。
+
+**例：**Vault が見えても API が読めないなら、ID、権限、利用側設定を確認します。
+
+**手順：**対象と利用側を棚卸しし、保護を事前に準備します。復旧と purge を分けます。許可された purge は対象を戻す選択肢を失わせるため、場当たり的な掃除に使いません。制限と保護も確認し、正当な利用側の完全な要求で検証します。
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)

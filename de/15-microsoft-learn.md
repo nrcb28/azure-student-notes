@@ -87,3 +87,51 @@ Azure-Pipelines-Ressourcenverantwortliche verwalten Approvals und Checks außerh
 ---
 
 [Source register](../LEARN-SOURCES.md) · [Attribution](../ATTRIBUTION.md)
+
+<a id="learn-blob-recovery"></a>
+
+## 9. Blob-Wiederherstellung nach Schutzebene
+
+Soft Delete bewahrt gelöschte Objekte während der Aufbewahrung. Es schützt allein weder die Löschung des Containers noch des gesamten Kontos. Diese Risiken getrennt behandeln.
+
+**Fall:** Der Lernunterlagen-Container wird gelöscht. Blob-Schutz beweist keine Container-Wiederherstellung. Containersicherung und geeignete Backups vorher prüfen.
+
+**Vorgehen:** Objekt, Zeitpunkt, bereits geltende Aufbewahrung und Wiederherstellungsidentität bestimmen. Inhalt und Rechte prüfen, Datenbankmetadaten abgleichen. Nachträgliches Aktivieren stellt keinen zuvor nicht bewahrten Zustand her.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview)
+
+<a id="learn-retry"></a>
+
+## 10. Begrenzte, idempotente Wiederholungen
+
+Retries helfen vorübergehenden Fehlern, nicht falschen Zugangsdaten oder ungültigen Anfragen. Versuche und Gesamtdauer begrenzen, vorhandene SDK-Wiederholungen berücksichtigen.
+
+**Fall:** Dokument gespeichert, Antwort verloren. Wiederholung kann duplizieren. Stabile Kennung und konsistente Ergebnisprüfung verwenden.
+
+**Vorgehen:** Fehler klassifizieren, anwendbare Wartehinweise beachten, Gesamtfrist setzen. Erholte Fehler von ausgeschöpften Versuchen unterscheiden und keine Geheimnisse protokollieren. Bei mehreren Wiederholungsebenen tatsächliche Anfragen berechnen. Eine Retry-Flut kann Überlastung verschärfen.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
+
+<a id="learn-rbac-diagnosis"></a>
+
+## 11. RBAC anhand von Nachweisen prüfen
+
+Ressourcenverwaltung gewährt nicht automatisch Rollenzuweisung oder Datenzugriff. Passende Aktion und Bereich sind erforderlich; Bedingungen können Rollen und Empfänger beschränken.
+
+**Fall:** Zuweisungsschaltfläche deaktiviert. Konto, Mandant, Bereich und Zuweisungsrecht vor pauschalem Owner prüfen.
+
+**Vorgehen:** Fehlgeschlagene Aktion, effektive Identität und Ressource dokumentieren. Gruppen, direkte und geerbte Rechte, Bedingungen sowie Verwaltungs- und Datenebene unterscheiden. Weitergabe und Aktualisierung der Anmeldung berücksichtigen. Dieselbe minimale Operation erneut prüfen und Ergebnis begründen.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting)
+
+<a id="learn-vault-recovery"></a>
+
+## 12. Key Vault samt Abhängigkeiten wiederherstellen
+
+Soft Delete ermöglicht Wiederherstellung innerhalb der Aufbewahrung. Der wiederhergestellte Vault stellt Integrationen wie RBAC-Zuweisungen und Event-Grid-Abonnements nicht automatisch wieder her.
+
+**Fall:** Vault sichtbar, API liest kein Geheimnis. Identität, Rechte und Verbraucherkonfiguration prüfen.
+
+**Vorgehen:** Objekte und Abhängigkeiten inventarisieren, Schutz vor dem Vorfall vorbereiten. Wiederherstellen und Purge unterscheiden. Purge nicht improvisiert zur Bereinigung nutzen: Wo zulässig, beseitigt es die Wiederherstellungsmöglichkeit des Objekts. Schutzmechanismen und Beschränkungen prüfen. Erst ein vollständiger autorisierter Zugriff bestätigt die Erholung.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)

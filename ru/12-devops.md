@@ -35,3 +35,9 @@ What-if прогнозирует изменения без применения.
 В Azure Pipelines владельцы ресурсов управляют approvals и checks вне YAML. До этапа должны пройти проверки используемых ресурсов.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-checks)
+
+## Ограниченные повторы и идемпотентность
+
+Повторы помогают временным сбоям, но не неправильным учётным данным или запросам. Ограничиваем число и общее время, учитываем встроенные повторы SDK.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Ограниченные повторы и идемпотентность](15-microsoft-learn.md#learn-retry)

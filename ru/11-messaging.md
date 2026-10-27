@@ -15,3 +15,9 @@
 ---
 
 [Назад](10-architecture.md) · [Далее](12-devops.md) · [English](../en/11-messaging.md)
+
+## Ограниченные повторы и идемпотентность
+
+Повторы помогают временным сбоям, но не неправильным учётным данным или запросам. Ограничиваем число и общее время, учитываем встроенные повторы SDK.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Ограниченные повторы и идемпотентность](15-microsoft-learn.md#learn-retry)

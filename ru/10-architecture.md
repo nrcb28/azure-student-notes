@@ -23,3 +23,21 @@ RTO — целевое время восстановления; RPO — допу
 Landing zones организуют удостоверения, подключения, администрирование и управление. У платформы и нагрузок могут быть разные владельцы. Акселератор не заменяет требования.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) · [Дополнение Microsoft Learn](15-microsoft-learn.md#learn-landing)
+
+## Восстановление Blob по уровню защиты
+
+Обратимое удаление сохраняет объекты в течение настроенного срока. Само по себе оно не защищает удаление контейнера или всего аккаунта. Эти риски различаются.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [Восстановление Blob по уровню защиты](15-microsoft-learn.md#learn-blob-recovery)
+
+## Ограниченные повторы и идемпотентность
+
+Повторы помогают временным сбоям, но не неправильным учётным данным или запросам. Ограничиваем число и общее время, учитываем встроенные повторы SDK.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Ограниченные повторы и идемпотентность](15-microsoft-learn.md#learn-retry)
+
+## Восстановление Key Vault и зависимостей
+
+Обратимое удаление позволяет вернуть объекты в течение хранения. Возврат vault не восстанавливает автоматически некоторые интеграции, включая RBAC и подписки Event Grid.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) · [Восстановление Key Vault и зависимостей](15-microsoft-learn.md#learn-vault-recovery)

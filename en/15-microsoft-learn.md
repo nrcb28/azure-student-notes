@@ -87,3 +87,51 @@ Azure Pipelines resource owners administer approvals and checks outside pipeline
 ---
 
 [Source register](../LEARN-SOURCES.md) · [Attribution](../ATTRIBUTION.md)
+
+<a id="learn-blob-recovery"></a>
+
+## 9. Blob recovery: choose the protection level
+
+Blob soft delete retains deleted objects for the configured period. It does not by itself protect deletion of the container or entire account. Distinguish object, container, and account risks and prepare appropriate protection.
+
+**Case:** a student deletes the notes container. Knowing blobs had soft delete does not establish container recovery. Check container protection and suitable backup options before the incident.
+
+**Study procedure:** identify what was deleted, when, the retention already configured, and the recovery identity. Restore in a controlled environment where possible, verify content and permissions, and reconcile database metadata. Record exclusions. Enabling a feature after deletion is not equivalent to having preserved the earlier state.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview)
+
+<a id="learn-retry"></a>
+
+## 10. Retries: do not repeat every failure
+
+Retries help transient failures, not invalid credentials or malformed requests. Bound attempts and total duration. Inspect built-in SDK retries to avoid multiplying them across layers.
+
+**Case:** a worker registers a document but loses the response. Retrying may create another record unless the operation is idempotent. Use a stable identifier and a consistent result check.
+
+**Design:** classify failures, respect service wait guidance where applicable, and define a total deadline. Separate recovered initial failures from exhausted attempts. Log useful context without secrets. If several layers retry, calculate actual request count and dependency impact. A retry storm can worsen saturation rather than improve availability.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
+
+<a id="learn-rbac-diagnosis"></a>
+
+## 11. Evidence-based RBAC diagnosis
+
+Resource administration does not imply role-assignment authority or data access. Creating assignments needs the corresponding action at the correct scope, and conditions can restrict permitted roles or principals.
+
+**Case:** the assignment button is disabled. Before requesting Owner, confirm account, tenant, scope, and assignment permission. Broad access can hide the cause while leaving permanent privilege.
+
+**Checklist:** record failed action, effective identity, resource, and scope. Inspect direct and inherited assignments, groups, and conditions. Separate management and data planes. Consider propagation or credential refresh as appropriate. Retest the minimal failing operation rather than a different action. Retain evidence explaining why access was granted or refused.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting)
+
+<a id="learn-vault-recovery"></a>
+
+## 12. Recovering Key Vault does not restore every integration
+
+Soft delete supports recovery of vaults and supported objects during retention. Recovering a deleted vault does not automatically restore certain integrations such as RBAC assignments and Event Grid subscriptions; review and recreate them where needed.
+
+**Case:** the vault returns but the API cannot read its secret. A visible resource name does not establish recovered access and dependencies. Inspect identity, permissions, and application settings.
+
+**Runbook:** inventory objects and consumers, prepare protection and ownership, distinguish recovery from purge, and validate a complete request. Do not use purge as improvised cleanup: where allowed, it removes the purged object's recovery option. Check protections and restrictions that may prevent purge. Recovery ends when the authorised consumer works, not when the portal displays the vault.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)

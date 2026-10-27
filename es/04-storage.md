@@ -60,3 +60,9 @@ Una URL con SAS puede conceder acceso a quien la tenga. Limitar permisos, duraci
 Una user delegation SAS para Blob se firma mediante una clave de delegación obtenida con Entra ID. Emitirla requiere permisos para obtener esa clave; tener un enlace de un blob no concede ese derecho. La firma y las restricciones de acceso deben diseñarse conjuntamente.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Ampliación desde Microsoft Learn](15-microsoft-learn.md#learn-sas)
+
+## Recuperar blobs: elegir el nivel de protección
+
+La eliminación temporal de blobs conserva objetos eliminados durante la retención configurada. No protege por sí sola una eliminación del contenedor o de toda la cuenta. Hay que distinguir objeto, contenedor y servicio, y preparar protección para cada riesgo.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) · [Recuperar blobs: elegir el nivel de protección](15-microsoft-learn.md#learn-blob-recovery)

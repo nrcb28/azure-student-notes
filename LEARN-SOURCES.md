@@ -2,9 +2,9 @@
 
 Reference check / Consulta: **2026-10-27**.
 
-These eight articles were opened and read for the new practical expansion. Each language has a matching section with the same stable topic ID. Explanations are independently rewritten and translated; university-app scenarios are our own teaching examples. This register records source consultation, not deployment tests or certification completeness.
+These twelve articles were opened and read for the new practical expansion. Each language has a matching section with the same stable topic ID. Explanations are independently rewritten and translated; university-app scenarios are our own teaching examples. This register records source consultation, not deployment tests or certification completeness.
 
-Se consultaron estos ocho artículos para la ampliación práctica. Cada idioma tiene una sección correspondiente con el mismo identificador. Se reescribe y traduce la explicación; los casos universitarios son ejemplos didácticos propios. Consultar fuentes no equivale a probar despliegues ni a cubrir exhaustivamente un examen.
+Se consultaron estos doce artículos para la ampliación práctica. Cada idioma tiene una sección correspondiente con el mismo identificador. Se reescribe y traduce la explicación; los casos universitarios son ejemplos didácticos propios. Consultar fuentes no equivale a probar despliegues ni a cubrir exhaustivamente un examen.
 
 | ID | Article / Artículo | Integration / Integración |
 |---|---|---|
@@ -16,6 +16,10 @@ Se consultaron estos ocho artículos para la ampliación práctica. Cada idioma 
 | slots | [App Service deployment slots](https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots) | 03-compute, 12-devops; AZ-104, AZ-400 |
 | landing | [Azure landing zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) | 02-resources, 10-architecture; AZ-900, AZ-305 |
 | checks | [Azure Pipelines approvals and checks](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) | 12-devops; AZ-400 |
+| blob-recovery | [Blob soft delete](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) | 04-storage, 10-architecture; AZ-104, AZ-305 |
+| retry | [Retry pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) | 10-architecture, 11-messaging, 12-devops; AZ-305, AZ-400 |
+| rbac-diagnosis | [Troubleshoot Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting) | 06-identity; AZ-104 |
+| vault-recovery | [Key Vault soft delete and recovery](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) | 06-identity, 10-architecture; AZ-104, AZ-305 |
 
 ## Language editions / Idiomas
 

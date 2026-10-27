@@ -12,11 +12,15 @@ Azure study notes for computer science students. Short explanations, practical d
 
 ## Microsoft Learn: nueva ampliación / New expansion
 
-Ocho temas con explicaciones reescritas, fuentes directas y casos propios, disponibles en los ocho idiomas e integrados también en los capítulos y certificaciones.
+Doce temas con explicaciones reescritas, fuentes directas y casos propios, disponibles en los ocho idiomas e integrados también en los capítulos y certificaciones.
 
-Eight topics with rewritten explanations, direct sources, and original cases, available in all eight languages and integrated into chapters and exam routes.
+Twelve topics with rewritten explanations, direct sources, and original cases, available in all eight languages and integrated into chapters and exam routes.
 
 [Fuentes verificadas / Source register](LEARN-SOURCES.md) · [Español](es/15-microsoft-learn.md) · [日本語](ja/15-microsoft-learn.md) · [简体中文](zh/15-microsoft-learn.md)
+
+Nuevos temas: recuperación de blobs, reintentos e idempotencia, diagnóstico RBAC y recuperación de Key Vault. Cada uno incluye un caso y pasos de revisión en los ocho idiomas.
+
+New topics: blob recovery, retries and idempotency, RBAC diagnosis, and Key Vault recovery. Each includes a case and review steps in all eight languages.
 
 ## Idiomas / Languages
 

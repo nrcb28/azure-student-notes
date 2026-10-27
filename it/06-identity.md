@@ -23,3 +23,15 @@ La nostra app deve verificare il proprietario di ogni documento: essere autentic
 Una user delegation SAS per Blob usa una chiave di delegazione ottenuta con Entra ID. Servono i diritti per ottenerla; conoscere l'URL non basta.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Approfondimento Microsoft Learn](15-microsoft-learn.md#learn-sas)
+
+## Diagnosticare RBAC con prove
+
+Amministrare risorse non concede automaticamente assegnazione di ruoli o accesso ai dati. Servono azione e ambito adeguati; condizioni possono limitare ruoli e destinatari.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting) · [Diagnosticare RBAC con prove](15-microsoft-learn.md#learn-rbac-diagnosis)
+
+## Recuperare Key Vault e le dipendenze
+
+Soft delete consente recupero entro retention. Ripristinare il vault non ricrea automaticamente integrazioni come assegnazioni RBAC e sottoscrizioni Event Grid.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) · [Recuperare Key Vault e le dipendenze](15-microsoft-learn.md#learn-vault-recovery)

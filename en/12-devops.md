@@ -81,3 +81,9 @@ A deployment slot has its own hostname and runs an application. Copying settings
 Azure Pipelines resource owners administer approvals and checks outside pipeline YAML. A stage must satisfy checks on its resources before starting. Author-controlled conditions are not equivalent separation of responsibility.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-checks)
+
+## Retries: do not repeat every failure
+
+Retries help transient failures, not invalid credentials or malformed requests. Bound attempts and total duration. Inspect built-in SDK retries to avoid multiplying them across layers.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Retries: do not repeat every failure](15-microsoft-learn.md#learn-retry)

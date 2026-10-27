@@ -62,3 +62,15 @@ Workload identities need review too. Managed identity removes a stored credentia
 A Blob user delegation SAS is signed using a delegation key obtained through Entra ID. Issuing one requires permission to obtain that key; possessing a blob URL does not grant that permission. Design the signature and access constraints together.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-user-delegation-sas-create-cli) · [Microsoft Learn expansion](15-microsoft-learn.md#learn-sas)
+
+## Evidence-based RBAC diagnosis
+
+Resource administration does not imply role-assignment authority or data access. Creating assignments needs the corresponding action at the correct scope, and conditions can restrict permitted roles or principals.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/troubleshooting) · [Evidence-based RBAC diagnosis](15-microsoft-learn.md#learn-rbac-diagnosis)
+
+## Recovering Key Vault does not restore every integration
+
+Soft delete supports recovery of vaults and supported objects during retention. Recovering a deleted vault does not automatically restore certain integrations such as RBAC assignments and Event Grid subscriptions; review and recreate them where needed.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) · [Recovering Key Vault does not restore every integration](15-microsoft-learn.md#learn-vault-recovery)

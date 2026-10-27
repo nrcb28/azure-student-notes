@@ -13,3 +13,9 @@
 ---
 
 [←](10-architecture.md) · [→](12-devops.md) · [English](../en/11-messaging.md)
+
+## 有界重试与幂等性
+
+重试适合暂时故障，不能修复无效凭据或错误请求。限制次数和总时长，并检查 SDK 已有重试。
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [有界重试与幂等性](15-microsoft-learn.md#learn-retry)

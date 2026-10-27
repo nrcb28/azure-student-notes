@@ -35,3 +35,9 @@ Uno slot ha hostname e applicazione propri. Copiare impostazioni non clona conte
 In Azure Pipelines i responsabili delle risorse amministrano approvals e checks fuori dal YAML. Prima della fase devono essere soddisfatti i controlli delle risorse utilizzate.
 
 [Microsoft Learn](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops) · [Approfondimento Microsoft Learn](15-microsoft-learn.md#learn-checks)
+
+## Retry con limiti e idempotenza
+
+I retry aiutano guasti transitori, non credenziali errate o richieste invalide. Limitiamo tentativi e tempo totale e controlliamo quelli già effettuati dagli SDK.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry) · [Retry con limiti e idempotenza](15-microsoft-learn.md#learn-retry)
