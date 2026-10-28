@@ -33,3 +33,5 @@ Se añaden versiones de estudio adaptadas en italiano, alemán, francés y ruso,
 Credit: Microsoft and Microsoft Learn contributors for the documentation identified in [LEARN-SOURCES.md](LEARN-SOURCES.md). Changes: paraphrase, reorganisation, translation, and original university-app scenarios. Japanese and Simplified Chinese study editions are added. Original project attribution remains applicable. No official status, endorsement, certified translation, or warranties are implied.
 
 Se atribuyen las nuevas referencias a Microsoft y los colaboradores de Microsoft Learn. Se añaden paráfrasis, reorganización, traducciones y ejemplos propios, además de ediciones en japonés y chino simplificado. Se mantiene la atribución del proyecto original, sin respaldo oficial ni garantías.
+
+Added original common-core exercises, twenty advanced certification units per language, synthetic-data recovery and read-only role labs, and a local SQLite retry demonstration. Microsoft Learn references are listed in SOURCES.md; original attribution remains unchanged.

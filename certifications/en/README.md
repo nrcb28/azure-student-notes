@@ -50,3 +50,10 @@ AZ-303 and AZ-304 from the source repository are historical exams. Related archi
 ## Microsoft Learn expansion
 
 [Microsoft Learn expansion](../../en/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)
+
+## Advanced workbook
+
+- [AZ-900](AZ-900-workbook.md)
+- [AZ-104](AZ-104-workbook.md)
+- [AZ-305](AZ-305-workbook.md)
+- [AZ-400](AZ-400-workbook.md)

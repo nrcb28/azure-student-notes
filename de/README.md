@@ -1,5 +1,14 @@
 # Azure verständlich erklärt
 
+## Gemeinsamer Lernweg und Übungen
+
+[Gemeinsamer Lernkern](16-common-core.md) · [Labs](17-advanced-labs.md)
+
+- [AZ-900 · Vertiefungsheft](../certifications/de/AZ-900-workbook.md)
+- [AZ-104 · Vertiefungsheft](../certifications/de/AZ-104-workbook.md)
+- [AZ-305 · Vertiefungsheft](../certifications/de/AZ-305-workbook.md)
+- [AZ-400 · Vertiefungsheft](../certifications/de/AZ-400-workbook.md)
+
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 Bearbeitete deutsche Ausgabe mit allen Lernpfaden, eigenen Erklärungen und Fällen. Zusätzliche Vertiefungen stehen in den ausführlichen spanischen und englischen Ausgaben. Keine beglaubigte Übersetzung und kein offizieller Lehrplan.

@@ -18,3 +18,9 @@ Las ediciones italiana, alemana, francesa, rusa, japonesa y china simplificada s
 Product names, commands and parameters are preserved. Newly adapted lab command blocks match English exactly, including comments. Existing Spanish examples contain localised comments. All labs are unverified in Azure; local structural and Bash syntax checks are separate from deployment tests.
 
 [Sources](LEARN-SOURCES.md) · [Attribution](ATTRIBUTION.md)
+
+## Common study core / Núcleo común
+
+The new core and advanced workbooks share unit coverage, scenarios, evidence and lab procedures across all eight languages. Earlier supplementary notes retain different lengths. See [STUDY-PARITY.md](STUDY-PARITY.md) for the exact scope and limits of parity.
+
+El nuevo núcleo iguala unidades, escenarios, evidencias y procedimientos. Las notas complementarias anteriores conservan extensiones distintas. El registro detalla qué se ha igualado y qué no.

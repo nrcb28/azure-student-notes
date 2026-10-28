@@ -50,3 +50,10 @@ Los exámenes AZ-303 y AZ-304 del repositorio de referencia son históricos. Su 
 ## Ampliación desde Microsoft Learn
 
 [Ampliación desde Microsoft Learn](../../es/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)
+
+## Cuaderno avanzado
+
+- [AZ-900](AZ-900-workbook.md)
+- [AZ-104](AZ-104-workbook.md)
+- [AZ-305](AZ-305-workbook.md)
+- [AZ-400](AZ-400-workbook.md)

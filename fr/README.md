@@ -1,5 +1,14 @@
 # Azure sans se compliquer la vie
 
+## Parcours commun et pratiques
+
+[Socle commun d'étude](16-common-core.md) · [Labs](17-advanced-labs.md)
+
+- [AZ-900 · Cahier avancé](../certifications/fr/AZ-900-workbook.md)
+- [AZ-104 · Cahier avancé](../certifications/fr/AZ-104-workbook.md)
+- [AZ-305 · Cahier avancé](../certifications/fr/AZ-305-workbook.md)
+- [AZ-400 · Cahier avancé](../certifications/fr/AZ-400-workbook.md)
+
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 Édition française adaptée couvrant tous les parcours avec explications, exemples et cas propres. Les éditions espagnole et anglaise proposent des approfondissements supplémentaires. Ce n'est ni une traduction certifiée ni un programme officiel.

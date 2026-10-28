@@ -66,3 +66,13 @@ Four additional Microsoft Learn articles were reviewed on 2026-10-27: Blob soft 
 Se revisaron cuatro artículos adicionales sobre recuperación, reintentos y permisos. El registro reúne doce temas, con casos y procedimientos en los ocho idiomas. No se atribuyen nuevas pruebas en Azure.
 
 [Sources / Fuentes](LEARN-SOURCES.md)
+
+## Advanced study route and labs / Ruta avanzada y prácticas
+
+Official exam guides were checked again for this revision. New labs refer to:
+- [Enable Blob soft delete](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-enable)
+- [Manage and restore deleted blobs](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-manage)
+- [List RBAC assignments using CLI](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-list-cli)
+- [Install Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)
+
+Scenarios, exercises and the SQLite simulator are original teaching material. Cloud lab instructions are not claimed to have been deployed. Existing licence and attribution notices remain applicable.

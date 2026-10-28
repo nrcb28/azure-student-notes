@@ -22,3 +22,10 @@
 ## Microsoft Learn 补充内容
 
 [Microsoft Learn 补充内容](../../zh/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)
+
+## 进阶练习册
+
+- [AZ-900](AZ-900-workbook.md)
+- [AZ-104](AZ-104-workbook.md)
+- [AZ-305](AZ-305-workbook.md)
+- [AZ-400](AZ-400-workbook.md)

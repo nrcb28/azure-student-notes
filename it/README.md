@@ -1,5 +1,14 @@
 # Azure senza troppa confusione
 
+## Percorso comune e laboratori
+
+[Nucleo comune di studio](16-common-core.md) · [Labs](17-advanced-labs.md)
+
+- [AZ-900 · Quaderno avanzato](../certifications/it/AZ-900-workbook.md)
+- [AZ-104 · Quaderno avanzato](../certifications/it/AZ-104-workbook.md)
+- [AZ-305 · Quaderno avanzato](../certifications/it/AZ-305-workbook.md)
+- [AZ-400 · Quaderno avanzato](../certifications/it/AZ-400-workbook.md)
+
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 Edizione adattata in italiano: copre tutti i percorsi del progetto con spiegazioni, esempi e casi propri. Per approfondimenti ulteriori sono disponibili anche le edizioni estese in spagnolo e inglese. Non è una traduzione certificata né un programma ufficiale.

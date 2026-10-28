@@ -1,5 +1,14 @@
 # Azure without the confusion
 
+## Common route and labs
+
+[Common study core](16-common-core.md) · [Labs](17-advanced-labs.md)
+
+- [AZ-900 · Advanced workbook](../certifications/en/AZ-900-workbook.md)
+- [AZ-104 · Advanced workbook](../certifications/en/AZ-104-workbook.md)
+- [AZ-305 · Advanced workbook](../certifications/en/AZ-305-workbook.md)
+- [AZ-400 · Advanced workbook](../certifications/en/AZ-400-workbook.md)
+
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)

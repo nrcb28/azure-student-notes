@@ -10,6 +10,16 @@ Azure study notes for computer science students. Short explanations, practical d
 
 **Certificaciones / Certifications: [Español](certifications/es/README.md) · [English](certifications/en/README.md)**
 
+## Ruta común ampliada / Expanded common route
+
+- [Doce unidades básicas en ocho idiomas / Twelve foundation units](STUDY-PARITY.md).
+- [20 unidades avanzadas por idioma / 20 advanced units per language](certifications/es/README.md).
+- [Tres laboratorios nuevos / Three new labs](es/17-advanced-labs.md): recuperación de blobs, inspección de roles y simulación local de reintentos.
+
+Cada unidad avanzada incluye explicación, escenario y evidencia solicitada. Las notas anteriores se conservan; el núcleo nuevo tiene los mismos objetivos y entregables en los ocho idiomas. No se afirma traducción literal completa de cada párrafo anterior.
+
+Each advanced unit includes explanation, scenario, and requested evidence. Earlier notes remain available; the new core has matching objectives and deliverables in all eight languages. This does not claim complete verbatim translation of every earlier paragraph.
+
 ## Microsoft Learn: nueva ampliación / New expansion
 
 Doce temas con explicaciones reescritas, fuentes directas y casos propios, disponibles en los ocho idiomas e integrados también en los capítulos y certificaciones.
@@ -94,5 +104,7 @@ python tools/check_docs.py
 Comprueba enlaces relativos a archivos, bloques de código, correspondencia de idiomas, archivos de certificaciones y sintaxis Bash. No consulta URLs remotas ni valida despliegues Azure o compilación Bicep.
 
 Checks relative file links, code fences, language counterparts, certification files, and Bash syntax. It does not check remote URLs, Azure deployments, or Bicep compilation.
+
+[Validación de esta revisión / Revision validation](VALIDATION.md) · [Equivalencia del núcleo / Core parity](STUDY-PARITY.md)
 
 Consulta [ATTRIBUTION.md](ATTRIBUTION.md), [LICENSE.md](LICENSE.md) y [las fuentes](SOURCES.md).

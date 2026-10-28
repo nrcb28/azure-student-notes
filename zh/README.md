@@ -1,5 +1,14 @@
 # 面向计算机专业学生的 Azure 笔记
 
+## 共同路线与实验
+
+[共同学习核心](16-common-core.md) · [Labs](17-advanced-labs.md)
+
+- [AZ-900 · 进阶练习册](../certifications/zh/AZ-900-workbook.md)
+- [AZ-104 · 进阶练习册](../certifications/zh/AZ-104-workbook.md)
+- [AZ-305 · 进阶练习册](../certifications/zh/AZ-305-workbook.md)
+- [AZ-400 · 进阶练习册](../certifications/zh/AZ-400-workbook.md)
+
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 这是重新组织的中文学习版本，不是官方教材或认证翻译。西班牙语和英语版本保留了更多详细说明。产品名称、命令和参数保持原样。考试范围和前置条件请以 Microsoft Learn 为准。

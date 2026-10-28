@@ -24,3 +24,10 @@ Bei Expert-Zertifizierungen die Voraussetzungen auf offiziellen Seiten prüfen. 
 ## Microsoft-Learn-Vertiefung
 
 [Microsoft-Learn-Vertiefung](../../de/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)
+
+## Vertiefungsheft
+
+- [AZ-900](AZ-900-workbook.md)
+- [AZ-104](AZ-104-workbook.md)
+- [AZ-305](AZ-305-workbook.md)
+- [AZ-400](AZ-400-workbook.md)

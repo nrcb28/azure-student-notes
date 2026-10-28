@@ -22,3 +22,10 @@
 ## Microsoft Learn の補足
 
 [Microsoft Learn の補足](../../ja/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)
+
+## 発展ワークブック
+
+- [AZ-900](AZ-900-workbook.md)
+- [AZ-104](AZ-104-workbook.md)
+- [AZ-305](AZ-305-workbook.md)
+- [AZ-400](AZ-400-workbook.md)

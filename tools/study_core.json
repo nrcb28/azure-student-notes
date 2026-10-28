@@ -1,0 +1,63 @@
+{
+  "languages": [
+    "es",
+    "en",
+    "it",
+    "de",
+    "fr",
+    "ru",
+    "ja",
+    "zh"
+  ],
+  "core_units": [
+    "cloud",
+    "resources",
+    "compute",
+    "data",
+    "network",
+    "identity",
+    "governance",
+    "monitor",
+    "cost",
+    "recovery",
+    "messaging",
+    "delivery"
+  ],
+  "exams": {
+    "AZ-900": [
+      "az-900-unit-1",
+      "az-900-unit-2",
+      "az-900-unit-3",
+      "az-900-unit-4",
+      "az-900-unit-5"
+    ],
+    "AZ-104": [
+      "az-104-unit-1",
+      "az-104-unit-2",
+      "az-104-unit-3",
+      "az-104-unit-4",
+      "az-104-unit-5"
+    ],
+    "AZ-305": [
+      "az-305-unit-1",
+      "az-305-unit-2",
+      "az-305-unit-3",
+      "az-305-unit-4",
+      "az-305-unit-5"
+    ],
+    "AZ-400": [
+      "az-400-unit-1",
+      "az-400-unit-2",
+      "az-400-unit-3",
+      "az-400-unit-4",
+      "az-400-unit-5"
+    ]
+  },
+  "labs": [
+    "advanced-lab-1",
+    "advanced-lab-2",
+    "advanced-lab-3",
+    "advanced-lab-4"
+  ],
+  "meaning": "Equal objectives, scenarios and evidence in the new common core; older explanatory notes remain supplementary."
+}
