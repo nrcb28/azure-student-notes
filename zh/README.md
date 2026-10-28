@@ -1,5 +1,7 @@
 # 面向计算机专业学生的 Azure 笔记
 
+**[交互学习训练器](18-study-trainer.md) · [Anki](../flashcards/zh.tsv)**
+
 ## 共同路线与实验
 
 [共同学习核心](16-common-core.md) · [Labs](17-advanced-labs.md)

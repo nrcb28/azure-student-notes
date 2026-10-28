@@ -35,3 +35,7 @@ Credit: Microsoft and Microsoft Learn contributors for the documentation identif
 Se atribuyen las nuevas referencias a Microsoft y los colaboradores de Microsoft Learn. Se añaden paráfrasis, reorganización, traducciones y ejemplos propios, además de ediciones en japonés y chino simplificado. Se mantiene la atribución del proyecto original, sin respaldo oficial ni garantías.
 
 Added original common-core exercises, twenty advanced certification units per language, synthetic-data recovery and read-only role labs, and a local SQLite retry demonstration. Microsoft Learn references are listed in SOURCES.md; original attribution remains unchanged.
+
+## Study trainer and flashcard exports
+
+Added an original offline study tool, local review scheduling, self-assessment, and Anki exports generated from the existing case banks. The exported educational text retains the repository's CC BY 4.0 attribution. No official Microsoft or Anki endorsement is implied.

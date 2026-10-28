@@ -1,0 +1,43 @@
+#separator:Tab
+#html:true
+#tags column:3
+AZ-900 · 需要内核控制怎么办？	"评估满足要求的 VM，不假设 Web 平台具有相同控制能力。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-900-cases.md"">zh/AZ-900/01</a></small>"	zh az900
+AZ-900 · MFA 会授予文档权限吗？	"不会。身份验证与授权不同。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-900-cases.md"">zh/AZ-900/02</a></small>"	zh az900
+AZ-900 · 公共 endpoint 就是匿名访问吗？	"不一定，仍可以要求身份和权限。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-900-cases.md"">zh/AZ-900/03</a></small>"	zh az900
+AZ-900 · 增加实例属于哪种扩展？	"横向扩展；增加单实例能力是纵向扩展。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-900-cases.md"">zh/AZ-900/04</a></small>"	zh az900
+AZ-900 · 副本能恢复所有删除吗？	"不能，需要保留以前状态的机制。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-900-cases.md"">zh/AZ-900/05</a></small>"	zh az900
+AZ-900 · 如何限制部署区域？	"使用作用域和效果合适的 Policy。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-900-cases.md"">zh/AZ-900/06</a></small>"	zh az900
+AZ-900 · 预算停止全部支出吗？	"不会，主要用于跟踪和告警。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-900-cases.md"">zh/AZ-900/07</a></small>"	zh az900
+AZ-900 · CPU 低但 API 很慢。	"检查数据库、网络、依赖和等待。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-900-cases.md"">zh/AZ-900/08</a></small>"	zh az900
+AZ-900 · 网络慢但要迁移大量数据。	"按时间、支持和安全比较网络传输与 Data Box。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-900-cases.md"">zh/AZ-900/09</a></small>"	zh az900
+AZ-900 · 部署成功就足够了吗？	"不够，还要验证实际功能和依赖。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-900-cases.md"">zh/AZ-900/10</a></small>"	zh az900
+AZ-104 · 移除 Reader 后仍能访问。	"检查组、继承分配和实际身份。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-104-cases.md"">zh/AZ-104/01</a></small>"	zh az104
+AZ-104 · Contributor 无法读取 Blob。	"检查数据角色及身份验证方式。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-104-cases.md"">zh/AZ-104/02</a></small>"	zh az104
+AZ-104 · VNet integration 后 Web 仍公开。	"区分出站集成和入站控制。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-104-cases.md"">zh/AZ-104/03</a></small>"	zh az104
+AZ-104 · backend 显示 unhealthy。	"检查 probe 端口、响应、进程和过滤。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-104-cases.md"">zh/AZ-104/04</a></small>"	zh az104
+AZ-104 · 有 A-B、B-C 对等互连，A-C 不通。	"对等互连不会自动传递。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-104-cases.md"">zh/AZ-104/05</a></small>"	zh az104
+AZ-104 · Bicep 编译通过但部署被拒绝。	"检查 Policy、权限、配额和可用性。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-104-cases.md"">zh/AZ-104/06</a></small>"	zh az104
+AZ-104 · 备份成功能保证 RTO 吗？	"不能，必须测量完整恢复时间。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-104-cases.md"">zh/AZ-104/07</a></small>"	zh az104
+AZ-104 · 有 private endpoint 却解析为公共 IP。	"检查 DNS 区域、链接、转发及客户端解析。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-104-cases.md"">zh/AZ-104/08</a></small>"	zh az104
+AZ-104 · VM 停止后仍有费用。	"区分停止、取消分配及磁盘等成本。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-104-cases.md"">zh/AZ-104/09</a></small>"	zh az104
+AZ-104 · Policy 未修复旧资源。	"检查效果和所需修正任务。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-104-cases.md"">zh/AZ-104/10</a></small>"	zh az104
+AZ-305 · RPO 为零就表示 RTO 为零？	"不是，数据损失和恢复时间独立。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-305-cases.md"">zh/AZ-305/01</a></small>"	zh az305
+AZ-305 · JSON 加复杂事务该如何选择？	"按查询和需求选择数据库，而不是传输格式。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-305-cases.md"">zh/AZ-305/02</a></small>"	zh az305
+AZ-305 · 小团队为一个 API 选择 AKS。	"比较 Kubernetes 必要性、能力、成本和备选。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-305-cases.md"">zh/AZ-305/03</a></small>"	zh az305
+AZ-305 · 境外复制与境内存储要求冲突。	"检查副本、备份、日志和依赖的位置。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-305-cases.md"">zh/AZ-305/04</a></small>"	zh az305
+AZ-305 · VM 已复制但缺少 DNS 和秘密。	"完整服务尚未恢复。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-305-cases.md"">zh/AZ-305/05</a></small>"	zh az305
+AZ-305 · 添加缓存要考虑什么？	"设计过期、失效和旧数据容忍。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-305-cases.md"">zh/AZ-305/06</a></small>"	zh az305
+AZ-305 · 持续写入期间迁移。	"定义初始传输、同步、切换和回退。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-305-cases.md"">zh/AZ-305/07</a></small>"	zh az305
+AZ-305 · 分析拖慢注册事务。	"先检查查询及分析隔离，再扩容。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-305-cases.md"">zh/AZ-305/08</a></small>"	zh az305
+AZ-305 · 架构图只有服务名。	"补充需求、边界、故障、运维和验证。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-305-cases.md"">zh/AZ-305/09</a></small>"	zh az305
+AZ-305 · 预算减少但目标不变。	"重新评估方案和测量，不作无依据承诺。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-305-cases.md"">zh/AZ-305/10</a></small>"	zh az305
+AZ-400 · 测试后为生产重新构建。	"存在差异风险，应推广同一验证制品。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-400-cases.md"">zh/AZ-400/01</a></small>"	zh az400
+AZ-400 · 删列后回滚旧镜像。	"不会自动恢复结构和数据。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-400-cases.md"">zh/AZ-400/02</a></small>"	zh az400
+AZ-400 · 秘密在 Git 暴露几分钟。	"先撤销或轮换，再调查暴露。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-400-cases.md"">zh/AZ-400/03</a></small>"	zh az400
+AZ-400 · 外部 PR 使用内部 runner。	"检查信任、隔离、持久性和权限。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-400-cases.md"">zh/AZ-400/04</a></small>"	zh az400
+AZ-400 · canary CPU 正常但结果错误。	"需要业务功能信号及停止标准。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-400-cases.md"">zh/AZ-400/05</a></small>"	zh az400
+AZ-400 · 测试第五次才成功。	"调查不稳定性，不应掩盖。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-400-cases.md"">zh/AZ-400/06</a></small>"	zh az400
+AZ-400 · 已允许 OIDC 但 Azure 登录失败。	"检查 issuer、subject、audience 和信任。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-400-cases.md"">zh/AZ-400/07</a></small>"	zh az400
+AZ-400 · 发布增多但恢复变慢。	"同时评估速度和稳定性。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-400-cases.md"">zh/AZ-400/08</a></small>"	zh az400
+AZ-400 · 旧缓存导致构建失败。	"检查键、依赖和工具版本。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-400-cases.md"">zh/AZ-400/09</a></small>"	zh az400
+AZ-400 · 复盘只说以后小心。	"需要具体措施、负责人、期限和验证。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/zh/AZ-400-cases.md"">zh/AZ-400/10</a></small>"	zh az400

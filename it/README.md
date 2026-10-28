@@ -1,5 +1,7 @@
 # Azure senza troppa confusione
 
+**[Allenatore interattivo](18-study-trainer.md) · [Anki](../flashcards/it.tsv)**
+
 ## Percorso comune e laboratori
 
 [Nucleo comune di studio](16-common-core.md) · [Labs](17-advanced-labs.md)

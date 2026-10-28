@@ -13,3 +13,7 @@ No Azure deployment, Blob restore against Azure, effective-permission check agai
 No se ejecutaron despliegues ni restauraciones en Azure, ni consultas de permisos en un tenant real. La compilación local no demuestra cuotas, políticas, permisos, disponibilidad regional, precios o éxito operativo.
 
 Structural parity checks do not certify language quality or establish complete translation of older supplementary notes. See [STUDY-PARITY.md](STUDY-PARITY.md).
+
+## Offline study trainer
+
+The trainer adds 15 tests covering all 320 source cases, interval scheduling, selection, Unicode export and HTML escaping, existing-file protection, damaged progress, concurrent sessions and locks, interactive saving and quitting, read-only commands, UTC fallback, and matching ready-made decks. These are local behaviour checks, not assessments of a learner or Azure deployments.

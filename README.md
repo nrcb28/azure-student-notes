@@ -10,6 +10,22 @@ Azure study notes for computer science students. Short explanations, practical d
 
 **Certificaciones / Certifications: [Español](certifications/es/README.md) · [English](certifications/en/README.md)**
 
+## Practica de verdad / Practise actively
+
+**[Entrenador en español](es/18-study-trainer.md) · [English trainer](en/18-study-trainer.md) · [Anki en ocho idiomas](flashcards/README.md)**
+
+Un entrenador local convierte los 320 casos del repositorio en sesiones de repaso. Guarda valoraciones, prioriza repasos pendientes, recupera dificultades, propone un plan y exporta a Anki. Funciona sin Azure, cuenta ni paquetes externos. Es autoevaluación, no corrección automática ni predicción de aprobar.
+
+An offline trainer turns the 320 repository cases into review sessions. It saves ratings, prioritises due reviews, revisits difficulties, suggests a plan, and exports to Anki. No Azure account or external packages. Self-assessment, not automatic grading or a pass prediction.
+
+```bash
+python tools/study.py demo --lang es --exam AZ-104
+python tools/study.py study --lang es --exam AZ-104 --limit 5
+python tools/study.py stats --lang es
+```
+
+[Manual completo / Full manual](TRAINER.md). El progreso personal no se sube a Git / Personal progress is excluded from Git.
+
 ## Ruta común ampliada / Expanded common route
 
 - [Doce unidades básicas en ocho idiomas / Twelve foundation units](STUDY-PARITY.md).

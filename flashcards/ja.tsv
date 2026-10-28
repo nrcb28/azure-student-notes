@@ -1,0 +1,43 @@
+#separator:Tab
+#html:true
+#tags column:3
+AZ-900 · カーネル制御が必要なら？	"要件を満たす VM を検討。Web 基盤で同じ制御ができるとは限りません。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-900-cases.md"">ja/AZ-900/01</a></small>"	ja az900
+AZ-900 · MFA は文書権限を与える？	"いいえ。認証と認可は別です。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-900-cases.md"">ja/AZ-900/02</a></small>"	ja az900
+AZ-900 · 公開 endpoint は匿名アクセス？	"必ずしもそうではありません。ID と権限を要求できます。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-900-cases.md"">ja/AZ-900/03</a></small>"	ja az900
+AZ-900 · 台数を増やすスケールは？	"水平スケール。一台の能力を増やすのは垂直です。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-900-cases.md"">ja/AZ-900/04</a></small>"	ja az900
+AZ-900 · レプリカで全削除を戻せる？	"いいえ。過去の状態を保持する仕組みが必要です。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-900-cases.md"">ja/AZ-900/05</a></small>"	ja az900
+AZ-900 · 地域を制限するなら？	"適切なスコープと効果の Policy を使います。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-900-cases.md"">ja/AZ-900/06</a></small>"	ja az900
+AZ-900 · 予算は全費用を止める？	"いいえ。追跡と警告が中心です。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-900-cases.md"">ja/AZ-900/07</a></small>"	ja az900
+AZ-900 · CPU が低いのに API が遅い。	"DB、経路、依存先、待ち時間を調べます。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-900-cases.md"">ja/AZ-900/08</a></small>"	ja az900
+AZ-900 · 回線が遅く大量データを移す。	"ネット転送と Data Box を時間、対応、安全性で比較します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-900-cases.md"">ja/AZ-900/09</a></small>"	ja az900
+AZ-900 · デプロイ成功だけで十分？	"いいえ。実際の機能と依存先を確認します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-900-cases.md"">ja/AZ-900/10</a></small>"	ja az900
+AZ-104 · Reader を外したのに見える。	"グループと継承割り当て、実際の ID を確認します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-104-cases.md"">ja/AZ-104/01</a></small>"	ja az104
+AZ-104 · Contributor が Blob を読めない。	"データロールと認証方法を確認します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-104-cases.md"">ja/AZ-104/02</a></small>"	ja az104
+AZ-104 · VNet integration 後も Web が公開。	"送信統合と受信制御を区別します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-104-cases.md"">ja/AZ-104/03</a></small>"	ja az104
+AZ-104 · backend が unhealthy。	"probe のポートと応答、プロセス、フィルターを確認します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-104-cases.md"">ja/AZ-104/04</a></small>"	ja az104
+AZ-104 · A-B、B-C のピアリングで A-C 不通。	"ピアリングは自動で推移的になりません。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-104-cases.md"">ja/AZ-104/05</a></small>"	ja az104
+AZ-104 · Bicep は通るが公開が拒否。	"Policy、権限、クォータ、利用可能性を調べます。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-104-cases.md"">ja/AZ-104/06</a></small>"	ja az104
+AZ-104 · バックアップ成功で RTO 保証？	"いいえ。完全な復旧時間を測ります。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-104-cases.md"">ja/AZ-104/07</a></small>"	ja az104
+AZ-104 · private endpoint があるのに公開 IP。	"DNS ゾーン、リンク、転送、クライアント解決を確認します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-104-cases.md"">ja/AZ-104/08</a></small>"	ja az104
+AZ-104 · 停止 VM に費用が残る。	"停止と割り当て解除、ディスクなどを区別します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-104-cases.md"">ja/AZ-104/09</a></small>"	ja az104
+AZ-104 · 古いリソースが Policy で直らない。	"効果と必要な修復タスクを確認します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-104-cases.md"">ja/AZ-104/10</a></small>"	ja az104
+AZ-305 · RPO ゼロなら RTO もゼロ？	"いいえ。損失と復旧時間は独立です。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-305-cases.md"">ja/AZ-305/01</a></small>"	ja az305
+AZ-305 · JSON と複雑なトランザクション。	"交換形式ではなく問い合わせと要件で DB を選びます。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-305-cases.md"">ja/AZ-305/02</a></small>"	ja az305
+AZ-305 · 小さいチームが API 一つに AKS。	"Kubernetes の必要性、能力、費用、代案を比較します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-305-cases.md"">ja/AZ-305/03</a></small>"	ja az305
+AZ-305 · 国外複製と国内保管の条件。	"レプリカ、コピー、ログ、依存先の場所を確認します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-305-cases.md"">ja/AZ-305/04</a></small>"	ja az305
+AZ-305 · VM 複製後に DNS と秘密がない。	"サービス全体はまだ復旧できていません。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-305-cases.md"">ja/AZ-305/05</a></small>"	ja az305
+AZ-305 · キャッシュを追加する。	"失効、無効化、古いデータの許容を設計します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-305-cases.md"">ja/AZ-305/06</a></small>"	ja az305
+AZ-305 · 書き込みが続く移行。	"初回転送、同期、切り替えと戻し方を定義します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-305-cases.md"">ja/AZ-305/07</a></small>"	ja az305
+AZ-305 · 分析が登録処理を遅くする。	"問い合わせと分析分離を調べてから拡張します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-305-cases.md"">ja/AZ-305/08</a></small>"	ja az305
+AZ-305 · 図にサービス名しかない。	"要件、境界、障害、運用、検証を追加します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-305-cases.md"">ja/AZ-305/09</a></small>"	ja az305
+AZ-305 · 予算減、目標は同じ。	"代案と測定で再評価し、根拠なく約束しません。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-305-cases.md"">ja/AZ-305/10</a></small>"	ja az305
+AZ-400 · 試験後に本番用に再ビルド。	"差異のリスクがあります。同じ検証済み成果物を使います。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-400-cases.md"">ja/AZ-400/01</a></small>"	ja az400
+AZ-400 · DB 列削除後に旧イメージへ戻す。	"スキーマとデータは自動で戻りません。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-400-cases.md"">ja/AZ-400/02</a></small>"	ja az400
+AZ-400 · 秘密が数分 Git に公開。	"失効または更新を先に行い、露出を調査します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-400-cases.md"">ja/AZ-400/03</a></small>"	ja az400
+AZ-400 · 外部 PR を内部 runner で実行。	"信頼、隔離、永続性、権限を検討します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-400-cases.md"">ja/AZ-400/04</a></small>"	ja az400
+AZ-400 · canary の CPU 正常、結果が誤り。	"業務機能の信号と停止基準が必要です。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-400-cases.md"">ja/AZ-400/05</a></small>"	ja az400
+AZ-400 · 五回目で試験成功。	"不安定さを調べ、単に隠しません。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-400-cases.md"">ja/AZ-400/06</a></small>"	ja az400
+AZ-400 · OIDC 許可、Azure ログイン拒否。	"issuer、subject、audience、信頼を確認します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-400-cases.md"">ja/AZ-400/07</a></small>"	ja az400
+AZ-400 · 公開頻度増、復旧は遅い。	"速度と安定性を一緒に評価します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-400-cases.md"">ja/AZ-400/08</a></small>"	ja az400
+AZ-400 · 古い cache でビルド失敗。	"キー、依存、ツール版を確認します。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-400-cases.md"">ja/AZ-400/09</a></small>"	ja az400
+AZ-400 · 対策は今後注意するだけ。	"具体策、所有者、期限、確認方法が必要です。<hr><small><a href=""https://github.com/nrcb28/azure-student-notes/blob/main/certifications/ja/AZ-400-cases.md"">ja/AZ-400/10</a></small>"	ja az400

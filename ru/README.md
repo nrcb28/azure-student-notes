@@ -1,5 +1,7 @@
 # Azure понятным языком
 
+**[Интерактивный тренажёр](18-study-trainer.md) · [Anki](../flashcards/ru.tsv)**
+
 ## Общий маршрут и практики
 
 [Общее учебное ядро](16-common-core.md) · [Labs](17-advanced-labs.md)

@@ -1,5 +1,7 @@
 # Azure sin tanto lío
 
+**[Entrenador interactivo](18-study-trainer.md) · [Anki](../flashcards/es.tsv)**
+
 ## Ruta común y laboratorios
 
 [Núcleo común de estudio](16-common-core.md) · [Labs](17-advanced-labs.md)

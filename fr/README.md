@@ -1,5 +1,7 @@
 # Azure sans se compliquer la vie
 
+**[Entraîneur interactif](18-study-trainer.md) · [Anki](../flashcards/fr.tsv)**
+
 ## Parcours commun et pratiques
 
 [Socle commun d'étude](16-common-core.md) · [Labs](17-advanced-labs.md)

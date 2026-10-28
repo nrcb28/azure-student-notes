@@ -1,5 +1,7 @@
 # 学生のための Azure ノート
 
+**[学習トレーナー](18-study-trainer.md) · [Anki](../flashcards/ja.tsv)**
+
 ## 共通ルートと演習
 
 [共通学習コア](16-common-core.md) · [Labs](17-advanced-labs.md)

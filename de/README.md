@@ -1,5 +1,7 @@
 # Azure verständlich erklärt
 
+**[Interaktiver Lerntrainer](18-study-trainer.md) · [Anki](../flashcards/de.tsv)**
+
 ## Gemeinsamer Lernweg und Übungen
 
 [Gemeinsamer Lernkern](16-common-core.md) · [Labs](17-advanced-labs.md)

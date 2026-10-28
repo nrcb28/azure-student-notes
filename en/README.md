@@ -1,5 +1,7 @@
 # Azure without the confusion
 
+**[Interactive study trainer](18-study-trainer.md) · [Anki](../flashcards/en.tsv)**
+
 ## Common route and labs
 
 [Common study core](16-common-core.md) · [Labs](17-advanced-labs.md)

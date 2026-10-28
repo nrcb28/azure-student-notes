@@ -14,3 +14,9 @@
 # Python local caches
 __pycache__/
 *.py[cod]
+
+# Personal study state and ad-hoc exports
+.study-progress.json
+.study-progress.json.lock
+.study-progress.json.*
+exports/
