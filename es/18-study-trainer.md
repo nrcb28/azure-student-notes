@@ -42,3 +42,7 @@ python tools/study.py doctor --lang es
 ```
 
 [CLI reference](../TRAINER.md) · [Anki decks](../flashcards/README.md)
+
+## Mini simulacro: decide y entiende el porqué
+
+[Mini simulacro: decide y entiende el porqué](19-mini-quiz.md) · [Preguntas para leer en GitHub](20-quiz-cases.md)

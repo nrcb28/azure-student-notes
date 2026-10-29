@@ -76,3 +76,9 @@ Official exam guides were checked again for this revision. New labs refer to:
 - [Install Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)
 
 Scenarios, exercises and the SQLite simulator are original teaching material. Cloud lab instructions are not claimed to have been deployed. Existing licence and attribution notices remain applicable.
+
+## Mini quiz / Mini simulacro
+
+Eight original scenarios with matching sources and answer structure in all eight languages. The linked Learn pages were reviewed on 2026-10-29. See the [scenario-to-source map](QUIZ-SOURCES.md).
+
+Ocho escenarios originales en ocho idiomas, con fuentes revisadas el 29 de octubre de 2026. El [mapa de fuentes](QUIZ-SOURCES.md) indica el concepto utilizado en cada caso.

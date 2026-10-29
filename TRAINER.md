@@ -56,3 +56,9 @@ The scheduler is a deliberately simple interval rule, not FSRS or a scientifical
 IANA timezone display needs the operating system timezone database. If it is unavailable, use --timezone UTC; that mode uses the standard library without additional packages. Export, stats, plan and doctor do not require timezone data.
 
 Si no están disponibles los datos horarios del sistema, usa --timezone UTC. No requiere paquetes adicionales.
+
+## Preguntas con corrección / Questions with marking
+
+El [mini simulacro](QUIZ.md) añade ocho escenarios de opción múltiple en los ocho idiomas, con explicación por distractor, informe local y repaso de errores. Es una herramienta separada: este entrenador sigue usando autoevaluación para sus casos abiertos.
+
+The [mini quiz](QUIZ.md) adds eight multiple-choice scenarios in all eight languages, with distractor reasoning, local reports, and mistake review. Its results are separate from this trainer's open-case self-ratings.

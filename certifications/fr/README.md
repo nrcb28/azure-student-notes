@@ -31,3 +31,7 @@ Pour les certifications Expert, vérifier les prérequis sur les pages officiell
 - [AZ-104](AZ-104-workbook.md)
 - [AZ-305](AZ-305-workbook.md)
 - [AZ-400](AZ-400-workbook.md)
+
+## Mini simulation : choisir et comprendre pourquoi
+
+[Mini simulation : choisir et comprendre pourquoi](../../fr/19-mini-quiz.md) · [Lire les questions sur GitHub](../../fr/20-quiz-cases.md)

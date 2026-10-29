@@ -20,3 +20,6 @@ __pycache__/
 .study-progress.json.lock
 .study-progress.json.*
 exports/
+
+# Personal quiz session reports
+.study-reports/

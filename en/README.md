@@ -62,3 +62,7 @@ An expanded conceptual guide; it does not fully cover AZ-900, AZ-104, AZ-305, or
 Adapted from undergroundwires/Azure-in-bullet-points under CC BY 4.0. [Attribution and changes](../ATTRIBUTION.md).
 
 15. [Microsoft Learn expansion](15-microsoft-learn.md)
+
+## Mini quiz with reasoned marking
+
+[Mini quiz with reasoned marking](19-mini-quiz.md) · [Read the questions on GitHub](20-quiz-cases.md)

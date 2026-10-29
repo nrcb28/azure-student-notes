@@ -31,3 +31,7 @@ Per certificazioni Expert, controlla i requisiti preliminari nelle pagine uffici
 - [AZ-104](AZ-104-workbook.md)
 - [AZ-305](AZ-305-workbook.md)
 - [AZ-400](AZ-400-workbook.md)
+
+## Mini simulazione: scegli e capisci il perché
+
+[Mini simulazione: scegli e capisci il perché](../../it/19-mini-quiz.md) · [Leggere le domande su GitHub](../../it/20-quiz-cases.md)

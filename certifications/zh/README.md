@@ -29,3 +29,7 @@
 - [AZ-104](AZ-104-workbook.md)
 - [AZ-305](AZ-305-workbook.md)
 - [AZ-400](AZ-400-workbook.md)
+
+## 迷你测验：把选择背后的理由也弄懂
+
+[迷你测验：把选择背后的理由也弄懂](../../zh/19-mini-quiz.md) · [在 GitHub 阅读题目](../../zh/20-quiz-cases.md)

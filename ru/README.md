@@ -45,3 +45,7 @@
 CC BY 4.0 · [undergroundwires/Azure-in-bullet-points](https://github.com/undergroundwires/Azure-in-bullet-points) · [Attribution](../ATTRIBUTION.md)
 
 15. [Дополнение Microsoft Learn](15-microsoft-learn.md)
+
+## Мини-тест: принимать решения и разбирать ошибки
+
+[Мини-тест: принимать решения и разбирать ошибки](19-mini-quiz.md) · [Читать вопросы на GitHub](20-quiz-cases.md)

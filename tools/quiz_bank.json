@@ -1,0 +1,1274 @@
+[
+  {
+    "id": "q01",
+    "exam": "AZ-900",
+    "topic": "compute-control",
+    "variants": {
+      "en": {
+        "question": "A lab application must install its own Linux kernel driver. Which hosting option best meets that requirement?",
+        "options": [
+          "Run the application in Microsoft 365.",
+          "Use an Azure virtual machine with a compatible Linux image.",
+          "Deploy it to an App Service managed runtime.",
+          "Put the driver inside a standard Azure Function."
+        ],
+        "correct": 1,
+        "explanation": "The decisive requirement is control of the guest operating system. A compatible Azure VM lets the team manage that environment and its drivers. This also leaves operating system maintenance with the team. A convenient managed application platform is unsuitable if it does not expose the required kernel control.",
+        "distractors": [
+          "Microsoft 365 is ready-to-use software, not a host for arbitrary kernel drivers.",
+          "",
+          "An App Service managed runtime does not provide the required guest-kernel administration.",
+          "A standard Function does not grant the required kernel-driver control."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree",
+        "chapter": "03-compute.md"
+      },
+      "es": {
+        "question": "Una aplicación de laboratorio necesita instalar su propio controlador del kernel de Linux. ¿Qué opción de alojamiento cumple mejor ese requisito?",
+        "options": [
+          "Ejecutar la aplicación en Microsoft 365.",
+          "Usar una máquina virtual de Azure con una imagen de Linux compatible.",
+          "Desplegarla en un entorno de ejecución administrado de App Service.",
+          "Incluir el controlador en una Azure Function estándar."
+        ],
+        "correct": 1,
+        "explanation": "La clave es poder administrar el sistema operativo invitado. Una VM de Azure compatible permite gestionar ese entorno y sus controladores, pero también deja su mantenimiento en manos del equipo. Una plataforma administrada de aplicaciones no sirve para este caso si no ofrece el control del kernel que se necesita.",
+        "distractors": [
+          "Microsoft 365 ofrece software listo para usar; no aloja controladores de kernel arbitrarios.",
+          "",
+          "El entorno administrado de App Service no permite la administración necesaria del kernel invitado.",
+          "Una Function estándar no concede el control necesario para instalar ese controlador."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree",
+        "chapter": "03-compute.md"
+      },
+      "it": {
+        "question": "Un’applicazione di laboratorio deve installare un proprio driver del kernel Linux. Quale soluzione di hosting soddisfa meglio questo requisito?",
+        "options": [
+          "Eseguire l’applicazione in Microsoft 365.",
+          "Usare una macchina virtuale Azure con un’immagine Linux compatibile.",
+          "Distribuirla in un runtime gestito di App Service.",
+          "Inserire il driver in una Azure Function standard."
+        ],
+        "correct": 1,
+        "explanation": "Il requisito decisivo è il controllo del sistema operativo guest. Una VM Azure compatibile permette al team di gestire quell’ambiente e i relativi driver, ma lascia al team anche la manutenzione del sistema. Una piattaforma applicativa gestita non è adatta se non offre il controllo del kernel richiesto.",
+        "distractors": [
+          "Microsoft 365 offre software pronto all’uso, non un ambiente per driver del kernel arbitrari.",
+          "",
+          "Un runtime gestito di App Service non consente l’amministrazione necessaria del kernel guest.",
+          "Una Function standard non concede il controllo necessario per installare quel driver."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree",
+        "chapter": "03-compute.md"
+      },
+      "fr": {
+        "question": "Une application de laboratoire doit installer son propre pilote du noyau Linux. Quel hébergement répond le mieux à ce besoin ?",
+        "options": [
+          "Exécuter l’application dans Microsoft 365.",
+          "Utiliser une machine virtuelle Azure avec une image Linux compatible.",
+          "La déployer dans un environnement d’exécution géré d’App Service.",
+          "Placer le pilote dans une Azure Function standard."
+        ],
+        "correct": 1,
+        "explanation": "Le besoin décisif est de contrôler le système d’exploitation invité. Une VM Azure compatible permet à l’équipe de gérer cet environnement et ses pilotes, mais lui laisse aussi la maintenance du système. Une plateforme applicative gérée ne convient pas si elle ne donne pas le contrôle du noyau nécessaire.",
+        "distractors": [
+          "Microsoft 365 fournit des logiciels prêts à l’emploi, pas un hébergement pour des pilotes de noyau arbitraires.",
+          "",
+          "L’environnement géré d’App Service ne permet pas l’administration nécessaire du noyau invité.",
+          "Une Function standard ne donne pas le contrôle nécessaire pour installer ce pilote."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree",
+        "chapter": "03-compute.md"
+      },
+      "de": {
+        "question": "Eine Laboranwendung muss einen eigenen Linux-Kerneltreiber installieren. Welche Hostingoption erfüllt diese Anforderung am besten?",
+        "options": [
+          "Die Anwendung in Microsoft 365 ausführen.",
+          "Eine Azure-VM mit einem kompatiblen Linux-Image verwenden.",
+          "Die Anwendung in einer verwalteten App-Service-Laufzeit bereitstellen.",
+          "Den Treiber in eine gewöhnliche Azure Function aufnehmen."
+        ],
+        "correct": 1,
+        "explanation": "Entscheidend ist die Kontrolle über das Gastbetriebssystem. Mit einer passenden Azure-VM kann das Team dieses System und seine Treiber verwalten. Dafür bleibt auch die Betriebssystemwartung beim Team. Eine verwaltete Anwendungsplattform passt hier nicht, wenn sie den erforderlichen Zugriff auf den Kernel nicht bietet.",
+        "distractors": [
+          "Microsoft 365 bietet fertige Software und keinen Host für beliebige Kerneltreiber.",
+          "",
+          "Eine verwaltete App-Service-Laufzeit bietet nicht die erforderliche Administration des Gastkernels.",
+          "Eine gewöhnliche Function gewährt nicht die benötigte Kontrolle über Kerneltreiber."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree",
+        "chapter": "03-compute.md"
+      },
+      "ru": {
+        "question": "Для лабораторного приложения нужно установить собственный драйвер ядра Linux. Какой вариант размещения лучше всего подходит под это требование?",
+        "options": [
+          "Запустить приложение в Microsoft 365.",
+          "Использовать виртуальную машину Azure с совместимым образом Linux.",
+          "Развернуть приложение в управляемой среде App Service.",
+          "Поместить драйвер в обычную Azure Function."
+        ],
+        "correct": 1,
+        "explanation": "Ключевое требование — управление гостевой операционной системой. Совместимая виртуальная машина Azure позволяет команде настраивать эту среду и её драйверы. При этом обслуживание ОС тоже остаётся задачей команды. Управляемая платформа приложений здесь не подходит, если она не даёт нужного доступа к ядру.",
+        "distractors": [
+          "Microsoft 365 предоставляет готовое ПО, а не среду для произвольных драйверов ядра.",
+          "",
+          "Управляемая среда App Service не предоставляет необходимое администрирование гостевого ядра.",
+          "Обычная Function не даёт требуемого контроля над драйверами ядра."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree",
+        "chapter": "03-compute.md"
+      },
+      "ja": {
+        "question": "実習用アプリで独自の Linux カーネルドライバーをインストールする必要がある。この要件に最も合う実行環境はどれ？",
+        "options": [
+          "Microsoft 365 上でアプリを実行する。",
+          "互換性のある Linux イメージを使った Azure 仮想マシンを利用する。",
+          "App Service のマネージドランタイムにデプロイする。",
+          "標準的な Azure Function の中にドライバーを入れる。"
+        ],
+        "correct": 1,
+        "explanation": "決め手はゲスト OS を管理できること。互換性のある Azure VM なら、その環境とドライバーを自分たちで管理できる。その分、OS の保守もチームの仕事になる。マネージドなアプリ基盤は便利でも、必要なカーネル操作が許可されなければ、この要件には合わない。",
+        "distractors": [
+          "Microsoft 365 は利用するための完成したソフトウェアであり、任意のカーネルドライバーを動かす環境ではない。",
+          "",
+          "App Service のマネージドランタイムでは、必要なゲストカーネルの管理ができない。",
+          "標準的な Function では、必要なカーネルドライバーの管理権限が得られない。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree",
+        "chapter": "03-compute.md"
+      },
+      "zh": {
+        "question": "实验用应用必须安装自己的 Linux 内核驱动。哪种托管方式最符合这个要求？",
+        "options": [
+          "在 Microsoft 365 中运行应用。",
+          "使用采用兼容 Linux 镜像的 Azure 虚拟机。",
+          "部署到 App Service 的托管运行时。",
+          "把驱动放进普通的 Azure Function。"
+        ],
+        "correct": 1,
+        "explanation": "关键是能管理来宾操作系统。兼容的 Azure VM 允许团队管理系统环境和驱动，同时也把操作系统的维护责任留给团队。托管应用平台虽然方便，但如果不开放所需的内核控制能力，就无法满足这个要求。",
+        "distractors": [
+          "Microsoft 365 是可以直接使用的软件，并不是安装任意内核驱动的运行环境。",
+          "",
+          "App Service 的托管运行时不提供这里需要的来宾内核管理能力。",
+          "普通的 Function 不提供这里需要的内核驱动控制能力。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree",
+        "chapter": "03-compute.md"
+      }
+    }
+  },
+  {
+    "id": "q02",
+    "exam": "AZ-900",
+    "topic": "horizontal-scaling",
+    "variants": {
+      "en": {
+        "question": "A notes API adds instances behind a load balancer. Any instance may be replaced, but users must keep their sessions. Sessions currently exist only in each instance's memory. What should change?",
+        "options": [
+          "Increase CPU on every instance.",
+          "Keep sessions in memory and enable sticky routing only.",
+          "Move session state to an appropriate shared external store.",
+          "Give every instance a public IP address."
+        ],
+        "correct": 2,
+        "explanation": "Horizontal scaling distributes requests across instances, so important session state cannot depend solely on one instance's memory. An appropriate external store lets replacement instances retrieve it. Sticky routing alone cannot preserve memory after that instance disappears. The application must also handle access and failures of the external state service.",
+        "distractors": [
+          "More CPU does not preserve memory after instance replacement.",
+          "Sticky routing still loses the session when its selected instance disappears.",
+          "",
+          "Public addresses do not provide shared or durable session state."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out",
+        "chapter": "01-fundamentals.md"
+      },
+      "es": {
+        "question": "Una API de apuntes añade instancias detrás de un balanceador. Cualquier instancia puede sustituirse, pero los usuarios deben conservar sus sesiones. Ahora las sesiones solo están en la memoria de cada instancia. ¿Qué habría que cambiar?",
+        "options": [
+          "Aumentar la CPU de todas las instancias.",
+          "Mantener las sesiones en memoria y activar únicamente afinidad de sesión.",
+          "Mover el estado de las sesiones a un almacén externo compartido adecuado.",
+          "Asignar una IP pública a cada instancia."
+        ],
+        "correct": 2,
+        "explanation": "Al escalar horizontalmente, las peticiones se reparten entre instancias. El estado importante de una sesión no puede depender solo de la memoria de una de ellas. Un almacén externo adecuado permite recuperarlo desde una instancia de reemplazo. La afinidad por sí sola no conserva la memoria de una instancia que desaparece. La aplicación también debe gestionar el acceso al almacén y sus posibles fallos.",
+        "distractors": [
+          "Más CPU no conserva la memoria cuando se sustituye la instancia.",
+          "La afinidad también pierde la sesión si desaparece la instancia elegida.",
+          "",
+          "Una IP pública no aporta un estado de sesión compartido o duradero."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out",
+        "chapter": "01-fundamentals.md"
+      },
+      "it": {
+        "question": "Un’API di appunti aggiunge istanze dietro un bilanciatore di carico. Ogni istanza può essere sostituita, ma gli utenti devono conservare le sessioni. Ora le sessioni esistono solo nella memoria di ogni istanza. Che cosa va cambiato?",
+        "options": [
+          "Aumentare la CPU di tutte le istanze.",
+          "Lasciare le sessioni in memoria e attivare soltanto l’affinità di sessione.",
+          "Spostare lo stato delle sessioni in un archivio esterno condiviso adatto.",
+          "Assegnare un indirizzo IP pubblico a ogni istanza."
+        ],
+        "correct": 2,
+        "explanation": "La scalabilità orizzontale distribuisce le richieste tra istanze: lo stato importante di una sessione non può dipendere solo dalla memoria di una di esse. Un archivio esterno adatto permette alle istanze sostitutive di recuperarlo. La sola affinità non conserva la memoria quando l’istanza scompare. L’applicazione deve anche gestire l’accesso all’archivio e i suoi possibili guasti.",
+        "distractors": [
+          "Più CPU non conserva la memoria quando l’istanza viene sostituita.",
+          "Anche con l’affinità, la sessione va persa se l’istanza scelta scompare.",
+          "",
+          "Un IP pubblico non fornisce uno stato di sessione condiviso o durevole."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out",
+        "chapter": "01-fundamentals.md"
+      },
+      "fr": {
+        "question": "Une API de partage de notes ajoute des instances derrière un équilibreur de charge. Toute instance peut être remplacée, mais les utilisateurs doivent conserver leur session. Les sessions existent uniquement dans la mémoire de chaque instance. Que faut-il changer ?",
+        "options": [
+          "Augmenter le processeur de toutes les instances.",
+          "Garder les sessions en mémoire et activer seulement l’affinité de session.",
+          "Déplacer l’état des sessions vers un stockage externe partagé adapté.",
+          "Attribuer une adresse IP publique à chaque instance."
+        ],
+        "correct": 2,
+        "explanation": "La mise à l’échelle horizontale répartit les requêtes entre plusieurs instances. L’état important d’une session ne peut donc pas dépendre uniquement de la mémoire d’une instance. Un stockage externe adapté permet aux instances de remplacement de le retrouver. L’affinité seule ne préserve pas la mémoire d’une instance qui disparaît. L’application doit aussi gérer les accès et les pannes éventuelles de ce stockage.",
+        "distractors": [
+          "Plus de processeur ne préserve pas la mémoire lorsque l’instance est remplacée.",
+          "Même avec l’affinité, la session est perdue si l’instance choisie disparaît.",
+          "",
+          "Une IP publique ne fournit pas un état de session partagé ou durable."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out",
+        "chapter": "01-fundamentals.md"
+      },
+      "de": {
+        "question": "Eine API für Lernnotizen erhält weitere Instanzen hinter einem Lastenausgleich. Jede Instanz kann ersetzt werden, die Benutzersitzungen müssen aber erhalten bleiben. Bisher liegen die Sitzungen nur im Arbeitsspeicher der jeweiligen Instanz. Was sollte sich ändern?",
+        "options": [
+          "Die CPU-Leistung jeder Instanz erhöhen.",
+          "Die Sitzungen im Arbeitsspeicher behalten und nur Sitzungsaffinität aktivieren.",
+          "Den Sitzungszustand in einen geeigneten gemeinsamen externen Speicher verlagern.",
+          "Jeder Instanz eine öffentliche IP-Adresse geben."
+        ],
+        "correct": 2,
+        "explanation": "Bei horizontaler Skalierung werden Anfragen auf mehrere Instanzen verteilt. Wichtiger Sitzungszustand darf deshalb nicht allein vom Arbeitsspeicher einer Instanz abhängen. Ein geeigneter externer Speicher ermöglicht auch Ersatzinstanzen den Zugriff. Sitzungsaffinität allein rettet keine Daten aus einer verschwundenen Instanz. Die Anwendung muss außerdem Zugriffe und Ausfälle des externen Zustandsdienstes behandeln.",
+        "distractors": [
+          "Mehr CPU erhält den Arbeitsspeicher einer ersetzten Instanz nicht.",
+          "Auch mit Sitzungsaffinität geht die Sitzung verloren, wenn die zugeordnete Instanz verschwindet.",
+          "",
+          "Öffentliche IP-Adressen stellen keinen gemeinsamen oder dauerhaften Sitzungsspeicher bereit."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out",
+        "chapter": "01-fundamentals.md"
+      },
+      "ru": {
+        "question": "В API для учебных заметок добавляют экземпляры за балансировщиком нагрузки. Любой экземпляр могут заменить, но пользовательские сеансы должны сохраниться. Сейчас сеансы находятся только в памяти каждого экземпляра. Что нужно изменить?",
+        "options": [
+          "Увеличить мощность CPU каждого экземпляра.",
+          "Оставить сеансы в памяти и включить только привязку запросов к одному экземпляру.",
+          "Перенести состояние сеансов в подходящее общее внешнее хранилище.",
+          "Назначить каждому экземпляру общедоступный IP-адрес."
+        ],
+        "correct": 2,
+        "explanation": "Горизонтальное масштабирование распределяет запросы между экземплярами, поэтому важное состояние сеанса не должно зависеть только от памяти одного из них. Подходящее внешнее хранилище позволит новому экземпляру получить это состояние. Одна лишь привязка запросов не сохранит память исчезнувшего экземпляра. Приложению также нужно обрабатывать доступ к внешнему сервису состояния и его сбои.",
+        "distractors": [
+          "Дополнительная мощность CPU не сохраняет память после замены экземпляра.",
+          "При исчезновении выбранного экземпляра сеанс потеряется даже с привязкой запросов.",
+          "",
+          "Общедоступные IP-адреса не обеспечивают общее или долговременное хранение состояния сеансов."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out",
+        "chapter": "01-fundamentals.md"
+      },
+      "ja": {
+        "question": "ノート共有 API がロードバランサーの背後でインスタンスを増やす。どのインスタンスも交換される可能性があるが、利用者のセッションは維持したい。現在、セッションは各インスタンスのメモリにしかない。何を変えるべき？",
+        "options": [
+          "各インスタンスの CPU を増やす。",
+          "セッションをメモリに置いたまま、スティッキーなルーティングだけを有効にする。",
+          "セッション状態を適切な共有の外部ストアへ移す。",
+          "各インスタンスにパブリック IP アドレスを割り当てる。"
+        ],
+        "correct": 2,
+        "explanation": "水平スケーリングでは複数のインスタンスが要求を処理する。大切なセッション状態を、どれか一つのメモリだけに依存させてはいけない。適切な外部ストアなら、交換後のインスタンスも状態を取得できる。スティッキーなルーティングだけでは、選ばれたインスタンスが失われたときのメモリを守れない。外部の状態管理サービスへの接続や障害への対処も必要になる。",
+        "distractors": [
+          "CPU を増やしても、交換されたインスタンスのメモリは維持できない。",
+          "固定先のインスタンスが失われれば、スティッキーなルーティングでもセッションは失われる。",
+          "",
+          "パブリック IP はセッション状態の共有や永続化を実現しない。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out",
+        "chapter": "01-fundamentals.md"
+      },
+      "zh": {
+        "question": "笔记 API 在负载均衡器后面增加了多个实例。任何实例都可能被替换，但用户会话必须保留。目前会话只放在各实例的内存中。应该改什么？",
+        "options": [
+          "增加每个实例的 CPU。",
+          "继续把会话放在内存中，只开启会话粘滞路由。",
+          "把会话状态移到合适的共享外部存储中。",
+          "给每个实例分配一个公网 IP 地址。"
+        ],
+        "correct": 2,
+        "explanation": "水平扩展会把请求分散到多个实例，因此重要的会话状态不能只依赖某个实例的内存。合适的外部存储能让替换后的实例重新读取状态。粘滞路由无法在原实例消失后保住它的内存。应用还需要处理访问外部状态服务时的连接和故障问题。",
+        "distractors": [
+          "增加 CPU 无法在实例被替换后保留它的内存。",
+          "被固定选中的实例一旦消失，即使有粘滞路由，会话仍然会丢失。",
+          "",
+          "公网地址不提供共享或持久的会话状态。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out",
+        "chapter": "01-fundamentals.md"
+      }
+    }
+  },
+  {
+    "id": "q03",
+    "exam": "AZ-104",
+    "topic": "storage-data-access",
+    "variants": {
+      "en": {
+        "question": "A user has Contributor on a storage account. A Blob request using that user's Entra identity reaches the service but is denied for missing data permission. The user only needs to read blobs in one container. What is the least-privilege response?",
+        "options": [
+          "Assign Storage Blob Data Reader at that container's scope.",
+          "Assign Owner on the entire subscription.",
+          "Open every inbound network port.",
+          "Distribute the storage account key to the user."
+        ],
+        "correct": 0,
+        "explanation": "Management permissions and blob data permissions are separate. Storage Blob Data Reader grants the required read capability, and container scope limits the grant to the stated need. The scenario already identifies a data-permission problem, so broad administrative rights or unrelated network changes would not be a proportionate diagnosis.",
+        "distractors": [
+          "",
+          "Subscription Owner exceeds the stated container-read requirement.",
+          "Opening ports does not supply the missing data authorisation.",
+          "An account key grants much broader access than the stated need."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access",
+        "chapter": "06-identity.md"
+      },
+      "es": {
+        "question": "Un usuario tiene Contributor en una cuenta de almacenamiento. Una petición Blob con su identidad de Entra llega al servicio, pero se rechaza por falta de permisos sobre los datos. Solo necesita leer blobs de un contenedor. ¿Qué solución sigue el principio de mínimo privilegio?",
+        "options": [
+          "Asignar Storage Blob Data Reader con el ámbito de ese contenedor.",
+          "Asignar Owner en toda la suscripción.",
+          "Abrir todos los puertos de entrada.",
+          "Entregar al usuario la clave de la cuenta de almacenamiento."
+        ],
+        "correct": 0,
+        "explanation": "Los permisos de administración y los permisos sobre los datos Blob son distintos. Storage Blob Data Reader permite la lectura solicitada, y el ámbito del contenedor limita la concesión a lo necesario. El caso ya identifica una falta de autorización sobre los datos: conceder administración general o cambiar la red no es una respuesta proporcionada.",
+        "distractors": [
+          "",
+          "Owner en la suscripción supera la necesidad de leer un solo contenedor.",
+          "Abrir puertos no concede la autorización que falta sobre los datos.",
+          "Una clave de cuenta da un acceso mucho más amplio del necesario."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access",
+        "chapter": "06-identity.md"
+      },
+      "it": {
+        "question": "Un utente ha Contributor su un account di archiviazione. Una richiesta Blob con la sua identità Entra raggiunge il servizio, ma viene rifiutata perché mancano i permessi sui dati. Deve soltanto leggere i blob di un contenitore. Quale soluzione rispetta il privilegio minimo?",
+        "options": [
+          "Assegnare Storage Blob Data Reader nell’ambito di quel contenitore.",
+          "Assegnare Owner sull’intera sottoscrizione.",
+          "Aprire tutte le porte di rete in ingresso.",
+          "Consegnare all’utente la chiave dell’account di archiviazione."
+        ],
+        "correct": 0,
+        "explanation": "I permessi di gestione e quelli sui dati Blob sono distinti. Storage Blob Data Reader consente la lettura richiesta, mentre l’ambito del contenitore limita la concessione alla necessità indicata. Il caso identifica già un problema di autorizzazione sui dati: concedere ampi diritti amministrativi o modificare la rete non sarebbe una risposta proporzionata.",
+        "distractors": [
+          "",
+          "Owner sulla sottoscrizione supera il requisito di lettura di un solo contenitore.",
+          "Aprire porte non fornisce l’autorizzazione mancante sui dati.",
+          "Una chiave dell’account concede un accesso molto più ampio del necessario."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access",
+        "chapter": "06-identity.md"
+      },
+      "fr": {
+        "question": "Un utilisateur possède Contributor sur un compte de stockage. Une requête Blob avec son identité Entra atteint le service, mais elle est refusée faute d’autorisation sur les données. Il doit seulement lire les blobs d’un conteneur. Quelle réponse respecte le moindre privilège ?",
+        "options": [
+          "Attribuer Storage Blob Data Reader à l’étendue de ce conteneur.",
+          "Attribuer Owner sur toute la souscription.",
+          "Ouvrir tous les ports réseau entrants.",
+          "Transmettre à l’utilisateur la clé du compte de stockage."
+        ],
+        "correct": 0,
+        "explanation": "Les autorisations de gestion et celles sur les données Blob sont distinctes. Storage Blob Data Reader permet la lecture demandée, et l’étendue du conteneur limite l’accès au besoin indiqué. Le scénario identifie déjà un problème d’autorisation sur les données : des droits administratifs étendus ou des changements réseau sans rapport ne seraient pas une réponse proportionnée.",
+        "distractors": [
+          "",
+          "Owner sur la souscription dépasse le besoin de lecture d’un seul conteneur.",
+          "Ouvrir des ports ne donne pas l’autorisation manquante sur les données.",
+          "Une clé de compte donne un accès bien plus large que nécessaire."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access",
+        "chapter": "06-identity.md"
+      },
+      "de": {
+        "question": "Ein Benutzer hat Contributor für ein Speicherkonto. Eine Blob-Anfrage mit seiner Entra-Identität erreicht den Dienst, wird aber wegen einer fehlenden Datenberechtigung abgelehnt. Der Benutzer muss nur Blobs in einem Container lesen. Welche Maßnahme erfüllt das Prinzip der geringsten Rechte?",
+        "options": [
+          "Storage Blob Data Reader im Gültigkeitsbereich dieses Containers zuweisen.",
+          "Owner für das gesamte Abonnement zuweisen.",
+          "Alle eingehenden Netzwerkports öffnen.",
+          "Dem Benutzer den Schlüssel des Speicherkontos geben."
+        ],
+        "correct": 0,
+        "explanation": "Verwaltungsberechtigungen und Berechtigungen für Blob-Daten sind getrennt. Storage Blob Data Reader erlaubt das benötigte Lesen; der Container als Gültigkeitsbereich begrenzt die Freigabe auf den konkreten Bedarf. Im Szenario ist eine fehlende Datenberechtigung bereits als Ursache benannt. Weitreichende Verwaltungsrechte oder unpassende Netzwerkänderungen lösen das Problem nicht angemessen.",
+        "distractors": [
+          "",
+          "Owner auf Abonnementebene geht weit über das Lesen eines Containers hinaus.",
+          "Offene Ports erteilen keine fehlende Datenberechtigung.",
+          "Ein Kontoschlüssel ermöglicht einen viel breiteren Zugriff als erforderlich."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access",
+        "chapter": "06-identity.md"
+      },
+      "ru": {
+        "question": "У пользователя есть роль Contributor для учётной записи хранения. Запрос к Blob с его идентичностью Entra доходит до сервиса, но отклоняется из-за отсутствия разрешения на данные. Пользователю нужно только читать BLOB-объекты в одном контейнере. Как применить принцип наименьших привилегий?",
+        "options": [
+          "Назначить Storage Blob Data Reader в области действия этого контейнера.",
+          "Назначить Owner для всей подписки.",
+          "Открыть все входящие сетевые порты.",
+          "Передать пользователю ключ учётной записи хранения."
+        ],
+        "correct": 0,
+        "explanation": "Разрешения на управление и разрешения на данные Blob разделены. Storage Blob Data Reader даёт необходимое право чтения, а область действия контейнера ограничивает доступ указанной задачей. В условии уже установлено, что не хватает разрешения на данные. Широкие административные права или несвязанные изменения сети здесь несоразмерны задаче.",
+        "distractors": [
+          "",
+          "Роль Owner на уровне подписки намного шире требуемого чтения одного контейнера.",
+          "Открытие портов не выдаёт недостающее разрешение на данные.",
+          "Ключ учётной записи предоставляет гораздо более широкий доступ, чем требуется."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access",
+        "chapter": "06-identity.md"
+      },
+      "ja": {
+        "question": "ある利用者はストレージアカウントの Contributor ロールを持っている。その利用者の Entra ID で送った Blob 要求はサービスに届くが、データ権限が足りず拒否される。必要なのは、一つのコンテナー内の Blob の読み取りだけ。最小権限に合う対応はどれ？",
+        "options": [
+          "そのコンテナーをスコープとして Storage Blob Data Reader を割り当てる。",
+          "サブスクリプション全体に Owner を割り当てる。",
+          "受信ネットワークポートをすべて開く。",
+          "ストレージアカウントキーを利用者に渡す。"
+        ],
+        "correct": 0,
+        "explanation": "リソースの管理権限と Blob データの権限は別。Storage Blob Data Reader は必要な読み取りを許可し、コンテナーのスコープは対象を要件の範囲に限定する。この問題ではデータ権限の不足が分かっているので、広い管理権限を与えたり、無関係なネットワーク設定を変えたりするのは適切ではない。",
+        "distractors": [
+          "",
+          "サブスクリプションの Owner は、一つのコンテナーを読むという要件を大きく超える。",
+          "ポートを開いても、足りないデータ操作の認可は追加されない。",
+          "アカウントキーは、今回必要な範囲よりずっと広いアクセスを与える。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access",
+        "chapter": "06-identity.md"
+      },
+      "zh": {
+        "question": "用户拥有某个存储帐户的 Contributor 角色。使用该用户 Entra 身份发出的 Blob 请求已到达服务，但因缺少数据权限而被拒绝。用户只需要读取一个容器中的 Blob。符合最小权限原则的做法是什么？",
+        "options": [
+          "在该容器的作用域内分配 Storage Blob Data Reader 角色。",
+          "在整个订阅上分配 Owner 角色。",
+          "开放所有入站网络端口。",
+          "把存储帐户密钥发给用户。"
+        ],
+        "correct": 0,
+        "explanation": "资源管理权限与 Blob 数据权限是两回事。Storage Blob Data Reader 提供所需的读取能力，容器作用域又把授权限制在实际需求内。题目已经说明问题在数据权限，因此授予广泛的管理权或修改无关的网络配置，都不是适度的解决办法。",
+        "distractors": [
+          "",
+          "订阅级 Owner 远超“读取一个容器”的需求。",
+          "开放端口不会补上缺少的数据操作授权。",
+          "帐户密钥提供的访问范围比这里的需求大得多。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access",
+        "chapter": "06-identity.md"
+      }
+    }
+  },
+  {
+    "id": "q04",
+    "exam": "AZ-104",
+    "topic": "rbac-inheritance",
+    "variants": {
+      "en": {
+        "question": "A user has Reader directly on a VM and also through a group assigned Reader at subscription scope. You remove only the direct VM assignment. The user can still read the VM. What explains this?",
+        "options": [
+          "Azure automatically gives every user Reader on all VMs.",
+          "A resource-group tag restores the deleted assignment.",
+          "Removing a role always requires deleting the VM.",
+          "The group assignment still grants inherited access."
+        ],
+        "correct": 3,
+        "explanation": "Removing one assignment does not remove permissions obtained from another assignment. The group has Reader at the subscription, so its members can inherit that access to the VM. Inspect direct assignments, group membership, and parent scopes before treating the remaining access as a service error or granting more permissions.",
+        "distractors": [
+          "There is no universal Reader grant to every user.",
+          "Tags classify resources and do not recreate role assignments.",
+          "Role removal does not require deleting the protected resource.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview",
+        "chapter": "06-identity.md"
+      },
+      "es": {
+        "question": "Un usuario tiene Reader asignado directamente en una VM y también pertenece a un grupo con Reader en la suscripción. Eliminas solo la asignación directa de la VM. El usuario sigue pudiendo leerla. ¿Por qué?",
+        "options": [
+          "Azure da Reader en todas las VM a todos los usuarios automáticamente.",
+          "Una etiqueta del grupo de recursos restaura la asignación eliminada.",
+          "Para quitar un rol siempre hay que eliminar la VM.",
+          "La asignación del grupo sigue concediendo acceso heredado."
+        ],
+        "correct": 3,
+        "explanation": "Eliminar una asignación no elimina los permisos obtenidos mediante otra. Como el grupo tiene Reader en la suscripción, sus miembros pueden heredar ese acceso a la VM. Conviene revisar asignaciones directas, pertenencia a grupos y ámbitos superiores antes de interpretar el acceso restante como un fallo del servicio o conceder más permisos.",
+        "distractors": [
+          "No existe una concesión universal de Reader a todos los usuarios.",
+          "Las etiquetas clasifican recursos; no recrean asignaciones de roles.",
+          "Quitar un rol no exige eliminar el recurso protegido.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview",
+        "chapter": "06-identity.md"
+      },
+      "it": {
+        "question": "Un utente ha Reader direttamente su una VM e appartiene anche a un gruppo con Reader nell’ambito della sottoscrizione. Rimuovi solo l’assegnazione diretta sulla VM. L’utente può ancora leggerla. Perché?",
+        "options": [
+          "Azure assegna automaticamente Reader su tutte le VM a ogni utente.",
+          "Un tag del gruppo di risorse ripristina l’assegnazione eliminata.",
+          "Per rimuovere un ruolo bisogna sempre eliminare la VM.",
+          "L’assegnazione del gruppo continua a concedere accesso ereditato."
+        ],
+        "correct": 3,
+        "explanation": "Rimuovere un’assegnazione non elimina i permessi ottenuti tramite un’altra. Il gruppo ha Reader sulla sottoscrizione, quindi i suoi membri possono ereditare quell’accesso alla VM. Controlla assegnazioni dirette, appartenenza ai gruppi e ambiti superiori prima di considerare l’accesso residuo un errore del servizio o aggiungere altri permessi.",
+        "distractors": [
+          "Non esiste una concessione universale di Reader a ogni utente.",
+          "I tag classificano le risorse e non ricreano le assegnazioni di ruolo.",
+          "Rimuovere un ruolo non richiede l’eliminazione della risorsa protetta.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview",
+        "chapter": "06-identity.md"
+      },
+      "fr": {
+        "question": "Un utilisateur possède Reader directement sur une VM et appartient aussi à un groupe ayant Reader à l’étendue de la souscription. Vous supprimez uniquement l’attribution directe sur la VM. Il peut toujours lire la VM. Pourquoi ?",
+        "options": [
+          "Azure donne automatiquement Reader sur toutes les VM à chaque utilisateur.",
+          "Une étiquette du groupe de ressources rétablit l’attribution supprimée.",
+          "Retirer un rôle exige toujours de supprimer la VM.",
+          "L’attribution du groupe continue de donner un accès hérité."
+        ],
+        "correct": 3,
+        "explanation": "Supprimer une attribution ne retire pas les autorisations obtenues par une autre. Le groupe possède Reader sur la souscription : ses membres peuvent donc hériter de cet accès à la VM. Vérifiez les attributions directes, l’appartenance aux groupes et les étendues parentes avant de considérer l’accès restant comme une erreur du service ou d’ajouter des autorisations.",
+        "distractors": [
+          "Il n’existe pas d’attribution universelle de Reader à tous les utilisateurs.",
+          "Les étiquettes classent les ressources et ne recréent pas les attributions de rôles.",
+          "Retirer un rôle n’exige pas de supprimer la ressource protégée.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview",
+        "chapter": "06-identity.md"
+      },
+      "de": {
+        "question": "Ein Benutzer hat Reader direkt für eine VM und zusätzlich über eine Gruppe, der Reader auf Abonnementebene zugewiesen ist. Du entfernst nur die direkte VM-Zuweisung. Der Benutzer kann die VM weiterhin lesen. Warum?",
+        "options": [
+          "Azure gibt automatisch allen Benutzern Reader für sämtliche VMs.",
+          "Ein Tag der Ressourcengruppe stellt die gelöschte Zuweisung wieder her.",
+          "Zum Entfernen einer Rolle muss immer die VM gelöscht werden.",
+          "Die Gruppenzuweisung gewährt weiterhin geerbten Zugriff."
+        ],
+        "correct": 3,
+        "explanation": "Das Entfernen einer Zuweisung entfernt keine Berechtigungen aus anderen Zuweisungen. Die Gruppe besitzt Reader auf Abonnementebene; ihre Mitglieder können diesen Zugriff auf die VM erben. Prüfe direkte Zuweisungen, Gruppenmitgliedschaften und übergeordnete Gültigkeitsbereiche, bevor du einen Dienstfehler annimmst oder weitere Rechte vergibst.",
+        "distractors": [
+          "Es gibt keine allgemeine Reader-Zuweisung für alle Benutzer.",
+          "Tags ordnen Ressourcen ein und legen keine Rollenzuweisungen erneut an.",
+          "Eine Rolle lässt sich entfernen, ohne die geschützte Ressource zu löschen.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview",
+        "chapter": "06-identity.md"
+      },
+      "ru": {
+        "question": "У пользователя есть Reader, назначенный напрямую для виртуальной машины, а также через группу с ролью Reader на уровне подписки. Ты удаляешь только прямое назначение для ВМ. Пользователь всё ещё может читать сведения о ВМ. Почему?",
+        "options": [
+          "Azure автоматически выдаёт всем пользователям Reader для всех ВМ.",
+          "Тег группы ресурсов восстанавливает удалённое назначение.",
+          "Удаление роли всегда требует удаления ВМ.",
+          "Назначение группе по-прежнему предоставляет унаследованный доступ."
+        ],
+        "correct": 3,
+        "explanation": "Удаление одного назначения не отменяет разрешения из других назначений. У группы есть Reader на уровне подписки, поэтому её участники могут наследовать этот доступ к ВМ. Проверь прямые назначения, членство в группах и родительские области действия, прежде чем считать оставшийся доступ ошибкой сервиса или выдавать дополнительные права.",
+        "distractors": [
+          "Общего назначения Reader всем пользователям не существует.",
+          "Теги классифицируют ресурсы и не создают заново назначения ролей.",
+          "Роль можно удалить без удаления защищённого ресурса.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview",
+        "chapter": "06-identity.md"
+      },
+      "ja": {
+        "question": "ある利用者には VM へ直接 Reader が割り当てられており、さらにサブスクリプションのスコープで Reader を持つグループにも所属している。VM への直接の割り当てだけを削除したが、その利用者はまだ VM を読み取れる。なぜ？",
+        "options": [
+          "Azure はすべての利用者に、全 VM の Reader を自動で与えるから。",
+          "リソースグループのタグが、削除した割り当てを復元するから。",
+          "ロールを削除するには、必ず VM も削除しなければならないから。",
+          "グループ経由の割り当てによる、継承されたアクセスが残っているから。"
+        ],
+        "correct": 3,
+        "explanation": "一つの割り当てを消しても、別の割り当てから得た権限までは消えない。グループはサブスクリプションの Reader を持つので、メンバーはそのアクセスを VM にも継承できる。サービスの不具合と判断したり、権限を追加したりする前に、直接の割り当て、グループ所属、上位スコープを確認しよう。",
+        "distractors": [
+          "すべての利用者に Reader を与える共通の仕組みはない。",
+          "タグはリソースを分類するもので、ロールの割り当てを作り直すものではない。",
+          "ロールの割り当てを削除するために、対象リソースを削除する必要はない。",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview",
+        "chapter": "06-identity.md"
+      },
+      "zh": {
+        "question": "用户既有直接分配给某台 VM 的 Reader 角色，也属于一个在订阅作用域拥有 Reader 的组。你只删除了 VM 上的直接角色分配，但用户仍能读取这台 VM。原因是什么？",
+        "options": [
+          "Azure 自动给所有用户分配所有 VM 的 Reader。",
+          "资源组标签恢复了已删除的角色分配。",
+          "删除角色之前总是必须先删除 VM。",
+          "组的角色分配仍然通过继承授予访问权限。"
+        ],
+        "correct": 3,
+        "explanation": "删除一个角色分配，不会消除从其他分配中获得的权限。组在订阅作用域拥有 Reader，所以成员仍可继承对 VM 的读取权限。在把问题归咎于服务故障或继续加权限之前，先检查直接分配、组成员身份和上级作用域。",
+        "distractors": [
+          "不存在给所有用户统一授予 Reader 的规则。",
+          "标签用于分类资源，不会重新创建角色分配。",
+          "删除角色分配不要求删除它所保护的资源。",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview",
+        "chapter": "06-identity.md"
+      }
+    }
+  },
+  {
+    "id": "q05",
+    "exam": "AZ-305",
+    "topic": "recovery-objectives",
+    "variants": {
+      "en": {
+        "question": "A design keeps successful recoverable database points only once every 24 hours. The business now requires no more than one hour of recent data loss after a disaster. Which change directly addresses the gap?",
+        "options": [
+          "Increase the API server's CPU.",
+          "Design recoverable data protection points no more than one hour apart, and validate recovery.",
+          "Add a cost-alert budget.",
+          "Rename the resource group to production."
+        ],
+        "correct": 1,
+        "explanation": "RPO concerns the amount of recent data that may be lost, expressed in time. Daily recovery points alone cannot support a one-hour target. The protection design must produce sufficiently frequent recoverable states and be validated. Faster application compute or cost labels do not change the age of the available recovery data.",
+        "distractors": [
+          "API CPU does not increase the frequency of protected recovery data.",
+          "",
+          "A budget alerts on spending, not data loss.",
+          "A resource-group name does not change recovery-point frequency."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery",
+        "chapter": "10-architecture.md"
+      },
+      "es": {
+        "question": "Un diseño solo conserva puntos válidos de recuperación de la base de datos una vez cada 24 horas. El negocio ahora exige perder como máximo una hora de datos recientes tras un desastre. ¿Qué cambio resuelve directamente esa diferencia?",
+        "options": [
+          "Aumentar la CPU del servidor de la API.",
+          "Diseñar puntos de protección de datos recuperables separados por una hora como máximo y validar la recuperación.",
+          "Añadir un presupuesto con alertas de costes.",
+          "Cambiar el nombre del grupo de recursos a production."
+        ],
+        "correct": 1,
+        "explanation": "El RPO expresa en tiempo cuántos datos recientes se pueden perder. Tener únicamente puntos diarios no permite cumplir un objetivo de una hora. El diseño debe generar estados recuperables con la frecuencia necesaria y comprobar que se pueden restaurar. Más CPU o una etiqueta de costes no cambian la antigüedad de los datos disponibles para recuperar.",
+        "distractors": [
+          "La CPU de la API no aumenta la frecuencia de protección de los datos.",
+          "",
+          "Un presupuesto avisa del gasto, no de la pérdida de datos.",
+          "El nombre del grupo de recursos no cambia la frecuencia de los puntos de recuperación."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery",
+        "chapter": "10-architecture.md"
+      },
+      "it": {
+        "question": "Un progetto conserva punti validi di ripristino del database soltanto una volta ogni 24 ore. L’azienda ora accetta di perdere al massimo un’ora di dati recenti dopo un disastro. Quale modifica risolve direttamente questa lacuna?",
+        "options": [
+          "Aumentare la CPU del server API.",
+          "Prevedere punti di protezione dei dati recuperabili distanti al massimo un’ora e verificare il ripristino.",
+          "Aggiungere un budget con avvisi sui costi.",
+          "Rinominare il gruppo di risorse in production."
+        ],
+        "correct": 1,
+        "explanation": "L’RPO esprime in tempo la quantità di dati recenti che si può perdere. I soli punti giornalieri non bastano per un obiettivo di un’ora. Il progetto deve produrre stati recuperabili con frequenza adeguata e verificarne il ripristino. Più potenza di calcolo o etichette dei costi non cambiano l’età dei dati disponibili per recuperare.",
+        "distractors": [
+          "La CPU dell’API non aumenta la frequenza di protezione dei dati.",
+          "",
+          "Un budget segnala la spesa, non la perdita di dati.",
+          "Il nome del gruppo di risorse non cambia la frequenza dei punti di ripristino."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery",
+        "chapter": "10-architecture.md"
+      },
+      "fr": {
+        "question": "Une architecture ne conserve des points de récupération valides de la base de données qu’une fois toutes les 24 heures. L’entreprise exige maintenant de perdre au maximum une heure de données récentes après un sinistre. Quel changement répond directement à cet écart ?",
+        "options": [
+          "Augmenter le processeur du serveur de l’API.",
+          "Prévoir des points de protection des données récupérables espacés d’au plus une heure et valider la restauration.",
+          "Ajouter un budget avec des alertes de coûts.",
+          "Renommer le groupe de ressources en production."
+        ],
+        "correct": 1,
+        "explanation": "Le RPO exprime en temps la quantité de données récentes que l’on accepte de perdre. Des points quotidiens seuls ne suffisent pas pour un objectif d’une heure. La protection doit produire des états récupérables assez souvent, et leur restauration doit être vérifiée. Plus de puissance applicative ou des étiquettes de coûts ne changent pas l’âge des données disponibles pour la récupération.",
+        "distractors": [
+          "Le processeur de l’API n’augmente pas la fréquence de protection des données.",
+          "",
+          "Un budget signale des dépenses, pas une perte de données.",
+          "Le nom du groupe de ressources ne change pas la fréquence des points de récupération."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery",
+        "chapter": "10-architecture.md"
+      },
+      "de": {
+        "question": "Ein Entwurf erzeugt nur einmal alle 24 Stunden einen erfolgreich wiederherstellbaren Datenbankstand. Nach einer Katastrophe darf das Unternehmen künftig höchstens die Daten der letzten Stunde verlieren. Welche Änderung schließt diese Lücke unmittelbar?",
+        "options": [
+          "Die CPU-Leistung des API-Servers erhöhen.",
+          "Wiederherstellbare Sicherungsstände mit höchstens einer Stunde Abstand vorsehen und die Wiederherstellung prüfen.",
+          "Ein Budget mit Kostenwarnung hinzufügen.",
+          "Die Ressourcengruppe in production umbenennen."
+        ],
+        "correct": 1,
+        "explanation": "Das RPO beschreibt den zulässigen Verlust aktueller Daten als Zeitspanne. Tägliche Wiederherstellungspunkte allein erfüllen kein Ziel von einer Stunde. Der Datensicherungsentwurf muss ausreichend häufig wiederherstellbare Zustände erzeugen, und die Wiederherstellung muss überprüft werden. Schnellere Anwendungsserver oder Kostenbezeichnungen ändern das Alter der verfügbaren Wiederherstellungsdaten nicht.",
+        "distractors": [
+          "Mehr API-CPU erzeugt keine häufigeren geschützten Datenstände.",
+          "",
+          "Ein Budget warnt vor Ausgaben und nicht vor Datenverlust.",
+          "Der Name der Ressourcengruppe verändert die Häufigkeit der Wiederherstellungspunkte nicht."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery",
+        "chapter": "10-architecture.md"
+      },
+      "ru": {
+        "question": "В текущем проекте пригодная для восстановления точка базы данных успешно создаётся только раз в 24 часа. Теперь после аварии бизнес допускает потерю данных не более чем за последний час. Какое изменение непосредственно устраняет это несоответствие?",
+        "options": [
+          "Увеличить мощность CPU сервера API.",
+          "Обеспечить пригодные для восстановления защищённые состояния с интервалом не более часа и проверить восстановление.",
+          "Добавить бюджет с оповещением о расходах.",
+          "Переименовать группу ресурсов в production."
+        ],
+        "correct": 1,
+        "explanation": "RPO описывает допустимый объём потери свежих данных, выраженный во времени. Одни лишь ежедневные точки восстановления не обеспечивают цель в один час. Схема защиты должна создавать пригодные для восстановления состояния достаточно часто, а восстановление нужно проверить. Быстрые серверы приложения или обозначения затрат не меняют возраст доступных для восстановления данных.",
+        "distractors": [
+          "Мощность CPU API не увеличивает частоту создания защищённых состояний данных.",
+          "",
+          "Бюджет предупреждает о расходах, а не о потере данных.",
+          "Название группы ресурсов не меняет частоту точек восстановления."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery",
+        "chapter": "10-architecture.md"
+      },
+      "ja": {
+        "question": "現在の設計では、正常に復旧できるデータベースの復旧ポイントを 24 時間に一度だけ保持している。災害後に失ってよい直近のデータを、最大 1 時間分にしたい。この差を直接埋める変更はどれ？",
+        "options": [
+          "API サーバーの CPU を増やす。",
+          "復旧可能なデータ保護ポイントの間隔が 1 時間を超えないよう設計し、復旧を検証する。",
+          "費用アラート用の予算を追加する。",
+          "リソースグループの名前を production に変える。"
+        ],
+        "correct": 1,
+        "explanation": "RPO は、失われてもよい直近のデータ量を時間で表す目標。1 日に一度の復旧ポイントだけでは、1 時間という目標には足りない。十分な頻度で復旧可能な状態を作る設計にして、実際に復旧できるか検証する必要がある。アプリの CPU や費用のラベルを変えても、使える復旧データの古さは変わらない。",
+        "distractors": [
+          "API の CPU を増やしても、復旧用データの保護頻度は上がらない。",
+          "",
+          "予算は支出を通知するもので、データ損失を抑えるものではない。",
+          "リソースグループの名前は、復旧ポイントの頻度を変えない。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery",
+        "chapter": "10-architecture.md"
+      },
+      "zh": {
+        "question": "当前设计每 24 小时才保留一个成功且可恢复的数据库恢复点。业务现在要求灾难后最多只能丢失最近 1 小时的数据。哪个改动能直接弥补这个差距？",
+        "options": [
+          "增加 API 服务器的 CPU。",
+          "设计间隔不超过 1 小时的可恢复数据保护点，并验证恢复过程。",
+          "添加一个费用预警预算。",
+          "把资源组重命名为 production。"
+        ],
+        "correct": 1,
+        "explanation": "RPO 用时间表示可以接受丢失多少最近的数据。每天一次的恢复点无法独自满足 1 小时的目标。数据保护设计必须足够频繁地产生可恢复状态，并验证这些状态确实能恢复。提高应用算力或修改费用标签，都不会改变现有恢复数据的新旧程度。",
+        "distractors": [
+          "API 的 CPU 不会提高恢复数据的保护频率。",
+          "",
+          "预算针对支出发出预警，不会减少数据丢失。",
+          "资源组名称不会改变恢复点的生成频率。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery",
+        "chapter": "10-architecture.md"
+      }
+    }
+  },
+  {
+    "id": "q06",
+    "exam": "AZ-305",
+    "topic": "private-dns",
+    "variants": {
+      "en": {
+        "question": "Public access to a storage service has been disabled and a private endpoint exists. The client still resolves the service hostname to its public IP. Its private network path is otherwise available. What should you investigate first?",
+        "options": [
+          "Give the client subscription Owner.",
+          "Hard-code the public IP permanently.",
+          "Private DNS zones, links, and forwarding used by that client.",
+          "Increase the application's retry count indefinitely."
+        ],
+        "correct": 2,
+        "explanation": "The client is resolving the wrong destination for the intended private connection. Check the service's recommended private DNS configuration and how this client reaches it, including links and forwarding. Keep using the service hostname. Correcting DNS does not itself grant data permissions, but unrelated privileges and endless retries do not fix this mismatch.",
+        "distractors": [
+          "Owner does not change the client's name resolution.",
+          "The public address is the wrong destination after public access is disabled.",
+          "",
+          "Repeating a request does not correct deterministic DNS configuration."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns",
+        "chapter": "05-networking.md"
+      },
+      "es": {
+        "question": "Se ha desactivado el acceso público a un servicio de almacenamiento y existe un punto de conexión privado. El cliente sigue resolviendo el nombre del servicio a su IP pública. La ruta de red privada está disponible. ¿Qué revisarías primero?",
+        "options": [
+          "Dar al cliente Owner en la suscripción.",
+          "Fijar permanentemente la IP pública en la configuración.",
+          "Las zonas DNS privadas, sus vínculos y el reenvío que usa ese cliente.",
+          "Aumentar indefinidamente los reintentos de la aplicación."
+        ],
+        "correct": 2,
+        "explanation": "El cliente resuelve un destino distinto del que necesita la conexión privada. Revisa la configuración DNS privada recomendada para el servicio y cómo accede a ella este cliente, incluidos vínculos y reenvío. Sigue usando el nombre del servicio. Corregir DNS no concede por sí mismo permisos sobre los datos, pero más privilegios o reintentos sin límite tampoco arreglan esta discrepancia.",
+        "distractors": [
+          "Owner no cambia cómo resuelve nombres el cliente.",
+          "La dirección pública es el destino equivocado cuando el acceso público está desactivado.",
+          "",
+          "Repetir peticiones no corrige una configuración DNS errónea."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns",
+        "chapter": "05-networking.md"
+      },
+      "it": {
+        "question": "L’accesso pubblico a un servizio di archiviazione è disabilitato ed esiste un endpoint privato. Il client continua a risolvere il nome del servizio nel suo IP pubblico. Il percorso di rete privato è disponibile. Che cosa controlli per prima cosa?",
+        "options": [
+          "Assegnare al client Owner sulla sottoscrizione.",
+          "Impostare in modo permanente l’IP pubblico nella configurazione.",
+          "Le zone DNS private, i collegamenti e l’inoltro usati da quel client.",
+          "Aumentare senza limiti i tentativi dell’applicazione."
+        ],
+        "correct": 2,
+        "explanation": "Il client risolve una destinazione sbagliata per la connessione privata prevista. Controlla la configurazione DNS privata consigliata per il servizio e come il client la raggiunge, inclusi collegamenti e inoltro. Continua a usare il nome del servizio. Correggere il DNS non concede da solo i permessi sui dati, ma privilegi aggiuntivi e tentativi infiniti non risolvono questa discrepanza.",
+        "distractors": [
+          "Owner non cambia la risoluzione dei nomi del client.",
+          "L’indirizzo pubblico è la destinazione sbagliata quando l’accesso pubblico è disabilitato.",
+          "",
+          "Ripetere una richiesta non corregge una configurazione DNS errata."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns",
+        "chapter": "05-networking.md"
+      },
+      "fr": {
+        "question": "L’accès public à un service de stockage est désactivé et un point de terminaison privé existe. Le client résout encore le nom du service vers son IP publique. Le chemin réseau privé est par ailleurs disponible. Que faut-il examiner en premier ?",
+        "options": [
+          "Donner au client Owner sur la souscription.",
+          "Inscrire définitivement l’IP publique dans la configuration.",
+          "Les zones DNS privées, leurs liens et le transfert DNS utilisés par ce client.",
+          "Augmenter sans limite les nouvelles tentatives de l’application."
+        ],
+        "correct": 2,
+        "explanation": "Le client résout une mauvaise destination pour la connexion privée prévue. Vérifiez la configuration DNS privée recommandée pour le service et la manière dont ce client y accède, y compris les liens et le transfert DNS. Continuez à utiliser le nom du service. Corriger le DNS ne donne pas à lui seul des autorisations sur les données, mais des privilèges supplémentaires ou des tentatives infinies ne corrigent pas cet écart.",
+        "distractors": [
+          "Owner ne change pas la résolution de noms du client.",
+          "L’adresse publique est la mauvaise destination lorsque l’accès public est désactivé.",
+          "",
+          "Répéter une requête ne corrige pas une mauvaise configuration DNS."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns",
+        "chapter": "05-networking.md"
+      },
+      "de": {
+        "question": "Der öffentliche Zugriff auf einen Speicherdienst ist deaktiviert und ein privater Endpunkt vorhanden. Der Client löst den Dienstnamen weiterhin zur öffentlichen IP-Adresse auf. Der private Netzwerkpfad ist ansonsten verfügbar. Was solltest du zuerst untersuchen?",
+        "options": [
+          "Dem Client Owner auf Abonnementebene geben.",
+          "Die öffentliche IP-Adresse dauerhaft fest eintragen.",
+          "Die privaten DNS-Zonen, Verknüpfungen und Weiterleitungen, die dieser Client nutzt.",
+          "Die Anzahl der Anwendungswiederholungen unbegrenzt erhöhen."
+        ],
+        "correct": 2,
+        "explanation": "Der Client ermittelt das falsche Ziel für die gewünschte private Verbindung. Prüfe die für den Dienst empfohlene private DNS-Konfiguration und wie der Client sie erreicht, einschließlich Verknüpfungen und Weiterleitungen. Verwende weiterhin den Dienstnamen. Eine DNS-Korrektur erteilt noch keine Datenberechtigung; zusätzliche Rechte oder endlose Wiederholungen beheben diese falsche Namensauflösung jedoch nicht.",
+        "distractors": [
+          "Owner ändert die Namensauflösung des Clients nicht.",
+          "Nach dem Abschalten des öffentlichen Zugriffs ist die öffentliche Adresse das falsche Ziel.",
+          "",
+          "Wiederholte Anfragen korrigieren keine beständig falsche DNS-Konfiguration."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns",
+        "chapter": "05-networking.md"
+      },
+      "ru": {
+        "question": "Общедоступный доступ к сервису хранения отключён, а частная конечная точка уже создана. Клиент всё ещё разрешает имя сервиса в общедоступный IP-адрес. Сам частный сетевой маршрут доступен. Что стоит проверить первым?",
+        "options": [
+          "Назначить клиенту Owner на уровне подписки.",
+          "Навсегда прописать общедоступный IP-адрес вручную.",
+          "Частные зоны DNS, их связи и пересылку запросов, которыми пользуется этот клиент.",
+          "Неограниченно увеличивать число повторных запросов приложения."
+        ],
+        "correct": 2,
+        "explanation": "Клиент получает неверный адрес назначения для предполагаемого частного подключения. Проверь рекомендуемую для сервиса конфигурацию частного DNS и то, как клиент ею пользуется, включая связи и пересылку. Продолжай использовать имя сервиса. Исправление DNS само по себе не выдаёт разрешения на данные, но посторонние привилегии и бесконечные повторы не устраняют это несоответствие.",
+        "distractors": [
+          "Роль Owner не меняет разрешение имён на клиенте.",
+          "После отключения общедоступного доступа публичный адрес — неверное назначение.",
+          "",
+          "Повторение запроса не исправляет устойчиво неверную конфигурацию DNS."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns",
+        "chapter": "05-networking.md"
+      },
+      "ja": {
+        "question": "ストレージサービスのパブリックアクセスは無効で、プライベートエンドポイントも存在する。しかしクライアントは、サービスのホスト名をまだパブリック IP に解決している。プライベート側のネットワーク経路は利用できる。まず何を調べる？",
+        "options": [
+          "クライアントにサブスクリプションの Owner を与える。",
+          "パブリック IP を恒久的にハードコードする。",
+          "そのクライアントが使うプライベート DNS ゾーン、リンク、転送設定を調べる。",
+          "アプリの再試行回数を際限なく増やす。"
+        ],
+        "correct": 2,
+        "explanation": "クライアントの名前解決が、意図したプライベート接続とは違う宛先を返している。そのサービスで推奨されるプライベート DNS 構成と、クライアントからそこへ到達する仕組みを、リンクや転送も含めて確認する。接続には引き続きサービスのホスト名を使う。DNS の修正だけでデータ権限は付与されないが、無関係な管理権限や無限の再試行もこの不一致を直せない。",
+        "distractors": [
+          "Owner を与えても、クライアントの名前解決は変わらない。",
+          "パブリックアクセスを無効にした後は、パブリックアドレスは意図した接続先ではない。",
+          "",
+          "要求を繰り返しても、毎回同じ誤った結果を返す DNS 設定は直らない。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns",
+        "chapter": "05-networking.md"
+      },
+      "zh": {
+        "question": "存储服务已禁用公共访问，也已建立专用终结点。但客户端仍把服务主机名解析为公网 IP，其他专用网络路径则可用。首先应该排查什么？",
+        "options": [
+          "给客户端分配订阅级 Owner。",
+          "永久硬编码公网 IP。",
+          "客户端使用的专用 DNS 区域、链接和转发配置。",
+          "无限增加应用的重试次数。"
+        ],
+        "correct": 2,
+        "explanation": "客户端解析出的目的地址，与预期的专用连接不一致。应检查该服务推荐的专用 DNS 配置，以及客户端如何访问这套 DNS，包括区域链接和转发。连接时仍应使用服务主机名。修好 DNS 本身不会授予数据权限，但无关的管理权和无限重试也修不好这个解析问题。",
+        "distractors": [
+          "Owner 不会改变客户端的名称解析。",
+          "公共访问被禁用后，公网地址不是预期的连接目的地。",
+          "",
+          "重复请求无法修复每次都返回同样错误结果的 DNS 配置。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns",
+        "chapter": "05-networking.md"
+      }
+    }
+  },
+  {
+    "id": "q07",
+    "exam": "AZ-400",
+    "topic": "artifact-promotion",
+    "variants": {
+      "en": {
+        "question": "A pipeline tests one container image, then rebuilds from source for production using changeable dependencies. How can the team ensure production receives the image that passed testing?",
+        "options": [
+          "Retest only the source comments.",
+          "Use the latest tag without recording which image it points to.",
+          "Skip testing because the source commit is unchanged.",
+          "Promote the same tested image, identified by an immutable digest."
+        ],
+        "correct": 3,
+        "explanation": "The same source commit can produce different outputs when tools, dependencies, or base images change. Promoting the already tested image avoids that rebuild difference. An immutable digest identifies the actual artifact rather than a tag that can move. Environment configuration still needs its own validation and controlled handling.",
+        "distractors": [
+          "Source comments do not identify the built artifact.",
+          "A mutable tag can refer to a different image later.",
+          "An unchanged commit does not establish an identical rebuilt output.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/container-registry/container-registry-concepts",
+        "chapter": "12-devops.md"
+      },
+      "es": {
+        "question": "Un pipeline prueba una imagen de contenedor y después vuelve a compilar desde el código para producción con dependencias que pueden cambiar. ¿Cómo asegurar que producción recibe la imagen que superó las pruebas?",
+        "options": [
+          "Volver a probar únicamente los comentarios del código.",
+          "Usar la etiqueta latest sin registrar a qué imagen apunta.",
+          "Omitir las pruebas porque el commit del código no ha cambiado.",
+          "Promover la misma imagen probada, identificada por un digest inmutable."
+        ],
+        "correct": 3,
+        "explanation": "El mismo commit puede producir resultados distintos si cambian las herramientas, las dependencias o las imágenes base. Promover la imagen ya probada evita esa diferencia de recompilación. Un digest inmutable identifica el artefacto concreto, mientras que una etiqueta puede cambiar de destino. La configuración de cada entorno sigue necesitando validación y gestión controlada.",
+        "distractors": [
+          "Los comentarios del código no identifican el artefacto compilado.",
+          "Una etiqueta mutable puede apuntar después a otra imagen.",
+          "Que el commit sea el mismo no demuestra que la recompilación produzca una imagen idéntica.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/container-registry/container-registry-concepts",
+        "chapter": "12-devops.md"
+      },
+      "it": {
+        "question": "Una pipeline testa un’immagine di container e poi ricompila dal sorgente per la produzione usando dipendenze che possono cambiare. Come assicurarsi che in produzione arrivi l’immagine che ha superato i test?",
+        "options": [
+          "Ripetere i test solo sui commenti del codice.",
+          "Usare il tag latest senza registrare a quale immagine punta.",
+          "Saltare i test perché il commit del sorgente non è cambiato.",
+          "Promuovere la stessa immagine già testata, identificata da un digest immutabile."
+        ],
+        "correct": 3,
+        "explanation": "Lo stesso commit può generare risultati diversi se cambiano strumenti, dipendenze o immagini di base. Promuovere l’immagine già testata evita questa differenza dovuta alla ricompilazione. Un digest immutabile identifica l’artefatto effettivo, mentre un tag può cambiare destinazione. La configurazione degli ambienti richiede comunque una propria validazione e una gestione controllata.",
+        "distractors": [
+          "I commenti del codice non identificano l’artefatto compilato.",
+          "Un tag modificabile può in seguito puntare a un’altra immagine.",
+          "Un commit invariato non dimostra che la nuova compilazione produca un risultato identico.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/container-registry/container-registry-concepts",
+        "chapter": "12-devops.md"
+      },
+      "fr": {
+        "question": "Un pipeline teste une image de conteneur, puis reconstruit depuis le code source pour la production avec des dépendances qui peuvent changer. Comment garantir que la production reçoit l’image qui a réussi les tests ?",
+        "options": [
+          "Tester à nouveau uniquement les commentaires du code.",
+          "Utiliser l’étiquette latest sans enregistrer l’image qu’elle désigne.",
+          "Omettre les tests puisque le commit du code source n’a pas changé.",
+          "Promouvoir la même image testée, identifiée par un digest immuable."
+        ],
+        "correct": 3,
+        "explanation": "Un même commit peut produire des résultats différents si les outils, les dépendances ou les images de base changent. Promouvoir l’image déjà testée évite cette différence liée à la reconstruction. Un digest immuable identifie l’artefact précis, tandis qu’une étiquette peut changer de cible. La configuration des environnements demande toujours sa propre validation et une gestion contrôlée.",
+        "distractors": [
+          "Les commentaires du code n’identifient pas l’artefact construit.",
+          "Une étiquette modifiable peut désigner une autre image plus tard.",
+          "Un commit inchangé ne prouve pas que la reconstruction produit un résultat identique.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/container-registry/container-registry-concepts",
+        "chapter": "12-devops.md"
+      },
+      "de": {
+        "question": "Eine Pipeline testet ein Container-Image und baut für die Produktion anschließend erneut aus dem Quellcode, wobei sich Abhängigkeiten ändern können. Wie stellt das Team sicher, dass die Produktion genau das getestete Image erhält?",
+        "options": [
+          "Nur die Kommentare im Quellcode erneut prüfen.",
+          "Das Tag latest verwenden, ohne das zugehörige Image festzuhalten.",
+          "Tests auslassen, weil der Quellcode-Commit unverändert ist.",
+          "Dasselbe getestete Image weitergeben und es über einen unveränderlichen Digest identifizieren."
+        ],
+        "correct": 3,
+        "explanation": "Derselbe Quellcode-Commit kann bei geänderten Werkzeugen, Abhängigkeiten oder Basis-Images unterschiedliche Ergebnisse liefern. Wer das bereits getestete Image weitergibt, vermeidet diese Abweichung durch einen Neubau. Ein unveränderlicher Digest identifiziert das tatsächliche Artefakt, während ein Tag verschoben werden kann. Die Umgebungskonfiguration muss trotzdem gesondert geprüft und kontrolliert verwaltet werden.",
+        "distractors": [
+          "Quellcodekommentare identifizieren das gebaute Artefakt nicht.",
+          "Ein veränderliches Tag kann später auf ein anderes Image zeigen.",
+          "Ein unveränderter Commit belegt kein identisches Ergebnis eines erneuten Builds.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/container-registry/container-registry-concepts",
+        "chapter": "12-devops.md"
+      },
+      "ru": {
+        "question": "Конвейер тестирует один образ контейнера, а затем заново собирает его из исходного кода для production с зависимостями, которые могут измениться. Как убедиться, что в production попадёт именно протестированный образ?",
+        "options": [
+          "Повторно проверить только комментарии в исходном коде.",
+          "Использовать тег latest, не фиксируя, на какой образ он указывает.",
+          "Пропустить тесты, поскольку коммит исходного кода не изменился.",
+          "Продвинуть тот же протестированный образ, идентифицируя его неизменяемым digest."
+        ],
+        "correct": 3,
+        "explanation": "Один и тот же коммит может дать разные результаты сборки при изменении инструментов, зависимостей или базовых образов. Продвижение уже протестированного образа исключает такое отличие из-за повторной сборки. Неизменяемый digest идентифицирует сам артефакт, тогда как тег может указывать на другой образ. Конфигурацию среды всё равно нужно отдельно проверять и контролировать.",
+        "distractors": [
+          "Комментарии исходного кода не идентифицируют собранный артефакт.",
+          "Изменяемый тег позже может указывать на другой образ.",
+          "Неизменившийся коммит не доказывает идентичность повторно собранного результата.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/container-registry/container-registry-concepts",
+        "chapter": "12-devops.md"
+      },
+      "ja": {
+        "question": "パイプラインがコンテナーイメージをテストした後、変更され得る依存関係を使ってソースから本番用に再ビルドする。テストを通過したイメージを確実に本番へ届けるには？",
+        "options": [
+          "ソースのコメントだけを再テストする。",
+          "どのイメージを指すか記録せず、latest タグを使う。",
+          "ソースのコミットが同じなのでテストを省く。",
+          "不変のダイジェストで特定した、テスト済みの同じイメージを本番へ昇格させる。"
+        ],
+        "correct": 3,
+        "explanation": "ソースのコミットが同じでも、ツール、依存関係、ベースイメージが変われば成果物は変わり得る。テスト済みイメージをそのまま昇格させれば、再ビルドによる差を避けられる。不変のダイジェストは、付け替え可能なタグとは違い、実際の成果物を特定する。ただし、環境設定は別途検証し、管理された方法で扱う必要がある。",
+        "distractors": [
+          "ソースのコメントは、ビルドされた成果物を特定しない。",
+          "変更可能なタグは、後で別のイメージを指すことがある。",
+          "コミットが同じだけでは、再ビルドした成果物も同じとはいえない。",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/container-registry/container-registry-concepts",
+        "chapter": "12-devops.md"
+      },
+      "zh": {
+        "question": "流水线先测试一个容器镜像，然后使用可能变化的依赖从源码重新构建生产镜像。怎样确保生产环境拿到的就是通过测试的镜像？",
+        "options": [
+          "只重新测试源码注释。",
+          "使用 latest 标签，但不记录它指向哪个镜像。",
+          "因为源码提交没变，所以跳过测试。",
+          "提升同一个已测试镜像，并用不可变摘要标识它。"
+        ],
+        "correct": 3,
+        "explanation": "即使源码提交相同，工具、依赖或基础镜像变化后，构建结果也可能不同。直接提升已测试的镜像，可以避免重新构建带来的差异。不可变摘要标识的是实际构件，而标签以后可能指向别处。环境配置仍需要单独验证，并以受控方式管理。",
+        "distractors": [
+          "源码注释无法标识已经构建出的镜像。",
+          "可变标签以后可能指向另一个镜像。",
+          "提交没有变化，不能证明重新构建的产物也完全一样。",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/container-registry/container-registry-concepts",
+        "chapter": "12-devops.md"
+      }
+    }
+  },
+  {
+    "id": "q08",
+    "exam": "AZ-400",
+    "topic": "canary-signals",
+    "variants": {
+      "en": {
+        "question": "A canary release has normal CPU and memory, but its document downloads return incorrect files. What should the deployment decision rely on?",
+        "options": [
+          "Functional correctness signals and a defined stop or rollback criterion.",
+          "CPU alone, because healthy infrastructure proves correct results.",
+          "A larger VM before checking the returned files.",
+          "Deleting old logs so the dashboard looks cleaner."
+        ],
+        "correct": 0,
+        "explanation": "A release can run comfortably while producing incorrect business results. Promotion needs signals that reflect the user operation, not just infrastructure utilisation. A defined stop or rollback rule makes that evidence actionable. Also check data compatibility: reverting application code does not automatically undo harmful data changes made by the release.",
+        "distractors": [
+          "",
+          "CPU and memory do not prove that users receive the correct documents.",
+          "More compute does not inherently fix incorrect application output.",
+          "Removing evidence makes investigation harder and does not correct results."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments",
+        "chapter": "12-devops.md"
+      },
+      "es": {
+        "question": "Un despliegue canario muestra CPU y memoria normales, pero las descargas de documentos devuelven archivos incorrectos. ¿En qué debería basarse la decisión de continuar el despliegue?",
+        "options": [
+          "En señales de funcionamiento correcto y un criterio definido para detener o revertir el despliegue.",
+          "Solo en la CPU, porque una infraestructura sana demuestra que los resultados son correctos.",
+          "En usar una VM mayor antes de revisar los archivos devueltos.",
+          "En borrar registros antiguos para que el panel se vea más limpio."
+        ],
+        "correct": 0,
+        "explanation": "Una versión puede consumir pocos recursos y aun así dar resultados incorrectos. Para promoverla hacen falta señales de la operación que realiza el usuario, además de métricas de infraestructura. Un criterio definido de parada o reversión permite actuar sobre esas señales. También hay que revisar la compatibilidad de los datos: revertir el código no deshace automáticamente los cambios de datos perjudiciales de esa versión.",
+        "distractors": [
+          "",
+          "CPU y memoria no demuestran que los usuarios reciban los documentos correctos.",
+          "Más capacidad de cómputo no corrige por sí sola una salida errónea de la aplicación.",
+          "Borrar evidencias dificulta investigar y no corrige los resultados."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments",
+        "chapter": "12-devops.md"
+      },
+      "it": {
+        "question": "Una versione canary mostra CPU e memoria normali, ma i download dei documenti restituiscono file sbagliati. Su che cosa dovrebbe basarsi la decisione di proseguire il rilascio?",
+        "options": [
+          "Su segnali di correttezza funzionale e un criterio definito per fermare o annullare il rilascio.",
+          "Solo sulla CPU, perché un’infrastruttura sana dimostra che i risultati sono corretti.",
+          "Su una VM più grande prima di controllare i file restituiti.",
+          "Sull’eliminazione dei vecchi log per rendere più pulita la dashboard."
+        ],
+        "correct": 0,
+        "explanation": "Una versione può usare poche risorse e produrre comunque risultati sbagliati. Per promuoverla servono segnali legati all’operazione dell’utente, oltre alle metriche infrastrutturali. Un criterio definito di arresto o rollback permette di agire su queste evidenze. Verifica anche la compatibilità dei dati: ripristinare il codice precedente non annulla automaticamente le modifiche dannose ai dati introdotte dalla versione.",
+        "distractors": [
+          "",
+          "CPU e memoria non dimostrano che gli utenti ricevano i documenti corretti.",
+          "Più potenza di calcolo non corregge automaticamente un risultato applicativo errato.",
+          "Eliminare le evidenze rende l’indagine più difficile e non corregge i risultati."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments",
+        "chapter": "12-devops.md"
+      },
+      "fr": {
+        "question": "Une version canary affiche une utilisation normale du processeur et de la mémoire, mais ses téléchargements de documents renvoient de mauvais fichiers. Sur quoi doit reposer la décision de poursuivre le déploiement ?",
+        "options": [
+          "Sur des signaux de justesse fonctionnelle et un critère défini d’arrêt ou de retour arrière.",
+          "Sur le processeur seul, car une infrastructure saine prouve que les résultats sont corrects.",
+          "Sur une VM plus puissante avant de vérifier les fichiers renvoyés.",
+          "Sur la suppression des anciens journaux pour rendre le tableau de bord plus propre."
+        ],
+        "correct": 0,
+        "explanation": "Une version peut consommer peu de ressources et produire tout de même des résultats incorrects. Sa promotion demande des signaux liés à l’opération de l’utilisateur, en plus des métriques d’infrastructure. Un critère défini d’arrêt ou de retour arrière permet d’agir sur ces éléments. Vérifiez aussi la compatibilité des données : revenir au code précédent n’annule pas automatiquement les changements nuisibles apportés aux données par la version.",
+        "distractors": [
+          "",
+          "Le processeur et la mémoire ne prouvent pas que les utilisateurs reçoivent les bons documents.",
+          "Plus de puissance de calcul ne corrige pas automatiquement une sortie erronée de l’application.",
+          "Supprimer les preuves complique l’enquête et ne corrige pas les résultats."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments",
+        "chapter": "12-devops.md"
+      },
+      "de": {
+        "question": "Eine Canary-Version zeigt normale CPU- und Speicherauslastung, liefert beim Herunterladen von Dokumenten aber falsche Dateien. Worauf sollte die Entscheidung über die weitere Bereitstellung beruhen?",
+        "options": [
+          "Auf Signalen zur fachlichen Korrektheit und einem festgelegten Abbruch- oder Rollback-Kriterium.",
+          "Nur auf der CPU, denn gesunde Infrastruktur beweist korrekte Ergebnisse.",
+          "Auf einer größeren VM, bevor die gelieferten Dateien geprüft werden.",
+          "Auf dem Löschen alter Protokolle, damit das Dashboard aufgeräumter aussieht."
+        ],
+        "correct": 0,
+        "explanation": "Eine Version kann ressourcenschonend laufen und trotzdem fachlich falsche Ergebnisse liefern. Die Freigabe braucht Signale zum tatsächlichen Benutzervorgang und nicht allein zur Infrastrukturauslastung. Eine festgelegte Abbruch- oder Rollback-Regel macht diese Beobachtungen handlungsfähig. Prüfe auch die Datenkompatibilität: Ein Code-Rollback macht schädliche Datenänderungen der Version nicht automatisch rückgängig.",
+        "distractors": [
+          "",
+          "CPU und Arbeitsspeicher beweisen nicht, dass Benutzer die richtigen Dokumente erhalten.",
+          "Mehr Rechenleistung korrigiert falsche Anwendungsergebnisse nicht automatisch.",
+          "Das Löschen von Belegen erschwert die Untersuchung und korrigiert keine Ergebnisse."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments",
+        "chapter": "12-devops.md"
+      },
+      "ru": {
+        "question": "В canary-релизе загрузка CPU и памяти обычная, но при скачивании документов пользователи получают неверные файлы. На чём должно основываться решение о дальнейшем развёртывании?",
+        "options": [
+          "На сигналах функциональной корректности и заранее заданном критерии остановки или отката.",
+          "Только на CPU: здоровая инфраструктура доказывает правильность результатов.",
+          "На переходе к более мощной ВМ до проверки возвращаемых файлов.",
+          "На удалении старых журналов, чтобы панель мониторинга выглядела аккуратнее."
+        ],
+        "correct": 0,
+        "explanation": "Релиз может потреблять мало ресурсов и при этом выдавать неверный результат для пользователя. Для продвижения нужны сигналы, отражающие пользовательскую операцию, а не только загрузку инфраструктуры. Заранее заданное правило остановки или отката помогает действовать на основании этих данных. Проверь и совместимость данных: откат кода сам по себе не отменяет вредные изменения данных, сделанные релизом.",
+        "distractors": [
+          "",
+          "CPU и память не доказывают, что пользователи получают нужные документы.",
+          "Дополнительная вычислительная мощность сама по себе не исправляет неверный вывод приложения.",
+          "Удаление свидетельств затрудняет расследование и не исправляет результат."
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments",
+        "chapter": "12-devops.md"
+      },
+      "ja": {
+        "question": "カナリアリリースの CPU とメモリは正常だが、文書のダウンロードで別のファイルが返ってくる。デプロイを進めるかどうかは、何を基準に決めるべき？",
+        "options": [
+          "機能が正しく動くことを示す指標と、事前に定めた停止またはロールバックの基準。",
+          "インフラが正常なら結果も正しいので、CPU だけ。",
+          "返されたファイルを調べる前に、より大きな VM を使う。",
+          "ダッシュボードをすっきりさせるため、古いログを削除する。"
+        ],
+        "correct": 0,
+        "explanation": "余裕を持って動いているリリースでも、利用者に誤った結果を返すことはある。展開を進めるには、インフラの使用率だけでなく、利用者の操作の正しさを示す指標が必要。停止やロールバックの基準を決めておけば、その証拠を判断につなげられる。データの互換性も確認する。アプリのコードを戻しても、そのリリースが加えた有害なデータ変更まで自動で元に戻るわけではない。",
+        "distractors": [
+          "",
+          "CPU とメモリが正常でも、利用者に正しい文書が届くとは限らない。",
+          "計算リソースを増やすだけでは、アプリの誤った出力は直らない。",
+          "証拠を消すと調査が難しくなり、結果の誤りも直らない。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments",
+        "chapter": "12-devops.md"
+      },
+      "zh": {
+        "question": "一次金丝雀发布的 CPU 和内存正常，但下载文档时会返回错误的文件。是否继续部署，应该依据什么？",
+        "options": [
+          "反映功能正确性的信号，以及事先定义的停止或回滚条件。",
+          "只看 CPU，因为基础设施健康就说明结果正确。",
+          "检查返回文件之前，先换更大的 VM。",
+          "删除旧日志，让仪表板看起来更清爽。"
+        ],
+        "correct": 0,
+        "explanation": "发布版本可能运行得很轻松，却给用户返回错误的业务结果。继续推广时，需要能反映用户操作是否正确的信号，而不只是基础设施利用率。预先定义停止或回滚条件，才能把这些证据用于决策。还要检查数据兼容性：回退应用代码，并不会自动撤销这次发布造成的有害数据修改。",
+        "distractors": [
+          "",
+          "CPU 和内存正常不能证明用户拿到的文档正确。",
+          "增加算力本身不能修复应用的错误输出。",
+          "删除证据只会让调查更困难，并不能纠正结果。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments",
+        "chapter": "12-devops.md"
+      }
+    }
+  }
+]

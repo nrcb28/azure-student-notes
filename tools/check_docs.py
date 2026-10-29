@@ -1,19 +1,120 @@
 #!/usr/bin/env python3
 """Check repository documents without network access or Azure execution.
 
-Checks relative file links, balanced fenced blocks, eight-language file parity,
-required certification material, and Bash syntax. Does not validate remote URLs,
-Markdown anchor fragments, Bicep compilation, or Azure deployment behaviour.
+Checks local file links and Markdown fragments, balanced fenced blocks,
+eight-language file parity, required certification material, and Bash syntax.
+Does not validate remote URLs, Bicep compilation, or Azure deployment behaviour.
 """
 from pathlib import Path
+from html import unescape
+from html.parser import HTMLParser
 import re
 import json
 import shutil
 import subprocess
 import sys
-from urllib.parse import unquote
+import unicodedata
+from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def prose_lines(text):
+    """Keep line positions while hiding fenced blocks from links and headings."""
+    fence = None
+    for line in text.splitlines():
+        marker = re.match(r"^\s*(`{3,}|~{3,})(.*)$", line)
+        if fence is None and marker:
+            fence = marker.group(1)
+            yield ""
+        elif fence is not None:
+            if (marker and marker.group(1)[0] == fence[0]
+                    and len(marker.group(1)) >= len(fence)
+                    and not marker.group(2).strip()):
+                fence = None
+            yield ""
+        else:
+            yield line
+
+
+class _ExplicitAnchors(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.anchors = set()
+
+    def handle_starttag(self, tag, attrs):
+        for name, value in attrs:
+            if value and (name == "id" or (tag == "a" and name == "name")):
+                self.anchors.add(value)
+
+    handle_startendtag = handle_starttag
+
+
+def heading_slug(heading):
+    """GitHub-style slug for ordinary Markdown headings, including Unicode."""
+    heading = re.sub(r"!?\[([^\]]+)\]\([^)]*\)", r"\1", heading)
+    heading = re.sub(r"<[^>]*>", "", heading)
+    heading = re.sub(r"(?<!\w)_{1,2}(.+?)_{1,2}(?!\w)", r"\1", heading)
+    heading = unescape(heading).strip().lower()
+    heading = "".join(char for char in heading if char in "-_" or
+                      unicodedata.category(char)[0] not in "PSC")
+    return re.sub(r"\s", "-", heading)
+
+
+def markdown_anchors(text):
+    lines = list(prose_lines(text))
+    parser = _ExplicitAnchors()
+    parser.feed("\n".join(lines))
+    anchors = set(parser.anchors)
+    generated = set()
+    for index, line in enumerate(lines):
+        match = re.match(r"^ {0,3}#{1,6}(?:[ \t]+|$)(.*)$", line)
+        if match:
+            title = re.sub(r"[ \t]+#+[ \t]*$", "", match.group(1))
+        elif (line.strip() and index + 1 < len(lines)
+              and re.fullmatch(r" {0,3}(?:=+|-+)[ \t]*", lines[index + 1])):
+            title = line.strip()
+        else:
+            continue
+        base = heading_slug(title)
+        slug, suffix = base, 0
+        while slug in generated:
+            suffix += 1
+            slug = f"{base}-{suffix}"
+        generated.add(slug)
+        anchors.add(slug)
+    return anchors
+
+
+def check_local_links(document, text, anchor_cache=None):
+    """Validate ordinary inline local destinations; never fetch remote links."""
+    anchor_cache = {} if anchor_cache is None else anchor_cache
+    errors = []
+    count = 0
+    prose = "\n".join(prose_lines(text))
+    pattern = r'''!?\[[^\]]*\]\(\s*(?:<([^>]+)>|([^\s)]+))(?:\s+["'][^"']*["'])?\s*\)'''
+    for angled, bare in re.findall(pattern, prose):
+        target = angled or bare
+        parsed = urlsplit(target)
+        if parsed.scheme or parsed.netloc:
+            continue
+        count += 1
+        path = unquote(parsed.path)
+        destination = (document.parent / path).resolve() if path else document.resolve()
+        if not destination.exists():
+            errors.append(f"missing linked file: {target}")
+            continue
+        fragment = unquote(parsed.fragment)
+        if not fragment or destination.suffix.lower() not in (".md", ".markdown"):
+            continue
+        if not destination.is_file():
+            errors.append(f"missing linked file: {target}")
+            continue
+        if destination not in anchor_cache:
+            anchor_cache[destination] = markdown_anchors(destination.read_text(encoding="utf-8"))
+        if fragment not in anchor_cache[destination]:
+            errors.append(f"missing local fragment: {target}")
+    return count, errors
 
 
 def check(root):
@@ -21,6 +122,7 @@ def check(root):
     links = 0
     shell_blocks = 0
     documents = list(root.rglob("*.md"))
+    anchor_cache = {}
     bash = shutil.which("bash")
     for document in documents:
         text = document.read_text(encoding="utf-8")
@@ -55,13 +157,9 @@ def check(root):
                 prose.append(line)
         if fence is not None:
             errors.append(f"{relative}: unclosed code fence")
-        for target in re.findall(r"!?\[[^\]]*\]\(([^\s)]+)\)", "\n".join(prose)):
-            if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", target) or target.startswith("#"):
-                continue
-            links += 1
-            path = unquote(target.split("#", 1)[0])
-            if path and not (document.parent / path).exists():
-                errors.append(f"{relative}: missing linked file: {target}")
+        count, link_errors = check_local_links(document, text, anchor_cache)
+        links += count
+        errors.extend(f"{relative}: {error}" for error in link_errors)
     languages = ("es", "en", "it", "de", "fr", "ru", "ja", "zh")
     for parent in (root, root / "certifications"):
         expected = {p.name for p in (parent / "en").glob("*.md")}

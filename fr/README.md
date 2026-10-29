@@ -45,3 +45,7 @@ Guides indépendants. Domaines et pondérations issus des guides officiels angla
 CC BY 4.0 · [undergroundwires/Azure-in-bullet-points](https://github.com/undergroundwires/Azure-in-bullet-points) · [Attribution](../ATTRIBUTION.md)
 
 15. [Approfondissement Microsoft Learn](15-microsoft-learn.md)
+
+## Mini simulation : choisir et comprendre pourquoi
+
+[Mini simulation : choisir et comprendre pourquoi](19-mini-quiz.md) · [Lire les questions sur GitHub](20-quiz-cases.md)

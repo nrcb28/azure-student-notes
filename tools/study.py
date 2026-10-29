@@ -59,6 +59,8 @@ def stamp(value):
 
 
 def parse_time(value):
+    if not isinstance(value, str):
+        raise ValueError('Progress timestamps must be ISO-formatted strings')
     parsed = datetime.fromisoformat(value)
     if parsed.tzinfo is None:
         raise ValueError('Progress timestamps require a timezone')
@@ -66,10 +68,11 @@ def parse_time(value):
 
 
 def validate_state(state):
-    if not isinstance(state, dict) or state.get('version') != 1 or not isinstance(state.get('cards'), dict):
+    if (not isinstance(state, dict) or type(state.get('version')) is not int or
+            state['version'] != 1 or not isinstance(state.get('cards'), dict)):
         raise ValueError('Unsupported or invalid progress file; it was not overwritten')
     for key, record in state['cards'].items():
-        if not re.fullmatch(r'(es|en|it|de|fr|ru|ja|zh)/AZ-(900|104|305|400)/\d{2}', key):
+        if not isinstance(key, str) or not re.fullmatch(r'(es|en|it|de|fr|ru|ja|zh)/AZ-(900|104|305|400)/(0[1-9]|10)', key):
             raise ValueError('Invalid progress card ID')
         if not isinstance(record, dict):
             raise ValueError('Invalid progress record')
@@ -78,8 +81,16 @@ def validate_state(state):
                 raise ValueError(f'Invalid progress field: {field}')
         if record['last_grade'] > 3:
             raise ValueError('Invalid grade')
-        for field in ('due', 'last_review'):
-            parse_time(record[field])
+        if (record['reviews'] < 1 or record['repetitions'] > record['reviews'] or
+                record['lapses'] > record['reviews'] or record['interval_days'] > 365):
+            raise ValueError('Invalid progress counters or interval')
+        grade = record['last_grade']
+        if ((grade == 0 and (record['repetitions'] != 0 or record['interval_days'] != 0)) or
+                (grade == 1 and (record['repetitions'] != 0 or record['interval_days'] != 1)) or
+                (grade >= 2 and (record['repetitions'] < 1 or record['interval_days'] < 1))):
+            raise ValueError('Progress rating and review interval disagree')
+        if parse_time(record.get('due')) < parse_time(record.get('last_review')):
+            raise ValueError('Progress due time precedes its last review')
     return state
 
 
@@ -122,7 +133,7 @@ class Progress:
 
 
 def schedule(previous, grade, now):
-    if grade not in (0, 1, 2, 3):
+    if type(grade) is not int or grade not in (0, 1, 2, 3):
         raise ValueError('Grade must be 0, 1, 2 or 3')
     old = previous or {'reviews': 0, 'repetitions': 0, 'lapses': 0, 'interval_days': 0}
     repetitions = old['repetitions']
@@ -156,7 +167,9 @@ def select_cards(cards, state, now, mode='due', limit=10, seed=None):
         selected.sort(key=lambda c: (-records[c.id]['lapses'], records[c.id]['last_grade'], c.id))
     else:
         selected = [card for card in cards if card.id not in records or parse_time(records[card.id]['due']) <= now]
-        selected.sort(key=lambda c: (c.id not in records, records.get(c.id, {}).get('due', ''), c.id))
+        selected.sort(key=lambda c: (c.id not in records,
+                                    parse_time(records[c.id]['due']) if c.id in records else now,
+                                    c.id))
     return selected[:limit]
 
 
@@ -191,7 +204,15 @@ def export_anki(cards, destination):
 
 
 def text_for(language):
-    return json.loads((ROOT/'tools/study_ui.json').read_text(encoding='utf-8'))[language]
+    messages = json.loads((ROOT/'tools/study_ui.json').read_text(encoding='utf-8'))
+    required = {'doctor', 'exported', 'next', 'demo', 'stats_header', 'assessment',
+                'plan_notice', 'plan_day', 'empty', 'reveal', 'grade', 'source',
+                'invalid', 'saved', 'error', 'interrupted'}
+    language_messages = messages.get(language) if isinstance(messages, dict) else None
+    if (not isinstance(language_messages, dict) or not required <= language_messages.keys() or
+            any(not isinstance(language_messages[key], str) for key in required)):
+        raise ValueError(f'Incomplete or invalid study interface: {language}')
+    return language_messages
 
 
 def positive(value):
@@ -226,8 +247,9 @@ def parser():
 
 def main(argv=None):
     args = parser().parse_args(argv)
-    ui = text_for(args.lang)
+    ui = {'error': 'Unable to load the study interface'}
     try:
+        ui = text_for(args.lang)
         zone = UTC
         if args.command in ('study', 'demo') and args.timezone != 'UTC':
             zone = ZoneInfo(args.timezone)

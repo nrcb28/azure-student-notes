@@ -29,3 +29,7 @@
 - [AZ-104](AZ-104-workbook.md)
 - [AZ-305](AZ-305-workbook.md)
 - [AZ-400](AZ-400-workbook.md)
+
+## ミニクイズ：選んだ理由まで復習する
+
+[ミニクイズ：選んだ理由まで復習する](../../ja/19-mini-quiz.md) · [GitHub で問題を読む](../../ja/20-quiz-cases.md)

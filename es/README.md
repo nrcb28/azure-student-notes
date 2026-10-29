@@ -62,3 +62,7 @@ Guía conceptual ampliada; no cubre por completo AZ-900, AZ-104, AZ-305 ni AZ-40
 Adaptación de undergroundwires/Azure-in-bullet-points bajo CC BY 4.0. [Atribución y cambios](../ATTRIBUTION.md).
 
 15. [Ampliación desde Microsoft Learn](15-microsoft-learn.md)
+
+## Mini simulacro: decide y entiende el porqué
+
+[Mini simulacro: decide y entiende el porqué](19-mini-quiz.md) · [Preguntas para leer en GitHub](20-quiz-cases.md)

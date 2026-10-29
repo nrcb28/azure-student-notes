@@ -137,6 +137,81 @@ class TrainerTests(unittest.TestCase):
             trainer.export_anki(trainer.load_cards(language=language),target)
             self.assertEqual(target.read_bytes(),(trainer.ROOT/'flashcards'/(language+'.tsv')).read_bytes())
 
+    def test_progress_rejects_noninteger_version_without_replacing_file(self):
+        for version in (True, 1.0):
+            with self.subTest(version=version):
+                raw = json.dumps({'version':version,'cards':{}}).encode()
+                self.path.write_bytes(raw)
+                with self.assertRaises(ValueError):
+                    trainer.Progress(self.path)
+                self.assertEqual(self.path.read_bytes(),raw)
+
+    def test_progress_rejects_unknown_case_ids_without_replacing_file(self):
+        for number in ('00','11','99'):
+            with self.subTest(number=number):
+                state = {'version':1,'cards':{f'es/AZ-104/{number}':trainer.schedule(None,2,NOW)}}
+                raw = json.dumps(state).encode()
+                self.path.write_bytes(raw)
+                with self.assertRaises(ValueError):
+                    trainer.Progress(self.path)
+                self.assertEqual(self.path.read_bytes(),raw)
+
+    def test_progress_rejects_impossible_counters_and_intervals(self):
+        for changes in ({'reviews':0}, {'repetitions':2}, {'lapses':2},
+                        {'interval_days':10**400}, {'last_grade':0},
+                        {'last_grade':1,'interval_days':0}):
+            with self.subTest(changes=changes):
+                record = trainer.schedule(None,2,NOW)
+                record.update(changes)
+                state = {'version':1,'cards':{self.cards[0].id:record}}
+                raw = json.dumps(state).encode()
+                self.path.write_bytes(raw)
+                with self.assertRaises(ValueError):
+                    trainer.Progress(self.path)
+                self.assertEqual(self.path.read_bytes(),raw)
+
+    def test_progress_rejects_missing_or_reversed_review_dates(self):
+        for changes in ({'due':None}, {'last_review':None},
+                        {'due':trainer.stamp(NOW-timedelta(seconds=1))}):
+            with self.subTest(changes=changes):
+                record = trainer.schedule(None,2,NOW)
+                record.update(changes)
+                with self.assertRaises(ValueError):
+                    trainer.validate_state({'version':1,'cards':{self.cards[0].id:record}})
+
+    def test_due_order_compares_instants_not_timestamp_spelling(self):
+        earlier = trainer.schedule(None,0,NOW-timedelta(days=1))
+        later = dict(earlier)
+        earlier['due'] = '2026-01-01T11:00:00+02:00'  # 09:00 UTC
+        later['due'] = '2026-01-01T09:30:00+00:00'
+        state = {'version':1,'cards':{self.cards[0].id:earlier,self.cards[1].id:later}}
+        selected = trainer.select_cards(self.cards[:2],state,NOW)
+        self.assertEqual(selected,[self.cards[0],self.cards[1]])
+
+    def test_boolean_grade_is_not_a_numeric_self_rating(self):
+        with self.assertRaises(ValueError):
+            trainer.schedule(None,True,NOW)
+
+    def test_missing_ui_fails_cleanly_without_creating_progress(self):
+        output = io.StringIO()
+        with patch.object(trainer,'ROOT',Path(self.temp.name)), contextlib.redirect_stderr(output):
+            result = trainer.main(['study','--progress',str(self.path)])
+        self.assertEqual(result,2)
+        self.assertIn('Unable to load the study interface',output.getvalue())
+        self.assertFalse(self.path.exists())
+
+    def test_invalid_ui_structure_fails_cleanly(self):
+        root = Path(self.temp.name)
+        (root/'tools').mkdir()
+        for invalid in ([], {'es':[]}, {'es':{'error':'Error'}}):
+            with self.subTest(invalid=invalid):
+                (root/'tools/study_ui.json').write_text(json.dumps(invalid))
+                output = io.StringIO()
+                with patch.object(trainer,'ROOT',root), contextlib.redirect_stderr(output):
+                    result = trainer.main(['demo'])
+                self.assertEqual(result,2)
+                self.assertIn('Incomplete or invalid study interface',output.getvalue())
+
 
 if __name__ == '__main__':
     unittest.main()

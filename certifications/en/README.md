@@ -57,3 +57,7 @@ AZ-303 and AZ-304 from the source repository are historical exams. Related archi
 - [AZ-104](AZ-104-workbook.md)
 - [AZ-305](AZ-305-workbook.md)
 - [AZ-400](AZ-400-workbook.md)
+
+## Mini quiz with reasoned marking
+
+[Mini quiz with reasoned marking](../../en/19-mini-quiz.md) · [Read the questions on GitHub](../../en/20-quiz-cases.md)

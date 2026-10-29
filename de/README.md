@@ -45,3 +45,7 @@ Unabhängige Lernunterlagen. Bereiche und Gewichtungen stammen aus den offiziell
 CC BY 4.0 · [undergroundwires/Azure-in-bullet-points](https://github.com/undergroundwires/Azure-in-bullet-points) · [Attribution](../ATTRIBUTION.md)
 
 15. [Microsoft-Learn-Vertiefung](15-microsoft-learn.md)
+
+## Miniquiz: entscheiden und aus Fehlern lernen
+
+[Miniquiz: entscheiden und aus Fehlern lernen](19-mini-quiz.md) · [Fragen auf GitHub lesen](20-quiz-cases.md)

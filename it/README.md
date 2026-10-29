@@ -45,3 +45,7 @@ Guide di studio indipendenti. Obiettivi e pesi derivano dalle guide ufficiali in
 CC BY 4.0 · [undergroundwires/Azure-in-bullet-points](https://github.com/undergroundwires/Azure-in-bullet-points) · [Attribution](../ATTRIBUTION.md)
 
 15. [Approfondimento Microsoft Learn](15-microsoft-learn.md)
+
+## Mini simulazione: scegli e capisci il perché
+
+[Mini simulazione: scegli e capisci il perché](19-mini-quiz.md) · [Leggere le domande su GitHub](20-quiz-cases.md)

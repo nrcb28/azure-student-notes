@@ -42,3 +42,7 @@ python tools/study.py doctor --lang de
 ```
 
 [CLI reference](../TRAINER.md) · [Anki decks](../flashcards/README.md)
+
+## Miniquiz: entscheiden und aus Fehlern lernen
+
+[Miniquiz: entscheiden und aus Fehlern lernen](19-mini-quiz.md) · [Fragen auf GitHub lesen](20-quiz-cases.md)

@@ -42,3 +42,7 @@ python tools/study.py doctor --lang ru
 ```
 
 [CLI reference](../TRAINER.md) · [Anki decks](../flashcards/README.md)
+
+## Мини-тест: принимать решения и разбирать ошибки
+
+[Мини-тест: принимать решения и разбирать ошибки](19-mini-quiz.md) · [Читать вопросы на GitHub](20-quiz-cases.md)

@@ -42,3 +42,7 @@ python tools/study.py doctor --lang fr
 ```
 
 [CLI reference](../TRAINER.md) · [Anki decks](../flashcards/README.md)
+
+## Mini simulation : choisir et comprendre pourquoi
+
+[Mini simulation : choisir et comprendre pourquoi](19-mini-quiz.md) · [Lire les questions sur GitHub](20-quiz-cases.md)

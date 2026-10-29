@@ -57,3 +57,7 @@ Los exámenes AZ-303 y AZ-304 del repositorio de referencia son históricos. Su 
 - [AZ-104](AZ-104-workbook.md)
 - [AZ-305](AZ-305-workbook.md)
 - [AZ-400](AZ-400-workbook.md)
+
+## Mini simulacro: decide y entiende el porqué
+
+[Mini simulacro: decide y entiende el porqué](../../es/19-mini-quiz.md) · [Preguntas para leer en GitHub](../../es/20-quiz-cases.md)

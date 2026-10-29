@@ -40,3 +40,7 @@
 [Glossary](../GLOSSARY-multilingual.md) · [出典](../SOURCES.md) · [Microsoft Learn](../LEARN-SOURCES.md)
 
 CC BY 4.0 · [Attribution](../ATTRIBUTION.md)
+
+## ミニクイズ：選んだ理由まで復習する
+
+[ミニクイズ：選んだ理由まで復習する](19-mini-quiz.md) · [GitHub で問題を読む](20-quiz-cases.md)

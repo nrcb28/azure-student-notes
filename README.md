@@ -26,6 +26,21 @@ python tools/study.py stats --lang es
 
 [Manual completo / Full manual](TRAINER.md). El progreso personal no se sube a Git / Personal progress is excluded from Git.
 
+## Mini simulacro con corrección / Mini quiz with marking
+
+**[Practicar en español](es/19-mini-quiz.md) · [Read in English](en/19-mini-quiz.md) · [Preguntas en GitHub](es/20-quiz-cases.md)**
+
+Ocho escenarios originales, dos por cada ruta de certificación, en los ocho idiomas. Elige una respuesta y revisa su explicación, el motivo del error, una fuente de Microsoft Learn y el capítulo relacionado. Incluye modos practice y exam, tiempo opcional, informes JSON locales y repaso de errores. Es un banco pequeño para practicar decisiones.
+
+Eight original scenarios, two per certification route, translated into all eight languages. Practise with immediate explanations or defer marking until the end, save a local report, and revisit mistakes by topic. This small bank does not cover a complete exam or predict passing.
+
+```bash
+python tools/quiz.py demo --lang es
+python tools/quiz.py run --lang es --mode exam --count 8 --minutes 12
+```
+
+[Manual / Manual](QUIZ.md) · [Fuentes de cada caso / Scenario sources](QUIZ-SOURCES.md). El temporizador se comprueba al recibir la entrada; pulsa Intro al vencer el plazo. / Time is checked after terminal input; press Enter when it expires.
+
 ## Ruta común ampliada / Expanded common route
 
 - [Doce unidades básicas en ocho idiomas / Twelve foundation units](STUDY-PARITY.md).
@@ -117,7 +132,7 @@ Con Python 3 y Bash, ejecuta desde la raíz / With Python 3 and Bash, run from t
 python tools/check_docs.py
 ```
 
-Comprueba enlaces relativos a archivos, bloques de código, correspondencia de idiomas, archivos de certificaciones y sintaxis Bash. No consulta URLs remotas ni valida despliegues Azure o compilación Bicep.
+Comprueba enlaces relativos a archivos y secciones Markdown, bloques de código, correspondencia de idiomas, archivos de certificaciones y sintaxis Bash. No consulta URLs remotas ni valida despliegues Azure o compilación Bicep.
 
 Checks relative file links, code fences, language counterparts, certification files, and Bash syntax. It does not check remote URLs, Azure deployments, or Bicep compilation.
 

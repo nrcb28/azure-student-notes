@@ -31,3 +31,7 @@ Bei Expert-Zertifizierungen die Voraussetzungen auf offiziellen Seiten prüfen. 
 - [AZ-104](AZ-104-workbook.md)
 - [AZ-305](AZ-305-workbook.md)
 - [AZ-400](AZ-400-workbook.md)
+
+## Miniquiz: entscheiden und aus Fehlern lernen
+
+[Miniquiz: entscheiden und aus Fehlern lernen](../../de/19-mini-quiz.md) · [Fragen auf GitHub lesen](../../de/20-quiz-cases.md)

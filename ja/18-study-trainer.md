@@ -42,3 +42,7 @@ python tools/study.py doctor --lang ja
 ```
 
 [CLI reference](../TRAINER.md) · [Anki decks](../flashcards/README.md)
+
+## ミニクイズ：選んだ理由まで復習する
+
+[ミニクイズ：選んだ理由まで復習する](19-mini-quiz.md) · [GitHub で問題を読む](20-quiz-cases.md)

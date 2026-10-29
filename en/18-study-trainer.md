@@ -42,3 +42,7 @@ python tools/study.py doctor --lang en
 ```
 
 [CLI reference](../TRAINER.md) · [Anki decks](../flashcards/README.md)
+
+## Mini quiz with reasoned marking
+
+[Mini quiz with reasoned marking](19-mini-quiz.md) · [Read the questions on GitHub](20-quiz-cases.md)

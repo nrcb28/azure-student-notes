@@ -35,3 +35,9 @@ Las notas previas se conservan como lectura complementaria y tienen extensiones 
 - Bicep compilation, when reported, is local validation only. Azure deployments, permissions, pricing, and recovery timing require a test subscription.
 
 The new local simulator and unit tests run without Azure credentials. Azure procedures have not been executed here. A source link and a green local check are not a certification guarantee.
+
+## Multiple-choice practice / Práctica de opción múltiple
+
+The [mini quiz](QUIZ.md) adds eight original scenarios, each translated into all eight languages: 64 variants, not 64 distinct questions. Each has four options, matching correct-answer indices and references, general reasoning, and a reason for each wrong choice. The interface, user guide, and generated question sheet are also available in every language. Automated checks establish structure; meaning was reviewed separately.
+
+El [mini simulacro](QUIZ.md) añade ocho escenarios con variantes en los ocho idiomas, además de interfaz, guía y hoja de preguntas. Los índices de respuesta y las referencias coinciden; cada alternativa incorrecta tiene explicación. La comprobación automática cubre la estructura y se complementó con lectura del significado.
