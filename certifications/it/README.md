@@ -1,10 +1,10 @@
-# Certificazioni: otto percorsi di studio
+# Certificazioni: dodici percorsi di studio
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [Appunti generali](../../it/README.md) · [Registro delle fonti](../../CERTIFICATION-SOURCES.md)
 
-Otto percorsi d’esame, ciascuno con una guida per capire le decisioni, dieci casi originali con risposte ragionate e un quaderno di cinque unità con prove da consegnare. Scegli prima l’area che vuoi approfondire.
+Dodici percorsi d’esame, ciascuno con una guida per capire le decisioni, dieci casi originali con risposte ragionate e un quaderno di cinque unità con prove da consegnare. Scegli prima l’area che vuoi approfondire.
 
 | Percorso | Tema | Guida | Casi | Quaderno |
 |---|---|---|---|---|
@@ -16,6 +16,10 @@ Otto percorsi d’esame, ciascuno con una guida per capire le decisioni, dieci c
 | SC-900 | Sicurezza, identità e conformità | [Leggi](SC-900.md) | [10 casi](SC-900-cases.md) | [5 unità](SC-900-workbook.md) |
 | AZ-700 | Reti Azure | [Leggi](AZ-700.md) | [10 casi](AZ-700-cases.md) | [5 unità](AZ-700-workbook.md) |
 | DP-300 | Amministrazione di Azure SQL | [Leggi](DP-300.md) | [10 casi](DP-300-cases.md) | [5 unità](DP-300-workbook.md) |
+| AI-901 | IA con Microsoft Foundry | [Leggi](AI-901.md) | [10 casi](AI-901-cases.md) | [5 unità](AI-901-workbook.md) |
+| SC-200 | Operazioni di sicurezza | [Leggi](SC-200.md) | [10 casi](SC-200-cases.md) | [5 unità](SC-200-workbook.md) |
+| SC-300 | Identità e accesso | [Leggi](SC-300.md) | [10 casi](SC-300-cases.md) | [5 unità](SC-300-workbook.md) |
+| AZ-140 | Azure Virtual Desktop | [Leggi](AZ-140.md) | [10 casi](AZ-140-cases.md) | [5 unità](AZ-140-workbook.md) |
 
 ## Da dove iniziare
 
@@ -23,16 +27,16 @@ AZ-900 offre una mappa generale. DP-900 chiarisce dati e carichi prima di DP-300
 
 ## Cosa è stato ampliato
 
-DP-900, SC-900, AZ-700 e DP-300 hanno spiegazioni, casi e consegne equivalenti nelle otto lingue. Le note supplementari precedenti degli altri percorsi mantengono lunghezze diverse. Ci sono 80 scenari per lingua, 640 varianti in totale; non sono domande reali d’esame.
+DP-900, SC-900, AZ-700 e DP-300 hanno spiegazioni, casi e consegne equivalenti nelle otto lingue. Le note supplementari precedenti degli altri percorsi mantengono lunghezze diverse. Ci sono 120 scenari per lingua, 960 varianti in totale; non sono domande reali d’esame.
 
 ## Ripasso con il trainer
 
-Il trainer di autovalutazione consente di scegliere tutti gli otto percorsi e di esportare i casi in Anki. Confronta la tua spiegazione con la risposta e valuta il ricordo. Il mini quiz a scelta multipla conserva le sue otto domande sui quattro percorsi iniziali.
+Il trainer di autovalutazione consente di scegliere tutti gli dodici percorsi e di esportare i casi in Anki. Confronta la tua spiegazione con la risposta e valuta il ricordo. Il mini quiz a scelta multipla conserva le sue otto domande sui quattro percorsi iniziali.
 
 ```bash
-python tools/study.py demo --lang it --exam DP-900
-python tools/study.py study --lang it --exam AZ-700 --limit 5
-python tools/study.py export --lang it --exam SC-900 --output exports/it-sc900.tsv
+python tools/study.py demo --lang it --exam AI-901
+python tools/study.py study --lang it --exam SC-200 --limit 5
+python tools/study.py export --lang it --exam SC-300 --output exports/it-sc300.tsv
 ```
 
 ## Fonti e limiti
@@ -40,3 +44,7 @@ python tools/study.py export --lang it --exam SC-900 --output exports/it-sc900.t
 Le fonti iniziali sono state consultate il 27 ottobre 2026; i quattro nuovi percorsi il 30 ottobre 2026. Controlla obiettivi, disponibilità, lingua e requisiti su Microsoft Learn prima di prenotare. Esame e certificazione sono concetti diversi; i percorsi Expert possono richiedere altre credenziali. Nessuna garanzia di superamento né esecuzione in Azure dichiarata.
 
 [Trainer](../../it/18-study-trainer.md) · [Mini quiz](../../it/19-mini-quiz.md) · [Anki](../../flashcards/it.tsv) · [Laboratorio di rete](network-lab.md) · [ADR](ADR-template.md)
+
+## IA, operazioni, identità e desktop
+
+AI-901, SC-200, SC-300 e AZ-140 aggiungono guide, dieci casi e cinque unità per percorso nelle otto lingue. AI-901 comprende l’implementazione con Microsoft Foundry; SC-200 tratta indagine e risposta; SC-300 approfondisce Entra; AZ-140 riguarda desktop e app virtuali. Le fonti di questi quattro percorsi sono state consultate il 1º novembre 2026.

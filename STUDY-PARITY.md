@@ -1,8 +1,8 @@
 # Common learning route / Ruta común de estudio
 
-The new learning route uses the same twelve foundation units, forty advanced certification units, scenarios, requested evidence, and three new lab procedures in all eight languages. This is parity of the new learning core, not a claim that every older explanatory paragraph has been translated verbatim or that equal word counts indicate quality.
+The new learning route uses the same twelve foundation units, sixty advanced certification units, scenarios, requested evidence, and three new lab procedures in all eight languages. This is parity of the new learning core, not a claim that every older explanatory paragraph has been translated verbatim or that equal word counts indicate quality.
 
-La nueva ruta comparte doce unidades básicas, cuarenta unidades avanzadas, escenarios, evidencias y tres procedimientos de laboratorio en los ocho idiomas. La igualdad corresponde a este núcleo nuevo. No se afirma que cada párrafo histórico esté traducido literalmente ni que contar palabras demuestre calidad.
+La nueva ruta comparte doce unidades básicas, sesenta unidades avanzadas, escenarios, evidencias y tres procedimientos de laboratorio en los ocho idiomas. La igualdad corresponde a este núcleo nuevo. No se afirma que cada párrafo histórico esté traducido literalmente ni que contar palabras demuestre calidad.
 
 | Language | Core | Advanced labs | Certification workbooks |
 |---|---|---|---|
@@ -44,10 +44,16 @@ El [mini simulacro](QUIZ.md) añade ocho escenarios con variantes en los ocho id
 
 ## Additional routes · Nuevas rutas · 2026-11-01
 
-DP-900, SC-900, AZ-700, and DP-300 add twenty workbook units and forty original open-response cases per language. Each new route has a guide, ten cases, and five units in all eight languages. Together with the original routes, the trainer now reads eighty cases per language (640 variants) and the manifest describes forty certification units per language.
+DP-900, SC-900, AZ-700, and DP-300 add twenty workbook units and forty original open-response cases per language. Each new route has a guide, ten cases, and five units in all eight languages. Together with the original routes, that revision provided eighty cases per language (640 variants) and forty certification units per language.
 
-DP-900, SC-900, AZ-700 y DP-300 añaden veinte unidades y cuarenta casos por idioma. Las nuevas rutas conservan temas, casos, anclajes de unidades y entregables equivalentes en los ocho idiomas. El total es de ocho rutas, ochenta casos y cuarenta unidades de certificación por idioma. Las comprobaciones estructurales no sustituyen una revisión lingüística profesional.
+DP-900, SC-900, AZ-700 y DP-300 añaden veinte unidades y cuarenta casos por idioma. Las nuevas rutas conservan temas, casos, anclajes de unidades y entregables equivalentes en los ocho idiomas. En esa revisión, el total era de ocho rutas, ochenta casos y cuarenta unidades de certificación por idioma. Las comprobaciones estructurales no sustituyen una revisión lingüística profesional.
 
 The multiple-choice bank remains the separate eight-scenario practice for the original four routes. New routes are integrated into the self-rating trainer and Anki; no new multiple-choice coverage is claimed.
 
 El mini simulacro mantiene sus ocho escenarios sobre las cuatro rutas originales. Las nuevas rutas se incorporan al entrenador de autoevaluación y a Anki.
+
+## Foundry, security operations, identity and desktops · 2026-11-01
+
+AI-901, SC-200, SC-300, and AZ-140 add four more routes with a guide, ten original cases, and five workbook units each in every language. The current total is twelve routes, 120 cases and sixty certification units per language: 960 locale/case variants. Earlier sections record previous expansions; their historical counts are not current totals.
+
+AI-901, SC-200, SC-300 y AZ-140 añaden cuatro rutas completas por idioma. El total actual es de doce rutas, 120 escenarios y sesenta unidades de certificación por idioma. Los recuentos de ampliaciones anteriores son históricos. Los casos se integran en el entrenador y Anki; el banco de opción múltiple mantiene su alcance de cuatro rutas.

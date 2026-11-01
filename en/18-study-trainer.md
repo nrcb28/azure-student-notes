@@ -2,7 +2,7 @@
 
 [←](README.md) · [Anki](../flashcards/en.tsv)
 
-Practise the 80 cases in your language, ten per certification. Requires Python 3.9 or later and only its standard library. No cloud account, external packages, or connection during use.
+Practise the 120 cases in your language, ten per certification. Requires Python 3.9 or later and only its standard library. No cloud account, external packages, or connection during use.
 
 ```bash
 python tools/study.py demo --lang en --exam AZ-104

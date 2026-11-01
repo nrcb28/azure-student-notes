@@ -17,7 +17,8 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGUAGES = ('es', 'en', 'it', 'de', 'fr', 'ru', 'ja', 'zh')
-EXAMS = ('AZ-900', 'AZ-104', 'AZ-305', 'AZ-400', 'DP-900', 'SC-900', 'AZ-700', 'DP-300')
+EXAMS = ('AZ-900', 'AZ-104', 'AZ-305', 'AZ-400', 'DP-900', 'SC-900', 'AZ-700', 'DP-300',
+         'AI-901', 'SC-200', 'SC-300', 'AZ-140')
 CARD_ID = re.compile(r'(?:' + '|'.join(map(re.escape, LANGUAGES)) + r')/(?:' +
                      '|'.join(map(re.escape, EXAMS)) + r')/(?:0[1-9]|10)')
 UTC = timezone.utc

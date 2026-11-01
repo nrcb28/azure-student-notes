@@ -88,3 +88,9 @@ Ocho escenarios originales en ocho idiomas, con fuentes revisadas el 29 de octub
 DP-900, SC-900, AZ-700, and DP-300 official English objectives and technical references were reviewed on 2026-10-30. Each route adds a guide, ten original cases, and a five-unit workbook in all eight languages. See [CERTIFICATION-SOURCES.md](CERTIFICATION-SOURCES.md) for objective versions, associated credentials, technical references, and review limits.
 
 Se añaden DP-900, SC-900, AZ-700 y DP-300 con guías, diez casos propios y cinco unidades por ruta e idioma. Las referencias se revisaron el 30 de octubre de 2026; el [registro](CERTIFICATION-SOURCES.md) distingue fechas de objetivos, credenciales y fuentes técnicas. No se atribuyen nuevas ejecuciones en Azure.
+
+## Further routes: AI, operations, identity, and desktops
+
+AI-901, SC-200, SC-300, and AZ-140 official English guides and associated credentials were reviewed on 2026-11-01. Their guides link technical references read for the new explanations. The [certification register](CERTIFICATION-SOURCES.md) records effective objective dates, the current AI-901 scope, and the SC-300 weighting discrepancy observed in the official guide.
+
+Se añaden AI-901, SC-200, SC-300 y AZ-140 en los ocho idiomas. Las fuentes de objetivos se revisaron el 1 de noviembre de 2026. El registro conserva la discrepancia publicada de pesos de SC-300 y distingue el programa de AI-901 del examen retirado AI-900.

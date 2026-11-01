@@ -30,3 +30,9 @@ El nuevo núcleo iguala unidades, escenarios, evidencias y procedimientos. Las n
 The DP-900, SC-900, AZ-700, and DP-300 expansion includes the same concepts, original cases, and workbook deliverables in all eight languages. Each route adds three documents per language. Older supplementary notes in the initial routes still differ in length. Translations preserve official product names, commands, source URLs, case numbering, and workbook anchors.
 
 La ampliación de DP-900, SC-900, AZ-700 y DP-300 desarrolla los mismos conceptos, casos propios y entregables en los ocho idiomas. Cada ruta añade tres documentos por idioma; las notas complementarias anteriores conservan longitudes diferentes. Los nombres de producto, comandos, fuentes, numeración y anclajes se mantienen.
+
+## Third certification expansion / Tercera ampliación
+
+AI-901, SC-200, SC-300, and AZ-140 likewise provide matching guide concepts, ten cases and five-unit workbooks in all eight editions. Official exam availability is separate from repository language coverage. The SC-300 guide records a discrepancy between the official summary and detailed authentication weightings; translations preserve that qualification.
+
+AI-901, SC-200, SC-300 y AZ-140 amplían las ocho ediciones con conceptos, diez casos y cinco unidades equivalentes. La disponibilidad de los idiomas de examen depende de Microsoft. Se conserva la advertencia concreta sobre la discrepancia entre los pesos de autenticación publicados en el resumen y el apartado detallado de SC-300.

@@ -91,7 +91,8 @@ class FragmentTests(unittest.TestCase):
                                             if broken_fragment and language == 'es' else '# Index\n')
             certs = self.root/'certifications'/language
             certs.mkdir(parents=True)
-            for exam in ('AZ-900','AZ-104','AZ-305','AZ-400','DP-900','SC-900','AZ-700','DP-300'):
+            for exam in ('AZ-900','AZ-104','AZ-305','AZ-400','DP-900','SC-900','AZ-700','DP-300',
+                         'AI-901','SC-200','SC-300','AZ-140'):
                 for suffix in ('','-cases','-workbook'):
                     (certs/f'{exam}{suffix}.md').write_text('# Guide\n')
         (self.root/'tools').mkdir()
@@ -115,7 +116,7 @@ class FragmentTests(unittest.TestCase):
     def test_new_certification_material_is_required_even_when_all_translations_are_missing(self):
         self.make_minimal_repo()
         languages = ('es','en','it','de','fr','ru','ja','zh')
-        for exam in ('DP-900','SC-900','AZ-700','DP-300'):
+        for exam in ('DP-900','SC-900','AZ-700','DP-300','AI-901','SC-200','SC-300','AZ-140'):
             for suffix in ('','-cases','-workbook'):
                 with self.subTest(exam=exam,suffix=suffix):
                     paths = [self.root/'certifications'/language/f'{exam}{suffix}.md'

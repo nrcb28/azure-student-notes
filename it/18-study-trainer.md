@@ -2,7 +2,7 @@
 
 [←](README.md) · [Anki](../flashcards/it.tsv)
 
-Esercitati sugli 80 casi della tua lingua, dieci per certificazione. Richiede Python 3.9 o successivo e solo libreria standard. Nessun account cloud, pacchetto esterno o connessione durante l'uso.
+Esercitati sugli 120 casi della tua lingua, dieci per certificazione. Richiede Python 3.9 o successivo e solo libreria standard. Nessun account cloud, pacchetto esterno o connessione durante l'uso.
 
 ```bash
 python tools/study.py demo --lang it --exam AZ-104

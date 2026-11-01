@@ -1,8 +1,8 @@
 # Referencias de certificación / Certification references
 
-Las cuatro rutas nuevas se contrastaron con las guías oficiales inglesas el **30 de octubre de 2026**. Se comprobaron título, fecha de objetivos, áreas y pesos. Las explicaciones, escenarios y entregables son redacción propia para estudiar; no reproducen preguntas reales ni pretenden cubrir exhaustivamente cada subobjetivo.
+Las rutas se contrastan con guías oficiales inglesas y se registran por fecha de revisión: **27 y 30 de octubre, y 1 de noviembre de 2026**. Se comprobaron título, fecha de objetivos, áreas y pesos. Las explicaciones, escenarios y entregables son redacción propia para estudiar; no reproducen preguntas reales ni pretenden cubrir exhaustivamente cada subobjetivo.
 
-The four additional routes were checked against the official English guides on **2026-10-30** for titles, objective dates, areas, and weightings. Explanations, scenarios, and deliverables are original study material. They are neither real exam questions nor exhaustive coverage of every subobjective.
+Routes are checked against official English guides for titles, objective dates, areas, and weightings; review dates are recorded per route: **2026-10-27, 2026-10-30, and 2026-11-01**. Explanations, scenarios, and deliverables are original study material. They are neither real exam questions nor exhaustive coverage of every subobjective.
 
 ## Registro de rutas / Route register
 
@@ -16,6 +16,10 @@ The four additional routes were checked against the official English guides on *
 | SC-900 | [Security, Compliance, Identity Fundamentals](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-900) | 2026-10-21 | 2026-10-30 |
 | AZ-700 | [Azure Networking Solutions](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-700) | 2026-07-27 | 2026-10-30 |
 | DP-300 | [Azure SQL Solutions](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-300) | 2026-10-27 | 2026-10-30 |
+| AI-901 | [Azure AI Fundamentals](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901) | 2026-04-15 | 2026-11-01 |
+| SC-200 | [Security Operations Analyst](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-200) | 2026-10-21 | 2026-11-01 |
+| SC-300 | [Identity and Access Administrator](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-300) | 2026-10-28 | 2026-11-01 |
+| AZ-140 | [Azure Virtual Desktop](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-140) | 2026-07-20 | 2026-11-01 |
 
 Las fechas se refieren a los objetivos de las guías inglesas consultadas. Una traducción de nuestros apuntes no implica que Microsoft ofrezca ese examen en todos los idiomas de este repositorio. Comprueba idioma, disponibilidad, requisitos y cambios antes de reservar.
 
@@ -64,11 +68,32 @@ Dates describe the checked English objective versions. Translating our notes doe
 - [Recovery using backups](https://learn.microsoft.com/en-us/azure/azure-sql/database/recovery-using-backups?view=azuresql): restoring retained data states.
 - [Business continuity](https://learn.microsoft.com/en-us/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview?view=azuresql): availability and disaster-recovery design.
 
+## AI-901, SC-200, SC-300 y AZ-140 · 2026-11-01
+
+Se abrieron las cuatro guías de examen y las páginas de sus credenciales el 1 de noviembre de 2026. AI-901 incorpora conceptos de IA y trabajo con Microsoft Foundry; el código anterior AI-900 figura como retirado el 30 de junio de 2026 en su [guía oficial](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-900). La nueva ruta usa los objetivos de AI-901.
+
+The four exam guides and associated credential pages were opened on 2026-11-01. AI-901 includes AI concepts and Foundry implementation; it is not treated as a renamed copy of the retired AI-900 syllabus. SC-200 covers operational investigation, SC-300 identity administration, and AZ-140 virtual desktops and apps.
+
+| Ruta / Route | Credencial / Credential | Material del repositorio / Repository material |
+|---|---|---|
+| AI-901 | [Azure AI Fundamentals](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/) | [Guía](certifications/es/AI-901.md) · [Guide](certifications/en/AI-901.md) |
+| SC-200 | [Security Operations Analyst Associate](https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/) | [Guía](certifications/es/SC-200.md) · [Guide](certifications/en/SC-200.md) |
+| SC-300 | [Identity and Access Administrator Associate](https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/) | [Guía](certifications/es/SC-300.md) · [Guide](certifications/en/SC-300.md) |
+| AZ-140 | [Azure Virtual Desktop Specialty](https://learn.microsoft.com/en-us/credentials/certifications/azure-virtual-desktop-specialty/) | [Guía](certifications/es/AZ-140.md) · [Guide](certifications/en/AZ-140.md) |
+
+**Discrepancia de SC-300:** en la consulta del 1 de noviembre, el resumen de la guía indicaba 25–30 % para autenticación y acceso, mientras el encabezado del desarrollo indicaba 20–25 %. Los apuntes conservan ambos datos identificados, sin presentar uno como corrección confirmada. Comprueba la guía oficial antes de planificar por pesos. La fecha de actualización de la página de la certificación tampoco sustituye la fecha de objetivos del estudio.
+
+**SC-300 discrepancy:** the checked guide's summary gave 25–30% for authentication/access, while the detailed heading gave 20–25%. The notes identify both values rather than inventing a resolved weighting. Recheck the official guide before allocating study time by percentage. A certification page's update date is also distinct from its study-guide objective date.
+
+Las nuevas guías enlazan además las referencias técnicas primarias consultadas para cada explicación. Los casos son propios y las unidades prácticas proponen evidencias sintéticas o de diseño; no se presentan como operaciones ejecutadas en un tenant o suscripción.
+
+The new guides also link primary technical references consulted for their explanations. Cases are original, and workbook evidence uses synthetic data or design exercises. No tenant or subscription execution is claimed.
+
 ## Límites de esta revisión / Review limits
 
-La revisión de [retiradas de credenciales](https://learn.microsoft.com/en-us/credentials/support/credential-retirement) del 30 de octubre no mostraba las cuatro nuevas certificaciones como retiradas ni con retirada programada. Es una comprobación con fecha, no una promesa de disponibilidad futura. La certificación es una credencial; el código identifica su examen y no describe por sí solo todos sus requisitos.
+La revisión de [retiradas de credenciales](https://learn.microsoft.com/en-us/credentials/support/credential-retirement) del 30 de octubre no mostraba las cuatro certificaciones de la ampliación de datos, seguridad, redes y SQL como retiradas ni con retirada programada. Es una comprobación con fecha, no una promesa de disponibilidad futura. La certificación es una credencial; el código identifica su examen y no describe por sí solo todos sus requisitos.
 
-The retirement page checked on 2026-10-30 did not list the four new certifications as retired or scheduled for retirement. That is a dated observation, not a promise of future availability. A certification is a credential; an exam code alone does not describe all requirements.
+The retirement page checked on 2026-10-30 did not list the four data, security, networking, and SQL additions as retired or scheduled for retirement. That is a dated observation, not a promise of future availability. A certification is a credential; an exam code alone does not describe all requirements.
 
 Los enlaces técnicos se leyeron para contrastar conceptos, no para copiar artículos completos. El registro no acredita despliegues, pruebas operativas, precios, licencias disponibles en un tenant ni equivalencia lingüística profesional. Las fuentes oficiales pueden cambiar sin que cambien estos apuntes.
 

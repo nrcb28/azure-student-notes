@@ -1,10 +1,10 @@
-# Zertifizierungen: acht Lernwege
+# Zertifizierungen: zwölf Lernwege
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [Allgemeine Notizen](../../de/README.md) · [Quellenverzeichnis](../../CERTIFICATION-SOURCES.md)
 
-Acht Prüfungswege mit jeweils einem Leitfaden für begründete Entscheidungen, zehn eigenen Fällen mit Lösungen und einem Arbeitsbuch mit fünf Einheiten und überprüfbaren Ergebnissen. Wähle zuerst das Gebiet, das du verstehen möchtest.
+Zwölf Prüfungswege mit jeweils einem Leitfaden für begründete Entscheidungen, zehn eigenen Fällen mit Lösungen und einem Arbeitsbuch mit fünf Einheiten und überprüfbaren Ergebnissen. Wähle zuerst das Gebiet, das du verstehen möchtest.
 
 | Prüfung | Schwerpunkt | Leitfaden | Fälle | Arbeitsbuch |
 |---|---|---|---|---|
@@ -16,6 +16,10 @@ Acht Prüfungswege mit jeweils einem Leitfaden für begründete Entscheidungen, 
 | SC-900 | Sicherheit, Identität und Compliance | [Lesen](SC-900.md) | [10 Fälle](SC-900-cases.md) | [5 Einheiten](SC-900-workbook.md) |
 | AZ-700 | Azure-Netzwerke | [Lesen](AZ-700.md) | [10 Fälle](AZ-700-cases.md) | [5 Einheiten](AZ-700-workbook.md) |
 | DP-300 | Azure-SQL-Administration | [Lesen](DP-300.md) | [10 Fälle](DP-300-cases.md) | [5 Einheiten](DP-300-workbook.md) |
+| AI-901 | KI mit Microsoft Foundry | [Lesen](AI-901.md) | [10 Fälle](AI-901-cases.md) | [5 Einheiten](AI-901-workbook.md) |
+| SC-200 | Sicherheitsbetrieb | [Lesen](SC-200.md) | [10 Fälle](SC-200-cases.md) | [5 Einheiten](SC-200-workbook.md) |
+| SC-300 | Identität und Zugriff | [Lesen](SC-300.md) | [10 Fälle](SC-300-cases.md) | [5 Einheiten](SC-300-workbook.md) |
+| AZ-140 | Azure Virtual Desktop | [Lesen](AZ-140.md) | [10 Fälle](AZ-140-cases.md) | [5 Einheiten](AZ-140-workbook.md) |
 
 ## Einstieg wählen
 
@@ -23,16 +27,16 @@ AZ-900 gibt einen allgemeinen Überblick. DP-900 erklärt Daten und Workloads vo
 
 ## Was neu hinzugekommen ist
 
-DP-900, SC-900, AZ-700 und DP-300 enthalten in allen acht Sprachen entsprechende Erklärungen, Fälle und Abgaben. Ältere ergänzende Notizen anderer Wege bleiben unterschiedlich lang. Es gibt 80 Szenarien pro Sprache und 640 Sprachvarianten insgesamt, keine echten Prüfungsfragen.
+DP-900, SC-900, AZ-700 und DP-300 enthalten in allen acht Sprachen entsprechende Erklärungen, Fälle und Abgaben. Ältere ergänzende Notizen anderer Wege bleiben unterschiedlich lang. Es gibt 120 Szenarien pro Sprache und 960 Sprachvarianten insgesamt, keine echten Prüfungsfragen.
 
 ## Mit dem Trainer wiederholen
 
-Der Trainer zur Selbsteinschätzung unterstützt alle acht Wege und den Export nach Anki. Vergleiche deine Erklärung mit der Lösung und bewerte dein Erinnern. Das Multiple-Choice-Miniquiz behält seine acht Fragen zu den vier ursprünglichen Wegen.
+Der Trainer zur Selbsteinschätzung unterstützt alle zwölf Wege und den Export nach Anki. Vergleiche deine Erklärung mit der Lösung und bewerte dein Erinnern. Das Multiple-Choice-Miniquiz behält seine acht Fragen zu den vier ursprünglichen Wegen.
 
 ```bash
-python tools/study.py demo --lang de --exam DP-900
-python tools/study.py study --lang de --exam AZ-700 --limit 5
-python tools/study.py export --lang de --exam SC-900 --output exports/de-sc900.tsv
+python tools/study.py demo --lang de --exam AI-901
+python tools/study.py study --lang de --exam SC-200 --limit 5
+python tools/study.py export --lang de --exam SC-300 --output exports/de-sc300.tsv
 ```
 
 ## Quellen und Grenzen
@@ -40,3 +44,7 @@ python tools/study.py export --lang de --exam SC-900 --output exports/de-sc900.t
 Die ursprünglichen Quellen wurden am 27. Oktober 2026 geprüft, die vier neuen Wege am 30. Oktober 2026. Prüfe Ziele, Verfügbarkeit, Prüfungssprachen und Voraussetzungen vor der Buchung auf Microsoft Learn. Prüfungscode und Zertifizierung sind verschieden; Expert-Zertifizierungen können weitere Nachweise verlangen. Keine Bestehensgarantie oder behauptete Ausführung in Azure.
 
 [Trainer](../../de/18-study-trainer.md) · [Miniquiz](../../de/19-mini-quiz.md) · [Anki](../../flashcards/de.tsv) · [Netzwerklabor](network-lab.md) · [ADR](ADR-template.md)
+
+## KI, Sicherheitsbetrieb, Identität und Desktops
+
+AI-901, SC-200, SC-300 und AZ-140 ergänzen Leitfäden, zehn Fälle und fünf Einheiten je Lernweg in allen acht Sprachen. AI-901 enthält die Umsetzung mit Microsoft Foundry, SC-200 Untersuchung und Reaktion, SC-300 vertieft Entra und AZ-140 behandelt virtuelle Desktops und Apps. Die Quellen dieser vier Wege wurden am 1. November 2026 geprüft.

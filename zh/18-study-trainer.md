@@ -2,7 +2,7 @@
 
 [←](README.md) · [Anki](../flashcards/zh.tsv)
 
-每种语言80个案例，每项认证10个。只需 Python3.9或更高和标准库，不需要云账户、外部包或使用时联网。
+每种语言120个案例，每项认证10个。只需 Python3.9或更高和标准库，不需要云账户、外部包或使用时联网。
 
 ```bash
 python tools/study.py demo --lang zh --exam AZ-104

@@ -44,3 +44,17 @@ Las 64 pruebas son comprobaciones locales del software y la documentación. El m
 - Reference review dates remain 2026-10-30 for the four new routes; translation completion and final local validation occurred on 2026-11-01. No newly executed Azure lab, deployment, tenant change, or operational recovery is claimed.
 
 La ampliación incorpora cuatro rutas nuevas y cuarenta escenarios nuevos por idioma. El total de 640 representa ochenta escenarios en ocho idiomas, no 640 escenarios distintos. El mini simulacro mantiene sus ocho preguntas de las cuatro rutas originales; las nuevas rutas están en el entrenador de autoevaluación y en Anki.
+
+## Foundry, security operations, identity and desktop routes · 2026-11-01
+
+- Added AI-901, SC-200, SC-300, and AZ-140 in all eight languages: **96 additional documents** with detailed guides, ten original cases per route, and five-unit workbooks.
+- Current totals: **twelve routes, 120 cases and sixty certification units per language**. The trainer parses **960 unique locale/case IDs**; these are 120 original scenario identities in eight languages, not 960 unrelated scenarios.
+- Full local suite: **70 tests passed**. Updated route fixtures and progress tests cover current additions, earlier additions, legacy progress, and strict rejection of unregistered codes. The test count remains the same because existing route regressions now cover the expanded allowlist.
+- Regenerated eight Anki decks with **120 cards each**. Export tests confirm exact correspondence to the source case banks.
+- New-document checks passed for numbered guide sections, ten complete case answers, five stable workbook anchors per route, Microsoft Learn source URL sets, and unchanged fenced code across all eight editions. Answer-toggle labels are localised.
+- Documentation: **496 Markdown files, 3,380 local links, 171 Bash blocks** passed. Common-core and generated multiple-choice-sheet checks also passed. The multiple-choice bank retains its original four-route scope; newly added routes are integrated into the self-rating trainer and Anki.
+- Independent read-throughs reviewed the new English/Spanish material and 66 selected question/answer pairs in the six other languages. No remaining concrete factual or meaning mismatch was found. These checks do not establish professional translation certification or exhaustive exam coverage.
+- Official guide and credential sources were opened on 2026-11-01. AI-901 follows current Foundry implementation objectives; SC-300 preserves the observed summary/detail weighting discrepancy instead of inventing a corrected value.
+- KQL examples use hypothetical or synthetic data and were not executed against Azure. No deployment, Foundry model or agent invocation, identity-tenant change, security response, AVD session, or operational recovery is claimed.
+
+La ampliación añade otras cuatro rutas completas en los ocho idiomas. La verificación es local y documental; los ejercicios proponen evidencia de estudio sin atribuir resultados observados en Azure.

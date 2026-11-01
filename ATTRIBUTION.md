@@ -45,3 +45,7 @@ Added an original offline study tool, local review scheduling, self-assessment, 
 Added independently written DP-900, SC-900, AZ-700, and DP-300 guides, original cases, and five-unit workbooks in all eight languages, with Microsoft Learn references. They are teaching adaptations, not copied exam questions or official Microsoft material. Existing attribution and licence terms remain applicable.
 
 Se añaden guías, casos originales y cuadernos de DP-900, SC-900, AZ-700 y DP-300 en los ocho idiomas, con referencias de Microsoft Learn. Son materiales de estudio propios, no preguntas de examen copiadas ni material oficial de Microsoft.
+
+Independently authored AI-901, SC-200, SC-300, and AZ-140 guides, cases, and workbooks are also adapted into all eight languages. Microsoft Learn sources inform technical checks and objective references; no Microsoft authorship or endorsement is implied.
+
+Se incorporan materiales propios de AI-901, SC-200, SC-300 y AZ-140 en los ocho idiomas, con fuentes de Microsoft Learn y las mismas condiciones de atribución y licencia.
