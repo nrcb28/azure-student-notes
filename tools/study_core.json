@@ -107,6 +107,34 @@
       "az-140-unit-3",
       "az-140-unit-4",
       "az-140-unit-5"
+    ],
+    "AI-103": [
+      "ai-103-unit-1",
+      "ai-103-unit-2",
+      "ai-103-unit-3",
+      "ai-103-unit-4",
+      "ai-103-unit-5"
+    ],
+    "DP-700": [
+      "dp-700-unit-1",
+      "dp-700-unit-2",
+      "dp-700-unit-3",
+      "dp-700-unit-4",
+      "dp-700-unit-5"
+    ],
+    "SC-100": [
+      "sc-100-unit-1",
+      "sc-100-unit-2",
+      "sc-100-unit-3",
+      "sc-100-unit-4",
+      "sc-100-unit-5"
+    ],
+    "AZ-120": [
+      "az-120-unit-1",
+      "az-120-unit-2",
+      "az-120-unit-3",
+      "az-120-unit-4",
+      "az-120-unit-5"
     ]
   },
   "labs": [

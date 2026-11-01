@@ -1,10 +1,10 @@
-# Certifications: twelve study routes
+# Certifications: sixteen study routes
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [General notes](../../en/README.md) · [Source register](../../CERTIFICATION-SOURCES.md)
 
-Twelve exam routes, each with a guide that explains decisions, ten original cases with reasoned answers, and a five-unit evidence workbook. Pick the area you want to understand before trying to study everything.
+Sixteen exam routes, each with a guide that explains decisions, ten original cases with reasoned answers, and a five-unit evidence workbook. Pick the area you want to understand before trying to study everything.
 
 | Route | Focus | Guide | Cases | Workbook |
 |---|---|---|---|---|
@@ -20,6 +20,10 @@ Twelve exam routes, each with a guide that explains decisions, ten original case
 | SC-200 | Security operations | [Read](SC-200.md) | [10 cases](SC-200-cases.md) | [5 units](SC-200-workbook.md) |
 | SC-300 | Identity and access | [Read](SC-300.md) | [10 cases](SC-300-cases.md) | [5 units](SC-300-workbook.md) |
 | AZ-140 | Azure Virtual Desktop | [Read](AZ-140.md) | [10 cases](AZ-140-cases.md) | [5 units](AZ-140-workbook.md) |
+| AI-103 | AI app and agent development | [Read](AI-103.md) | [10 cases](AI-103-cases.md) | [5 units](AI-103-workbook.md) |
+| DP-700 | Fabric data engineering | [Read](DP-700.md) | [10 cases](DP-700-cases.md) | [5 units](DP-700-workbook.md) |
+| SC-100 | Cybersecurity architecture | [Read](SC-100.md) | [10 cases](SC-100-cases.md) | [5 units](SC-100-workbook.md) |
+| AZ-120 | SAP workloads on Azure | [Read](AZ-120.md) | [10 cases](AZ-120-cases.md) | [5 units](AZ-120-workbook.md) |
 
 ## Where to start
 
@@ -27,16 +31,16 @@ Use AZ-900 as a general map when starting. DP-900 introduces data and workloads 
 
 ## What has expanded
 
-DP-900, SC-900, AZ-700, and DP-300 have matching explanations, cases, and deliverables in all eight languages. Older supplementary notes in other routes retain different lengths. There are 120 scenarios per language, 960 variants overall; these are not real exam questions.
+DP-900, SC-900, AZ-700, and DP-300 have matching explanations, cases, and deliverables in all eight languages. Older supplementary notes in other routes retain different lengths. There are 160 scenarios per language, 1280 variants overall; these are not real exam questions.
 
 ## Practise with the trainer
 
-Choose any of the twelve routes in the self-rating trainer or export cases to Anki. Compare your explanation with the answer and rate recall. The multiple-choice mini quiz retains its eight questions on the original four routes.
+Choose any of the sixteen routes in the self-rating trainer or export cases to Anki. Compare your explanation with the answer and rate recall. The multiple-choice mini quiz retains its eight questions on the original four routes.
 
 ```bash
-python tools/study.py demo --lang en --exam AI-901
-python tools/study.py study --lang en --exam SC-200 --limit 5
-python tools/study.py export --lang en --exam SC-300 --output exports/en-sc300.tsv
+python tools/study.py demo --lang en --exam AI-103
+python tools/study.py study --lang en --exam DP-700 --limit 5
+python tools/study.py export --lang en --exam SC-100 --output exports/en-sc100.tsv
 ```
 
 ## References and scope
@@ -48,3 +52,7 @@ Initial references were checked on 27 October 2026; the four new routes on 30 Oc
 ## AI, operations, identity, and desktops
 
 AI-901, SC-200, SC-300, and AZ-140 add guides, ten cases, and five units per route in all eight languages. AI-901 includes Microsoft Foundry implementation; SC-200 develops investigation and response; SC-300 focuses on Entra; AZ-140 covers virtual desktops and apps. References for these four routes were checked on 1 November 2026.
+
+## Applied AI, data engineering, security architecture, and SAP
+
+AI-103, DP-700, SC-100, and AZ-120 add guides, ten cases, and five units per route in all eight languages. Study Foundry development, Fabric engineering, security capabilities, and SAP infrastructure operations. References checked on 1 November 2026. Credential requirements and page-update metadata are checked separately.

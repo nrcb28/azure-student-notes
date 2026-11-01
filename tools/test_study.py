@@ -27,8 +27,8 @@ class TrainerTests(unittest.TestCase):
 
     def test_all_banks_have_unique_complete_questions_and_ui(self):
         cards = [card for lang in trainer.LANGUAGES for card in trainer.load_cards(language=lang)]
-        self.assertEqual(len(cards), 960)
-        self.assertEqual(len({card.id for card in cards}), 960)
+        self.assertEqual(len(cards), 1280)
+        self.assertEqual(len({card.id for card in cards}), 1280)
         expected = set(trainer.text_for('en'))
         for lang in trainer.LANGUAGES:
             self.assertEqual(set(trainer.text_for(lang)), expected)
@@ -158,7 +158,8 @@ class TrainerTests(unittest.TestCase):
 
     def test_new_routes_load_and_filter_ten_localised_cases(self):
         for exam in ('DP-900', 'SC-900', 'AZ-700', 'DP-300',
-                     'AI-901', 'SC-200', 'SC-300', 'AZ-140'):
+                     'AI-901', 'SC-200', 'SC-300', 'AZ-140',
+                     'AI-103', 'DP-700', 'SC-100', 'AZ-120'):
             with self.subTest(exam=exam):
                 cards = trainer.load_cards(language='ja', exams=(exam,))
                 self.assertEqual(len(cards),10)
@@ -173,7 +174,8 @@ class TrainerTests(unittest.TestCase):
         progress.state['cards']['es/AZ-104/01'] = legacy
         progress.save()
         for exam in ('DP-900', 'SC-900', 'AZ-700', 'DP-300',
-                     'AI-901', 'SC-200', 'SC-300', 'AZ-140'):
+                     'AI-901', 'SC-200', 'SC-300', 'AZ-140',
+                     'AI-103', 'DP-700', 'SC-100', 'AZ-120'):
             with self.subTest(exam=exam), patch('builtins.input',side_effect=['','2']), contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(trainer.main(['study','--lang','es','--exam',exam,'--limit','1',
                                                '--timezone','UTC','--progress',str(self.path)]),0)
@@ -181,10 +183,13 @@ class TrainerTests(unittest.TestCase):
         self.assertEqual(state['cards']['es/AZ-104/01'],legacy)
         self.assertEqual(set(state['cards']),{'es/AZ-104/01','es/DP-900/01','es/SC-900/01',
                                             'es/AZ-700/01','es/DP-300/01','es/AI-901/01',
-                                            'es/SC-200/01','es/SC-300/01','es/AZ-140/01'})
+                                            'es/SC-200/01','es/SC-300/01','es/AZ-140/01',
+                                            'es/AI-103/01','es/DP-700/01','es/SC-100/01',
+                                            'es/AZ-120/01'})
 
     def test_progress_rejects_unregistered_exam_codes_without_replacing_file(self):
-        for exam in ('AZ-999','DP-104','SC-301','AI-900','AZ-1400','DP-9000','dp-900'):
+        for exam in ('AZ-999','DP-104','SC-301','AI-900','AZ-1400','DP-9000','dp-900',
+                     'AI-1030','DP-7000','SC-1000','AZ-1200','ai-103','dp-700','sc-100','az-120'):
             with self.subTest(exam=exam):
                 state = {'version':1,'cards':{f'es/{exam}/01':trainer.schedule(None,2,NOW)}}
                 raw = json.dumps(state).encode()
@@ -200,7 +205,7 @@ class TrainerTests(unittest.TestCase):
                  for number in range(1,11)}
         state = {'version':1,'cards':cards}
         self.assertIs(trainer.validate_state(state),state)
-        self.assertEqual(len(state['cards']),960)
+        self.assertEqual(len(state['cards']),1280)
 
     def test_progress_rejects_impossible_counters_and_intervals(self):
         for changes in ({'reviews':0}, {'repetitions':2}, {'lapses':2},

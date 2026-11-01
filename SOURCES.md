@@ -94,3 +94,9 @@ Se añaden DP-900, SC-900, AZ-700 y DP-300 con guías, diez casos propios y cinc
 AI-901, SC-200, SC-300, and AZ-140 official English guides and associated credentials were reviewed on 2026-11-01. Their guides link technical references read for the new explanations. The [certification register](CERTIFICATION-SOURCES.md) records effective objective dates, the current AI-901 scope, and the SC-300 weighting discrepancy observed in the official guide.
 
 Se añaden AI-901, SC-200, SC-300 y AZ-140 en los ocho idiomas. Las fuentes de objetivos se revisaron el 1 de noviembre de 2026. El registro conserva la discrepancia publicada de pesos de SC-300 y distingue el programa de AI-901 del examen retirado AI-900.
+
+## Advanced development, data, architecture and SAP
+
+AI-103, DP-700, SC-100, and AZ-120 guides and associated credentials were checked on 2026-11-01. The [register](CERTIFICATION-SOURCES.md) distinguishes DP-700's undated live skills heading from update metadata, SC-100's current Expert prerequisites, and the recommended preparation for AZ-120. New guides cite primary technical sources for their original scenarios and workbook evidence.
+
+Se añaden AI-103, DP-700, SC-100 y AZ-120 en los ocho idiomas, con fuentes oficiales consultadas el 1 de noviembre de 2026 y límites explícitos sobre fechas, requisitos y pruebas. No se atribuyen ejecuciones de Foundry, Fabric, controles de seguridad ni SAP.

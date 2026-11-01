@@ -35,7 +35,7 @@
 
 ## 認定試験
 
-[AZ-900 · AZ-104 · AZ-305 · AZ-400 · DP-900 · SC-900 · AZ-700 · DP-300 · AI-901 · SC-200 · SC-300 · AZ-140](../certifications/ja/README.md)
+[AZ-900 · AZ-104 · AZ-305 · AZ-400 · DP-900 · SC-900 · AZ-700 · DP-300 · AI-901 · SC-200 · SC-300 · AZ-140 · AI-103 · DP-700 · SC-100 · AZ-120](../certifications/ja/README.md)
 
 [Glossary](../GLOSSARY-multilingual.md) · [出典](../SOURCES.md) · [Microsoft Learn](../LEARN-SOURCES.md)
 

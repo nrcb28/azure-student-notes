@@ -2,7 +2,7 @@
 
 [←](README.md) · [Anki](../flashcards/de.tsv)
 
-Übe 120 Fälle je Sprache, zehn pro Zertifizierung. Python 3.9 oder neuer und Standardbibliothek genügen. Kein Cloud-Konto, Zusatzpaket oder Netz während der Nutzung.
+Übe 160 Fälle je Sprache, zehn pro Zertifizierung. Python 3.9 oder neuer und Standardbibliothek genügen. Kein Cloud-Konto, Zusatzpaket oder Netz während der Nutzung.
 
 ```bash
 python tools/study.py demo --lang de --exam AZ-104

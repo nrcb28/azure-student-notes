@@ -58,3 +58,17 @@ La ampliación incorpora cuatro rutas nuevas y cuarenta escenarios nuevos por id
 - KQL examples use hypothetical or synthetic data and were not executed against Azure. No deployment, Foundry model or agent invocation, identity-tenant change, security response, AVD session, or operational recovery is claimed.
 
 La ampliación añade otras cuatro rutas completas en los ocho idiomas. La verificación es local y documental; los ejercicios proponen evidencia de estudio sin atribuir resultados observados en Azure.
+
+## Advanced AI development, Fabric engineering, architecture and SAP · 2026-11-01
+
+- Added AI-103, DP-700, SC-100, and AZ-120 in all eight languages: **96 additional guide, case-bank, and workbook documents**.
+- Current totals: **sixteen routes, 160 original scenarios and eighty certification units per language**. The trainer parses **1280 unique locale/case IDs**, representing those scenarios in eight languages.
+- Full local suite: **70 tests passed**. Existing route fixtures and progress regressions now include all sixteen registered codes, the four new case banks, preserved earlier ratings, and strict unknown-code rejection. The test count is unchanged; the covered route matrix is larger.
+- Eight regenerated Anki decks contain **160 cards each**; export tests match all published source cases exactly.
+- New-document checks passed for numbered sections, ten complete case answers, five stable unit anchors per route, Microsoft Learn source URL sets, and unchanged fenced code across languages. Answer toggles are localised.
+- Documentation: **592 Markdown files, 3,999 local links, 172 Bash blocks** passed. Foundation-unit, eighty-unit certification coverage, advanced-lab command, and generated multiple-choice-sheet checks passed too.
+- Independent read-throughs covered all new English/Spanish material and selected critical passages in the six other languages. Review clarified DP-700's yesterday-only reporting contract in all eight editions and corrected Spanish/Japanese SAP source-of-truth wording. The corrected passages were checked again; no remaining material issue was identified. This does not establish professional translation certification or exhaustive exam coverage.
+- All editions preserve DP-700's undated live skills-heading qualification and the requirement to know the watermark at arrival before deciding late-event acceptance. They also preserve SC-100's current one-of-three Associate prerequisite and AZ-120's recommended, rather than mandatory, Azure Administrator preparation.
+- Source checks are dated 2026-11-01. Synthetic loading states, architecture decisions, AI outputs, SAP failover and recovery evidence remain exercises or predictions. No Foundry, Fabric, security-control, SAP/HANA or Azure deployment execution is claimed.
+
+La ampliación lleva el total a dieciséis rutas y 160 escenarios por idioma. El mini simulacro de opción múltiple conserva su banco anterior; las nuevas rutas están integradas en el entrenador de autoevaluación y en Anki.

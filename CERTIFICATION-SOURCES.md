@@ -20,6 +20,10 @@ Routes are checked against official English guides for titles, objective dates, 
 | SC-200 | [Security Operations Analyst](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-200) | 2026-10-21 | 2026-11-01 |
 | SC-300 | [Identity and Access Administrator](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-300) | 2026-10-28 | 2026-11-01 |
 | AZ-140 | [Azure Virtual Desktop](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-140) | 2026-07-20 | 2026-11-01 |
+| AI-103 | [AI Apps and Agents on Azure](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103) | 2026-04-16 | 2026-11-01 |
+| DP-700 | [Fabric Data Engineering](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-700) | No explícita en el encabezado consultado / Not explicit in checked heading | 2026-11-01 |
+| SC-100 | [Cybersecurity Architect](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-100) | 2026-10-21 | 2026-11-01 |
+| AZ-120 | [Azure for SAP Workloads](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-120) | 2026-04-17 | 2026-11-01 |
 
 Las fechas se refieren a los objetivos de las guías inglesas consultadas. Una traducción de nuestros apuntes no implica que Microsoft ofrezca ese examen en todos los idiomas de este repositorio. Comprueba idioma, disponibilidad, requisitos y cambios antes de reservar.
 
@@ -88,6 +92,35 @@ The four exam guides and associated credential pages were opened on 2026-11-01. 
 Las nuevas guías enlazan además las referencias técnicas primarias consultadas para cada explicación. Los casos son propios y las unidades prácticas proponen evidencias sintéticas o de diseño; no se presentan como operaciones ejecutadas en un tenant o suscripción.
 
 The new guides also link primary technical references consulted for their explanations. Cases are original, and workbook evidence uses synthetic data or design exercises. No tenant or subscription execution is claimed.
+
+## AI-103, DP-700, SC-100 y AZ-120 · 2026-11-01
+
+Se abrieron las guías oficiales inglesas, las páginas de credenciales y referencias técnicas de desarrollo, datos, arquitectura y SAP. Cada guía del repositorio enlaza las fuentes concretas usadas para contrastar sus explicaciones. Los casos y cuadernos son originales y no equivalen a preguntas oficiales.
+
+Official English guides, credential pages, and technical development, data, architecture, and SAP references were opened. Repository guides link the specific sources used for concept checks. Cases and workbook tasks are original study material, not official exam questions.
+
+| Ruta / Route | Credencial / Credential | Material / Material |
+|---|---|---|
+| AI-103 | [Azure AI Apps and Agents Developer Associate](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-apps-and-agents-developer-associate/) | [Guía](certifications/es/AI-103.md) · [Guide](certifications/en/AI-103.md) |
+| DP-700 | [Fabric Data Engineer Associate](https://learn.microsoft.com/en-us/credentials/certifications/fabric-data-engineer-associate/) | [Guía](certifications/es/DP-700.md) · [Guide](certifications/en/DP-700.md) |
+| SC-100 | [Cybersecurity Architect Expert](https://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/) | [Guía](certifications/es/SC-100.md) · [Guide](certifications/en/SC-100.md) |
+| AZ-120 | [Azure for SAP Workloads Specialty](https://learn.microsoft.com/en-us/credentials/certifications/azure-for-sap-workloads-specialty/) | [Guía](certifications/es/AZ-120.md) · [Guide](certifications/en/AZ-120.md) |
+
+**Metadatos de DP-700:** la guía inglesa abierta mostraba “Skills measured” sin fecha de entrada en vigor en ese encabezado. La credencial indicaba actualización el 19 de octubre de 2026 y el pie de la guía mostraba 30 de octubre. Son metadatos distintos: no se presentan como confirmación de una fecha de objetivos. Las copias indexadas por buscadores pueden conservar encabezados anteriores.
+
+**DP-700 metadata:** the opened English guide used an undated “Skills measured” heading. Its credential page showed an update of 2026-10-19, while the guide footer showed 2026-10-30. Neither is treated as a confirmed objectives-effective date. Search-indexed copies can retain earlier headings.
+
+**Requisitos de SC-100:** la página consultada exigía aprobar SC-100 y haber obtenido al menos una de estas credenciales: Identity and Access Administrator Associate, Security Operations Analyst Associate o Cloud and AI Security Engineer Associate. No exige las tres a la vez. Estudiar una guía del repositorio no concede esa credencial.
+
+**SC-100 requirements:** the checked credential page required SC-100 plus at least one of those three associate credentials. Passing an exam and satisfying all credential requirements are separate matters; studying repository notes does not award a credential.
+
+**Preparación de AZ-120:** la certificación Azure Administrator Associate estaba fuertemente recomendada en las páginas consultadas; no se transforma esa recomendación en un requisito formal obligatorio. Las decisiones SAP necesitan comprobar soporte de plataforma, licencias y responsabilidades del servicio. Los apuntes no prueban una instalación SAP ni una restauración HANA.
+
+**AZ-120 preparation:** Azure Administrator Associate was strongly recommended, rather than stated as a formal mandatory prerequisite. SAP supportability, licensing, and operational responsibilities require their own checks. No SAP installation or HANA recovery is claimed.
+
+AI-103 estudia desarrollo con Foundry; DP-700 es una ruta de Microsoft Fabric, que no se presenta como un despliegue de Azure Synapse. La disponibilidad de estos productos y del examen debe comprobarse de nuevo antes de una práctica o reserva.
+
+AI-103 covers Foundry development; DP-700 covers Microsoft Fabric rather than treating it as an Azure Synapse deployment. Recheck product and exam availability before hands-on practice or booking.
 
 ## Límites de esta revisión / Review limits
 

@@ -14,9 +14,9 @@ Azure study notes for computer science students. Short explanations, practical d
 
 **[Entrenador en español](es/18-study-trainer.md) · [English trainer](en/18-study-trainer.md) · [Anki en ocho idiomas](flashcards/README.md)**
 
-Un entrenador local convierte 120 casos por idioma —960 variantes entre los ocho idiomas— en sesiones de repaso. Guarda valoraciones, prioriza repasos pendientes, recupera dificultades, propone un plan y exporta a Anki. Funciona sin Azure, cuenta ni paquetes externos. Es autoevaluación, no corrección automática ni predicción de aprobar.
+Un entrenador local convierte 160 casos por idioma —1280 variantes entre los ocho idiomas— en sesiones de repaso. Guarda valoraciones, prioriza repasos pendientes, recupera dificultades, propone un plan y exporta a Anki. Funciona sin Azure, cuenta ni paquetes externos. Es autoevaluación, no corrección automática ni predicción de aprobar.
 
-An offline trainer turns 120 cases per language, 960 language variants overall, into review sessions. It saves ratings, prioritises due reviews, revisits difficulties, suggests a plan, and exports to Anki. No Azure account or external packages. Self-assessment, not automatic grading or a pass prediction.
+An offline trainer turns 160 cases per language, 1280 language variants overall, into review sessions. It saves ratings, prioritises due reviews, revisits difficulties, suggests a plan, and exports to Anki. No Azure account or external packages. Self-assessment, not automatic grading or a pass prediction.
 
 ```bash
 python tools/study.py demo --lang es --exam AZ-104
@@ -44,7 +44,7 @@ python tools/quiz.py run --lang es --mode exam --count 8 --minutes 12
 ## Ruta común ampliada / Expanded common route
 
 - [Doce unidades básicas en ocho idiomas / Twelve foundation units](STUDY-PARITY.md).
-- [60 unidades avanzadas por idioma / 60 advanced units per language](certifications/es/README.md).
+- [80 unidades avanzadas por idioma / 80 advanced units per language](certifications/es/README.md).
 - [Tres laboratorios nuevos / Three new labs](es/17-advanced-labs.md): recuperación de blobs, inspección de roles y simulación local de reintentos.
 
 Cada unidad avanzada incluye explicación, escenario y evidencia solicitada. Las notas anteriores se conservan; el núcleo nuevo tiene los mismos objetivos y entregables en los ocho idiomas. No se afirma traducción literal completa de cada párrafo anterior.
@@ -67,20 +67,33 @@ New topics: blob recovery, retries and idempotency, RBAC diagnosis, and Key Vaul
 
 | Idioma / Language | Apuntes / Notes | Certificaciones / Certifications |
 |---|---|---|
-| Español | [Español](es/README.md) | [12 rutas / 12 routes](certifications/es/README.md) |
-| English | [English](en/README.md) | [12 rutas / 12 routes](certifications/en/README.md) |
-| Italiano | [Italiano](it/README.md) | [12 rutas / 12 routes](certifications/it/README.md) |
-| Deutsch | [Deutsch](de/README.md) | [12 rutas / 12 routes](certifications/de/README.md) |
-| Français | [Français](fr/README.md) | [12 rutas / 12 routes](certifications/fr/README.md) |
-| Русский | [Русский](ru/README.md) | [12 rutas / 12 routes](certifications/ru/README.md) |
-| 日本語 | [日本語](ja/README.md) | [12 rutas / 12 routes](certifications/ja/README.md) |
-| 简体中文 | [简体中文](zh/README.md) | [12 rutas / 12 routes](certifications/zh/README.md) |
+| Español | [Español](es/README.md) | [16 rutas / 16 routes](certifications/es/README.md) |
+| English | [English](en/README.md) | [16 rutas / 16 routes](certifications/en/README.md) |
+| Italiano | [Italiano](it/README.md) | [16 rutas / 16 routes](certifications/it/README.md) |
+| Deutsch | [Deutsch](de/README.md) | [16 rutas / 16 routes](certifications/de/README.md) |
+| Français | [Français](fr/README.md) | [16 rutas / 16 routes](certifications/fr/README.md) |
+| Русский | [Русский](ru/README.md) | [16 rutas / 16 routes](certifications/ru/README.md) |
+| 日本語 | [日本語](ja/README.md) | [16 rutas / 16 routes](certifications/ja/README.md) |
+| 简体中文 | [简体中文](zh/README.md) | [16 rutas / 16 routes](certifications/zh/README.md) |
 
 Las versiones italiana, alemana, francesa, rusa, japonesa y china son adaptaciones de estudio más compactas: incluyen los doce temas, prácticas, repaso y las cuatro rutas iniciales. Las guías añadidas de datos, seguridad, redes, SQL, IA y escritorios desarrollan los mismos temas, casos y entregables en los ocho idiomas. [Detalles de las ediciones](LOCALIZATION.md).
 
 The Italian, German, French, Russian, Japanese, and Chinese editions are more compact study adaptations covering all twelve topics, labs, review, and the four initial certification routes. The added data, security, networking, SQL, AI, and desktop guides have matching topics, cases, and deliverables in all eight languages. [Edition details](LOCALIZATION.md).
 
 [Glosario en ocho idiomas / Eight-language glossary](GLOSSARY-multilingual.md).
+
+## Desarrollo de IA, ingeniería de datos, arquitectura y SAP / Advanced routes
+
+Añadidas **AI-103, DP-700, SC-100 y AZ-120**: desarrollo con Microsoft Foundry, ingeniería de datos con Fabric, arquitectura de ciberseguridad y cargas SAP en Azure. Cada ruta incluye guía, diez casos originales y cinco unidades prácticas en los ocho idiomas; los casos también están en el entrenador y Anki.
+
+Added **AI-103, DP-700, SC-100, and AZ-120** in all eight languages, with guides, ten original cases, and five evidence-based workbook units per route. Study advanced Foundry development, Fabric data engineering, cybersecurity design, and SAP infrastructure operations.
+
+```bash
+python tools/study.py demo --lang es --exam AI-103
+python tools/study.py study --lang es --exam DP-700 --limit 5
+```
+
+[Las dieciséis rutas / Sixteen routes](certifications/es/README.md) · [Fuentes, fechas y requisitos / Sources, dates, requirements](CERTIFICATION-SOURCES.md)
 
 ## Más rutas: IA, seguridad y escritorios / More routes
 
@@ -93,7 +106,7 @@ python tools/study.py demo --lang es --exam AI-901
 python tools/study.py study --lang es --exam SC-200 --limit 5
 ```
 
-[Índice de las doce rutas / Twelve-route index](certifications/es/README.md) · [Versiones y fuentes / Sources and versions](CERTIFICATION-SOURCES.md)
+[Índice de certificaciones / Certification index](certifications/es/README.md) · [Versiones y fuentes / Sources and versions](CERTIFICATION-SOURCES.md)
 
 ## Nuevas rutas: datos, seguridad, redes y SQL / New routes
 
@@ -124,10 +137,14 @@ python tools/study.py study --lang es --exam AZ-700 --limit 5
 | SC-200 · Security Operations | [Guía](certifications/es/SC-200.md) | [Guide](certifications/en/SC-200.md) |
 | SC-300 · Identity and Access | [Guía](certifications/es/SC-300.md) | [Guide](certifications/en/SC-300.md) |
 | AZ-140 · Azure Virtual Desktop | [Guía](certifications/es/AZ-140.md) | [Guide](certifications/en/AZ-140.md) |
+| AI-103 · AI Apps and Agents | [Guía](certifications/es/AI-103.md) | [Guide](certifications/en/AI-103.md) |
+| DP-700 · Fabric Data Engineering | [Guía](certifications/es/DP-700.md) | [Guide](certifications/en/DP-700.md) |
+| SC-100 · Cybersecurity Architecture | [Guía](certifications/es/SC-100.md) | [Guide](certifications/en/SC-100.md) |
+| AZ-120 · SAP Workloads | [Guía](certifications/es/AZ-120.md) | [Guide](certifications/en/AZ-120.md) |
 
-Cada guía desarrolla conceptos, decisiones, diagnóstico, práctica y repaso. Hay 10 casos de certificación por examen y por idioma: 960 variantes en los ocho idiomas, a partir de 120 escenarios originales. Las referencias se registran por versión: 27 y 30 de octubre, y 1 de noviembre de 2026; consulta las páginas oficiales antes de reservar un examen.
+Cada guía desarrolla conceptos, decisiones, diagnóstico, práctica y repaso. Hay 10 casos de certificación por examen y por idioma: 1280 variantes en los ocho idiomas, a partir de 160 escenarios originales. Las referencias se registran por versión: 27 y 30 de octubre, y 1 de noviembre de 2026; consulta las páginas oficiales antes de reservar un examen.
 
-Each guide develops concepts, decisions, troubleshooting, practice, and review. There are ten certification cases per exam and language: 960 language variants from 120 original scenarios. References are versioned by review date: 27 and 30 October, and 1 November 2026; consult official pages before booking an exam.
+Each guide develops concepts, decisions, troubleshooting, practice, and review. There are ten certification cases per exam and language: 1280 language variants from 160 original scenarios. References are versioned by review date: 27 and 30 October, and 1 November 2026; consult official pages before booking an exam.
 
 ## Qué hay aquí / What's inside
 

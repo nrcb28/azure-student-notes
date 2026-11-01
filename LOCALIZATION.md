@@ -36,3 +36,9 @@ La ampliación de DP-900, SC-900, AZ-700 y DP-300 desarrolla los mismos concepto
 AI-901, SC-200, SC-300, and AZ-140 likewise provide matching guide concepts, ten cases and five-unit workbooks in all eight editions. Official exam availability is separate from repository language coverage. The SC-300 guide records a discrepancy between the official summary and detailed authentication weightings; translations preserve that qualification.
 
 AI-901, SC-200, SC-300 y AZ-140 amplían las ocho ediciones con conceptos, diez casos y cinco unidades equivalentes. La disponibilidad de los idiomas de examen depende de Microsoft. Se conserva la advertencia concreta sobre la discrepancia entre los pesos de autenticación publicados en el resumen y el apartado detallado de SC-300.
+
+## Fourth certification expansion / Cuarta ampliación
+
+AI-103, DP-700, SC-100, and AZ-120 are also developed in all eight languages, with matching guide concepts, ten scenarios and five workbook units each. DP-700 distinguishes an undated live skills heading from credential/page update metadata; SC-100 distinguishes passing an exam from meeting Expert credential prerequisites. Translations preserve those qualifications.
+
+AI-103, DP-700, SC-100 y AZ-120 se desarrollan en los ocho idiomas. Se conservan los matices sobre la fecha no declarada en el encabezado de objetivos de DP-700 y sobre los requisitos adicionales de la credencial Expert asociada a SC-100. Los idiomas del repositorio no determinan los idiomas de examen disponibles.

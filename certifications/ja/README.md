@@ -1,10 +1,10 @@
-# 認定資格：12 の学習ルート
+# 認定資格：16 の学習ルート
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [一般ノート](../../ja/README.md) · [出典一覧](../../CERTIFICATION-SOURCES.md)
 
-12 の試験ルートに、それぞれ判断の理由を学ぶガイド、解答つきの独自ケース 10 問、成果物を確認する 5 単元のワークブックを用意した。まず理解したい分野から選ぼう。
+16 の試験ルートに、それぞれ判断の理由を学ぶガイド、解答つきの独自ケース 10 問、成果物を確認する 5 単元のワークブックを用意した。まず理解したい分野から選ぼう。
 
 | ルート | 分野 | ガイド | ケース | ワークブック |
 |---|---|---|---|---|
@@ -20,6 +20,10 @@
 | SC-200 | セキュリティ運用 | [読む](SC-200.md) | [10 ケース](SC-200-cases.md) | [5 単元](SC-200-workbook.md) |
 | SC-300 | ID とアクセス管理 | [読む](SC-300.md) | [10 ケース](SC-300-cases.md) | [5 単元](SC-300-workbook.md) |
 | AZ-140 | Azure Virtual Desktop | [読む](AZ-140.md) | [10 ケース](AZ-140-cases.md) | [5 単元](AZ-140-workbook.md) |
+| AI-103 | AI アプリとエージェント開発 | [読む](AI-103.md) | [10 ケース](AI-103-cases.md) | [5 単元](AI-103-workbook.md) |
+| DP-700 | Fabric データエンジニアリング | [読む](DP-700.md) | [10 ケース](DP-700-cases.md) | [5 単元](DP-700-workbook.md) |
+| SC-100 | サイバーセキュリティ設計 | [読む](SC-100.md) | [10 ケース](SC-100-cases.md) | [5 単元](SC-100-workbook.md) |
+| AZ-120 | Azure 上の SAP ワークロード | [読む](AZ-120.md) | [10 ケース](AZ-120-cases.md) | [5 単元](AZ-120-workbook.md) |
 
 ## どこから始めるか
 
@@ -27,16 +31,16 @@ AZ-900 で全体像をつかむ。DP-900 は DP-300 に進む前のデータと�
 
 ## 今回の追加内容
 
-DP-900、SC-900、AZ-700、DP-300 は、8 言語で対応する解説・ケース・成果物をそろえた。他ルートの以前の補足ノートは長さが異なる。各言語 120 シナリオ、全体で 960 の言語版がある。実際の試験問題ではない。
+DP-900、SC-900、AZ-700、DP-300 は、8 言語で対応する解説・ケース・成果物をそろえた。他ルートの以前の補足ノートは長さが異なる。各言語 160 シナリオ、全体で 1280 の言語版がある。実際の試験問題ではない。
 
 ## トレーナーで復習
 
-自己評価トレーナーで 12 ルートを選び、ケースを Anki に書き出せる。自分の説明を解答と比べ、思い出せた度合いを評価する。選択式ミニクイズは、従来の 4 ルートに関する 8 問のままである。
+自己評価トレーナーで 16 ルートを選び、ケースを Anki に書き出せる。自分の説明を解答と比べ、思い出せた度合いを評価する。選択式ミニクイズは、従来の 4 ルートに関する 8 問のままである。
 
 ```bash
-python tools/study.py demo --lang ja --exam AI-901
-python tools/study.py study --lang ja --exam SC-200 --limit 5
-python tools/study.py export --lang ja --exam SC-300 --output exports/ja-sc300.tsv
+python tools/study.py demo --lang ja --exam AI-103
+python tools/study.py study --lang ja --exam DP-700 --limit 5
+python tools/study.py export --lang ja --exam SC-100 --output exports/ja-sc100.tsv
 ```
 
 ## 出典と範囲
@@ -48,3 +52,7 @@ python tools/study.py export --lang ja --exam SC-300 --output exports/ja-sc300.t
 ## AI・運用・ID・仮想デスクトップ
 
 AI-901、SC-200、SC-300、AZ-140 に、ガイド・10 ケース・5 単元を各ルートの 8 言語版で追加した。AI-901 は Microsoft Foundry での実装、SC-200 は調査と対応、SC-300 は Entra の詳細、AZ-140 は仮想デスクトップとアプリを扱う。これら 4 ルートの出典確認日は 2026 年 11 月 1 日。
+
+## 応用 AI・データ・セキュリティ設計・SAP
+
+AI-103、DP-700、SC-100、AZ-120 に、各ルートのガイド・10 ケース・5 単元を 8 言語で追加した。Foundry 開発、Fabric データ処理、セキュリティ機能、SAP 基盤を深める。出典確認日は 2026 年 11 月 1 日。資格の取得要件とページの更新日は別々に確認する。

@@ -49,3 +49,7 @@ Se añaden guías, casos originales y cuadernos de DP-900, SC-900, AZ-700 y DP-3
 Independently authored AI-901, SC-200, SC-300, and AZ-140 guides, cases, and workbooks are also adapted into all eight languages. Microsoft Learn sources inform technical checks and objective references; no Microsoft authorship or endorsement is implied.
 
 Se incorporan materiales propios de AI-901, SC-200, SC-300 y AZ-140 en los ocho idiomas, con fuentes de Microsoft Learn y las mismas condiciones de atribución y licencia.
+
+AI-103, DP-700, SC-100, and AZ-120 guides, original cases and workbooks are additional independent teaching adaptations in all eight languages. References to Microsoft Learn support source checks; they do not imply official authorship, endorsement or a reproduction of real exams.
+
+Se añaden guías, escenarios y cuadernos propios de AI-103, DP-700, SC-100 y AZ-120 en los ocho idiomas, con las mismas condiciones de atribución y licencia.

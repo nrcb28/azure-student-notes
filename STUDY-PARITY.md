@@ -1,8 +1,8 @@
 # Common learning route / Ruta común de estudio
 
-The new learning route uses the same twelve foundation units, sixty advanced certification units, scenarios, requested evidence, and three new lab procedures in all eight languages. This is parity of the new learning core, not a claim that every older explanatory paragraph has been translated verbatim or that equal word counts indicate quality.
+The new learning route uses the same twelve foundation units, eighty advanced certification units, scenarios, requested evidence, and three new lab procedures in all eight languages. This is parity of the new learning core, not a claim that every older explanatory paragraph has been translated verbatim or that equal word counts indicate quality.
 
-La nueva ruta comparte doce unidades básicas, sesenta unidades avanzadas, escenarios, evidencias y tres procedimientos de laboratorio en los ocho idiomas. La igualdad corresponde a este núcleo nuevo. No se afirma que cada párrafo histórico esté traducido literalmente ni que contar palabras demuestre calidad.
+La nueva ruta comparte doce unidades básicas, ochenta unidades avanzadas, escenarios, evidencias y tres procedimientos de laboratorio en los ocho idiomas. La igualdad corresponde a este núcleo nuevo. No se afirma que cada párrafo histórico esté traducido literalmente ni que contar palabras demuestre calidad.
 
 | Language | Core | Advanced labs | Certification workbooks |
 |---|---|---|---|
@@ -54,6 +54,12 @@ El mini simulacro mantiene sus ocho escenarios sobre las cuatro rutas originales
 
 ## Foundry, security operations, identity and desktops · 2026-11-01
 
-AI-901, SC-200, SC-300, and AZ-140 add four more routes with a guide, ten original cases, and five workbook units each in every language. The current total is twelve routes, 120 cases and sixty certification units per language: 960 locale/case variants. Earlier sections record previous expansions; their historical counts are not current totals.
+AI-901, SC-200, SC-300, and AZ-140 add four more routes with a guide, ten original cases, and five workbook units each in every language. That revision provided twelve routes, 120 cases and sixty certification units per language: 960 locale/case variants. Earlier sections record previous expansions; their historical counts are not current totals.
 
-AI-901, SC-200, SC-300 y AZ-140 añaden cuatro rutas completas por idioma. El total actual es de doce rutas, 120 escenarios y sesenta unidades de certificación por idioma. Los recuentos de ampliaciones anteriores son históricos. Los casos se integran en el entrenador y Anki; el banco de opción múltiple mantiene su alcance de cuatro rutas.
+AI-901, SC-200, SC-300 y AZ-140 añaden cuatro rutas completas por idioma. Esa revisión alcanzó doce rutas, 120 escenarios y sesenta unidades de certificación por idioma. Los recuentos de ampliaciones anteriores son históricos. Los casos se integran en el entrenador y Anki; el banco de opción múltiple mantiene su alcance de cuatro rutas.
+
+## Advanced development, data, security architecture and SAP · 2026-11-01
+
+AI-103, DP-700, SC-100, and AZ-120 add guides, ten cases and five workbook units per route in all eight languages. The current total is **sixteen routes, 160 original scenarios and eighty certification units per language**, yielding 1280 locale/case variants. Source and prerequisite qualifications remain part of the translated material. Historical expansion counts above describe earlier revisions.
+
+AI-103, DP-700, SC-100 y AZ-120 llevan el total actual a dieciséis rutas, 160 escenarios y ochenta unidades de certificación por idioma. Las 1280 variantes conservan fuentes y límites de los metadatos consultados. El banco de opción múltiple mantiene su alcance anterior; las nuevas rutas están en el entrenador de autoevaluación y en Anki.
