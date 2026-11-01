@@ -14,9 +14,9 @@ Azure study notes for computer science students. Short explanations, practical d
 
 **[Entrenador en español](es/18-study-trainer.md) · [English trainer](en/18-study-trainer.md) · [Anki en ocho idiomas](flashcards/README.md)**
 
-Un entrenador local convierte los 320 casos del repositorio en sesiones de repaso. Guarda valoraciones, prioriza repasos pendientes, recupera dificultades, propone un plan y exporta a Anki. Funciona sin Azure, cuenta ni paquetes externos. Es autoevaluación, no corrección automática ni predicción de aprobar.
+Un entrenador local convierte 80 casos por idioma —640 variantes entre los ocho idiomas— en sesiones de repaso. Guarda valoraciones, prioriza repasos pendientes, recupera dificultades, propone un plan y exporta a Anki. Funciona sin Azure, cuenta ni paquetes externos. Es autoevaluación, no corrección automática ni predicción de aprobar.
 
-An offline trainer turns the 320 repository cases into review sessions. It saves ratings, prioritises due reviews, revisits difficulties, suggests a plan, and exports to Anki. No Azure account or external packages. Self-assessment, not automatic grading or a pass prediction.
+An offline trainer turns 80 cases per language, 640 language variants overall, into review sessions. It saves ratings, prioritises due reviews, revisits difficulties, suggests a plan, and exports to Anki. No Azure account or external packages. Self-assessment, not automatic grading or a pass prediction.
 
 ```bash
 python tools/study.py demo --lang es --exam AZ-104
@@ -30,9 +30,9 @@ python tools/study.py stats --lang es
 
 **[Practicar en español](es/19-mini-quiz.md) · [Read in English](en/19-mini-quiz.md) · [Preguntas en GitHub](es/20-quiz-cases.md)**
 
-Ocho escenarios originales, dos por cada ruta de certificación, en los ocho idiomas. Elige una respuesta y revisa su explicación, el motivo del error, una fuente de Microsoft Learn y el capítulo relacionado. Incluye modos practice y exam, tiempo opcional, informes JSON locales y repaso de errores. Es un banco pequeño para practicar decisiones.
+Ocho escenarios originales para las cuatro rutas iniciales, dos por ruta, en los ocho idiomas. Elige una respuesta y revisa su explicación, el motivo del error, una fuente de Microsoft Learn y el capítulo relacionado. Incluye modos practice y exam, tiempo opcional, informes JSON locales y repaso de errores. Es un banco pequeño para practicar decisiones.
 
-Eight original scenarios, two per certification route, translated into all eight languages. Practise with immediate explanations or defer marking until the end, save a local report, and revisit mistakes by topic. This small bank does not cover a complete exam or predict passing.
+Eight original scenarios for the four initial certification routes, two per route, translated into all eight languages. Practise with immediate explanations or defer marking until the end, save a local report, and revisit mistakes by topic. This small bank does not cover a complete exam or predict passing.
 
 ```bash
 python tools/quiz.py demo --lang es
@@ -44,7 +44,7 @@ python tools/quiz.py run --lang es --mode exam --count 8 --minutes 12
 ## Ruta común ampliada / Expanded common route
 
 - [Doce unidades básicas en ocho idiomas / Twelve foundation units](STUDY-PARITY.md).
-- [20 unidades avanzadas por idioma / 20 advanced units per language](certifications/es/README.md).
+- [40 unidades avanzadas por idioma / 40 advanced units per language](certifications/es/README.md).
 - [Tres laboratorios nuevos / Three new labs](es/17-advanced-labs.md): recuperación de blobs, inspección de roles y simulación local de reintentos.
 
 Cada unidad avanzada incluye explicación, escenario y evidencia solicitada. Las notas anteriores se conservan; el núcleo nuevo tiene los mismos objetivos y entregables en los ocho idiomas. No se afirma traducción literal completa de cada párrafo anterior.
@@ -67,20 +67,33 @@ New topics: blob recovery, retries and idempotency, RBAC diagnosis, and Key Vaul
 
 | Idioma / Language | Apuntes / Notes | Certificaciones / Certifications |
 |---|---|---|
-| Español | [Español](es/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/es/README.md) |
-| English | [English](en/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/en/README.md) |
-| Italiano | [Italiano](it/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/it/README.md) |
-| Deutsch | [Deutsch](de/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/de/README.md) |
-| Français | [Français](fr/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/fr/README.md) |
-| Русский | [Русский](ru/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/ru/README.md) |
-| 日本語 | [日本語](ja/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/ja/README.md) |
-| 简体中文 | [简体中文](zh/README.md) | [AZ-900 · AZ-104 · AZ-305 · AZ-400](certifications/zh/README.md) |
+| Español | [Español](es/README.md) | [8 rutas / 8 routes](certifications/es/README.md) |
+| English | [English](en/README.md) | [8 rutas / 8 routes](certifications/en/README.md) |
+| Italiano | [Italiano](it/README.md) | [8 rutas / 8 routes](certifications/it/README.md) |
+| Deutsch | [Deutsch](de/README.md) | [8 rutas / 8 routes](certifications/de/README.md) |
+| Français | [Français](fr/README.md) | [8 rutas / 8 routes](certifications/fr/README.md) |
+| Русский | [Русский](ru/README.md) | [8 rutas / 8 routes](certifications/ru/README.md) |
+| 日本語 | [日本語](ja/README.md) | [8 rutas / 8 routes](certifications/ja/README.md) |
+| 简体中文 | [简体中文](zh/README.md) | [8 rutas / 8 routes](certifications/zh/README.md) |
 
-Las versiones italiana, alemana, francesa, rusa, japonesa y china son adaptaciones de estudio más compactas: incluyen los doce temas, prácticas, repaso y las cuatro certificaciones. Español e inglés mantienen los desarrollos más extensos. [Detalles de las ediciones](LOCALIZATION.md).
+Las versiones italiana, alemana, francesa, rusa, japonesa y china son adaptaciones de estudio más compactas: incluyen los doce temas, prácticas, repaso y las cuatro rutas iniciales. Las nuevas guías DP-900, SC-900, AZ-700 y DP-300 desarrollan los mismos temas, casos y entregables en los ocho idiomas. [Detalles de las ediciones](LOCALIZATION.md).
 
-The Italian, German, French, Russian, Japanese, and Chinese editions are more compact study adaptations covering all twelve topics, labs, review, and the four certification routes. Spanish and English retain the longer explanations. [Edition details](LOCALIZATION.md).
+The Italian, German, French, Russian, Japanese, and Chinese editions are more compact study adaptations covering all twelve topics, labs, review, and the four initial certification routes. The new DP-900, SC-900, AZ-700, and DP-300 guides have matching topics, cases, and deliverables in all eight languages. [Edition details](LOCALIZATION.md).
 
 [Glosario en ocho idiomas / Eight-language glossary](GLOSSARY-multilingual.md).
+
+## Nuevas rutas: datos, seguridad, redes y SQL / New routes
+
+Añadidas **DP-900, SC-900, AZ-700 y DP-300**. Cada ruta incluye una guía desarrollada, diez casos con respuestas razonadas y cinco unidades prácticas. Se puede estudiar en español, inglés, italiano, alemán, francés, ruso, japonés y chino simplificado. El entrenador y los mazos Anki incorporan los nuevos casos.
+
+Added **DP-900, SC-900, AZ-700, and DP-300**. Every route has a detailed guide, ten cases with reasoned answers, and five workbook units in all eight languages. New cases are available in the trainer and Anki decks.
+
+```bash
+python tools/study.py demo --lang es --exam DP-900
+python tools/study.py study --lang es --exam AZ-700 --limit 5
+```
+
+[Elegir ruta / Choose a route](certifications/es/README.md) · [Referencias oficiales / Official references](CERTIFICATION-SOURCES.md)
 
 ## Certificaciones con más detalle / Detailed certification guides
 
@@ -90,10 +103,14 @@ The Italian, German, French, Russian, Japanese, and Chinese editions are more co
 | AZ-104 · Administrator | [Guía](certifications/es/AZ-104.md) | [Guide](certifications/en/AZ-104.md) |
 | AZ-305 · Infrastructure Solutions | [Guía](certifications/es/AZ-305.md) | [Guide](certifications/en/AZ-305.md) |
 | AZ-400 · DevOps Solutions | [Guía](certifications/es/AZ-400.md) | [Guide](certifications/en/AZ-400.md) |
+| DP-900 · Data Fundamentals | [Guía](certifications/es/DP-900.md) | [Guide](certifications/en/DP-900.md) |
+| SC-900 · Security, Compliance, Identity | [Guía](certifications/es/SC-900.md) | [Guide](certifications/en/SC-900.md) |
+| AZ-700 · Networking Solutions | [Guía](certifications/es/AZ-700.md) | [Guide](certifications/en/AZ-700.md) |
+| DP-300 · Azure SQL Administration | [Guía](certifications/es/DP-300.md) | [Guide](certifications/en/DP-300.md) |
 
-Cada guía desarrolla conceptos, decisiones, diagnóstico, práctica y repaso. Hay 10 casos de certificación por examen y por idioma: 320 casos en los ocho idiomas. Las referencias de objetivos y pesos se comprobaron el 27 de octubre de 2026; consulta las páginas oficiales antes de reservar un examen.
+Cada guía desarrolla conceptos, decisiones, diagnóstico, práctica y repaso. Hay 10 casos de certificación por examen y por idioma: 640 variantes en los ocho idiomas, a partir de 80 escenarios originales. Las referencias iniciales se comprobaron el 27 de octubre y las cuatro rutas nuevas el 30 de octubre de 2026; consulta las páginas oficiales antes de reservar un examen.
 
-Each guide develops concepts, decisions, troubleshooting, practice, and review. There are ten certification cases per exam and language: 320 cases across eight languages. Objective dates and weightings were checked on 27 October 2026; consult official pages before booking an exam.
+Each guide develops concepts, decisions, troubleshooting, practice, and review. There are ten certification cases per exam and language: 640 language variants from 80 original scenarios. Initial references were checked on 27 October and the four new routes on 30 October 2026; consult official pages before booking an exam.
 
 ## Qué hay aquí / What's inside
 

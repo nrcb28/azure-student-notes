@@ -51,7 +51,10 @@ def check(root):
             errors.append(f"{script.name}: {result.stderr}")
     for error in errors:
         print(error, file=sys.stderr)
-    print(f'{len(manifest["languages"])} languages: 12 core units, 20 certification units, 3 new labs.')
+    certification_units = sum(len(units) for units in manifest['exams'].values())
+    print(f'{len(manifest["languages"])} languages: {len(manifest["core_units"])} core units, '
+          f'{certification_units} certification units across {len(manifest["exams"])} routes, '
+          f'{len(manifest["labs"])} advanced-lab sections.')
     return bool(errors)
 
 

@@ -24,3 +24,9 @@ Product names, commands and parameters are preserved. Newly adapted lab command 
 The new core and advanced workbooks share unit coverage, scenarios, evidence and lab procedures across all eight languages. Earlier supplementary notes retain different lengths. See [STUDY-PARITY.md](STUDY-PARITY.md) for the exact scope and limits of parity.
 
 El nuevo núcleo iguala unidades, escenarios, evidencias y procedimientos. Las notas complementarias anteriores conservan extensiones distintas. El registro detalla qué se ha igualado y qué no.
+
+## New certification guides / Nuevas guías de certificación
+
+The DP-900, SC-900, AZ-700, and DP-300 expansion includes the same concepts, original cases, and workbook deliverables in all eight languages. Each route adds three documents per language. Older supplementary notes in the initial routes still differ in length. Translations preserve official product names, commands, source URLs, case numbering, and workbook anchors.
+
+La ampliación de DP-900, SC-900, AZ-700 y DP-300 desarrolla los mismos conceptos, casos propios y entregables en los ocho idiomas. Cada ruta añade tres documentos por idioma; las notas complementarias anteriores conservan longitudes diferentes. Los nombres de producto, comandos, fuentes, numeración y anclajes se mantienen.

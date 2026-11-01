@@ -27,8 +27,8 @@ class TrainerTests(unittest.TestCase):
 
     def test_all_banks_have_unique_complete_questions_and_ui(self):
         cards = [card for lang in trainer.LANGUAGES for card in trainer.load_cards(language=lang)]
-        self.assertEqual(len(cards), 320)
-        self.assertEqual(len({card.id for card in cards}), 320)
+        self.assertEqual(len(cards), 640)
+        self.assertEqual(len({card.id for card in cards}), 640)
         expected = set(trainer.text_for('en'))
         for lang in trainer.LANGUAGES:
             self.assertEqual(set(trainer.text_for(lang)), expected)
@@ -155,6 +155,48 @@ class TrainerTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     trainer.Progress(self.path)
                 self.assertEqual(self.path.read_bytes(),raw)
+
+    def test_new_routes_load_and_filter_ten_localised_cases(self):
+        for exam in ('DP-900', 'SC-900', 'AZ-700', 'DP-300'):
+            with self.subTest(exam=exam):
+                cards = trainer.load_cards(language='ja', exams=(exam,))
+                self.assertEqual(len(cards),10)
+                self.assertEqual({card.exam for card in cards},{exam})
+                self.assertEqual([card.id for card in cards],
+                                 [f'ja/{exam}/{number:02d}' for number in range(1,11)])
+                self.assertTrue(all(card.source == f'certifications/ja/{exam}-cases.md' for card in cards))
+
+    def test_new_routes_save_ratings_without_changing_legacy_progress(self):
+        legacy = trainer.schedule(None,2,NOW)
+        progress = trainer.Progress(self.path)
+        progress.state['cards']['es/AZ-104/01'] = legacy
+        progress.save()
+        for exam in ('DP-900', 'SC-900', 'AZ-700', 'DP-300'):
+            with self.subTest(exam=exam), patch('builtins.input',side_effect=['','2']), contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(trainer.main(['study','--lang','es','--exam',exam,'--limit','1',
+                                               '--timezone','UTC','--progress',str(self.path)]),0)
+        state = trainer.Progress(self.path).state
+        self.assertEqual(state['cards']['es/AZ-104/01'],legacy)
+        self.assertEqual(set(state['cards']),{'es/AZ-104/01','es/DP-900/01','es/SC-900/01',
+                                            'es/AZ-700/01','es/DP-300/01'})
+
+    def test_progress_rejects_unregistered_exam_codes_without_replacing_file(self):
+        for exam in ('AZ-999','DP-104','SC-300','DP-9000','dp-900'):
+            with self.subTest(exam=exam):
+                state = {'version':1,'cards':{f'es/{exam}/01':trainer.schedule(None,2,NOW)}}
+                raw = json.dumps(state).encode()
+                self.path.write_bytes(raw)
+                with self.assertRaises(ValueError):
+                    trainer.Progress(self.path)
+                self.assertEqual(self.path.read_bytes(),raw)
+
+    def test_registered_routes_keep_existing_progress_ids_valid(self):
+        record = trainer.schedule(None,2,NOW)
+        cards = {f'{lang}/{exam}/01':dict(record)
+                 for lang in trainer.LANGUAGES for exam in trainer.EXAMS}
+        state = {'version':1,'cards':cards}
+        self.assertIs(trainer.validate_state(state),state)
+        self.assertEqual(len(state['cards']),64)
 
     def test_progress_rejects_impossible_counters_and_intervals(self):
         for changes in ({'reviews':0}, {'repetitions':2}, {'lapses':2},

@@ -2,7 +2,7 @@
 
 Ocho escenarios originales, dos por ruta AZ-900, AZ-104, AZ-305 y AZ-400, traducidos a ocho idiomas. Corrección por opción elegida, explicación del error y capítulos para repasar. Python 3.9+ y biblioteca estándar; funciona sin cuenta de Azure ni conexión.
 
-Eight original scenarios, two per route, with questions, explanations, and interface in eight languages. This is a small practice bank, independent of Microsoft and separate from the 320 open-response cases used by the [self-rating trainer](TRAINER.md).
+Eight original scenarios, two per route, with questions, explanations, and interface in eight languages. This is a small practice bank, independent of Microsoft and separate from the 640 open-response language variants used by the [self-rating trainer](TRAINER.md).
 
 [Español](es/19-mini-quiz.md) · [English](en/19-mini-quiz.md) · [Italiano](it/19-mini-quiz.md) · [Deutsch](de/19-mini-quiz.md) · [Français](fr/19-mini-quiz.md) · [Русский](ru/19-mini-quiz.md) · [日本語](ja/19-mini-quiz.md) · [简体中文](zh/19-mini-quiz.md)
 

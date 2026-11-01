@@ -1,37 +1,42 @@
-# Zertifizierungen · Azure
+# Zertifizierungen: acht Lernwege
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
-[Start](../../README.md) · [Inhalt](../../de/README.md)
+[Allgemeine Notizen](../../de/README.md) · [Quellenverzeichnis](../../CERTIFICATION-SOURCES.md)
 
-Unabhängige Lernunterlagen. Bereiche und Gewichtungen stammen aus den offiziellen englischen Leitfäden, geprüft am 27. Oktober 2026. Vor der Prüfung erneut kontrollieren. Keine Bestehensgarantie und keine offiziellen oder vertraulichen Prüfungsfragen.
+Acht Prüfungswege mit jeweils einem Leitfaden für begründete Entscheidungen, zehn eigenen Fällen mit Lösungen und einem Arbeitsbuch mit fünf Einheiten und überprüfbaren Ergebnissen. Wähle zuerst das Gebiet, das du verstehen möchtest.
 
-Bearbeitete deutsche Ausgabe mit allen Lernpfaden, eigenen Erklärungen und Fällen. Zusätzliche Vertiefungen stehen in den ausführlichen spanischen und englischen Ausgaben. Keine beglaubigte Übersetzung und kein offizieller Lehrplan.
+| Prüfung | Schwerpunkt | Leitfaden | Fälle | Arbeitsbuch |
+|---|---|---|---|---|
+| AZ-900 | Azure-Grundlagen | [Lesen](AZ-900.md) | [10 Fälle](AZ-900-cases.md) | [5 Einheiten](AZ-900-workbook.md) |
+| AZ-104 | Azure-Administration | [Lesen](AZ-104.md) | [10 Fälle](AZ-104-cases.md) | [5 Einheiten](AZ-104-workbook.md) |
+| AZ-305 | Lösungsarchitektur | [Lesen](AZ-305.md) | [10 Fälle](AZ-305-cases.md) | [5 Einheiten](AZ-305-workbook.md) |
+| AZ-400 | Bereitstellung und DevOps | [Lesen](AZ-400.md) | [10 Fälle](AZ-400-cases.md) | [5 Einheiten](AZ-400-workbook.md) |
+| DP-900 | Datengrundlagen | [Lesen](DP-900.md) | [10 Fälle](DP-900-cases.md) | [5 Einheiten](DP-900-workbook.md) |
+| SC-900 | Sicherheit, Identität und Compliance | [Lesen](SC-900.md) | [10 Fälle](SC-900-cases.md) | [5 Einheiten](SC-900-workbook.md) |
+| AZ-700 | Azure-Netzwerke | [Lesen](AZ-700.md) | [10 Fälle](AZ-700-cases.md) | [5 Einheiten](AZ-700-workbook.md) |
+| DP-300 | Azure-SQL-Administration | [Lesen](DP-300.md) | [10 Fälle](DP-300-cases.md) | [5 Einheiten](DP-300-workbook.md) |
 
-| Exam | Lesen | Wiederholung |
-|---|---|---|
-| AZ-900 | [Lesen](AZ-900.md) | [10 Fälle](AZ-900-cases.md) |
-| AZ-104 | [Lesen](AZ-104.md) | [10 Fälle](AZ-104-cases.md) |
-| AZ-305 | [Lesen](AZ-305.md) | [10 Fälle](AZ-305-cases.md) |
-| AZ-400 | [Lesen](AZ-400.md) | [10 Fälle](AZ-400-cases.md) |
+## Einstieg wählen
 
-[Übungen: Storage](../../de/13-laboratorios.md) · [Übungen: VNet](network-lab.md) · [ADR](ADR-template.md)
+AZ-900 gibt einen allgemeinen Überblick. DP-900 erklärt Daten und Workloads vor DP-300. SC-900 behandelt Sicherheit, Identität und Compliance auch in Microsoft 365. AZ-104 liefert die Betriebsgrundlagen für AZ-700; AZ-305 und AZ-400 ergänzen Entwurf und Bereitstellung. Das sind Lernempfehlungen, keine offiziellen Voraussetzungen.
 
-Bei Expert-Zertifizierungen die Voraussetzungen auf offiziellen Seiten prüfen. AZ-303 und AZ-304 sind historische Prüfungen; Architekturthemen werden hier unter AZ-305 eingeordnet.
+## Was neu hinzugekommen ist
 
-[Sources](../../SOURCES.md) · [License / Attribution](../../ATTRIBUTION.md)
+DP-900, SC-900, AZ-700 und DP-300 enthalten in allen acht Sprachen entsprechende Erklärungen, Fälle und Abgaben. Ältere ergänzende Notizen anderer Wege bleiben unterschiedlich lang. Es gibt 80 Szenarien pro Sprache und 640 Sprachvarianten insgesamt, keine echten Prüfungsfragen.
 
-## Microsoft-Learn-Vertiefung
+## Mit dem Trainer wiederholen
 
-[Microsoft-Learn-Vertiefung](../../de/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)
+Der Trainer zur Selbsteinschätzung unterstützt alle acht Wege und den Export nach Anki. Vergleiche deine Erklärung mit der Lösung und bewerte dein Erinnern. Das Multiple-Choice-Miniquiz behält seine acht Fragen zu den vier ursprünglichen Wegen.
 
-## Vertiefungsheft
+```bash
+python tools/study.py demo --lang de --exam DP-900
+python tools/study.py study --lang de --exam AZ-700 --limit 5
+python tools/study.py export --lang de --exam SC-900 --output exports/de-sc900.tsv
+```
 
-- [AZ-900](AZ-900-workbook.md)
-- [AZ-104](AZ-104-workbook.md)
-- [AZ-305](AZ-305-workbook.md)
-- [AZ-400](AZ-400-workbook.md)
+## Quellen und Grenzen
 
-## Miniquiz: entscheiden und aus Fehlern lernen
+Die ursprünglichen Quellen wurden am 27. Oktober 2026 geprüft, die vier neuen Wege am 30. Oktober 2026. Prüfe Ziele, Verfügbarkeit, Prüfungssprachen und Voraussetzungen vor der Buchung auf Microsoft Learn. Prüfungscode und Zertifizierung sind verschieden; Expert-Zertifizierungen können weitere Nachweise verlangen. Keine Bestehensgarantie oder behauptete Ausführung in Azure.
 
-[Miniquiz: entscheiden und aus Fehlern lernen](../../de/19-mini-quiz.md) · [Fragen auf GitHub lesen](../../de/20-quiz-cases.md)
+[Trainer](../../de/18-study-trainer.md) · [Miniquiz](../../de/19-mini-quiz.md) · [Anki](../../flashcards/de.tsv) · [Netzwerklabor](network-lab.md) · [ADR](ADR-template.md)

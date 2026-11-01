@@ -35,7 +35,7 @@
 
 ## 认证考试
 
-[AZ-900 · AZ-104 · AZ-305 · AZ-400](../certifications/zh/README.md)
+[AZ-900 · AZ-104 · AZ-305 · AZ-400 · DP-900 · SC-900 · AZ-700 · DP-300](../certifications/zh/README.md)
 
 [Glossary](../GLOSSARY-multilingual.md) · [来源](../SOURCES.md) · [Microsoft Learn](../LEARN-SOURCES.md)
 

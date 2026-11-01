@@ -19,7 +19,7 @@ These notes explain Azure from a computer science student's perspective. First t
 
 ## Certification guides
 
-[AZ-900 · AZ-104 · AZ-305 · AZ-400](../certifications/en/README.md)
+[AZ-900 · AZ-104 · AZ-305 · AZ-400 · DP-900 · SC-900 · AZ-700 · DP-300](../certifications/en/README.md)
 
 Detailed guides with study areas, reasoned examples, and case banks. The general chapters below also include expanded troubleshooting and exercises.
 

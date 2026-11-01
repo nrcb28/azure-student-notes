@@ -17,6 +17,8 @@ import unicodedata
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
+CERTIFICATION_EXAMS = ('AZ-900', 'AZ-104', 'AZ-305', 'AZ-400',
+                       'DP-900', 'SC-900', 'AZ-700', 'DP-300')
 
 
 def prose_lines(text):
@@ -170,8 +172,8 @@ def check(root):
             for name in sorted(actual - expected):
                 errors.append(f"Unexpected {lang} file without English counterpart: {name}")
     for lang in languages:
-        for exam in ("AZ-900", "AZ-104", "AZ-305", "AZ-400"):
-            for suffix in ("", "-cases"):
+        for exam in CERTIFICATION_EXAMS:
+            for suffix in ("", "-cases", "-workbook"):
                 path = root / "certifications" / lang / f"{exam}{suffix}.md"
                 if not path.is_file():
                     errors.append(f"Missing certification file: {path.relative_to(root)}")

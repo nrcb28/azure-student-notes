@@ -17,7 +17,9 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGUAGES = ('es', 'en', 'it', 'de', 'fr', 'ru', 'ja', 'zh')
-EXAMS = ('AZ-900', 'AZ-104', 'AZ-305', 'AZ-400')
+EXAMS = ('AZ-900', 'AZ-104', 'AZ-305', 'AZ-400', 'DP-900', 'SC-900', 'AZ-700', 'DP-300')
+CARD_ID = re.compile(r'(?:' + '|'.join(map(re.escape, LANGUAGES)) + r')/(?:' +
+                     '|'.join(map(re.escape, EXAMS)) + r')/(?:0[1-9]|10)')
 UTC = timezone.utc
 
 
@@ -72,7 +74,7 @@ def validate_state(state):
             state['version'] != 1 or not isinstance(state.get('cards'), dict)):
         raise ValueError('Unsupported or invalid progress file; it was not overwritten')
     for key, record in state['cards'].items():
-        if not isinstance(key, str) or not re.fullmatch(r'(es|en|it|de|fr|ru|ja|zh)/AZ-(900|104|305|400)/(0[1-9]|10)', key):
+        if not isinstance(key, str) or not CARD_ID.fullmatch(key):
             raise ValueError('Invalid progress card ID')
         if not isinstance(record, dict):
             raise ValueError('Invalid progress record')

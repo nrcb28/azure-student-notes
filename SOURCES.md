@@ -82,3 +82,9 @@ Scenarios, exercises and the SQLite simulator are original teaching material. Cl
 Eight original scenarios with matching sources and answer structure in all eight languages. The linked Learn pages were reviewed on 2026-10-29. See the [scenario-to-source map](QUIZ-SOURCES.md).
 
 Ocho escenarios originales en ocho idiomas, con fuentes revisadas el 29 de octubre de 2026. El [mapa de fuentes](QUIZ-SOURCES.md) indica el concepto utilizado en cada caso.
+
+## Four additional certification routes / Cuatro rutas adicionales
+
+DP-900, SC-900, AZ-700, and DP-300 official English objectives and technical references were reviewed on 2026-10-30. Each route adds a guide, ten original cases, and a five-unit workbook in all eight languages. See [CERTIFICATION-SOURCES.md](CERTIFICATION-SOURCES.md) for objective versions, associated credentials, technical references, and review limits.
+
+Se añaden DP-900, SC-900, AZ-700 y DP-300 con guías, diez casos propios y cinco unidades por ruta e idioma. Las referencias se revisaron el 30 de octubre de 2026; el [registro](CERTIFICATION-SOURCES.md) distingue fechas de objetivos, credenciales y fuentes técnicas. No se atribuyen nuevas ejecuciones en Azure.

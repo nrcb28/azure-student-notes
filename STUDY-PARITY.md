@@ -1,8 +1,8 @@
 # Common learning route / Ruta común de estudio
 
-The new learning route uses the same twelve foundation units, twenty advanced certification units, scenarios, requested evidence, and three new lab procedures in all eight languages. This is parity of the new learning core, not a claim that every older explanatory paragraph has been translated verbatim or that equal word counts indicate quality.
+The new learning route uses the same twelve foundation units, forty advanced certification units, scenarios, requested evidence, and three new lab procedures in all eight languages. This is parity of the new learning core, not a claim that every older explanatory paragraph has been translated verbatim or that equal word counts indicate quality.
 
-La nueva ruta comparte doce unidades básicas, veinte unidades avanzadas, escenarios, evidencias y tres procedimientos de laboratorio en los ocho idiomas. La igualdad corresponde a este núcleo nuevo. No se afirma que cada párrafo histórico esté traducido literalmente ni que contar palabras demuestre calidad.
+La nueva ruta comparte doce unidades básicas, cuarenta unidades avanzadas, escenarios, evidencias y tres procedimientos de laboratorio en los ocho idiomas. La igualdad corresponde a este núcleo nuevo. No se afirma que cada párrafo histórico esté traducido literalmente ni que contar palabras demuestre calidad.
 
 | Language | Core | Advanced labs | Certification workbooks |
 |---|---|---|---|
@@ -41,3 +41,13 @@ The new local simulator and unit tests run without Azure credentials. Azure proc
 The [mini quiz](QUIZ.md) adds eight original scenarios, each translated into all eight languages: 64 variants, not 64 distinct questions. Each has four options, matching correct-answer indices and references, general reasoning, and a reason for each wrong choice. The interface, user guide, and generated question sheet are also available in every language. Automated checks establish structure; meaning was reviewed separately.
 
 El [mini simulacro](QUIZ.md) añade ocho escenarios con variantes en los ocho idiomas, además de interfaz, guía y hoja de preguntas. Los índices de respuesta y las referencias coinciden; cada alternativa incorrecta tiene explicación. La comprobación automática cubre la estructura y se complementó con lectura del significado.
+
+## Additional routes · Nuevas rutas · 2026-11-01
+
+DP-900, SC-900, AZ-700, and DP-300 add twenty workbook units and forty original open-response cases per language. Each new route has a guide, ten cases, and five units in all eight languages. Together with the original routes, the trainer now reads eighty cases per language (640 variants) and the manifest describes forty certification units per language.
+
+DP-900, SC-900, AZ-700 y DP-300 añaden veinte unidades y cuarenta casos por idioma. Las nuevas rutas conservan temas, casos, anclajes de unidades y entregables equivalentes en los ocho idiomas. El total es de ocho rutas, ochenta casos y cuarenta unidades de certificación por idioma. Las comprobaciones estructurales no sustituyen una revisión lingüística profesional.
+
+The multiple-choice bank remains the separate eight-scenario practice for the original four routes. New routes are integrated into the self-rating trainer and Anki; no new multiple-choice coverage is claimed.
+
+El mini simulacro mantiene sus ocho escenarios sobre las cuatro rutas originales. Las nuevas rutas se incorporan al entrenador de autoevaluación y a Anki.

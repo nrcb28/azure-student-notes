@@ -1,35 +1,42 @@
-# 认证考试 · Azure
+# 认证：八条学习路线
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
-[目录](../../zh/README.md)
+[通用笔记](../../zh/README.md) · [来源记录](../../CERTIFICATION-SOURCES.md)
 
-考试领域和权重依据2026年10月27日核查的官方英语指南。不同考试语言和日期可能有更新，请在报考前确认。这是独立学习材料，不保证覆盖全部考题或通过考试。
+八条考试学习路线，每条都有解释决策的指南、十个带答案的原创案例，以及要求提交证据的五单元练习册。先选择你想弄懂的领域，不必同时学完所有路线。
 
-这是重新组织的中文学习版本，不是官方教材或认证翻译。西班牙语和英语版本保留了更多详细说明。产品名称、命令和参数保持原样。考试范围和前置条件请以 Microsoft Learn 为准。
+| 路线 | 方向 | 指南 | 案例 | 练习册 |
+|---|---|---|---|---|
+| AZ-900 | Azure 基础 | [阅读](AZ-900.md) | [10 个案例](AZ-900-cases.md) | [5 个单元](AZ-900-workbook.md) |
+| AZ-104 | Azure 管理 | [阅读](AZ-104.md) | [10 个案例](AZ-104-cases.md) | [5 个单元](AZ-104-workbook.md) |
+| AZ-305 | 解决方案架构 | [阅读](AZ-305.md) | [10 个案例](AZ-305-cases.md) | [5 个单元](AZ-305-workbook.md) |
+| AZ-400 | 交付与 DevOps | [阅读](AZ-400.md) | [10 个案例](AZ-400-cases.md) | [5 个单元](AZ-400-workbook.md) |
+| DP-900 | 数据基础 | [阅读](DP-900.md) | [10 个案例](DP-900-cases.md) | [5 个单元](DP-900-workbook.md) |
+| SC-900 | 安全、身份与合规 | [阅读](SC-900.md) | [10 个案例](SC-900-cases.md) | [5 个单元](SC-900-workbook.md) |
+| AZ-700 | Azure 网络 | [阅读](AZ-700.md) | [10 个案例](AZ-700-cases.md) | [5 个单元](AZ-700-workbook.md) |
+| DP-300 | Azure SQL 管理 | [阅读](DP-300.md) | [10 个案例](DP-300-cases.md) | [5 个单元](DP-300-workbook.md) |
 
-| Exam | 学习指南 | 复习 |
-|---|---|---|
-| AZ-900 | [学习指南](AZ-900.md) | [10](AZ-900-cases.md) |
-| AZ-104 | [学习指南](AZ-104.md) | [10](AZ-104-cases.md) |
-| AZ-305 | [学习指南](AZ-305.md) | [10](AZ-305-cases.md) |
-| AZ-400 | [学习指南](AZ-400.md) | [10](AZ-400-cases.md) |
+## 从哪里开始
 
-[实验: Storage](../../zh/13-laboratorios.md) · [实验: VNet](network-lab.md) · [ADR](ADR-template.md) · [Microsoft Learn 补充内容](../../zh/15-microsoft-learn.md)
+AZ-900 用于建立整体认识。DP-900 先讲数据和工作负载，再进入 DP-300。SC-900 不仅涉及 Azure，也包括 Microsoft 365 的安全、身份与合规。AZ-104 提供深入 AZ-700 的运维基础；AZ-305 和 AZ-400 补充设计与交付。这是学习建议，不是官方先决条件。
 
-[Sources](../../SOURCES.md) · [Attribution](../../ATTRIBUTION.md)
+## 本次扩充内容
 
-## Microsoft Learn 补充内容
+DP-900、SC-900、AZ-700、DP-300 在八种语言中都有对应的讲解、案例和交付要求。其他路线以前的补充笔记仍有篇幅差异。每种语言 80 个场景，合计 640 个语言版本；它们不是实际考试题目。
 
-[Microsoft Learn 补充内容](../../zh/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)
+## 使用训练器复习
 
-## 进阶练习册
+自评训练器支持选择八条路线，也能把案例导出到 Anki。将自己的解释与答案对照，再评价记忆情况。选择题迷你测验仍保留原来四条路线的八道题。
 
-- [AZ-900](AZ-900-workbook.md)
-- [AZ-104](AZ-104-workbook.md)
-- [AZ-305](AZ-305-workbook.md)
-- [AZ-400](AZ-400-workbook.md)
+```bash
+python tools/study.py demo --lang zh --exam DP-900
+python tools/study.py study --lang zh --exam AZ-700 --limit 5
+python tools/study.py export --lang zh --exam SC-900 --output exports/zh-sc900.tsv
+```
 
-## 迷你测验：把选择背后的理由也弄懂
+## 来源与范围
 
-[迷你测验：把选择背后的理由也弄懂](../../zh/19-mini-quiz.md) · [在 GitHub 阅读题目](../../zh/20-quiz-cases.md)
+原有参考资料查阅于 2026 年 10 月 27 日，四条新路线查阅于 2026 年 10 月 30 日。预约前请到 Microsoft Learn 核对考试目标、可用情况、语言和要求。考试代码与认证不同，Expert 认证可能要求其他证书。这里不保证通过，也不声称已在 Azure 执行练习。
+
+[训练器](../../zh/18-study-trainer.md) · [迷你测验](../../zh/19-mini-quiz.md) · [Anki](../../flashcards/zh.tsv) · [网络实验](network-lab.md) · [ADR](ADR-template.md)

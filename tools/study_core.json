@@ -51,6 +51,34 @@
       "az-400-unit-3",
       "az-400-unit-4",
       "az-400-unit-5"
+    ],
+    "DP-900": [
+      "dp-900-unit-1",
+      "dp-900-unit-2",
+      "dp-900-unit-3",
+      "dp-900-unit-4",
+      "dp-900-unit-5"
+    ],
+    "SC-900": [
+      "sc-900-unit-1",
+      "sc-900-unit-2",
+      "sc-900-unit-3",
+      "sc-900-unit-4",
+      "sc-900-unit-5"
+    ],
+    "AZ-700": [
+      "az-700-unit-1",
+      "az-700-unit-2",
+      "az-700-unit-3",
+      "az-700-unit-4",
+      "az-700-unit-5"
+    ],
+    "DP-300": [
+      "dp-300-unit-1",
+      "dp-300-unit-2",
+      "dp-300-unit-3",
+      "dp-300-unit-4",
+      "dp-300-unit-5"
     ]
   },
   "labs": [

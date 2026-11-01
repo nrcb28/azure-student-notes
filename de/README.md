@@ -34,7 +34,7 @@ Bearbeitete deutsche Ausgabe mit allen Lernpfaden, eigenen Erklärungen und Fäl
 
 ## Zertifizierungen
 
-[AZ-900 · AZ-104 · AZ-305 · AZ-400](../certifications/de/README.md)
+[AZ-900 · AZ-104 · AZ-305 · AZ-400 · DP-900 · SC-900 · AZ-700 · DP-300](../certifications/de/README.md)
 
 [Glossary / Glossario / Glossar / Glossaire / Словарь](../GLOSSARY-multilingual.md) · [Quellen](../SOURCES.md)
 

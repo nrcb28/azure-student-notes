@@ -1,6 +1,8 @@
 # Ready-to-import Anki cards / Tarjetas listas para Anki
 
-40 original study cases per language, ten for each exam. / 40 casos originales por idioma, diez por examen.
+80 original study cases per language, ten for each exam. / 80 casos originales por idioma, diez por examen.
+
+Routes / Rutas: AZ-900, AZ-104, AZ-305, AZ-400, DP-900, SC-900, AZ-700, DP-300.
 
 | Language | UTF-8 TSV |
 |---|---|

@@ -1,63 +1,42 @@
-# Azure certification routes
+# Certifications: eight study routes
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
-[Home](../../README.md) · [Español](../es/README.md) · [English](../en/README.md)
+[General notes](../../en/README.md) · [Source register](../../CERTIFICATION-SOURCES.md)
 
-These guides organise study around the work expected in each exam. The general chapters remain useful foundations; these add configuration, scenarios, decisions, and review routes.
+Eight exam routes, each with a guide that explains decisions, ten original cases with reasoned answers, and a five-unit evidence workbook. Pick the area you want to understand before trying to study everything.
 
-## Choose a route
+| Route | Focus | Guide | Cases | Workbook |
+|---|---|---|---|---|
+| AZ-900 | Azure fundamentals | [Read](AZ-900.md) | [10 cases](AZ-900-cases.md) | [5 units](AZ-900-workbook.md) |
+| AZ-104 | Azure administration | [Read](AZ-104.md) | [10 cases](AZ-104-cases.md) | [5 units](AZ-104-workbook.md) |
+| AZ-305 | Solution architecture | [Read](AZ-305.md) | [10 cases](AZ-305-cases.md) | [5 units](AZ-305-workbook.md) |
+| AZ-400 | Delivery and DevOps | [Read](AZ-400.md) | [10 cases](AZ-400-cases.md) | [5 units](AZ-400-workbook.md) |
+| DP-900 | Data fundamentals | [Read](DP-900.md) | [10 cases](DP-900-cases.md) | [5 units](DP-900-workbook.md) |
+| SC-900 | Security, identity, and compliance | [Read](SC-900.md) | [10 cases](SC-900-cases.md) | [5 units](SC-900-workbook.md) |
+| AZ-700 | Azure networking | [Read](AZ-700.md) | [10 cases](AZ-700-cases.md) | [5 units](AZ-700-workbook.md) |
+| DP-300 | Azure SQL administration | [Read](DP-300.md) | [10 cases](DP-300-cases.md) | [5 units](DP-300-workbook.md) |
 
-| Exam | Detailed guide | Reasoned practice |
-|---|---|---|
-| AZ-900 | [Fundamentals](AZ-900.md) | [10 cases](AZ-900-cases.md) |
-| AZ-104 | [Administrator](AZ-104.md) | [10 cases](AZ-104-cases.md) |
-| AZ-305 | [Infrastructure Solutions](AZ-305.md) | [10 cases](AZ-305-cases.md) |
-| AZ-400 | [DevOps Solutions](AZ-400.md) | [10 cases](AZ-400-cases.md) |
+## Where to start
 
-[Additional networking practice](network-lab.md) · [Architecture decision template](ADR-template.md)
+Use AZ-900 as a general map when starting. DP-900 introduces data and workloads before DP-300. SC-900 covers security, identity, and compliance across Azure and Microsoft 365. AZ-104 gives an operational base for AZ-700; AZ-305 and AZ-400 add design and delivery. These are learning suggestions, not formal prerequisites.
 
-## How to combine the material
+## What has expanded
 
-| Route | Recommended foundation | What to produce |
-|---|---|---|
-| AZ-900 | Chapters 1–9 | Comparisons and a service map |
-| AZ-104 | Chapters 2–9 and 12 | Configuration, checks, and troubleshooting |
-| AZ-305 | Chapters 4–11 | Two ADRs and a recovery plan |
-| AZ-400 | Chapters 8 and 10–12 | Delivery flow with artifacts and rollback |
+DP-900, SC-900, AZ-700, and DP-300 have matching explanations, cases, and deliverables in all eight languages. Older supplementary notes in other routes retain different lengths. There are 80 scenarios per language, 640 variants overall; these are not real exam questions.
 
-[General Spanish contents](../../es/README.md) · [General English contents](../../en/README.md)
+## Practise with the trainer
 
-## Study plan by outcomes
+Choose any of the eight routes in the self-rating trainer or export cases to Anki. Compare your explanation with the answer and rate recall. The multiple-choice mini quiz retains its eight questions on the original four routes.
 
-1. Read a section and explain its decisions without looking.
-2. Solve scenarios before revealing answers.
-3. Run a suitable lab or document the design if you have no subscription.
-4. Record expected and observed results; an explained failure is useful learning.
-5. Return to the official guide to identify remaining weak objectives.
-6. Repeat with a different scenario rather than memorising one answer.
+```bash
+python tools/study.py demo --lang en --exam DP-900
+python tools/study.py study --lang en --exam AZ-700 --limit 5
+python tools/study.py export --lang en --exam SC-900 --output exports/en-sc900.tsv
+```
 
-## Exams and certifications are different
+## References and scope
 
-AZ-900, AZ-104, AZ-305, and AZ-400 are exam codes. Associated certifications have requirements. The official pages checked require Azure Administrator Associate alongside AZ-305 for Solutions Architect Expert, and AZ-400 plus an accepted prerequisite certification for DevOps Engineer Expert. Linked official pages are authoritative for planning.
+Initial references were checked on 27 October 2026; the four new routes on 30 October 2026. Recheck objectives, availability, exam languages, and requirements on Microsoft Learn before booking. Exam codes and certifications are different; Expert routes can require other credentials. No pass guarantee or Azure execution is claimed.
 
-## Reference and limits
-
-Reference check: 27 October 2026. Titles, areas, weightings, and objective dates were checked against official English guides. Technical explanations are independent material, not an exhaustive transcription of every subobjective. Localised versions and future updates can differ. Passing is not guaranteed, and labs are not claimed to have run in Azure.
-
-AZ-303 and AZ-304 from the source repository are historical exams. Related architecture concepts are reorganised around AZ-305 and the architecture chapters, not presented as current routes. Other certifications are not claimed to be covered.
-
-## Microsoft Learn expansion
-
-[Microsoft Learn expansion](../../en/15-microsoft-learn.md) · [Sources](../../LEARN-SOURCES.md)
-
-## Advanced workbook
-
-- [AZ-900](AZ-900-workbook.md)
-- [AZ-104](AZ-104-workbook.md)
-- [AZ-305](AZ-305-workbook.md)
-- [AZ-400](AZ-400-workbook.md)
-
-## Mini quiz with reasoned marking
-
-[Mini quiz with reasoned marking](../../en/19-mini-quiz.md) · [Read the questions on GitHub](../../en/20-quiz-cases.md)
+[Trainer](../../en/18-study-trainer.md) · [Mini quiz](../../en/19-mini-quiz.md) · [Anki](../../flashcards/en.tsv) · [Networking lab](network-lab.md) · [ADR](ADR-template.md)

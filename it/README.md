@@ -34,7 +34,7 @@ Edizione adattata in italiano: copre tutti i percorsi del progetto con spiegazio
 
 ## Certificazioni
 
-[AZ-900 · AZ-104 · AZ-305 · AZ-400](../certifications/it/README.md)
+[AZ-900 · AZ-104 · AZ-305 · AZ-400 · DP-900 · SC-900 · AZ-700 · DP-300](../certifications/it/README.md)
 
 [Glossary / Glossario / Glossar / Glossaire / Словарь](../GLOSSARY-multilingual.md) · [Fonti](../SOURCES.md)
 

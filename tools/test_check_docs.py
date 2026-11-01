@@ -82,24 +82,54 @@ class FragmentTests(unittest.TestCase):
     def test_remote_and_protocol_relative_urls_are_not_local_files(self):
         self.assertEqual(self.inspect('[a](https://example.com/a#b) [b](//example.com/c#d)'), (0, []))
 
-    def test_full_checker_reports_fragment_defect_in_minimal_repo(self):
+    def make_minimal_repo(self, broken_fragment=False):
         for language in ('es','en','it','de','fr','ru','ja','zh'):
             folder = self.root/language
             folder.mkdir()
             (folder/'15-microsoft-learn.md').write_text('# Learn\n')
-            (folder/'README.md').write_text('# Index\n[bad](#missing)\n' if language == 'es' else '# Index\n')
+            (folder/'README.md').write_text('# Index\n[bad](#missing)\n'
+                                            if broken_fragment and language == 'es' else '# Index\n')
             certs = self.root/'certifications'/language
             certs.mkdir(parents=True)
-            for exam in ('AZ-900','AZ-104','AZ-305','AZ-400'):
-                for suffix in ('','-cases'):
+            for exam in ('AZ-900','AZ-104','AZ-305','AZ-400','DP-900','SC-900','AZ-700','DP-300'):
+                for suffix in ('','-cases','-workbook'):
                     (certs/f'{exam}{suffix}.md').write_text('# Guide\n')
         (self.root/'tools').mkdir()
         (self.root/'tools/learn_topics.json').write_text(json.dumps({'topics':[]}))
+
+    def test_full_checker_reports_fragment_defect_in_minimal_repo(self):
+        self.make_minimal_repo(broken_fragment=True)
         errors = io.StringIO()
         with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(errors):
             result = docs.check(self.root)
         self.assertTrue(result)
         self.assertIn('es/README.md: missing local fragment: #missing', errors.getvalue())
+
+    def test_full_checker_accepts_all_required_certification_material(self):
+        self.make_minimal_repo()
+        errors = io.StringIO()
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(errors):
+            self.assertFalse(docs.check(self.root))
+        self.assertEqual(errors.getvalue(),'')
+
+    def test_new_certification_material_is_required_even_when_all_translations_are_missing(self):
+        self.make_minimal_repo()
+        languages = ('es','en','it','de','fr','ru','ja','zh')
+        for exam in ('DP-900','SC-900','AZ-700','DP-300'):
+            for suffix in ('','-cases','-workbook'):
+                with self.subTest(exam=exam,suffix=suffix):
+                    paths = [self.root/'certifications'/language/f'{exam}{suffix}.md'
+                             for language in languages]
+                    for path in paths:
+                        path.unlink()
+                    errors = io.StringIO()
+                    with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(errors):
+                        self.assertTrue(docs.check(self.root))
+                    for language in languages:
+                        self.assertIn(f'Missing certification file: certifications/{language}/{exam}{suffix}.md',
+                                      errors.getvalue())
+                    for path in paths:
+                        path.write_text('# Guide\n')
 
 
 if __name__ == '__main__':

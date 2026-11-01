@@ -39,3 +39,9 @@ Added original common-core exercises, twenty advanced certification units per la
 ## Study trainer and flashcard exports
 
 Added an original offline study tool, local review scheduling, self-assessment, and Anki exports generated from the existing case banks. The exported educational text retains the repository's CC BY 4.0 attribution. No official Microsoft or Anki endorsement is implied.
+
+## Additional certification routes
+
+Added independently written DP-900, SC-900, AZ-700, and DP-300 guides, original cases, and five-unit workbooks in all eight languages, with Microsoft Learn references. They are teaching adaptations, not copied exam questions or official Microsoft material. Existing attribution and licence terms remain applicable.
+
+Se añaden guías, casos originales y cuadernos de DP-900, SC-900, AZ-700 y DP-300 en los ocho idiomas, con referencias de Microsoft Learn. Son materiales de estudio propios, no preguntas de examen copiadas ni material oficial de Microsoft.

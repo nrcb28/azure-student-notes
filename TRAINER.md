@@ -11,6 +11,10 @@ python tools/study.py demo --lang es --exam AZ-104
 python tools/study.py study --lang es --exam AZ-104 --limit 5
 ```
 
+Supported routes: AZ-900, AZ-104, AZ-305, AZ-400, DP-900, SC-900, AZ-700, and DP-300. There are 80 cases per language, ten per route.
+
+Rutas disponibles: las ocho del índice de certificaciones, con 80 casos por idioma y diez por ruta.
+
 Choose es, en, it, de, fr, ru, ja, or zh. Repeat --exam to combine certifications. Question and answer text come directly from the Markdown case files. Press Enter to reveal, then rate 0–3; q leaves. Ratings are saved after each completed card. This is manual self-assessment, not automated answer grading.
 
 Selecciona idioma y combina exámenes repitiendo --exam. Las preguntas proceden de los Markdown. Intro revela la solución; valora 0–3 y usa q para salir. Cada valoración se guarda. No hay corrección automática.
@@ -24,7 +28,7 @@ Selecciona idioma y combina exámenes repitiendo --exam. Las preguntas proceden 
 | plan | Suggested sessions with --days and --minutes; not a prediction of future due dates |
 | export | Anki TSV with --output; existing files are never overwritten |
 | demo | One example without saving progress |
-| doctor | Validate 320 source cases across eight languages |
+| doctor | Validate 640 source cases across eight languages |
 
 Consolidated means two consecutive ratings of at least 2. It is not a pass prediction. Weak mode can include a case with a past lapse even after a later successful rating.
 
