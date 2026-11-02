@@ -4,7 +4,7 @@
 
 ## Gemeinsamer Lernweg und Übungen
 
-[Gemeinsamer Lernkern](16-common-core.md) · [Labs](17-advanced-labs.md)
+[Gemeinsamer Lernkern](16-common-core.md) · [Übungen](17-advanced-labs.md)
 
 - [AZ-900 · Vertiefungsheft](../certifications/de/AZ-900-workbook.md)
 - [AZ-104 · Vertiefungsheft](../certifications/de/AZ-104-workbook.md)
@@ -31,6 +31,12 @@ Bearbeitete deutsche Ausgabe mit allen Lernpfaden, eigenen Erklärungen und Fäl
 12. [DevOps und Infrastruktur als Code](12-devops.md)
 13. [Übungen](13-laboratorios.md)
 14. [Wiederholung](14-repaso.md)
+15. [Microsoft-Learn-Vertiefung](15-microsoft-learn.md)
+16. [Gemeinsamer Lernkern](16-common-core.md)
+17. [Vertiefende Übungen](17-advanced-labs.md)
+18. [Lerntrainer](18-study-trainer.md)
+19. [Miniquiz mit Erklärung](19-mini-quiz.md)
+20. [Fragen des Miniquiz](20-quiz-cases.md)
 
 ## Zertifizierungen
 
@@ -40,11 +46,10 @@ Bearbeitete deutsche Ausgabe mit allen Lernpfaden, eigenen Erklärungen und Fäl
 
 ---
 
-Unabhängige Lernunterlagen. Bereiche und Gewichtungen stammen aus den offiziellen englischen Leitfäden, geprüft am 27. Oktober 2026. Vor der Prüfung erneut kontrollieren. Keine Bestehensgarantie und keine offiziellen oder vertraulichen Prüfungsfragen.
+Unabhängige Lernunterlagen. Bereiche und Gewichtungen stammen aus den offiziellen englischen Leitfäden, je nach Lernweg geprüft am 27. und 30. Oktober sowie am 1. November 2026. Siehe [Quellenverzeichnis](../CERTIFICATION-SOURCES.md); vor der Prüfung erneut kontrollieren. Keine Bestehensgarantie und keine offiziellen oder vertraulichen Prüfungsfragen.
 
 CC BY 4.0 · [undergroundwires/Azure-in-bullet-points](https://github.com/undergroundwires/Azure-in-bullet-points) · [Attribution](../ATTRIBUTION.md)
 
-15. [Microsoft-Learn-Vertiefung](15-microsoft-learn.md)
 
 ## Miniquiz: entscheiden und aus Fehlern lernen
 

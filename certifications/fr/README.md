@@ -45,7 +45,7 @@ python tools/study.py export --lang fr --exam SC-100 --output exports/fr-sc100.t
 
 ## Références et limites
 
-Les références initiales ont été consultées le 27 octobre 2026 ; les quatre nouveaux parcours le 30 octobre 2026. Revérifie objectifs, disponibilité, langue et conditions sur Microsoft Learn avant de réserver. Code d’examen et certification sont différents ; les certifications Expert peuvent exiger d’autres titres. Aucune garantie de réussite ni exécution dans Azure revendiquée.
+Les références de AZ-900, AZ-104, AZ-305 et AZ-400 ont été consultées le 27 octobre 2026 ; celles de DP-900, SC-900, AZ-700 et DP-300 le 30 octobre. Les huit parcours ajoutés ensuite ont été vérifiés le 1er novembre 2026. Ces dates de consultation sont distinctes des dates d’entrée en vigueur des objectifs. Revérifie objectifs, disponibilité, langue et conditions sur Microsoft Learn avant de réserver. Code d’examen et certification sont différents ; les certifications Expert peuvent exiger d’autres titres. Aucune garantie de réussite ni exécution dans Azure revendiquée.
 
 [Trainer](../../fr/18-study-trainer.md) · [Mini quiz](../../fr/19-mini-quiz.md) · [Anki](../../flashcards/fr.tsv) · [Laboratoire réseau](network-lab.md) · [ADR](ADR-template.md)
 

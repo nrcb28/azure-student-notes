@@ -45,7 +45,7 @@ python tools/study.py export --lang en --exam SC-100 --output exports/en-sc100.t
 
 ## References and scope
 
-Initial references were checked on 27 October 2026; the four new routes on 30 October 2026. Recheck objectives, availability, exam languages, and requirements on Microsoft Learn before booking. Exam codes and certifications are different; Expert routes can require other credentials. No pass guarantee or Azure execution is claimed.
+References for AZ-900, AZ-104, AZ-305, and AZ-400 were checked on 27 October 2026; DP-900, SC-900, AZ-700, and DP-300 on 30 October. The eight later additions were checked on 1 November 2026. These are review dates, separate from objective-effective dates. Recheck objectives, availability, exam languages, and requirements on Microsoft Learn before booking. Exam codes and certifications are different; Expert routes can require other credentials. No pass guarantee or Azure execution is claimed.
 
 [Trainer](../../en/18-study-trainer.md) · [Mini quiz](../../en/19-mini-quiz.md) · [Anki](../../flashcards/en.tsv) · [Networking lab](network-lab.md) · [ADR](ADR-template.md)
 

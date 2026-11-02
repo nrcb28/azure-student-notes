@@ -4,7 +4,7 @@
 
 ## Parcours commun et pratiques
 
-[Socle commun d'étude](16-common-core.md) · [Labs](17-advanced-labs.md)
+[Socle commun d'étude](16-common-core.md) · [Travaux pratiques](17-advanced-labs.md)
 
 - [AZ-900 · Cahier avancé](../certifications/fr/AZ-900-workbook.md)
 - [AZ-104 · Cahier avancé](../certifications/fr/AZ-104-workbook.md)
@@ -31,6 +31,12 @@
 12. [DevOps et infrastructure comme code](12-devops.md)
 13. [Travaux pratiques](13-laboratorios.md)
 14. [Révision](14-repaso.md)
+15. [Approfondissement Microsoft Learn](15-microsoft-learn.md)
+16. [Socle commun d’étude](16-common-core.md)
+17. [Travaux pratiques avancés](17-advanced-labs.md)
+18. [Entraîneur de révision](18-study-trainer.md)
+19. [Mini simulation avec correction](19-mini-quiz.md)
+20. [Questions de la mini simulation](20-quiz-cases.md)
 
 ## Certifications
 
@@ -40,11 +46,10 @@
 
 ---
 
-Guides indépendants. Domaines et pondérations issus des guides officiels anglais consultés le 27 octobre 2026 ; à revérifier avant l'examen. Aucune garantie de réussite et aucune question officielle ou confidentielle.
+Guides indépendants. Domaines et pondérations issus des guides officiels anglais consultés, selon le parcours, les 27 et 30 octobre et le 1er novembre 2026 ; voir le [registre des sources](../CERTIFICATION-SOURCES.md) et revérifier avant l'examen. Aucune garantie de réussite et aucune question officielle ou confidentielle.
 
 CC BY 4.0 · [undergroundwires/Azure-in-bullet-points](https://github.com/undergroundwires/Azure-in-bullet-points) · [Attribution](../ATTRIBUTION.md)
 
-15. [Approfondissement Microsoft Learn](15-microsoft-learn.md)
 
 ## Mini simulation : choisir et comprendre pourquoi
 

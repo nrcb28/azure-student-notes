@@ -13,7 +13,6 @@
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
-[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 These notes explain Azure from a computer science student's perspective. First the idea, then the comparison, then a decision for a class notes application. They do not claim unverified personal experience or certifications.
 
@@ -39,6 +38,12 @@ Detailed guides with study areas, reasoned examples, and case banks. The general
 12. [DevOps and infrastructure as code](12-devops.md)
 13. [CLI and Bicep labs](13-laboratorios.md)
 14. [24 questions with answers](14-repaso.md)
+15. [Microsoft Learn expansion](15-microsoft-learn.md)
+16. [Common study core](16-common-core.md)
+17. [Advanced labs](17-advanced-labs.md)
+18. [Study trainer](18-study-trainer.md)
+19. [Mini quiz with marking](19-mini-quiz.md)
+20. [Mini quiz questions](20-quiz-cases.md)
 
 [Bilingual glossary](../GLOSSARY.md) · [Sources](../SOURCES.md)
 
@@ -61,7 +66,6 @@ An expanded conceptual guide; it does not fully cover AZ-900, AZ-104, AZ-305, or
 
 Adapted from undergroundwires/Azure-in-bullet-points under CC BY 4.0. [Attribution and changes](../ATTRIBUTION.md).
 
-15. [Microsoft Learn expansion](15-microsoft-learn.md)
 
 ## Mini quiz with reasoned marking
 

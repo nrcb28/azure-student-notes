@@ -82,6 +82,26 @@ class FragmentTests(unittest.TestCase):
     def test_remote_and_protocol_relative_urls_are_not_local_files(self):
         self.assertEqual(self.inspect('[a](https://example.com/a#b) [b](//example.com/c#d)'), (0, []))
 
+    def test_inline_code_links_are_examples_not_destinations(self):
+        count, errors = self.inspect('# Real\nUse `[example](missing.md)`; [real](#real).')
+        self.assertEqual((count, errors), (1, []))
+
+    def test_double_backtick_and_multiline_code_hide_links(self):
+        text = '# Real\n``literal ` [example](missing.md)``\n'
+        text += '`another\n[example](also-missing.md)`\n[real](#real)'
+        self.assertEqual(self.inspect(text), (1, []))
+
+    def test_unmatched_and_escaped_backticks_do_not_hide_real_links(self):
+        for text in ('`unmatched [link](missing.md)', r'\`escaped [link](missing.md)'):
+            with self.subTest(text=text):
+                self.assertEqual(self.inspect(text), (1, ['missing linked file: missing.md']))
+
+    def test_invalid_url_is_reported_without_aborting_the_document(self):
+        count, errors = self.inspect('[invalid](https://[broken) [missing](missing.md)')
+        self.assertEqual(count, 1)
+        self.assertEqual(errors, ['invalid link target: https://[broken',
+                                  'missing linked file: missing.md'])
+
     def make_minimal_repo(self, broken_fragment=False):
         for language in ('es','en','it','de','fr','ru','ja','zh'):
             folder = self.root/language

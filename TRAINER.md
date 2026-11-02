@@ -34,6 +34,16 @@ Consolidated means two consecutive ratings of at least 2. It is not a pass predi
 
 Consolidada significa dos valoraciones consecutivas de al menos 2. No predice aprobar. El modo weak conserva casos con olvidos anteriores aunque luego se hayan recordado.
 
+For longer plans, each exam starts another pass through its pool only after every case has been suggested. These are suggested practice slots, not predictions of due reviews.
+
+En los planes largos, cada examen empieza otra vuelta por su banco después de haber propuesto todos sus casos. Son huecos de práctica sugeridos, no predicciones de repasos pendientes.
+
+## Review intervals / Intervalos de repaso
+
+Ratings 0 and 1 reset the successful-review streak and return after ten minutes or one day respectively. Ratings 2 and 3 share that streak. With 2, the first success schedules one day, the second three, and later successes double the previous interval. With 3, the first success schedules four days; later successes multiply the previous interval by 2.5, round to whole days, and use at least four days. Both cap at 365 days. Changing between 2 and 3 does not reset the streak: 3 followed by 2 schedules four then three days.
+
+Las valoraciones 0 y 1 reinician la racha de aciertos y vuelven a los diez minutos o al día siguiente, respectivamente. Las valoraciones 2 y 3 comparten esa racha. Con 2, el primer acierto programa un día, el segundo tres y los siguientes duplican el intervalo anterior. Con 3, el primero programa cuatro días; los siguientes multiplican el intervalo anterior por 2,5, redondean a días enteros y usan al menos cuatro días. Ambos tienen un máximo de 365 días. Cambiar entre 2 y 3 no reinicia la racha: 3 seguido de 2 programa cuatro y luego tres días.
+
 ## Storage and recovery / Guardado y recuperación
 
 The default .study-progress.json is excluded from Git. --progress selects another location; if choosing a custom name, keep it outside version control. Language progress is separate. Ratings and dates are stored; written answers are not. Internal timestamps use UTC. Display uses Europe/Madrid by default; override with --timezone and an IANA timezone.

@@ -4,7 +4,7 @@
 
 ## 共同路线与实验
 
-[共同学习核心](16-common-core.md) · [Labs](17-advanced-labs.md)
+[共同学习核心](16-common-core.md) · [实验](17-advanced-labs.md)
 
 - [AZ-900 · 进阶练习册](../certifications/zh/AZ-900-workbook.md)
 - [AZ-104 · 进阶练习册](../certifications/zh/AZ-104-workbook.md)
@@ -32,6 +32,11 @@
 13. [实验](13-laboratorios.md)
 14. [复习](14-repaso.md)
 15. [Microsoft Learn 补充内容](15-microsoft-learn.md)
+16. [共同学习核心](16-common-core.md)
+17. [进阶实验](17-advanced-labs.md)
+18. [学习训练器](18-study-trainer.md)
+19. [带解析迷你测验](19-mini-quiz.md)
+20. [迷你测验题目](20-quiz-cases.md)
 
 ## 认证考试
 

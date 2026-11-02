@@ -125,6 +125,30 @@ class TrainerTests(unittest.TestCase):
                 self.assertEqual(trainer.main([command,'--lang','zh','--progress',str(self.path)]),0)
             self.assertFalse(self.path.exists())
 
+    def test_plan_restarts_each_exam_pool_after_covering_all_cases(self):
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            result = trainer.main(['plan','--lang','en','--exam','AZ-104','--days','6',
+                                   '--minutes','16','--progress',str(self.path)])
+        self.assertEqual(result,0)
+        days = [line.split(' · cases ')[1] for line in output.getvalue().splitlines()
+                if line.startswith('Day ')]
+        self.assertEqual(days,['1, 2, 3, 4','5, 6, 7, 8','9, 10',
+                               '1, 2, 3, 4','5, 6, 7, 8','9, 10'])
+        self.assertFalse(self.path.exists())
+
+    def test_twenty_minute_plan_repeats_both_halves_of_a_bank(self):
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            result = trainer.main(['plan','--lang','en','--exam','AZ-104','--days','5',
+                                   '--minutes','20','--progress',str(self.path)])
+        self.assertEqual(result,0)
+        days = [line.split(' · cases ')[1] for line in output.getvalue().splitlines()
+                if line.startswith('Day ')]
+        self.assertEqual(days,['1, 2, 3, 4, 5','6, 7, 8, 9, 10',
+                               '1, 2, 3, 4, 5','6, 7, 8, 9, 10','1, 2, 3, 4, 5'])
+        self.assertFalse(self.path.exists())
+
     def test_utc_display_works_without_system_timezone_database(self):
         output = io.StringIO()
         with patch.object(trainer, 'ZoneInfo', side_effect=trainer.ZoneInfoNotFoundError), contextlib.redirect_stdout(output):
@@ -230,6 +254,34 @@ class TrainerTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     trainer.validate_state({'version':1,'cards':{self.cards[0].id:record}})
 
+    def test_progress_duplicate_json_keys_cannot_discard_saved_reviews(self):
+        record = json.dumps(trainer.schedule(None,2,NOW))
+        cards = '{"es/AZ-104/01":' + record + '}'
+        for raw in ('{"version":1,"cards":' + cards + ',"cards":{}}',
+                    '{"version":1,"cards":{"es/AZ-104/01":' + record +
+                    ',"es/AZ-104/01":' + record + '}}'):
+            with self.subTest(raw=raw):
+                self.path.write_text(raw,encoding='utf-8')
+                output = io.StringIO()
+                with patch('builtins.input') as user_input, contextlib.redirect_stderr(output):
+                    result = trainer.main(['study','--timezone','UTC','--progress',str(self.path)])
+                self.assertEqual(result,2)
+                self.assertIn('Duplicate JSON key',output.getvalue())
+                user_input.assert_not_called()
+                self.assertEqual(self.path.read_text(encoding='utf-8'),raw)
+
+    def test_progress_out_of_range_utc_timestamp_fails_cleanly(self):
+        record = trainer.schedule(None,2,NOW)
+        record['due'] = '9999-12-31T23:59:59-01:00'
+        raw = json.dumps({'version':1,'cards':{self.cards[0].id:record}})
+        self.path.write_text(raw,encoding='utf-8')
+        output = io.StringIO()
+        with contextlib.redirect_stderr(output):
+            result = trainer.main(['stats','--progress',str(self.path)])
+        self.assertEqual(result,2)
+        self.assertIn('UTC range',output.getvalue())
+        self.assertEqual(self.path.read_text(encoding='utf-8'),raw)
+
     def test_due_order_compares_instants_not_timestamp_spelling(self):
         earlier = trainer.schedule(None,0,NOW-timedelta(days=1))
         later = dict(earlier)
@@ -262,6 +314,34 @@ class TrainerTests(unittest.TestCase):
                     result = trainer.main(['demo'])
                 self.assertEqual(result,2)
                 self.assertIn('Incomplete or invalid study interface',output.getvalue())
+
+    def test_invalid_ui_templates_fail_before_a_review_can_be_saved(self):
+        messages = json.loads((trainer.ROOT/'tools/study_ui.json').read_text(encoding='utf-8'))
+        root = Path(self.temp.name)
+        (root/'tools').mkdir()
+        for key, invalid in (('doctor','{unknown}'), ('exported','{'),
+                             ('next','{value:d}'), ('plan_day','Day {}'),
+                             ('saved','Reviewed {count.missing}'),
+                             ('saved','Reviewed {count[missing]}'),
+                             ('saved','Reviewed {count:{count}}'),
+                             ('saved','Reviewed {count!s}'),
+                             ('saved','Reviewed cards'),
+                             ('exported','Exported {count} cards'),
+                             ('reveal','Reveal {unknown}'),
+                             ('grade','Rate {'), ('error','Error {unknown}')):
+            with self.subTest(key=key,invalid=invalid):
+                localized = dict(messages['en'])
+                localized[key] = invalid
+                (root/'tools/study_ui.json').write_text(json.dumps({'en':localized}),encoding='utf-8')
+                output = io.StringIO()
+                with patch.object(trainer,'ROOT',root), patch('builtins.input',side_effect=['','2']) as user_input, \
+                        contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(output):
+                    result = trainer.main(['study','--lang','en','--limit','1','--timezone','UTC',
+                                           '--progress',str(self.path)])
+                self.assertEqual(result,2)
+                self.assertIn('Incomplete or invalid study interface',output.getvalue())
+                user_input.assert_not_called()
+                self.assertFalse(self.path.exists())
 
 
 if __name__ == '__main__':

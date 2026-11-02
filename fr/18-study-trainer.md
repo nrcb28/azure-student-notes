@@ -9,6 +9,8 @@ python tools/study.py demo --lang fr --exam AZ-104
 python tools/study.py study --lang fr --exam AZ-104 --limit 5
 ```
 
+Le fuseau d’affichage par défaut, Europe/Madrid, nécessite les données de fuseaux IANA du système d’exploitation. Si elles manquent, ajoute --timezone UTC à la commande demo ou study ; aucun paquet supplémentaire n’est nécessaire.
+
 ## 1. Se tester
 
 Lis, réfléchis et appuie sur Entrée. Compare l'explication puis évalue : 0 oubliée, 1 difficile, 2 bien, 3 facile. q quitte ; chaque évaluation terminée est sauvegardée. Autoévaluation, pas correction automatique ou note d'examen.
@@ -23,7 +25,7 @@ stats montre nouvelles, échues, consolidées et oublis par examen. Consolidée 
 
 ## 4. Intervalles
 
-0 revient dans dix minutes et réinitialise la série ; 1 demain et réinitialise. 2 programme un jour, puis trois, puis double. 3 commence à quatre jours puis multiplie par 2,5, maximum365. Règle simple propre, pas FSRS ni garantie de mémoire.
+0 revient dans dix minutes et réinitialise la série ; 1 revient le lendemain et la réinitialise. Les évaluations 2 et 3 partagent une série de révisions réussies consécutives. Avec 2, la première réussite programme un jour, la deuxième trois, puis les suivantes doublent l’intervalle précédent. Avec 3, la première réussite programme quatre jours ; les suivantes multiplient l’intervalle précédent par 2,5, arrondissent en jours entiers et appliquent au moins quatre jours. Les deux sont plafonnées à 365 jours. Changer d’évaluation ne réinitialise pas la série : 3 puis 2 programme quatre puis trois jours. Règle simple propre, pas FSRS ni garantie de mémoire.
 
 ## 5. Emporter dans Anki
 

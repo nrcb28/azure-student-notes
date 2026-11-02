@@ -41,6 +41,33 @@ def prose_lines(text):
             yield line
 
 
+def without_inline_code(text):
+    """Hide matched backtick spans; unmatched and escaped delimiters stay prose."""
+    runs = list(re.finditer(r"`+", text))
+    pieces = []
+    cursor = 0
+    index = 0
+    while index < len(runs):
+        opening = runs[index]
+        prefix = text[:opening.start()]
+        escapes = len(prefix) - len(prefix.rstrip("\\"))
+        if escapes % 2:
+            index += 1
+            continue
+        closing_index = next((candidate for candidate in range(index + 1, len(runs))
+                              if len(runs[candidate].group()) == len(opening.group())), None)
+        if closing_index is None:
+            index += 1
+            continue
+        closing = runs[closing_index]
+        pieces.append(text[cursor:opening.start()])
+        pieces.append(re.sub(r"[^\n]", " ", text[opening.start():closing.end()]))
+        cursor = closing.end()
+        index = closing_index + 1
+    pieces.append(text[cursor:])
+    return "".join(pieces)
+
+
 class _ExplicitAnchors(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -95,11 +122,15 @@ def check_local_links(document, text, anchor_cache=None):
     anchor_cache = {} if anchor_cache is None else anchor_cache
     errors = []
     count = 0
-    prose = "\n".join(prose_lines(text))
+    prose = without_inline_code("\n".join(prose_lines(text)))
     pattern = r'''!?\[[^\]]*\]\(\s*(?:<([^>]+)>|([^\s)]+))(?:\s+["'][^"']*["'])?\s*\)'''
     for angled, bare in re.findall(pattern, prose):
         target = angled or bare
-        parsed = urlsplit(target)
+        try:
+            parsed = urlsplit(target)
+        except ValueError:
+            errors.append(f"invalid link target: {target}")
+            continue
         if parsed.scheme or parsed.netloc:
             continue
         count += 1

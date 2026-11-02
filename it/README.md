@@ -4,7 +4,7 @@
 
 ## Percorso comune e laboratori
 
-[Nucleo comune di studio](16-common-core.md) · [Labs](17-advanced-labs.md)
+[Nucleo comune di studio](16-common-core.md) · [Laboratori](17-advanced-labs.md)
 
 - [AZ-900 · Quaderno avanzato](../certifications/it/AZ-900-workbook.md)
 - [AZ-104 · Quaderno avanzato](../certifications/it/AZ-104-workbook.md)
@@ -31,6 +31,12 @@ Edizione adattata in italiano: copre tutti i percorsi del progetto con spiegazio
 12. [DevOps e infrastruttura come codice](12-devops.md)
 13. [Laboratori](13-laboratorios.md)
 14. [Ripasso](14-repaso.md)
+15. [Approfondimento Microsoft Learn](15-microsoft-learn.md)
+16. [Nucleo comune di studio](16-common-core.md)
+17. [Laboratori avanzati](17-advanced-labs.md)
+18. [Allenatore di studio](18-study-trainer.md)
+19. [Mini simulazione con correzione](19-mini-quiz.md)
+20. [Domande della mini simulazione](20-quiz-cases.md)
 
 ## Certificazioni
 
@@ -40,11 +46,10 @@ Edizione adattata in italiano: copre tutti i percorsi del progetto con spiegazio
 
 ---
 
-Guide di studio indipendenti. Obiettivi e pesi derivano dalle guide ufficiali inglesi consultate il 27 ottobre 2026; ricontrollali prima dell'esame. Non garantiscono il superamento e non contengono domande ufficiali o riservate.
+Guide di studio indipendenti. Obiettivi e pesi derivano dalle guide ufficiali inglesi, consultate il 27 e 30 ottobre e il 1º novembre 2026 secondo il percorso; consulta il [registro delle fonti](../CERTIFICATION-SOURCES.md) e ricontrollali prima dell'esame. Non garantiscono il superamento e non contengono domande ufficiali o riservate.
 
 CC BY 4.0 · [undergroundwires/Azure-in-bullet-points](https://github.com/undergroundwires/Azure-in-bullet-points) · [Attribution](../ATTRIBUTION.md)
 
-15. [Approfondimento Microsoft Learn](15-microsoft-learn.md)
 
 ## Mini simulazione: scegli e capisci il perché
 

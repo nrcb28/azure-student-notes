@@ -9,7 +9,6 @@ import os
 from pathlib import Path
 import random
 import re
-import string
 import sys
 import time
 from urllib.parse import urlsplit
@@ -23,6 +22,16 @@ TEXT_KEYS = ('intro', 'question', 'answer_prompt', 'invalid', 'late', 'correct',
              'incorrect', 'skipped', 'explanation', 'reason', 'source', 'study',
              'summary', 'topic', 'report_saved', 'report_notice', 'timer_notice',
              'empty', 'doctor', 'demo', 'error', 'interrupted', 'status')
+TEXT_PLACEHOLDERS = {
+    'intro': {'count'},
+    'question': {'number', 'total', 'exam'},
+    'incorrect': {'letter'},
+    'summary': {'correct', 'total', 'incorrect', 'unanswered'},
+    'topic': {'topic', 'correct', 'total'},
+    'report_saved': {'path'},
+    'doctor': {'scenarios', 'variants'},
+    'status': {'status'},
+}
 
 
 def nonempty(value):
@@ -101,7 +110,10 @@ def load_bank():
 
 
 def placeholders(value):
-    return {name for _, name, _, _ in string.Formatter().parse(value) if name is not None}
+    # Accept simple named fields and escaped braces, never format expressions.
+    if not re.fullmatch(r'(?:[^{}]|{{|}}|{[a-z_]+})*', value):
+        raise ValueError('Only simple named quiz placeholders are supported')
+    return {match[1] for match in re.finditer(r'{{|}}|{([a-z_]+)}', value) if match[1]}
 
 
 def text_for(language):
@@ -114,12 +126,22 @@ def text_for(language):
             raise ValueError(f'Incomplete quiz interface: {lang}')
         for field in ('topics', 'statuses'):
             if (not isinstance(texts[field], dict) or
-                    set(texts[field]) != set(bundle['en'][field]) or
                     not all(nonempty(value) for value in texts[field].values())):
                 raise ValueError(f'Incomplete quiz labels: {lang}/{field}')
+        if set(texts['statuses']) != {'completed', 'quit', 'timeout', 'interrupted'}:
+            raise ValueError(f'Incomplete quiz status labels: {lang}')
         for key in TEXT_KEYS:
-            if placeholders(texts[key]) != placeholders(bundle['en'][key]):
+            try:
+                valid = placeholders(texts[key]) == TEXT_PLACEHOLDERS.get(key, set())
+            except ValueError:
+                valid = False
+            if not valid:
                 raise ValueError(f'Invalid quiz translation placeholders: {lang}/{key}')
+    # Check the reference label sets only after every language has valid structure.
+    for lang, texts in bundle.items():
+        for field in ('topics', 'statuses'):
+            if set(texts[field]) != set(bundle['en'][field]):
+                raise ValueError(f'Incomplete quiz labels: {lang}/{field}')
     return bundle[language]
 
 
@@ -379,7 +401,7 @@ def main(argv=None):
                                           not finite_number(args.minutes * 60)):
             raise ValueError('--minutes must be a positive finite number')
         destination = args.report or ROOT/'.study-reports'/('quiz-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+uuid4().hex[:8]+'.json')
-        if destination.exists():
+        if os.path.lexists(destination):
             raise FileExistsError(f'Report already exists: {destination}')
         report = run_session(questions, args.lang, args.mode, args.minutes, texts)
         save_report(report, destination)

@@ -32,8 +32,10 @@ class RetryBehaviourTests(unittest.TestCase):
         self.assertEqual(result["planned_waits"], [])
 
     def test_invalid_attempt_budget_is_rejected(self):
-        with self.assertRaises(ValueError):
-            lab.exercise(idempotent=True, attempts=0)
+        for attempts in (0, 11, 1.5, True, None, "3"):
+            with self.subTest(attempts=attempts):
+                with self.assertRaises(ValueError):
+                    lab.exercise(idempotent=True, attempts=attempts)
 
 
 if __name__ == "__main__":

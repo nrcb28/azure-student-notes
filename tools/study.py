@@ -11,6 +11,7 @@ import os
 from pathlib import Path
 import random
 import re
+from string import Formatter
 import sys
 import tempfile
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
@@ -67,7 +68,19 @@ def parse_time(value):
     parsed = datetime.fromisoformat(value)
     if parsed.tzinfo is None:
         raise ValueError('Progress timestamps require a timezone')
-    return parsed.astimezone(UTC)
+    try:
+        return parsed.astimezone(UTC)
+    except OverflowError as error:
+        raise ValueError('Progress timestamp is outside the supported UTC range') from error
+
+
+def unique_json_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f'Duplicate JSON key: {key}')
+        result[key] = value
+    return result
 
 
 def validate_state(state):
@@ -103,7 +116,8 @@ class Progress:
         self.path = Path(path)
         raw = self.path.read_bytes() if self.path.exists() else None
         self.fingerprint = hashlib.sha256(raw).hexdigest() if raw is not None else None
-        self.state = validate_state(json.loads(raw)) if raw is not None else {'version': 1, 'cards': {}}
+        self.state = (validate_state(json.loads(raw, object_pairs_hook=unique_json_object))
+                      if raw is not None else {'version': 1, 'cards': {}})
 
     def save(self):
         validate_state(self.state)
@@ -207,14 +221,32 @@ def export_anki(cards, destination):
 
 
 def text_for(language):
-    messages = json.loads((ROOT/'tools/study_ui.json').read_text(encoding='utf-8'))
-    required = {'doctor', 'exported', 'next', 'demo', 'stats_header', 'assessment',
-                'plan_notice', 'plan_day', 'empty', 'reveal', 'grade', 'source',
-                'invalid', 'saved', 'error', 'interrupted'}
+    messages = json.loads((ROOT/'tools/study_ui.json').read_text(encoding='utf-8'),
+                          object_pairs_hook=unique_json_object)
+    placeholders = {'doctor': {'count'}, 'exported': {'count', 'path'},
+                    'next': {'value'}, 'demo': set(), 'stats_header': set(),
+                    'assessment': set(), 'plan_notice': set(),
+                    'plan_day': {'day', 'exam', 'cards'}, 'empty': set(),
+                    'reveal': set(), 'grade': set(), 'source': set(),
+                    'invalid': set(), 'saved': {'count'}, 'error': set(),
+                    'interrupted': set()}
     language_messages = messages.get(language) if isinstance(messages, dict) else None
-    if (not isinstance(language_messages, dict) or not required <= language_messages.keys() or
-            any(not isinstance(language_messages[key], str) for key in required)):
+    if (not isinstance(language_messages, dict) or not placeholders.keys() <= language_messages.keys() or
+            any(not isinstance(language_messages[key], str) for key in placeholders)):
         raise ValueError(f'Incomplete or invalid study interface: {language}')
+    try:
+        for key, expected in placeholders.items():
+            found = set()
+            for _, field, format_spec, conversion in Formatter().parse(language_messages[key]):
+                if field is not None:
+                    # UI templates use plain named fields, without lookup or nested formatting.
+                    if field not in expected or format_spec or conversion is not None:
+                        raise ValueError('Invalid study interface placeholder')
+                    found.add(field)
+            if found != expected:
+                raise ValueError('Missing study interface placeholder')
+    except ValueError as error:
+        raise ValueError(f'Incomplete or invalid study interface: {language}') from error
     return language_messages
 
 
@@ -294,10 +326,11 @@ def main(argv=None):
             for day in range(args.days):
                 exam = exam_order[day % len(exam_order)]
                 pending = [c for c in pools[exam] if c.id not in used]
+                if not pending:
+                    used.difference_update(c.id for c in pools[exam])
+                    pending = pools[exam]
                 selected = select_cards(pending, progress.state, now, mode='weak', limit=quota)
                 selected += [c for c in pending if c not in selected][:max(0, quota-len(selected))]
-                if not selected:
-                    selected = pools[exam][:quota]
                 used.update(c.id for c in selected)
                 print(ui['plan_day'].format(day=day+1, exam=exam, cards=', '.join(str(c.number) for c in selected)))
             return 0

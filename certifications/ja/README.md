@@ -45,7 +45,7 @@ python tools/study.py export --lang ja --exam SC-100 --output exports/ja-sc100.t
 
 ## 出典と範囲
 
-以前の参照日は 2026 年 10 月 27 日、今回の 4 ルートは 2026 年 10 月 30 日。予約前に Microsoft Learn で目標、提供状況、試験言語、要件を確認しよう。試験コードと認定資格は異なり、Expert 資格には別の資格が必要な場合がある。合格や Azure での実行を保証・主張するものではない。
+AZ-900、AZ-104、AZ-305、AZ-400 の出典は 2026 年 10 月 27 日、DP-900、SC-900、AZ-700、DP-300 は 10 月 30 日に確認した。その後に追加した 8 ルートは 2026 年 11 月 1 日に確認した。これは出典の確認日であり、試験目標の適用開始日とは別である。予約前に Microsoft Learn で目標、提供状況、試験言語、要件を確認しよう。試験コードと認定資格は異なり、Expert 資格には別の資格が必要な場合がある。合格や Azure での実行を保証・主張するものではない。
 
 [トレーナー](../../ja/18-study-trainer.md) · [ミニクイズ](../../ja/19-mini-quiz.md) · [Anki](../../flashcards/ja.tsv) · [ネットワーク演習](network-lab.md) · [ADR](ADR-template.md)
 

@@ -13,16 +13,23 @@ esac
 environment=$(az group show --name "$LAB_RG" --subscription "$LAB_SUBSCRIPTION" --query tags.environment -o tsv)
 [[ "$environment" == lab ]] || { echo "Group must carry environment=lab" >&2; exit 2; }
 
-# Confirm ownership/location in the intended group without requesting keys.
-az storage account show --name "$LAB_STORAGE" --resource-group "$LAB_RG" \
-  --subscription "$LAB_SUBSCRIPTION" --query id -o tsv > /dev/null
+# Confirm the account in the intended group without requesting keys.
+# This exercise deliberately uses the flat-namespace path from its template;
+# hierarchical-namespace accounts have their own recovery procedures.
+hns=$(az storage account show --name "$LAB_STORAGE" --resource-group "$LAB_RG" \
+  --subscription "$LAB_SUBSCRIPTION" --query isHnsEnabled -o tsv)
+[[ "$hns" == false || "$hns" == False ]] || {
+  echo "Requires hierarchical namespace explicitly disabled; no settings changed." >&2
+  exit 2
+}
 enabled=$(az storage account blob-service-properties show --account-name "$LAB_STORAGE" \
   --resource-group "$LAB_RG" --subscription "$LAB_SUBSCRIPTION" \
   --query deleteRetentionPolicy.enabled -o tsv)
 versioning=$(az storage account blob-service-properties show --account-name "$LAB_STORAGE" \
   --resource-group "$LAB_RG" --subscription "$LAB_SUBSCRIPTION" \
   --query isVersioningEnabled -o tsv)
-[[ "$enabled" == true && "$versioning" == false ]] || {
+[[ ( "$enabled" == true || "$enabled" == True ) &&
+   ( "$versioning" == false || "$versioning" == False ) ]] || {
   echo "Requires soft delete enabled and versioning explicitly disabled; no settings changed." >&2
   exit 2
 }
@@ -32,7 +39,8 @@ trap 'rm -rf "$scratch_dir"' EXIT
 container="lab-recovery-$(date -u +%s)-$RANDOM"
 created=$(az storage container create --account-name "$LAB_STORAGE" --name "$container" \
   --subscription "$LAB_SUBSCRIPTION" --auth-mode login --public-access off --query created -o tsv)
-[[ "$created" == true ]] || { echo "Container already existed; stopping." >&2; exit 2; }
+[[ "$created" == true || "$created" == True ]] || { echo "Container already existed or creation was not confirmed; stopping." >&2; exit 2; }
+printf 'Created synthetic recovery container: %s\n' "$container"
 printf 'Synthetic university notes: recovery exercise.\n' > "$scratch_dir/original.txt"
 
 az storage blob upload --account-name "$LAB_STORAGE" --container-name "$container" \

@@ -8,11 +8,13 @@ set -euo pipefail
 [[ "$LAB_PRINCIPAL_ID" =~ ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$ ]] || {
   echo "Expected UUID principal object ID" >&2; exit 2;
 }
+# Azure returns principal IDs in lowercase; JMESPath string equality is exact.
+principal_id=$(printf '%s' "$LAB_PRINCIPAL_ID" | tr 'A-F' 'a-f')
 case "$LAB_SCOPE" in
   /subscriptions/"$LAB_SUBSCRIPTION"/*) ;;
   *) echo "Scope must belong to the supplied subscription" >&2; exit 2 ;;
 esac
 az account show --subscription "$LAB_SUBSCRIPTION" --query '{name:name,id:id,tenantId:tenantId}' -o table
 az role assignment list --subscription "$LAB_SUBSCRIPTION" --scope "$LAB_SCOPE" --include-inherited \
-  --query "[?principalId=='$LAB_PRINCIPAL_ID'].{role:roleDefinitionName,scope:scope,condition:condition}" -o table
+  --query "[?principalId=='$principal_id'].{role:roleDefinitionName,scope:scope,condition:condition}" -o table
 printf 'Assignment inventory only: group memberships, conditions, deny assignments and data/network controls need separate analysis.\n'

@@ -13,6 +13,19 @@
 
 ## Rutas y comprobaciones / Routes and checks
 
+Ejecuta la comprobación completa desde cualquier carpeta, indicando la ruta al script si no estás en la raíz. Requiere Python 3.9+ y Bash:
+
+Run the complete offline verification with Python 3.9+ and Bash. Use the script's path when running outside the repository root:
+
+```bash
+python tools/verify.py
+```
+
+El comando detecta discrepancias entre registros de rutas e idiomas y ejecuta los comprobadores y pruebas. Devuelve un código distinto de cero ante cualquier fallo, aunque las comprobaciones posteriores pasen. No usa red ni Azure, ni modifica progreso, mazos o hojas generadas. La compilación Bicep se comprueba por separado cuando se dispone de su CLI.
+
+The command checks route/language registry agreement and runs the checkers and tests. Any failed check makes it fail overall, even if later checks pass. No network or Azure calls, progress updates, deck exports, or generated-sheet writes. Bicep compilation remains separate.
+
+
 Cada ruta de certificación necesita guía, diez casos con respuesta desplegable y cuaderno de cinco unidades en los ocho idiomas. Conserva IDs de casos y anclajes al corregir traducciones para no invalidar el progreso de quienes estudian. Las fuentes oficiales y fechas consultadas se registran en [CERTIFICATION-SOURCES.md](CERTIFICATION-SOURCES.md).
 
 Every certification route needs a guide, ten cases with expandable answers, and a five-unit workbook in all eight languages. Preserve case IDs and workbook anchors when correcting translations. Record official source versions and review dates in the source register. If registering another route, update the trainer allowlist, documentation requirements, study-core manifest, and their fixtures together; regenerate the Anki decks from the source cases.

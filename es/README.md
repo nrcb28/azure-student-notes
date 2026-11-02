@@ -4,7 +4,7 @@
 
 ## Ruta común y laboratorios
 
-[Núcleo común de estudio](16-common-core.md) · [Labs](17-advanced-labs.md)
+[Núcleo común de estudio](16-common-core.md) · [Laboratorios](17-advanced-labs.md)
 
 - [AZ-900 · Cuaderno avanzado](../certifications/es/AZ-900-workbook.md)
 - [AZ-104 · Cuaderno avanzado](../certifications/es/AZ-104-workbook.md)
@@ -13,7 +13,6 @@
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
-[Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 Estos apuntes están escritos para entender Azure desde el punto de vista de alguien que estudia informática. Primero la idea, luego la comparación y después una decisión para una aplicación de apuntes de clase. No se atribuyen experiencias o certificaciones que no se han demostrado.
 
@@ -39,6 +38,12 @@ Guías extensas con áreas de estudio, ejemplos razonados y bancos de casos. Los
 12. [DevOps e infraestructura como código](12-devops.md)
 13. [Laboratorios con CLI y Bicep](13-laboratorios.md)
 14. [24 preguntas con respuestas](14-repaso.md)
+15. [Ampliación desde Microsoft Learn](15-microsoft-learn.md)
+16. [Núcleo común de estudio](16-common-core.md)
+17. [Laboratorios avanzados](17-advanced-labs.md)
+18. [Entrenador de estudio](18-study-trainer.md)
+19. [Mini simulacro con corrección](19-mini-quiz.md)
+20. [Preguntas del mini simulacro](20-quiz-cases.md)
 
 [Glosario bilingüe](../GLOSSARY.md) · [Fuentes](../SOURCES.md)
 
@@ -61,7 +66,6 @@ Guía conceptual ampliada; no cubre por completo AZ-900, AZ-104, AZ-305 ni AZ-40
 
 Adaptación de undergroundwires/Azure-in-bullet-points bajo CC BY 4.0. [Atribución y cambios](../ATTRIBUTION.md).
 
-15. [Ampliación desde Microsoft Learn](15-microsoft-learn.md)
 
 ## Mini simulacro: decide y entiende el porqué
 

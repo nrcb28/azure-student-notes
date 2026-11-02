@@ -31,7 +31,7 @@ Las notas previas se conservan como lectura complementaria y tienen extensiones 
 
 - python tools/check_docs.py: file links, structure, source-topic integration, Bash blocks.
 - python tools/check_study_core.py: matching unit IDs, nonempty sections, identical lab commands, standalone script syntax.
-- python -m unittest discover -s tools -p 'test_*lab*.py' -v: seven behavioural tests.
+- python -m unittest discover -s tools -p 'test_*lab*.py' -v: local simulator behaviour and Azure-script guard tests using mocked commands.
 - Bicep compilation, when reported, is local validation only. Azure deployments, permissions, pricing, and recovery timing require a test subscription.
 
 The new local simulator and unit tests run without Azure credentials. Azure procedures have not been executed here. A source link and a green local check are not a certification guarantee.

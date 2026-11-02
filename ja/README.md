@@ -4,7 +4,7 @@
 
 ## 共通ルートと演習
 
-[共通学習コア](16-common-core.md) · [Labs](17-advanced-labs.md)
+[共通学習コア](16-common-core.md) · [演習](17-advanced-labs.md)
 
 - [AZ-900 · 発展ワークブック](../certifications/ja/AZ-900-workbook.md)
 - [AZ-104 · 発展ワークブック](../certifications/ja/AZ-104-workbook.md)
@@ -32,6 +32,11 @@
 13. [演習](13-laboratorios.md)
 14. [復習](14-repaso.md)
 15. [Microsoft Learn の補足](15-microsoft-learn.md)
+16. [共通学習コア](16-common-core.md)
+17. [発展演習](17-advanced-labs.md)
+18. [学習トレーナー](18-study-trainer.md)
+19. [解説つきミニクイズ](19-mini-quiz.md)
+20. [ミニクイズの問題](20-quiz-cases.md)
 
 ## 認定試験
 

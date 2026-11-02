@@ -35,7 +35,7 @@ DP-900, SC-900, AZ-700 e DP-300 hanno spiegazioni, casi e consegne equivalenti n
 
 ## Ripasso con il trainer
 
-Il trainer di autovalutazione consente di scegliere tutti gli sedici percorsi e di esportare i casi in Anki. Confronta la tua spiegazione con la risposta e valuta il ricordo. Il mini quiz a scelta multipla conserva le sue otto domande sui quattro percorsi iniziali.
+Il trainer di autovalutazione consente di scegliere tutti i sedici percorsi e di esportare i casi in Anki. Confronta la tua spiegazione con la risposta e valuta il ricordo. Il mini quiz a scelta multipla conserva le sue otto domande sui quattro percorsi iniziali.
 
 ```bash
 python tools/study.py demo --lang it --exam AI-103
@@ -45,7 +45,7 @@ python tools/study.py export --lang it --exam SC-100 --output exports/it-sc100.t
 
 ## Fonti e limiti
 
-Le fonti iniziali sono state consultate il 27 ottobre 2026; i quattro nuovi percorsi il 30 ottobre 2026. Controlla obiettivi, disponibilità, lingua e requisiti su Microsoft Learn prima di prenotare. Esame e certificazione sono concetti diversi; i percorsi Expert possono richiedere altre credenziali. Nessuna garanzia di superamento né esecuzione in Azure dichiarata.
+Le fonti di AZ-900, AZ-104, AZ-305 e AZ-400 sono state consultate il 27 ottobre 2026; quelle di DP-900, SC-900, AZ-700 e DP-300 il 30 ottobre. Gli otto percorsi aggiunti dopo sono stati verificati il 1º novembre 2026. Sono date di consultazione, distinte dalle date di validità degli obiettivi. Controlla obiettivi, disponibilità, lingua e requisiti su Microsoft Learn prima di prenotare. Esame e certificazione sono concetti diversi; i percorsi Expert possono richiedere altre credenziali. Nessuna garanzia di superamento né esecuzione in Azure dichiarata.
 
 [Trainer](../../it/18-study-trainer.md) · [Mini quiz](../../it/19-mini-quiz.md) · [Anki](../../flashcards/it.tsv) · [Laboratorio di rete](network-lab.md) · [ADR](ADR-template.md)
 

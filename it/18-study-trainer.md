@@ -9,6 +9,8 @@ python tools/study.py demo --lang it --exam AZ-104
 python tools/study.py study --lang it --exam AZ-104 --limit 5
 ```
 
+Il fuso di visualizzazione predefinito, Europe/Madrid, richiede i dati IANA del sistema operativo. Se non sono disponibili, aggiungi --timezone UTC al comando demo o study; non servono pacchetti aggiuntivi.
+
 ## 1. Mettiti alla prova
 
 Leggi, pensa e premi Invio. Confronta la spiegazione e valuta: 0 dimenticata, 1 difficile, 2 bene, 3 facile. q esce; le valutazioni completate vengono salvate. È autovalutazione, non correzione automatica o voto d'esame.
@@ -23,7 +25,7 @@ stats mostra nuove, scadute, consolidate e dimenticanze per esame. Consolidata s
 
 ## 4. Intervalli
 
-0 torna dopo dieci minuti e azzera la sequenza; 1 domani e azzera. 2 usa un giorno, poi tre, poi raddoppia. 3 inizia con quattro giorni e moltiplica per 2,5, massimo 365. Regola semplice propria, non FSRS né garanzia di memoria.
+0 torna dopo dieci minuti e azzera la sequenza; 1 torna il giorno dopo e la azzera. Le valutazioni 2 e 3 condividono una sequenza di ripassi consecutivi riusciti. Con 2, il primo successo programma un giorno, il secondo tre e i successivi raddoppiano l’intervallo precedente. Con 3, il primo successo programma quattro giorni; i successivi moltiplicano l’intervallo precedente per 2,5, arrotondano a giorni interi e usano almeno quattro giorni. Entrambi hanno un massimo di 365 giorni. Cambiare valutazione non azzera la sequenza: 3 seguito da 2 programma quattro e poi tre giorni. Regola semplice propria, non FSRS né garanzia di memoria.
 
 ## 5. Portalo in Anki
 

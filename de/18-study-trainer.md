@@ -9,6 +9,8 @@ python tools/study.py demo --lang de --exam AZ-104
 python tools/study.py study --lang de --exam AZ-104 --limit 5
 ```
 
+Die voreingestellte Anzeigezeitzone Europe/Madrid benötigt die IANA-Zeitzonendaten des Betriebssystems. Falls sie fehlen, ergänze den Befehl demo oder study um --timezone UTC; dafür ist kein Zusatzpaket nötig.
+
 ## 1. Selbst prüfen
 
 Frage lesen, nachdenken, Enter drücken. Erklärung vergleichen und bewerten: 0 vergessen, 1 schwer, 2 gut, 3 leicht. q beendet; fertige Bewertungen werden gespeichert. Selbstbewertung, keine automatische Korrektur oder Prüfungsnote.
@@ -23,7 +25,7 @@ stats zeigt neue, fällige, gefestigte Karten und Vergessen je Prüfung. Gefesti
 
 ## 4. Intervalle
 
-0: zehn Minuten, Serie zurückgesetzt. 1: morgen, zurückgesetzt. 2: ein Tag, drei Tage, danach verdoppeln. 3: vier Tage, danach mal 2,5, höchstens 365 Tage. Einfache eigene Regel, nicht FSRS oder Gedächtnisgarantie.
+0: nach zehn Minuten, Serie zurückgesetzt. 1: am nächsten Tag, Serie zurückgesetzt. Bewertungen 2 und 3 zählen gemeinsam als aufeinanderfolgende erfolgreiche Wiederholungen. Bei 2 folgt nach dem ersten Erfolg ein Tag, nach dem zweiten drei Tage; danach wird das vorige Intervall verdoppelt. Bei 3 folgt nach dem ersten Erfolg ein Intervall von vier Tagen; danach wird das vorige Intervall mit 2,5 multipliziert, auf ganze Tage gerundet und auf mindestens vier Tage gesetzt. Beide sind auf 365 Tage begrenzt. Ein Bewertungswechsel setzt die Serie nicht zurück: 3 und danach 2 ergibt vier und dann drei Tage. Einfache eigene Regel, nicht FSRS oder Gedächtnisgarantie.
 
 ## 5. Anki-Export
 

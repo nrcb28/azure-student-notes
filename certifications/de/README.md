@@ -45,7 +45,7 @@ python tools/study.py export --lang de --exam SC-100 --output exports/de-sc100.t
 
 ## Quellen und Grenzen
 
-Die ursprünglichen Quellen wurden am 27. Oktober 2026 geprüft, die vier neuen Wege am 30. Oktober 2026. Prüfe Ziele, Verfügbarkeit, Prüfungssprachen und Voraussetzungen vor der Buchung auf Microsoft Learn. Prüfungscode und Zertifizierung sind verschieden; Expert-Zertifizierungen können weitere Nachweise verlangen. Keine Bestehensgarantie oder behauptete Ausführung in Azure.
+Die Quellen zu AZ-900, AZ-104, AZ-305 und AZ-400 wurden am 27. Oktober 2026 geprüft; DP-900, SC-900, AZ-700 und DP-300 am 30. Oktober. Die acht später ergänzten Wege wurden am 1. November 2026 geprüft. Das sind Prüfdaten der Quellen, keine Gültigkeitsdaten der Prüfungsziele. Prüfe Ziele, Verfügbarkeit, Prüfungssprachen und Voraussetzungen vor der Buchung auf Microsoft Learn. Prüfungscode und Zertifizierung sind verschieden; Expert-Zertifizierungen können weitere Nachweise verlangen. Keine Bestehensgarantie oder behauptete Ausführung in Azure.
 
 [Trainer](../../de/18-study-trainer.md) · [Miniquiz](../../de/19-mini-quiz.md) · [Anki](../../flashcards/de.tsv) · [Netzwerklabor](network-lab.md) · [ADR](ADR-template.md)
 

@@ -9,6 +9,8 @@ python tools/study.py demo --lang en --exam AZ-104
 python tools/study.py study --lang en --exam AZ-104 --limit 5
 ```
 
+The default display timezone, Europe/Madrid, needs the operating system’s IANA timezone database. If it is unavailable, add --timezone UTC to the demo or study command; no extra package is needed.
+
 ## 1. Test yourself
 
 Read the question, think, and press Enter. Compare the explanation and rate: 0 forgotten, 1 hard, 2 good, 3 easy. q quits; completed ratings are saved individually. This is self-assessment, not automatic marking or an exam score.
@@ -23,7 +25,7 @@ stats shows new, due, consolidated, and lapses per exam. Consolidated means two 
 
 ## 4. Review intervals
 
-0 returns in ten minutes and resets the streak; 1 returns tomorrow and resets it. 2 schedules one day, then three, then doubles. 3 starts at four days and multiplies by 2.5, capped at 365 days. This is a simple custom rule, not FSRS or a memory guarantee.
+0 returns in ten minutes and resets the streak; 1 returns tomorrow and resets it. Ratings 2 and 3 share one streak of consecutive successful reviews. With 2, the first success schedules one day, the second three, and later successes double the previous interval. With 3, the first success schedules four days; later successes multiply the previous interval by 2.5, round to whole days, and use at least four days. Both cap at 365 days. Switching ratings does not restart the streak: 3 then 2 gives four then three days. This is a simple custom rule, not FSRS or a memory guarantee.
 
 ## 5. Take it to Anki
 

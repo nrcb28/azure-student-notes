@@ -48,6 +48,65 @@ class QuizTests(unittest.TestCase):
                 self.assertEqual(card['variants'][lang]['correct'], card['variants']['en']['correct'])
         self.assertEqual(sum(len(q['variants']) for q in self.bank), 64)
 
+    def test_invalid_ui_templates_are_rejected_before_questions_or_input(self):
+        bundle = json.loads((quiz.ROOT/'tools/quiz_ui.json').read_text(encoding='utf-8'))
+        question = quiz.select_questions(self.bank, 'en', quiz.EXAMS, 1, 42)[0]
+        templates = ('Incorrect {letter:{0}}', 'Incorrect {letter:{letter}}',
+                     'Incorrect {letter:>10}', 'Incorrect {letter:}', 'Incorrect {letter!s}',
+                     'Incorrect {}', 'Incorrect {0}', 'Incorrect {letter.real}',
+                     'Incorrect {letter[0]}', 'Incorrect {letter',
+                     'Incorrect {unknown}', 'Incorrect.')
+        for index, template in enumerate(templates):
+            # Corrupting English and every translation alike must not change the schema.
+            for texts in bundle.values():
+                texts['incorrect'] = template
+            destination = self.path.with_name(f'invalid-ui-{index}.json')
+            output, errors = io.StringIO(), io.StringIO()
+            with self.subTest(template=template), \
+                    patch.object(Path, 'read_text', return_value=json.dumps(bundle)), \
+                    patch.object(quiz, 'load_bank', return_value=self.bank), \
+                    patch('builtins.input', return_value=self.answer(question, False)) as input_fn, \
+                    contextlib.redirect_stdout(output), contextlib.redirect_stderr(errors):
+                self.assertEqual(quiz.main(['run', '--lang', 'en', '--count', '1', '--seed', '42',
+                                            '--report', str(destination)]), 1)
+                input_fn.assert_not_called()
+                self.assertEqual(output.getvalue(), '')
+                self.assertIn('Invalid quiz translation placeholders:', errors.getvalue())
+                self.assertFalse(destination.exists())
+
+    def test_malformed_ui_is_reported_cleanly_before_input(self):
+        bundle = json.loads((quiz.ROOT/'tools/quiz_ui.json').read_text(encoding='utf-8'))
+        malformed = ['{broken', '[]']
+        for value in (None, {}, {**bundle['en'], 'topics': None},
+                      {**bundle['en'], 'statuses': []}):
+            # Validate another language before the malformed English reference.
+            broken = {'es': bundle['es'], **bundle, 'en': value}
+            malformed.append(json.dumps(broken))
+        for raw in malformed:
+            errors = io.StringIO()
+            with self.subTest(ui=raw[:60]), patch.object(Path, 'read_text', return_value=raw), \
+                    patch('builtins.input') as input_fn, contextlib.redirect_stderr(errors):
+                with self.assertRaises(ValueError):
+                    quiz.text_for('en')
+                self.assertEqual(quiz.main(['run', '--lang', 'en', '--report', str(self.path)]), 1)
+                input_fn.assert_not_called()
+                self.assertTrue(errors.getvalue().startswith('Error:'))
+                self.assertFalse(self.path.exists())
+
+    def test_missing_status_in_every_translation_is_rejected_before_input(self):
+        messages = json.loads((quiz.ROOT/'tools/quiz_ui.json').read_text(encoding='utf-8'))
+        for texts in messages.values():
+            del texts['statuses']['quit']
+        original_read = Path.read_text
+        def read_text(path, *args, **kwargs):
+            if path.name == 'quiz_ui.json':
+                return json.dumps(messages, ensure_ascii=False)
+            return original_read(path, *args, **kwargs)
+        with patch.object(Path, 'read_text', read_text), patch('builtins.input', return_value='q') as prompt, contextlib.redirect_stderr(io.StringIO()), contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(quiz.main(['run', '--report', str(self.path)]), 1)
+        prompt.assert_not_called()
+        self.assertFalse(self.path.exists())
+
     def test_bank_rejects_missing_variant_duplicate_id_and_invalid_answer(self):
         for change in ('missing', 'duplicate', 'boolean', 'reason', 'reference'):
             with self.subTest(change=change):
@@ -206,6 +265,34 @@ class QuizTests(unittest.TestCase):
             self.assertEqual(quiz.main(['run', '--report', str(self.path)]), 1)
             input_fn.assert_not_called()
         self.assertEqual(self.path.read_text(), 'preserve me')
+
+    def test_dangling_report_symlink_is_rejected_before_questions(self):
+        target = self.path.with_name('missing-report.json')
+        self.path.symlink_to(target)
+        output, errors = io.StringIO(), io.StringIO()
+        with patch('builtins.input', return_value='q') as input_fn, \
+                contextlib.redirect_stdout(output), contextlib.redirect_stderr(errors):
+            self.assertEqual(quiz.main(['run', '--report', str(self.path)]), 1)
+            input_fn.assert_not_called()
+        self.assertEqual(output.getvalue(), '')
+        self.assertIn('Report already exists:', errors.getvalue())
+        self.assertTrue(self.path.is_symlink())
+        self.assertEqual(self.path.readlink(), target)
+        self.assertFalse(target.exists())
+
+    def test_practice_wrong_answer_feedback_keeps_the_saved_report(self):
+        question = quiz.select_questions(self.bank, 'en', quiz.EXAMS, 1, 42)[0]
+        output = io.StringIO()
+        with patch('builtins.input', return_value=self.answer(question, False)), \
+                contextlib.redirect_stdout(output):
+            self.assertEqual(quiz.main(['run', '--lang', 'en', '--count', '1', '--seed', '42',
+                                        '--report', str(self.path)]), 0)
+        report = quiz.validate_report(json.loads(self.path.read_text(encoding='utf-8')))
+        self.assertEqual(report['status'], 'completed')
+        self.assertEqual(quiz.summarize(report['questions']),
+                         {'correct': 0, 'total': 1, 'incorrect': 1, 'unanswered': 0})
+        letter = quiz.LETTERS[question['order'].index(question['variant']['correct'])]
+        self.assertIn(self.texts['incorrect'].format(letter=letter), output.getvalue())
 
     def test_completed_report_is_saved_before_final_corrections(self):
         with patch('builtins.input', return_value='q'), patch.object(quiz, 'show_summary', side_effect=KeyboardInterrupt), contextlib.redirect_stdout(io.StringIO()):

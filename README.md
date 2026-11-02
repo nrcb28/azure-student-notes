@@ -76,9 +76,9 @@ New topics: blob recovery, retries and idempotency, RBAC diagnosis, and Key Vaul
 | 日本語 | [日本語](ja/README.md) | [16 rutas / 16 routes](certifications/ja/README.md) |
 | 简体中文 | [简体中文](zh/README.md) | [16 rutas / 16 routes](certifications/zh/README.md) |
 
-Las versiones italiana, alemana, francesa, rusa, japonesa y china son adaptaciones de estudio más compactas: incluyen los doce temas, prácticas, repaso y las cuatro rutas iniciales. Las guías añadidas de datos, seguridad, redes, SQL, IA y escritorios desarrollan los mismos temas, casos y entregables en los ocho idiomas. [Detalles de las ediciones](LOCALIZATION.md).
+Los capítulos anteriores y las notas complementarias de las cuatro rutas iniciales son más compactos en italiano, alemán, francés, ruso, japonés y chino simplificado. Las doce rutas añadidas después —datos, seguridad, redes, SQL, IA, escritorios, arquitectura de ciberseguridad y SAP— desarrollan los mismos temas, casos y entregables en los ocho idiomas. [Detalles de las ediciones](LOCALIZATION.md).
 
-The Italian, German, French, Russian, Japanese, and Chinese editions are more compact study adaptations covering all twelve topics, labs, review, and the four initial certification routes. The added data, security, networking, SQL, AI, and desktop guides have matching topics, cases, and deliverables in all eight languages. [Edition details](LOCALIZATION.md).
+Older chapters and supplementary notes for the four initial routes are more compact in Italian, German, French, Russian, Japanese, and Simplified Chinese. The twelve later routes—data, security, networking, SQL, AI, desktops, cybersecurity architecture, and SAP—have matching topics, cases, and deliverables in all eight languages. [Edition details](LOCALIZATION.md).
 
 [Glosario en ocho idiomas / Eight-language glossary](GLOSSARY-multilingual.md).
 
@@ -157,9 +157,9 @@ Each guide develops concepts, decisions, troubleshooting, practice, and review. 
 
 ## Cómo usarlo / How to use it
 
-Lee los temas en orden si estás empezando. Después intenta explicar las decisiones del caso práctico sin mirar los apuntes. Las prácticas crean recursos reales y pueden generar costes; revisa sus pasos de limpieza.
+Lee los temas en orden si estás empezando. Después intenta explicar las decisiones del caso práctico sin mirar los apuntes. Las prácticas de Azure pueden crear recursos reales y generar costes; revisa sus pasos de limpieza. El simulador local de reintentos funciona sin Azure.
 
-Read in order if you are getting started. Then try explaining the case study decisions without looking at the notes. Labs create real resources and may incur costs; follow their cleanup steps.
+Read in order if you are getting started. Then try explaining the case study decisions without looking at the notes. Azure labs may create real resources and incur costs; follow their cleanup steps. The local retry simulator runs without Azure.
 
 Son apuntes conceptuales, no un temario oficial ni una garantía de aprobar una certificación. Los servicios, planes y objetivos de examen cambian. No se afirma que las prácticas se hayan desplegado en una suscripción real.
 
@@ -177,16 +177,16 @@ Changes: topic-based organisation, Spanish and English writing, original example
 
 ## Validación local / Local validation
 
-Con Python 3 y Bash, ejecuta desde la raíz / With Python 3 and Bash, run from the root:
+Con Python 3.9+ y Bash, ejecuta la [comprobación local completa](tools/verify.py) desde la raíz / With Python 3.9+ and Bash, run the [complete offline checks](tools/verify.py) from the root:
 
 ```bash
-python tools/check_docs.py
+python tools/verify.py
 ```
 
-Comprueba enlaces relativos a archivos y secciones Markdown, bloques de código, correspondencia de idiomas, archivos de certificaciones y sintaxis Bash. No consulta URLs remotas ni valida despliegues Azure o compilación Bicep.
+Comprueba documentación, enlaces y paridad de idiomas y rutas; valida los bancos e interfaces del entrenador y del simulacro, detecta hojas de preguntas desactualizadas y ejecuta todas las pruebas locales, incluida la coherencia de Anki. No modifica fuentes, progreso ni exportaciones, ni consulta la red. No valida despliegues Azure o compilación Bicep.
 
-Checks relative file links, code fences, language counterparts, certification files, and Bash syntax. It does not check remote URLs, Azure deployments, or Bicep compilation.
+Checks documentation, links, and language/route parity; validates trainer and quiz banks and interfaces, detects stale question sheets, and runs all local tests, including Anki consistency. It does not modify sources, progress, or exports, or access the network. It does not validate Azure deployments or Bicep compilation.
 
-[Validación de esta revisión / Revision validation](VALIDATION.md) · [Equivalencia del núcleo / Core parity](STUDY-PARITY.md)
+[Errores corregidos y mejoras / Review results](REVIEW.md) · [Validación de esta revisión / Revision validation](VALIDATION.md) · [Equivalencia del núcleo / Core parity](STUDY-PARITY.md)
 
 Consulta [ATTRIBUTION.md](ATTRIBUTION.md), [LICENSE.md](LICENSE.md) y [las fuentes](SOURCES.md).

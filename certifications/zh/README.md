@@ -45,7 +45,7 @@ python tools/study.py export --lang zh --exam SC-100 --output exports/zh-sc100.t
 
 ## 来源与范围
 
-原有参考资料查阅于 2026 年 10 月 27 日，四条新路线查阅于 2026 年 10 月 30 日。预约前请到 Microsoft Learn 核对考试目标、可用情况、语言和要求。考试代码与认证不同，Expert 认证可能要求其他证书。这里不保证通过，也不声称已在 Azure 执行练习。
+AZ-900、AZ-104、AZ-305、AZ-400 的来源查阅于 2026 年 10 月 27 日；DP-900、SC-900、AZ-700、DP-300 查阅于 10 月 30 日。之后新增的八条路线查阅于 2026 年 11 月 1 日。这些是来源查阅日期，与考试目标的生效日期不同。预约前请到 Microsoft Learn 核对考试目标、可用情况、语言和要求。考试代码与认证不同，Expert 认证可能要求其他证书。这里不保证通过，也不声称已在 Azure 执行练习。
 
 [训练器](../../zh/18-study-trainer.md) · [迷你测验](../../zh/19-mini-quiz.md) · [Anki](../../flashcards/zh.tsv) · [网络实验](network-lab.md) · [ADR](ADR-template.md)
 

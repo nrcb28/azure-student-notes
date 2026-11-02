@@ -14,8 +14,8 @@ class PermanentFailure(Exception):
 
 
 def exercise(*, idempotent, attempts=3, permanent=False):
-    if not 1 <= attempts <= 10:
-        raise ValueError("attempts must be 1..10")
+    if type(attempts) is not int or not 1 <= attempts <= 10:
+        raise ValueError("attempts must be an integer from 1..10")
     connection = sqlite3.connect(":memory:")
     connection.execute("CREATE TABLE documents (id INTEGER PRIMARY KEY, request_key TEXT, title TEXT)")
     if idempotent:
