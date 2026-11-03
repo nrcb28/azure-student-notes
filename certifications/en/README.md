@@ -35,7 +35,7 @@ DP-900, SC-900, AZ-700, and DP-300 have matching explanations, cases, and delive
 
 ## Practise with the trainer
 
-Choose any of the sixteen routes in the self-rating trainer or export cases to Anki. Compare your explanation with the answer and rate recall. The multiple-choice mini quiz retains its eight questions on the original four routes.
+Choose any of the sixteen routes in the self-rating trainer or export cases to Anki. Compare your explanation with the answer and rate recall. The multiple-choice mini quiz includes 32 original scenarios across all sixteen routes, two per route, translated into eight languages: 256 variants.
 
 ```bash
 python tools/study.py demo --lang en --exam AI-103

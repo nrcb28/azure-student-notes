@@ -44,11 +44,12 @@ class VerificationTests(unittest.TestCase):
         self.assertEqual(result, 1)
         self.assertEqual(len(calls), 2)
 
-    def test_registry_drift_is_rejected_but_intentionally_smaller_quiz_is_valid(self):
+    def test_registry_drift_including_incomplete_quiz_coverage_is_rejected(self):
         args = ({'exams': {'AZ-900': [], 'DP-900': []}, 'languages': ['es', 'en']},
-                ('AZ-900', 'DP-900'), ('AZ-900', 'DP-900'), ('es', 'en'), ('AZ-900',), ('es', 'en'))
+                ('AZ-900', 'DP-900'), ('AZ-900', 'DP-900'), ('es', 'en'), ('AZ-900', 'DP-900'), ('es', 'en'))
         self.assertEqual(verify.registry_errors(*args), [])
-        for index, broken in ((2, ('AZ-900',)), (4, ('SC-999',)),
+        for index, broken in ((2, ('AZ-900',)), (4, ('AZ-900',)), (4, ('SC-999',)),
+                              (4, ('DP-900', 'AZ-900')),
                               (5, ('en', 'es')), (1, ('AZ-900', 'AZ-900'))):
             changed = list(args)
             changed[index] = broken

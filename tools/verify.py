@@ -26,7 +26,7 @@ CHECKS = (
 
 def registry_errors(manifest, study_routes, document_routes, study_languages,
                     quiz_routes, quiz_languages):
-    """Keep independently used allowlists aligned while retaining quiz scope."""
+    """Keep the trainer, quiz and document route/language allowlists aligned."""
     if (not isinstance(manifest, dict) or not isinstance(manifest.get('exams'), dict) or
             not isinstance(manifest.get('languages'), list)):
         return ['Invalid study_core.json exam/language registry']
@@ -46,9 +46,8 @@ def registry_errors(manifest, study_routes, document_routes, study_languages,
         errors.append('Required document routes and trainer routes differ')
     if tuple(manifest['languages']) != tuple(study_languages) or tuple(quiz_languages) != tuple(study_languages):
         errors.append('Manifest, trainer and quiz language registries differ')
-    # The mini quiz intentionally covers only four of the sixteen trainer routes.
-    if not set(quiz_routes) <= set(study_routes):
-        errors.append('Quiz refers to an unregistered trainer route')
+    if tuple(quiz_routes) != tuple(study_routes):
+        errors.append('Quiz and trainer route registries differ')
     return errors
 
 

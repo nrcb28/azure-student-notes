@@ -35,7 +35,7 @@ DP-900, SC-900, AZ-700 und DP-300 enthalten in allen acht Sprachen entsprechende
 
 ## Mit dem Trainer wiederholen
 
-Der Trainer zur Selbsteinschätzung unterstützt alle sechzehn Wege und den Export nach Anki. Vergleiche deine Erklärung mit der Lösung und bewerte dein Erinnern. Das Multiple-Choice-Miniquiz behält seine acht Fragen zu den vier ursprünglichen Wegen.
+Der Trainer zur Selbsteinschätzung unterstützt alle sechzehn Wege und den Export nach Anki. Vergleiche deine Erklärung mit der Lösung und bewerte dein Erinnern. Das Multiple-Choice-Miniquiz enthält 32 eigens verfasste Szenarien zu allen sechzehn Wegen, zwei pro Weg, übersetzt in acht Sprachen: 256 Sprachvarianten.
 
 ```bash
 python tools/study.py demo --lang de --exam AI-103

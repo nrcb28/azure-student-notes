@@ -2,7 +2,7 @@
 
 [←](README.md) · [CLI](../QUIZ.md) · [Fragen auf GitHub lesen](20-quiz-cases.md)
 
-Acht eigene Szenarien helfen dir, Azure-Entscheidungen zu begründen: je zwei zu AZ-900, AZ-104, AZ-305 und AZ-400. Fragen, Antworten und Erläuterungen gibt es in allen acht Sprachen. Das Werkzeug läuft lokal mit Python und benötigt weder ein Azure-Konto noch zusätzliche Pakete.
+32 eigene Szenarien helfen dir, Azure-Entscheidungen zu begründen: je zwei für alle [sechzehn Lernwege](../certifications/de/README.md). Fragen, Antworten und Erläuterungen gibt es in acht Sprachen, insgesamt 256 Sprachvarianten. Das Werkzeug läuft lokal mit Python und benötigt weder ein Azure-Konto noch zusätzliche Pakete.
 
 ## Start
 
@@ -12,6 +12,14 @@ Python 3.9+ · es / en / it / de / fr / ru / ja / zh
 python tools/quiz.py demo --lang de
 python tools/quiz.py run --lang de --exam AZ-104 --count 2
 ```
+
+Ohne --count werden bis zu acht verfügbare Szenarien ausgewählt. Mit --count 32 ohne Prüfungsfilter übst du den gesamten Fragenbestand; jeder einzelne Lernweg enthält zwei Szenarien.
+
+```bash
+python tools/quiz.py run --lang de --mode exam --count 32
+```
+
+Die 24 ergänzten Szenarien verweisen auf Zertifizierungsleitfäden in derselben Sprache, etwa [AI-103](../certifications/de/AI-103.md). Die ursprünglichen acht behalten ihre Kapitelverweise. Vor der Erweiterung gespeicherte Berichte bleiben kompatibel: review verwendet die darin gespeicherten Kopien der Fragen und Quellenverweise.
 
 ## Üben mit Erklärung
 
@@ -31,7 +39,7 @@ python tools/quiz.py run --lang de --mode exam --count 8 --minutes 12 --report .
 
 ## Fehler nacharbeiten
 
-Der gespeicherte Bericht zeigt richtige, falsche und unbeantwortete Fragen sowie die Ergebnisse je Thema. Beim Nacharbeiten werden standardmäßig falsche und unbeantwortete Fragen mit Erklärung, Quelle und passendem Kapitel angezeigt. Unbeantwortete Fragen bleiben Teil der Gesamtzahl; eine kurze Sitzung verbessert das Ergebnis also nicht künstlich.
+Der gespeicherte Bericht zeigt richtige, falsche und unbeantwortete Fragen sowie die Ergebnisse je Thema. Beim Nacharbeiten werden standardmäßig falsche und unbeantwortete Fragen mit Erklärung, Quelle und passendem Kapitel oder Zertifizierungsleitfaden angezeigt. Unbeantwortete Fragen bleiben Teil der Gesamtzahl; eine kurze Sitzung verbessert das Ergebnis also nicht künstlich.
 
 ```bash
 python tools/quiz.py review --lang de --report .study-reports/first-quiz.json
@@ -45,7 +53,7 @@ Berichte bleiben lokal als JSON im von Git ausgeschlossenen Ordner .study-report
 
 ## Aussagekraft des Ergebnisses
 
-Mit acht Szenarien ist dies ein Miniquiz zum Wiederholen, keine vollständige Simulation, kein offizieller Fragenkatalog und keine Bestehensprognose. Die Erklärungen verweisen auf englische Microsoft-Learn-Seiten und passende Kapitel dieser Ausgabe. Ein gutes Ergebnis belegt nur, dass du diese konkreten Übungsfragen beantwortet hast.
+Mit zwei Szenarien je Lernweg ist dies ein Miniquiz zum Wiederholen, keine vollständige Simulation, kein offizieller Fragenkatalog und keine Bestehensprognose. Die Erklärungen verweisen auf englische Microsoft-Learn-Seiten und passende Kapitel oder Zertifizierungsleitfäden dieser Ausgabe. Ein gutes Ergebnis belegt nur, dass du diese konkreten Übungsfragen beantwortet hast.
 
 ```bash
 python tools/quiz.py doctor --lang de

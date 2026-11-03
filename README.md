@@ -30,14 +30,18 @@ python tools/study.py stats --lang es
 
 **[Practicar en español](es/19-mini-quiz.md) · [Read in English](en/19-mini-quiz.md) · [Preguntas en GitHub](es/20-quiz-cases.md)**
 
-Ocho escenarios originales para las cuatro rutas iniciales, dos por ruta, en los ocho idiomas. Elige una respuesta y revisa su explicación, el motivo del error, una fuente de Microsoft Learn y el capítulo relacionado. Incluye modos practice y exam, tiempo opcional, informes JSON locales y repaso de errores. Es un banco pequeño para practicar decisiones.
+32 escenarios originales para las dieciséis rutas, dos por ruta, en ocho idiomas: 256 variantes. Elige una respuesta y revisa su explicación, el motivo del error, una fuente de Microsoft Learn y la lectura relacionada. Incluye modos practice y exam, tiempo opcional, informes JSON locales y repaso de errores. Es un banco pequeño para practicar decisiones.
 
-Eight original scenarios for the four initial certification routes, two per route, translated into all eight languages. Practise with immediate explanations or defer marking until the end, save a local report, and revisit mistakes by topic. This small bank does not cover a complete exam or predict passing.
+32 original scenarios cover all sixteen certification routes, two per route, in eight languages: 256 variants. Practise with immediate explanations or defer marking until the end, save a local report, and revisit mistakes by topic. Two scenarios per route do not cover a complete exam or predict passing.
 
 ```bash
 python tools/quiz.py demo --lang es
+python tools/quiz.py run --lang es --exam AZ-104 --count 2
 python tools/quiz.py run --lang es --mode exam --count 8 --minutes 12
+python tools/quiz.py run --lang es --mode exam --count 32
 ```
+
+Sin --count se eligen hasta ocho escenarios; --count 32 recorre el banco completo. / Omitting --count selects up to eight scenarios; --count 32 uses the complete bank.
 
 [Manual / Manual](QUIZ.md) · [Fuentes de cada caso / Scenario sources](QUIZ-SOURCES.md). El temporizador se comprueba al recibir la entrada; pulsa Intro al vencer el plazo. / Time is checked after terminal input; press Enter when it expires.
 
@@ -187,6 +191,10 @@ Comprueba documentación, enlaces y paridad de idiomas y rutas; valida los banco
 
 Checks documentation, links, and language/route parity; validates trainer and quiz banks and interfaces, detects stale question sheets, and runs all local tests, including Anki consistency. It does not modify sources, progress, or exports, or access the network. It does not validate Azure deployments or Bicep compilation.
 
-[Errores corregidos y mejoras / Review results](REVIEW.md) · [Validación de esta revisión / Revision validation](VALIDATION.md) · [Equivalencia del núcleo / Core parity](STUDY-PARITY.md)
+[Errores corregidos y mejoras / Review results](REVIEW.md) · El [flujo de GitHub Actions](.github/workflows/verify.yml) está configurado para ejecutar el mismo comando en push, pull request y ejecución manual, con Python 3.9 y 3.12 en Ubuntu 24.04, sin acceso a Azure.
+
+The [GitHub Actions workflow](.github/workflows/verify.yml) is configured to run the same command on pushes, pull requests, and manual dispatch, using Python 3.9 and 3.12 on Ubuntu 24.04 without Azure access.
+
+[Validación de esta revisión / Revision validation](VALIDATION.md) · [Equivalencia del núcleo / Core parity](STUDY-PARITY.md)
 
 Consulta [ATTRIBUTION.md](ATTRIBUTION.md), [LICENSE.md](LICENSE.md) y [las fuentes](SOURCES.md).

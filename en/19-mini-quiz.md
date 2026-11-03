@@ -2,7 +2,7 @@
 
 [←](README.md) · [CLI](../QUIZ.md) · [Read the questions on GitHub](20-quiz-cases.md)
 
-Eight original scenarios, two for each route: AZ-900, AZ-104, AZ-305, and AZ-400. Questions, options, explanations, and interface are available in all eight languages. This small bank practises decisions from the notes; it is independent of Microsoft and does not reproduce real exam questions. Requires Python 3.9+ and its standard library. No Azure account or connection is needed.
+32 original scenarios, two for each of the [sixteen routes](../certifications/en/README.md). Questions, options, explanations, and interface are available in all eight languages: 256 locale variants. This small bank practises decisions from the notes; it is independent of Microsoft and does not reproduce real exam questions. Requires Python 3.9+ and its standard library. No Azure account or connection is needed.
 
 ## Start
 
@@ -13,9 +13,17 @@ python tools/quiz.py demo --lang en
 python tools/quiz.py run --lang en --exam AZ-104 --count 2
 ```
 
+Without --count, a session selects up to eight available scenarios. Use --count 32 without an exam filter to practise the complete bank; each single route still has two scenarios.
+
+```bash
+python tools/quiz.py run --lang en --mode exam --count 32
+```
+
+The 24 added scenarios link to certification guides in the same language, such as [AI-103](../certifications/en/AI-103.md). The original eight keep their chapter links. Reports saved before the expansion remain compatible: review uses the question and reference snapshots stored in each report.
+
 ## Practice with feedback
 
-In practice mode you see the explanation after each answer. Use A–D to choose, S or Enter to skip, and Q to finish. Option order changes; the answer is graded by its actual content. Each wrong answer has its own reason, a Microsoft Learn source, and a local chapter to revisit. Repeat --exam to combine routes; --count cannot exceed the distinct scenarios available in those routes. Omitting --count uses up to eight. A fixed --seed reproduces question and option order.
+In practice mode you see the explanation after each answer. Use A–D to choose, S or Enter to skip, and Q to finish. Option order changes; the answer is graded by its actual content. Each wrong answer has its own reason, a Microsoft Learn source, and a local chapter or certification guide to revisit. Repeat --exam to combine routes; --count cannot exceed the distinct scenarios available in those routes. Omitting --count uses up to eight. A fixed --seed reproduces question and option order.
 
 ```bash
 python tools/quiz.py run --lang en --exam AZ-900 --exam AZ-104 --count 4 --seed 42
@@ -45,7 +53,7 @@ Default reports live in .study-reports/, excluded from Git. Every session gets a
 
 ## What the result means
 
-Eight questions cannot cover a certification syllabus. Use the longer case banks, workbooks, and labs to justify decisions beyond choosing an option. Sources support the reasoning; they are not claims of full exam coverage. The doctor command checks structure, language coverage, matching answer indices, and local references; it does not verify translation quality or remote page availability. Imported reports are validated and their totals recomputed, but are editable personal files, not signed proof of an assessment.
+Two questions per route cannot cover a certification syllabus. Use the longer case banks, workbooks, and labs to justify decisions beyond choosing an option. Sources support the reasoning; they are not claims of full exam coverage. The doctor command checks structure, language coverage, matching answer indices, and local references; it does not verify translation quality or remote page availability. Imported reports are validated and their totals recomputed, but are editable personal files, not signed proof of an assessment.
 
 ```bash
 python tools/quiz.py doctor --lang en

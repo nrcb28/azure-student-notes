@@ -36,11 +36,11 @@ Las notas previas se conservan como lectura complementaria y tienen extensiones 
 
 The new local simulator and unit tests run without Azure credentials. Azure procedures have not been executed here. A source link and a green local check are not a certification guarantee.
 
-## Multiple-choice practice / Práctica de opción múltiple
+## Initial multiple-choice practice / Práctica inicial de opción múltiple · Historical / Histórico
 
-The [mini quiz](QUIZ.md) adds eight original scenarios, each translated into all eight languages: 64 variants, not 64 distinct questions. Each has four options, matching correct-answer indices and references, general reasoning, and a reason for each wrong choice. The interface, user guide, and generated question sheet are also available in every language. Automated checks establish structure; meaning was reviewed separately.
+The initial [mini quiz](QUIZ.md) provided eight original scenarios for four routes, each translated into all eight languages: 64 variants, not 64 distinct questions. These are historical counts; the current expansion is recorded below. Each has four options, matching correct-answer indices and references, general reasoning, and a reason for each wrong choice. The interface, user guide, and generated question sheet are also available in every language. Automated checks establish structure; meaning was reviewed separately.
 
-El [mini simulacro](QUIZ.md) añade ocho escenarios con variantes en los ocho idiomas, además de interfaz, guía y hoja de preguntas. Los índices de respuesta y las referencias coinciden; cada alternativa incorrecta tiene explicación. La comprobación automática cubre la estructura y se complementó con lectura del significado.
+El [mini simulacro](QUIZ.md) inicial tenía ocho escenarios de cuatro rutas con variantes en los ocho idiomas, además de interfaz, guía y hoja de preguntas. Son recuentos históricos; la ampliación actual se registra abajo. Los índices de respuesta y las referencias coinciden; cada alternativa incorrecta tiene explicación. La comprobación automática cubre la estructura y se complementó con lectura del significado.
 
 ## Additional routes · Nuevas rutas · 2026-11-01
 
@@ -48,18 +48,26 @@ DP-900, SC-900, AZ-700, and DP-300 add twenty workbook units and forty original 
 
 DP-900, SC-900, AZ-700 y DP-300 añaden veinte unidades y cuarenta casos por idioma. Las nuevas rutas conservan temas, casos, anclajes de unidades y entregables equivalentes en los ocho idiomas. En esa revisión, el total era de ocho rutas, ochenta casos y cuarenta unidades de certificación por idioma. Las comprobaciones estructurales no sustituyen una revisión lingüística profesional.
 
-The multiple-choice bank remains the separate eight-scenario practice for the original four routes. New routes are integrated into the self-rating trainer and Anki; no new multiple-choice coverage is claimed.
+At that revision, the multiple-choice bank remained a separate eight-scenario practice for the original four routes. The new routes were integrated into the self-rating trainer and Anki; multiple-choice coverage expanded later, as recorded below.
 
-El mini simulacro mantiene sus ocho escenarios sobre las cuatro rutas originales. Las nuevas rutas se incorporan al entrenador de autoevaluación y a Anki.
+En esa revisión, el mini simulacro conservaba ocho escenarios sobre las cuatro rutas originales. Las nuevas rutas se incorporaron al entrenador de autoevaluación y a Anki; la ampliación de opción múltiple llegó después y se registra abajo.
 
 ## Foundry, security operations, identity and desktops · 2026-11-01
 
 AI-901, SC-200, SC-300, and AZ-140 add four more routes with a guide, ten original cases, and five workbook units each in every language. That revision provided twelve routes, 120 cases and sixty certification units per language: 960 locale/case variants. Earlier sections record previous expansions; their historical counts are not current totals.
 
-AI-901, SC-200, SC-300 y AZ-140 añaden cuatro rutas completas por idioma. Esa revisión alcanzó doce rutas, 120 escenarios y sesenta unidades de certificación por idioma. Los recuentos de ampliaciones anteriores son históricos. Los casos se integran en el entrenador y Anki; el banco de opción múltiple mantiene su alcance de cuatro rutas.
+AI-901, SC-200, SC-300 y AZ-140 añaden cuatro rutas completas por idioma. Esa revisión alcanzó doce rutas, 120 escenarios y sesenta unidades de certificación por idioma. Los recuentos de ampliaciones anteriores son históricos. Los casos se integraron en el entrenador y Anki; en esa revisión, el banco de opción múltiple aún tenía cuatro rutas.
 
 ## Advanced development, data, security architecture and SAP · 2026-11-01
 
 AI-103, DP-700, SC-100, and AZ-120 add guides, ten cases and five workbook units per route in all eight languages. The current total is **sixteen routes, 160 original scenarios and eighty certification units per language**, yielding 1280 locale/case variants. Source and prerequisite qualifications remain part of the translated material. Historical expansion counts above describe earlier revisions.
 
-AI-103, DP-700, SC-100 y AZ-120 llevan el total actual a dieciséis rutas, 160 escenarios y ochenta unidades de certificación por idioma. Las 1280 variantes conservan fuentes y límites de los metadatos consultados. El banco de opción múltiple mantiene su alcance anterior; las nuevas rutas están en el entrenador de autoevaluación y en Anki.
+AI-103, DP-700, SC-100 y AZ-120 llevan el total actual a dieciséis rutas, 160 escenarios y ochenta unidades de certificación por idioma. Las 1280 variantes conservan fuentes y límites de los metadatos consultados. En esa revisión, el banco de opción múltiple aún conservaba su alcance anterior; las nuevas rutas se incorporaron al entrenador de autoevaluación y a Anki.
+
+## Current multiple-choice coverage / Alcance actual de opción múltiple
+
+The mini quiz now provides **32 original scenarios across all sixteen routes, two per route, in eight languages: 256 locale variants**. Questions, options, correct-answer indices, distractor reasoning, sources, guides, and generated question sheets share the same scope. The 24 added scenarios point to certification guides in their language; the original chapter references and reports saved before the expansion remain compatible. Review reads the snapshots saved in each report. The default session still selects up to eight scenarios; --count 32 selects the complete bank without an exam filter.
+
+El mini simulacro ofrece ahora **32 escenarios originales para las dieciséis rutas, dos por ruta, en ocho idiomas: 256 variantes**. Preguntas, opciones, índices correctos, motivos de los distractores, fuentes, guías y hojas generadas comparten el mismo alcance. Los 24 escenarios añadidos enlazan a guías de certificación de su idioma; las referencias iniciales a capítulos y los informes anteriores siguen siendo compatibles. review lee las copias guardadas en cada informe. La sesión predeterminada sigue eligiendo hasta ocho escenarios; --count 32 selecciona el banco completo sin filtro de examen.
+
+Two scenarios per route do not cover a full syllabus or predict passing. Structural parity does not certify translation quality. / Dos escenarios por ruta no cubren todo el temario ni predicen aprobar. La paridad estructural no certifica la calidad de las traducciones.

@@ -1,12 +1,14 @@
 # Mini simulacro local / Offline mini quiz
 
-Ocho escenarios originales, dos por ruta AZ-900, AZ-104, AZ-305 y AZ-400, traducidos a ocho idiomas. Corrección por opción elegida, explicación del error y capítulos para repasar. Python 3.9+ y biblioteca estándar; funciona sin cuenta de Azure ni conexión.
+32 escenarios originales, dos por cada una de las dieciséis rutas, traducidos a ocho idiomas: 256 variantes. Corrección por opción elegida, explicación del error y lecturas para repasar. Python 3.9+ y biblioteca estándar; funciona sin cuenta de Azure ni conexión.
 
-Eight original scenarios, two per route, with questions, explanations, and interface in eight languages. This is a small practice bank, independent of Microsoft and separate from the 1280 open-response language variants used by the [self-rating trainer](TRAINER.md).
+32 original scenarios, two per route across all sixteen routes, with questions, explanations, and interface in eight languages: 256 variants. This is a small practice bank, independent of Microsoft and separate from the 1280 open-response language variants used by the [self-rating trainer](TRAINER.md).
 
 [Español](es/19-mini-quiz.md) · [English](en/19-mini-quiz.md) · [Italiano](it/19-mini-quiz.md) · [Deutsch](de/19-mini-quiz.md) · [Français](fr/19-mini-quiz.md) · [Русский](ru/19-mini-quiz.md) · [日本語](ja/19-mini-quiz.md) · [简体中文](zh/19-mini-quiz.md)
 
 Puedes practicar leyendo las [preguntas desplegables en GitHub](es/20-quiz-cases.md) o ejecutar el programa desde la raíz del repositorio. / Read the [questions on GitHub](en/20-quiz-cases.md) or run the program from the repository root.
+
+Rutas disponibles / Available routes: AZ-900, AZ-104, AZ-305, AZ-400, DP-900, SC-900, AZ-700, DP-300, AI-901, SC-200, SC-300, AZ-140, AI-103, DP-700, SC-100, AZ-120.
 
 ## Empezar / Start
 
@@ -14,11 +16,12 @@ Puedes practicar leyendo las [preguntas desplegables en GitHub](es/20-quiz-cases
 python tools/quiz.py demo --lang es
 python tools/quiz.py run --lang es --exam AZ-104 --count 2
 python tools/quiz.py run --lang en --mode exam --count 8 --minutes 12
+python tools/quiz.py run --lang en --mode exam --count 32
 ```
 
-A–D responde; S o Intro salta; Q termina. El orden de preguntas y opciones cambia. La selección reparte preguntas entre las rutas elegidas, sin repetir escenarios. Repite --exam para combinar rutas y usa --seed 42 para reproducir una selección y su orden. Cada ruta contiene dos escenarios: --count 4 con una sola ruta se rechaza; sin --count se usan hasta ocho escenarios disponibles.
+A–D responde; S o Intro salta; Q termina. El orden de preguntas y opciones cambia. La selección reparte preguntas entre las rutas elegidas, sin repetir escenarios. Repite --exam para combinar rutas y usa --seed 42 para reproducir una selección y su orden. Cada ruta contiene dos escenarios: --count 4 con una sola ruta se rechaza; sin --count se usan hasta ocho escenarios disponibles. Usa --count 32 sin filtrar rutas para recorrer todo el banco.
 
-A–D answers; S or Enter skips; Q finishes. Selection balances the chosen routes and never repeats a scenario within a session. A fixed seed reproduces both question and option order. With two questions in one route, an explicit count of four is rejected. Omitting --count selects up to eight available scenarios.
+A–D answers; S or Enter skips; Q finishes. Selection balances the chosen routes and never repeats a scenario within a session. A fixed seed reproduces both question and option order. With two questions in one route, an explicit count of four is rejected. Omitting --count selects up to eight available scenarios. Use --count 32 without an exam filter to practise the complete bank.
 
 | Modo / Mode | Comportamiento / Behaviour |
 |---|---|
@@ -26,11 +29,17 @@ A–D answers; S or Enter skips; Q finishes. Selection balances the chosen route
 | exam | Explicaciones al terminar / Explanations after the session |
 | review | Repasar errores y preguntas sin responder / Revisit incorrect and unanswered questions |
 | demo | Ejemplo sin guardar / Read-only example |
-| doctor | Comprobar las 64 variantes y sus referencias / Validate all 64 variants and their references |
+| doctor | Comprobar las 256 variantes y sus referencias / Validate all 256 variants and their references |
 
-El resultado muestra aciertos sobre todas las preguntas seleccionadas, errores y preguntas sin responder. Salir antes no reduce el denominador. No hay nota de aprobado ni predicción sobre una certificación: ocho preguntas cubren una parte pequeña del temario.
+El resultado muestra aciertos sobre todas las preguntas seleccionadas, errores y preguntas sin responder. Salir antes no reduce el denominador. No hay nota de aprobado ni predicción sobre una certificación: dos preguntas por ruta cubren una parte pequeña del temario.
 
-Results show correct answers out of all selected questions, incorrect answers, and unanswered questions. Finishing early does not shrink the denominator. No pass threshold or readiness prediction is assigned.
+Results show correct answers out of all selected questions, incorrect answers, and unanswered questions. Finishing early does not shrink the denominator. No pass threshold or readiness prediction is assigned; two questions per route cover only a small part of each syllabus.
+
+## Lecturas relacionadas / Related reading
+
+Los 24 escenarios añadidos enlazan a guías de certificación del mismo idioma en `certifications/<idioma>/<examen>.md`, por ejemplo [AI-103 en español](certifications/es/AI-103.md). Los ocho escenarios iniciales conservan sus enlaces a capítulos. Los informes anteriores a la ampliación siguen siendo compatibles: review usa las preguntas y referencias guardadas en cada informe.
+
+The 24 added scenarios link to certification guides in the same language at `certifications/<language>/<exam>.md`, such as [AI-103 in English](certifications/en/AI-103.md). The original eight scenarios keep their chapter links. Reports saved before the expansion remain compatible: review uses the question and reference snapshots stored in each report.
 
 ## Temporizador / Timer
 
@@ -61,9 +70,9 @@ No written answers, credentials, telemetry, or network calls. Q, end-of-input, a
 
 ## Mantener el banco / Maintain the bank
 
-El archivo [quiz_bank.json](tools/quiz_bank.json) es la fuente de las preguntas. Cada escenario requiere ocho variantes con cuatro opciones, índice de respuesta correcto, explicación general, motivo para cada distractor, fuente HTTPS de Microsoft Learn y capítulo local. Las variantes conservan los mismos índices y referencias; la revisión de significado requiere lectura humana.
+El archivo [quiz_bank.json](tools/quiz_bank.json) es la fuente de las preguntas. Cada escenario requiere ocho variantes con cuatro opciones, índice de respuesta correcto, explicación general, motivo para cada distractor, fuente HTTPS de Microsoft Learn y lectura local del mismo idioma (capítulo o guía de certificación). Las variantes conservan los mismos índices y referencias; la revisión de significado requiere lectura humana.
 
-The bank is the question source. Every scenario needs eight variants, four options, one answer index, general reasoning, a reason for each distractor, a Microsoft Learn URL, and a local chapter. Matching structure cannot establish translation quality. Sources support the reasoning; they are not exam dumps or full-syllabus coverage.
+The bank is the question source. Every scenario needs eight variants, four options, one answer index, general reasoning, a reason for each distractor, a Microsoft Learn URL, and a local reading reference in the same language (a chapter or certification guide). Matching structure cannot establish translation quality. Sources support the reasoning; they are not exam dumps or full-syllabus coverage.
 
 ```bash
 python tools/quiz.py doctor --lang es
@@ -74,6 +83,6 @@ python tools/check_docs.py
 python tools/check_study_core.py
 ```
 
-render_quiz_docs.py regenera las ocho hojas Markdown a partir del banco. --check detecta hojas desactualizadas sin modificarlas. doctor verifica estructura, idiomas, índices coincidentes y capítulos locales; no consulta las URLs ni prueba Azure.
+render_quiz_docs.py regenera las ocho hojas Markdown a partir del banco. --check detecta hojas desactualizadas sin modificarlas. doctor verifica estructura, idiomas, índices coincidentes y lecturas locales; no consulta las URLs ni prueba Azure.
 
-The renderer regenerates the eight Markdown question sheets; --check detects stale copies without writing. Doctor checks structure, locale coverage, matching answer indices, and local chapters. It does not fetch remote URLs or test Azure. See the [source map](QUIZ-SOURCES.md) and [validation record](VALIDATION.md).
+The renderer regenerates the eight Markdown question sheets; --check detects stale copies without writing. Doctor checks structure, locale coverage, matching answer indices, and local reading references. It does not fetch remote URLs or test Azure. See the [source map](QUIZ-SOURCES.md) and [validation record](VALIDATION.md).

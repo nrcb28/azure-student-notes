@@ -35,7 +35,7 @@ DP-900, SC-900, AZ-700 y DP-300 tienen el mismo desarrollo, casos y entregables 
 
 ## Repasar con el entrenador
 
-El entrenador permite escoger cualquiera de las dieciséis rutas y exportar sus casos a Anki. Es autoevaluación: compara tu explicación con la respuesta y valora el recuerdo. El mini simulacro de opción múltiple mantiene sus ocho preguntas sobre las cuatro rutas originales.
+El entrenador permite escoger cualquiera de las dieciséis rutas y exportar sus casos a Anki. Es autoevaluación: compara tu explicación con la respuesta y valora el recuerdo. El mini simulacro de opción múltiple incluye 32 escenarios originales para las dieciséis rutas, dos por ruta, traducidos a ocho idiomas: 256 variantes.
 
 ```bash
 python tools/study.py demo --lang es --exam AI-103

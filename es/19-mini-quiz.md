@@ -2,7 +2,7 @@
 
 [←](README.md) · [CLI](../QUIZ.md) · [Preguntas para leer en GitHub](20-quiz-cases.md)
 
-Este mini simulacro incluye ocho escenarios originales, dos de cada ruta: AZ-900, AZ-104, AZ-305 y AZ-400. Sirve para practicar decisiones concretas de Azure sin cuenta ni conexión. Los escenarios son propios; las explicaciones enlazan a Microsoft Learn y las fuentes se conservan en inglés.
+Treinta y dos escenarios originales, dos por cada una de las [dieciséis rutas](../certifications/es/README.md), disponibles en ocho idiomas: 256 variantes. Este mini simulacro sirve para practicar decisiones concretas de Azure sin cuenta ni conexión. Los escenarios son propios; las explicaciones enlazan a Microsoft Learn y las fuentes se conservan en inglés.
 
 ## Empezar
 
@@ -13,9 +13,17 @@ python tools/quiz.py demo --lang es
 python tools/quiz.py run --lang es --exam AZ-104 --count 2
 ```
 
+Sin --count se eligen hasta ocho escenarios disponibles. Usa --count 32 sin filtrar por examen para practicar el banco completo; cada ruta individual sigue teniendo dos escenarios.
+
+```bash
+python tools/quiz.py run --lang es --mode exam --count 32
+```
+
+Los 24 escenarios añadidos enlazan a guías de certificación del mismo idioma, como [AI-103](../certifications/es/AI-103.md). Los ocho iniciales conservan sus enlaces a capítulos. Los informes anteriores a la ampliación siguen siendo compatibles: review usa las copias de las preguntas y referencias guardadas en cada informe.
+
 ## Práctica con corrección
 
-En el modo practice recibes la corrección después de cada respuesta, con el motivo de la solución, el fallo de tu alternativa y un capítulo para repasar. El orden de preguntas y opciones cambia. Responde A–D, pulsa S o Intro para saltar y Q para terminar; puedes filtrar por examen.
+En el modo practice recibes la corrección después de cada respuesta, con el motivo de la solución, el fallo de tu alternativa y una lectura para repasar. El orden de preguntas y opciones cambia. Responde A–D, pulsa S o Intro para saltar y Q para terminar; puedes filtrar por examen.
 
 ```bash
 python tools/quiz.py run --lang es --exam AZ-900 --exam AZ-104 --count 4 --seed 42
@@ -45,7 +53,7 @@ Al terminar se guarda un informe JSON local en .study-reports/, carpeta excluida
 
 ## Qué mide
 
-Ocho escenarios cubren una parte pequeña del temario y no forman un examen oficial ni completo. El resultado indica únicamente aciertos en esta sesión; no predice si aprobarás. Usa las explicaciones y sus fuentes para revisar los temas que te hayan costado, y consulta los objetivos oficiales actualizados antes de preparar una certificación.
+Dos escenarios por ruta cubren una parte pequeña del temario y no forman un examen oficial ni completo. El resultado indica únicamente aciertos en esta sesión; no predice si aprobarás. Usa las explicaciones y sus fuentes para revisar los temas que te hayan costado, y consulta los objetivos oficiales actualizados antes de preparar una certificación.
 
 ```bash
 python tools/quiz.py doctor --lang es

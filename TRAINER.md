@@ -73,6 +73,6 @@ Si no están disponibles los datos horarios del sistema, usa --timezone UTC. No 
 
 ## Preguntas con corrección / Questions with marking
 
-El [mini simulacro](QUIZ.md) añade ocho escenarios de opción múltiple en los ocho idiomas, con explicación por distractor, informe local y repaso de errores. Es una herramienta separada: este entrenador sigue usando autoevaluación para sus casos abiertos.
+El [mini simulacro](QUIZ.md) añade 32 escenarios originales de opción múltiple para las dieciséis rutas, dos por ruta, traducidos a ocho idiomas: 256 variantes. Incluye explicación por distractor, informe local y repaso de errores. Es una herramienta separada: este entrenador sigue usando autoevaluación para sus casos abiertos.
 
-The [mini quiz](QUIZ.md) adds eight multiple-choice scenarios in all eight languages, with distractor reasoning, local reports, and mistake review. Its results are separate from this trainer's open-case self-ratings.
+The [mini quiz](QUIZ.md) adds 32 original multiple-choice scenarios across all sixteen routes, two per route, translated into eight languages: 256 variants. It includes distractor reasoning, local reports, and mistake review. Its results are separate from this trainer's open-case self-ratings.

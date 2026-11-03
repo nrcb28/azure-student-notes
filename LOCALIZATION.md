@@ -42,3 +42,13 @@ AI-901, SC-200, SC-300 y AZ-140 amplían las ocho ediciones con conceptos, diez 
 AI-103, DP-700, SC-100, and AZ-120 are also developed in all eight languages, with matching guide concepts, ten scenarios and five workbook units each. DP-700 distinguishes an undated live skills heading from credential/page update metadata; SC-100 distinguishes passing an exam from meeting Expert credential prerequisites. Translations preserve those qualifications.
 
 AI-103, DP-700, SC-100 y AZ-120 se desarrollan en los ocho idiomas. Se conservan los matices sobre la fecha no declarada en el encabezado de objetivos de DP-700 y sobre los requisitos adicionales de la credencial Expert asociada a SC-100. Los idiomas del repositorio no determinan los idiomas de examen disponibles.
+
+## Multiple-choice practice / Práctica de opción múltiple
+
+The quiz bank contains 32 original scenarios, two for each of the sixteen certification routes, in all eight languages: 256 locale variants. The interface, user guides, and generated question sheets use the same scope. Variants preserve the scenario IDs, correct-answer indices, option meaning, source URLs, and matching local reading references. The 24 added scenarios link to certification guides in the selected language; the original chapter references remain valid. Archived reports retain their question snapshots and remain reviewable after the expansion.
+
+El banco de opción múltiple contiene 32 escenarios originales, dos por cada una de las dieciséis rutas, en los ocho idiomas: 256 variantes. La interfaz, las guías de uso y las hojas generadas comparten ese alcance. Las variantes conservan IDs, índices correctos, significado de las opciones, fuentes y lecturas locales correspondientes. Los 24 escenarios añadidos enlazan a guías de certificación del idioma elegido; los enlaces iniciales a capítulos siguen siendo válidos. Los informes anteriores conservan sus copias de las preguntas y se pueden seguir revisando tras la ampliación.
+
+These are study adaptations, not professionally certified translations. Automated checks establish structure and consistency; they do not prove linguistic equivalence, full-syllabus coverage, or exam readiness.
+
+Son adaptaciones de estudio, no traducciones certificadas profesionalmente. Las comprobaciones automáticas establecen estructura y coherencia; no demuestran equivalencia lingüística, cobertura completa del temario ni preparación para aprobar.

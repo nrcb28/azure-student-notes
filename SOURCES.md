@@ -79,9 +79,9 @@ Scenarios, exercises and the SQLite simulator are original teaching material. Cl
 
 ## Mini quiz / Mini simulacro
 
-Eight original scenarios with matching sources and answer structure in all eight languages. The linked Learn pages were reviewed on 2026-10-29. See the [scenario-to-source map](QUIZ-SOURCES.md).
+Thirty-two original scenarios cover sixteen routes, with two scenarios per route and matching sources and answer structure in all eight languages: 256 language variants. The original eight scenarios retain their 2026-10-29 source review; the expansion has its own review record in the [scenario-to-source map](QUIZ-SOURCES.md).
 
-Ocho escenarios originales en ocho idiomas, con fuentes revisadas el 29 de octubre de 2026. El [mapa de fuentes](QUIZ-SOURCES.md) indica el concepto utilizado en cada caso.
+Treinta y dos escenarios originales cubren dieciséis rutas, dos por ruta, con 256 variantes en los ocho idiomas. Se conserva la revisión del 29 de octubre de 2026 para los ocho casos iniciales; el [mapa de fuentes](QUIZ-SOURCES.md) registra por separado la ampliación y el concepto utilizado en cada caso.
 
 ## Four additional certification routes / Cuatro rutas adicionales
 

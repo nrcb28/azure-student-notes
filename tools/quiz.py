@@ -16,7 +16,8 @@ from uuid import uuid4
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGUAGES = ('es', 'en', 'it', 'de', 'fr', 'ru', 'ja', 'zh')
-EXAMS = ('AZ-900', 'AZ-104', 'AZ-305', 'AZ-400')
+EXAMS = ('AZ-900', 'AZ-104', 'AZ-305', 'AZ-400', 'DP-900', 'SC-900', 'AZ-700', 'DP-300',
+         'AI-901', 'SC-200', 'SC-300', 'AZ-140', 'AI-103', 'DP-700', 'SC-100', 'AZ-120')
 LETTERS = 'ABCD'
 TEXT_KEYS = ('intro', 'question', 'answer_prompt', 'invalid', 'late', 'correct',
              'incorrect', 'skipped', 'explanation', 'reason', 'source', 'study',
@@ -47,6 +48,37 @@ def finite_number(value):
         return False
 
 
+def resolve_study_reference(chapter, language, exam=None, root=None):
+    """Return a safe repository-relative guide path, including legacy snapshots.
+
+    Saved reports only need valid references. Passing a root additionally checks
+    that the guide exists inside that root, as required for the current bank.
+    """
+    if language not in LANGUAGES or (exam is not None and exam not in EXAMS):
+        raise ValueError('Invalid study reference language or exam')
+    if not isinstance(chapter, str):
+        raise ValueError('Invalid local study chapter')
+    if re.fullmatch(r'\d{2}-[a-z-]+\.md', chapter):
+        reference = f'{language}/{chapter}'
+    else:
+        match = re.fullmatch(r'certifications/([A-Z]{2}-\d{3})\.md', chapter)
+        if not match or match[1] not in EXAMS:
+            raise ValueError('Invalid local study chapter')
+        if exam is not None and match[1] != exam:
+            raise ValueError('Certification study chapter must match the question exam')
+        reference = f'certifications/{language}/{match[1]}.md'
+    if root is not None:
+        root = Path(root).resolve()
+        path = root/reference
+        try:
+            path.resolve().relative_to(root)
+        except ValueError as error:
+            raise ValueError('Local study chapter must remain inside the repository') from error
+        if not path.is_file():
+            raise ValueError(f'Missing local study chapter: {reference}')
+    return reference
+
+
 def validate_variant(value):
     if not isinstance(value, dict):
         raise ValueError('Invalid question variant')
@@ -70,8 +102,7 @@ def validate_variant(value):
     if (url.scheme != 'https' or url.netloc != 'learn.microsoft.com' or
             not url.path.startswith('/en-us/') or url.fragment or url.query):
         raise ValueError('Sources must be direct HTTPS Microsoft Learn pages')
-    if not re.fullmatch(r'\d{2}-[a-z-]+\.md', value['chapter']):
-        raise ValueError('Invalid local study chapter')
+    resolve_study_reference(value['chapter'], 'en')
     return value
 
 
@@ -94,14 +125,13 @@ def validate_bank(bank, root=ROOT):
             raise ValueError(f'{key}: all eight language variants are required')
         for lang, variant in variants.items():
             validate_variant(variant)
-            if not (root/lang/variant['chapter']).is_file():
-                raise ValueError(f'{key}: missing local study chapter for {lang}')
+            resolve_study_reference(variant['chapter'], lang, card['exam'], root)
         base = variants['en']
         for variant in variants.values():
             if any(variant[field] != base[field] for field in ('correct', 'source', 'chapter')):
                 raise ValueError(f'{key}: translated answer order or references differ')
     if set(card['exam'] for card in bank) != set(EXAMS):
-        raise ValueError('The bank must cover all four exam routes')
+        raise ValueError('The bank must cover all registered exam routes')
     return bank
 
 
@@ -213,7 +243,7 @@ def show_feedback(question, language, texts, output=print):
     output(f"{correct_letter}. {variant['options'][variant['correct']]}")
     output(texts['explanation'] + ' ' + variant['explanation'])
     output(texts['source'] + ' ' + variant['source'])
-    output(texts['study'] + f' {language}/{variant["chapter"]}')
+    output(texts['study'] + ' ' + resolve_study_reference(variant['chapter'], language, question['exam']))
 
 
 def show_summary(report, texts, output=print):
@@ -317,6 +347,7 @@ def validate_report(report):
                 not re.fullmatch(r'[a-z]+(?:-[a-z]+)*', question['topic'])):
             raise ValueError('Invalid report exam or topic')
         validate_variant(question.get('variant'))
+        resolve_study_reference(question['variant']['chapter'], report['language'], question['exam'])
         order = question.get('order')
         if (not isinstance(order, list) or len(order) != 4 or
                 any(type(index) is not int for index in order) or set(order) != set(range(4))):

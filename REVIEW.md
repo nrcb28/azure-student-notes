@@ -32,3 +32,11 @@ Lab tests use a local fake CLI and synthetic data. All three Bicep templates com
 El requisito de HNS deshabilitado pertenece a este laboratorio y su plantilla. Azure también admite recuperación de objetos con espacio jerárquico; sus condiciones deben consultarse en la [documentación de soft delete](https://learn.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview). / The flat-namespace guard is this lab’s scope, rather than a claim that Azure lacks hierarchical-namespace recovery.
 
 [Registro / Record](VALIDATION.md) · [Herramienta / Runner](tools/verify.py) · [Contribuir / Contributing](CONTRIBUTING.md)
+
+## Ampliación del simulacro y verificación continua · 2026-11-03
+
+El mini simulacro pasa de ocho a 32 escenarios originales: dos por cada una de las dieciséis rutas, con 256 variantes en ocho idiomas. Cada nueva pregunta incluye tres explicaciones de alternativas incorrectas, una fuente directa y una guía de certificación del mismo idioma. Los ocho casos anteriores y los informes guardados conservan su compatibilidad. La sesión rápida sigue usando hasta ocho preguntas; --count 32 permite recorrer todo el banco.
+
+The quiz now covers all sixteen routes with two original scenarios each. New reference validation supports certification guides while preserving old chapter references and archived reports. Eleven additional regressions bring the suite to 109 passing tests. The source review replaced twelve broad or mismatched citations, and explicitly bounds application-owned policies and scenario reasoning.
+
+La verificación está automatizada en [GitHub Actions](.github/workflows/verify.yml) para Python 3.9 y 3.12. El registro distingue los resultados locales de cada ejecución alojada. Dos preguntas por ruta orientan el repaso; no constituyen un temario completo ni predicen el aprobado.

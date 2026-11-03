@@ -1,28 +1,30 @@
 #!/usr/bin/env python3
 """Render the eight read-in-GitHub question sheets from the quiz's source bank."""
 import argparse
+import posixpath
 import sys
 
-from quiz import LANGUAGES, LETTERS, ROOT, load_bank, text_for
+from quiz import LANGUAGES, LETTERS, ROOT, load_bank, resolve_study_reference, text_for
 
 TITLES = {
-    'es': 'Ocho escenarios para practicar',
-    'en': 'Eight scenarios to practise',
-    'it': 'Otto scenari per esercitarsi',
-    'de': 'Acht Szenarien zum Üben',
-    'fr': 'Huit scénarios pour s’entraîner',
-    'ru': 'Восемь сценариев для практики',
-    'ja': '8 つのシナリオで練習',
-    'zh': '八个场景练习',
+    'es': '{count} escenarios para practicar',
+    'en': '{count} scenarios to practise',
+    'it': '{count} scenari per esercitarsi',
+    'de': '{count} Szenarien zum Üben',
+    'fr': '{count} scénarios pour s’entraîner',
+    'ru': 'Сценарии для практики: {count}',
+    'ja': '{count} つのシナリオで練習',
+    'zh': '{count} 个场景练习',
 }
 
 
 def render(bank, language):
     texts = text_for(language)
-    lines = [f'# {TITLES[language]}', '', '[←](19-mini-quiz.md) · [CLI](../QUIZ.md)', '',
+    lines = ['# ' + TITLES[language].format(count=len(bank)), '', '[←](19-mini-quiz.md) · [CLI](../QUIZ.md)', '',
              texts['report_notice'], '']
     for card in bank:
         variant = card['variants'][language]
+        chapter = posixpath.relpath(resolve_study_reference(variant['chapter'], language, card['exam']), language)
         lines.extend([f'<a id="quiz-{card["id"]}"></a>', '',
                       f'## {card["exam"]} · {texts["topics"][card["topic"]]}', '',
                       variant['question'], ''])
@@ -35,7 +37,7 @@ def render(bank, language):
             if index != correct:
                 lines.append(f'- **{LETTERS[index]}.** {reason}')
         lines.extend(['', f'[{texts["source"]}]({variant["source"]}) · '
-                          f'[{texts["study"]}]({variant["chapter"]})', '', '</details>', ''])
+                          f'[{texts["study"]}]({chapter})', '', '</details>', ''])
     return '\n'.join(lines)
 
 

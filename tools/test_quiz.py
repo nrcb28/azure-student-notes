@@ -10,6 +10,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
+import render_quiz_docs as quiz_docs
+
 SPEC = importlib.util.spec_from_file_location('azure_quiz', Path(__file__).with_name('quiz.py'))
 quiz = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(quiz)
@@ -21,9 +23,13 @@ class QuizTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.path = Path(self.temp.name)/'report.json'
-        self.bank = quiz.load_bank()
+        self.full_bank = quiz.load_bank()
+        # Keep session/grading regressions on the original eight-question fixture.
+        self.bank = copy.deepcopy([card for card in self.full_bank
+                                   if card['id'] in {f'q{number:02d}' for number in range(1, 9)}])
+        self.exams = ('AZ-900', 'AZ-104', 'AZ-305', 'AZ-400')
         self.texts = quiz.text_for('en')
-        self.questions = quiz.select_questions(self.bank, 'en', quiz.EXAMS, 8, 42)
+        self.questions = quiz.select_questions(self.bank, 'en', self.exams, 8, 42)
 
     def session(self, replies, questions=None, mode='exam', **kwargs):
         replies = iter(replies)
@@ -39,18 +45,20 @@ class QuizTests(unittest.TestCase):
 
     def test_all_eight_languages_have_matching_complete_scenarios_and_ui(self):
         self.assertEqual(len(self.bank), 8)
+        self.assertEqual(len(self.full_bank), 32)
+        self.assertEqual({q['id'] for q in self.full_bank}, {f'q{number:02d}' for number in range(1, 33)})
         for lang in quiz.LANGUAGES:
             texts = quiz.text_for(lang)
             self.assertEqual(set(texts), set(self.texts))
-            self.assertEqual({q['exam'] for q in self.bank}, set(quiz.EXAMS))
-            self.assertEqual(set(texts['topics']), {q['topic'] for q in self.bank})
-            for card in self.bank:
+            self.assertEqual({q['exam'] for q in self.full_bank}, set(quiz.EXAMS))
+            self.assertEqual(set(texts['topics']), {q['topic'] for q in self.full_bank})
+            for card in self.full_bank:
                 self.assertEqual(card['variants'][lang]['correct'], card['variants']['en']['correct'])
-        self.assertEqual(sum(len(q['variants']) for q in self.bank), 64)
+        self.assertEqual(sum(len(q['variants']) for q in self.full_bank), 256)
 
     def test_invalid_ui_templates_are_rejected_before_questions_or_input(self):
         bundle = json.loads((quiz.ROOT/'tools/quiz_ui.json').read_text(encoding='utf-8'))
-        question = quiz.select_questions(self.bank, 'en', quiz.EXAMS, 1, 42)[0]
+        question = quiz.select_questions(self.bank, 'en', self.exams, 1, 42)[0]
         templates = ('Incorrect {letter:{0}}', 'Incorrect {letter:{letter}}',
                      'Incorrect {letter:>10}', 'Incorrect {letter:}', 'Incorrect {letter!s}',
                      'Incorrect {}', 'Incorrect {0}', 'Incorrect {letter.real}',
@@ -110,7 +118,7 @@ class QuizTests(unittest.TestCase):
     def test_bank_rejects_missing_variant_duplicate_id_and_invalid_answer(self):
         for change in ('missing', 'duplicate', 'boolean', 'reason', 'reference'):
             with self.subTest(change=change):
-                bank = copy.deepcopy(self.bank)
+                bank = copy.deepcopy(self.full_bank)
                 if change == 'missing':
                     del bank[0]['variants']['ja']
                 elif change == 'duplicate':
@@ -124,14 +132,120 @@ class QuizTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     quiz.validate_bank(bank)
 
+    def test_reference_resolver_supports_legacy_and_certification_guides(self):
+        for lang in quiz.LANGUAGES:
+            self.assertEqual(quiz.resolve_study_reference('03-compute.md', lang, 'AZ-900'),
+                             f'{lang}/03-compute.md')
+            self.assertEqual(quiz.resolve_study_reference('certifications/DP-900.md', lang, 'DP-900', quiz.ROOT),
+                             f'certifications/{lang}/DP-900.md')
+
+    def test_reference_resolver_rejects_traversal_unregistered_routes_and_mismatch(self):
+        invalid = ('../03-compute.md', '/03-compute.md', 'en/03-compute.md',
+                   'certifications/en/DP-900.md', 'certifications/../DP-900.md',
+                   'certifications/DP-900.md/../AZ-900.md', 'certifications/SC-999.md',
+                   'certifications/DP-900.md#section', 'certifications/DP-900.md?x=1',
+                   'certifications\\DP-900.md', 'certifications/%2e%2e/DP-900.md')
+        for chapter in invalid:
+            with self.subTest(chapter=chapter), self.assertRaises(ValueError):
+                quiz.resolve_study_reference(chapter, 'en')
+        for language, exam in (('../en', 'DP-900'), ('en', 'SC-999'), ('en', 'AZ-104')):
+            with self.subTest(language=language, exam=exam), self.assertRaises(ValueError):
+                quiz.resolve_study_reference('certifications/DP-900.md', language, exam)
+
+    def test_bank_requires_existing_guides_and_rejects_symlinks_outside_root(self):
+        root = self.path.parent/'repository'
+        root.mkdir()
+        with self.assertRaisesRegex(ValueError, 'Missing local study chapter'):
+            quiz.validate_bank(self.full_bank, root=root)
+        guide = root/'certifications'/'en'/'DP-900.md'
+        guide.parent.mkdir(parents=True)
+        self.path.write_text('outside repository', encoding='utf-8')
+        guide.symlink_to(self.path)
+        with self.assertRaisesRegex(ValueError, 'inside the repository'):
+            quiz.resolve_study_reference('certifications/DP-900.md', 'en', 'DP-900', root)
+
+    def test_bank_rejects_exam_mismatch_and_different_translated_references(self):
+        bank = copy.deepcopy(self.full_bank)
+        for variant in bank[0]['variants'].values():
+            variant['chapter'] = 'certifications/DP-900.md'
+        with self.assertRaisesRegex(ValueError, 'match the question exam'):
+            quiz.validate_bank(bank)
+        for field, reference in (('chapter', 'certifications/AZ-900.md'),
+                                 ('source', 'https://learn.microsoft.com/en-us/azure/')):
+            bank = copy.deepcopy(self.full_bank)
+            bank[0]['variants']['ja'][field] = reference
+            with self.subTest(field=field), self.assertRaisesRegex(ValueError, 'references differ'):
+                quiz.validate_bank(bank)
+        incomplete = [card for card in self.full_bank if card['exam'] != 'DP-900']
+        with self.assertRaisesRegex(ValueError, 'all registered exam routes'):
+            quiz.validate_bank(incomplete)
+
+    def test_feedback_and_markdown_use_resolved_guides_and_actual_bank_count(self):
+        question = copy.deepcopy(self.questions[0])
+        question['exam'] = 'DP-900'
+        question['variant']['chapter'] = 'certifications/DP-900.md'
+        messages = []
+        quiz.show_feedback(question, 'en', self.texts, messages.append)
+        self.assertIn(self.texts['study'] + ' certifications/en/DP-900.md', messages)
+        for lang in quiz.LANGUAGES:
+            with self.subTest(language=lang):
+                rendered = quiz_docs.render(self.full_bank, lang)
+                self.assertIn('32', rendered.splitlines()[0])
+                self.assertEqual(rendered.count('<a id="quiz-'), 32)
+                self.assertIn(f'](../certifications/{lang}/DP-900.md)', rendered)
+                self.assertIn('](03-compute.md)', rendered)
+                fixture = quiz_docs.render(self.bank, lang)
+                self.assertIn('8', fixture.splitlines()[0])
+                self.assertEqual(fixture.count('<a id="quiz-'), 8)
+
     def test_selection_is_balanced_unique_and_reproducible(self):
         for count in range(1, 9):
-            chosen = quiz.select_questions(self.bank, 'es', quiz.EXAMS, count, 19)
-            self.assertEqual(chosen, quiz.select_questions(self.bank, 'es', quiz.EXAMS, count, 19))
-            counts = [sum(q['exam'] == exam for q in chosen) for exam in quiz.EXAMS]
+            chosen = quiz.select_questions(self.bank, 'es', self.exams, count, 19)
+            self.assertEqual(chosen, quiz.select_questions(self.bank, 'es', self.exams, count, 19))
+            counts = [sum(q['exam'] == exam for q in chosen) for exam in self.exams]
             self.assertLessEqual(max(counts)-min(counts), 1)
             self.assertEqual(len({q['id'] for q in chosen}), count)
-        self.assertNotEqual(self.questions, quiz.select_questions(self.bank, 'en', quiz.EXAMS, 8, 90))
+        self.assertNotEqual(self.questions, quiz.select_questions(self.bank, 'en', self.exams, 8, 90))
+
+    def test_full_bank_sampling_is_balanced_and_includes_every_route(self):
+        for count in range(1, 33):
+            chosen = quiz.select_questions(self.full_bank, 'en', quiz.EXAMS, count, 19)
+            self.assertEqual(chosen, quiz.select_questions(self.full_bank, 'en', quiz.EXAMS, count, 19))
+            self.assertEqual(len({q['id'] for q in chosen}), count)
+            counts = [sum(q['exam'] == exam for q in chosen) for exam in quiz.EXAMS]
+            self.assertLessEqual(max(counts)-min(counts), 1)
+        self.assertEqual(counts, [2]*16)
+
+    def test_all_sixteen_routes_have_two_distinct_questions_in_every_language(self):
+        for lang in quiz.LANGUAGES:
+            for exam in quiz.EXAMS:
+                with self.subTest(language=lang, exam=exam):
+                    chosen = quiz.select_questions(self.full_bank, lang, [exam, exam], 2, 7)
+                    self.assertEqual({q['exam'] for q in chosen}, {exam})
+                    self.assertEqual(len({q['id'] for q in chosen}), 2)
+                    with self.assertRaises(ValueError):
+                        quiz.select_questions(self.full_bank, lang, [exam], 3)
+
+    def test_cli_accepts_all_routes_and_defaults_to_two_distinct_questions(self):
+        for exam in quiz.EXAMS:
+            with self.subTest(exam=exam), patch('builtins.input', return_value='q'), \
+                    contextlib.redirect_stdout(io.StringIO()):
+                destination = self.path.with_name(f'{exam}.json')
+                self.assertEqual(quiz.main(['run', '--lang', 'en', '--exam', exam,
+                                            '--report', str(destination)]), 0)
+                report = quiz.validate_report(json.loads(destination.read_text(encoding='utf-8')))
+                self.assertEqual({q['exam'] for q in report['questions']}, {exam})
+                self.assertEqual(len({q['id'] for q in report['questions']}), 2)
+
+    def test_cli_keeps_eight_question_default_and_accepts_explicit_full_bank(self):
+        for options, count in (([], 8), (['--count', '32'], 32)):
+            with self.subTest(count=count), patch('builtins.input', return_value='q'), \
+                    contextlib.redirect_stdout(io.StringIO()):
+                destination = self.path.with_name(f'count-{count}.json')
+                self.assertEqual(quiz.main(['run', '--lang', 'en', *options,
+                                            '--report', str(destination)]), 0)
+                report = quiz.validate_report(json.loads(destination.read_text(encoding='utf-8')))
+                self.assertEqual(len(report['questions']), count)
 
     def test_exam_filter_and_explicit_count_never_repeat_questions(self):
         questions = quiz.select_questions(self.bank, 'en', ['AZ-104', 'AZ-104'], 2, 1)
@@ -217,7 +331,7 @@ class QuizTests(unittest.TestCase):
                 self.assertEqual(quiz.summarize(report['questions'])['correct'], 1)
 
     def test_snapshots_are_independent_of_bank_and_session_input(self):
-        questions = quiz.select_questions(self.bank, 'ja', quiz.EXAMS, 1, 1)
+        questions = quiz.select_questions(self.bank, 'ja', self.exams, 1, 1)
         report = self.session(['q'], questions=questions)
         original = report['questions'][0]['variant']['question']
         questions[0]['variant']['question'] = 'changed selection'
@@ -226,7 +340,7 @@ class QuizTests(unittest.TestCase):
         self.assertEqual(report['questions'][0]['variant']['question'], original)
 
     def test_report_unicode_roundtrip_and_exclusive_creation(self):
-        questions = quiz.select_questions(self.bank, 'zh', quiz.EXAMS, 1, 1)
+        questions = quiz.select_questions(self.bank, 'zh', self.exams, 1, 1)
         report = self.session(['q'], questions=questions)
         report['language'] = 'zh'
         quiz.save_report(report, self.path)
@@ -281,7 +395,7 @@ class QuizTests(unittest.TestCase):
         self.assertFalse(target.exists())
 
     def test_practice_wrong_answer_feedback_keeps_the_saved_report(self):
-        question = quiz.select_questions(self.bank, 'en', quiz.EXAMS, 1, 42)[0]
+        question = quiz.select_questions(self.full_bank, 'en', quiz.EXAMS, 1, 42)[0]
         output = io.StringIO()
         with patch('builtins.input', return_value=self.answer(question, False)), \
                 contextlib.redirect_stdout(output):
@@ -308,6 +422,31 @@ class QuizTests(unittest.TestCase):
         with patch.object(quiz, 'load_bank', side_effect=AssertionError('must use snapshots')), contextlib.redirect_stdout(output):
             self.assertEqual(quiz.main(['review', '--report', str(self.path), '--lang', 'ja', '--json']), 0)
         self.assertEqual(json.loads(output.getvalue()), {'correct':1,'total':8,'incorrect':0,'unanswered':7})
+
+    def test_review_supports_legacy_and_certification_snapshots_without_current_guides_or_bank(self):
+        for chapter, exam, expected in (('99-retired-guide.md', 'AZ-900', 'en/99-retired-guide.md'),
+                                        ('certifications/DP-900.md', 'DP-900', 'certifications/en/DP-900.md')):
+            report = self.session(['q'])
+            report['questions'] = report['questions'][:1]
+            report['questions'][0]['exam'] = exam
+            report['questions'][0]['variant']['chapter'] = chapter
+            destination = self.path.with_name(f'{exam}-snapshot.json')
+            quiz.save_report(report, destination)
+            output = io.StringIO()
+            with self.subTest(chapter=chapter), \
+                    patch.object(quiz, 'load_bank', side_effect=AssertionError('must use snapshots')), \
+                    patch.object(Path, 'is_file', side_effect=AssertionError('saved reports do not require current guides')), \
+                    contextlib.redirect_stdout(output):
+                self.assertEqual(quiz.main(['review', '--report', str(destination), '--lang', 'ja', '--all']), 0)
+                self.assertIn(expected, output.getvalue())
+
+    def test_report_rejects_unsafe_and_mismatched_references(self):
+        for chapter in ('../03-compute.md', 'certifications/SC-999.md', 'certifications/DP-900.md'):
+            report = self.session(['q'])
+            report['questions'][0]['exam'] = 'AZ-900'
+            report['questions'][0]['variant']['chapter'] = chapter
+            with self.subTest(chapter=chapter), self.assertRaises(ValueError):
+                quiz.validate_report(report)
 
     def test_corrupt_review_report_is_preserved_and_reports_error(self):
         self.path.write_text('{broken')

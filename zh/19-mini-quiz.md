@@ -2,7 +2,7 @@
 
 [←](README.md) · [CLI](../QUIZ.md) · [在 GitHub 阅读题目](20-quiz-cases.md)
 
-用 8 个原创场景练习 Azure 相关决策，AZ-900、AZ-104、AZ-305、AZ-400 每条学习路线各 2 题，8 种语言覆盖相同内容。选项会打乱，解析包含思路、错误选项的问题、建议复习章节和 Microsoft Learn 来源。来源链接使用英文页面。
+用 32 个原创场景练习 Azure 相关决策，[16 条学习路线](../certifications/zh/README.md)每条各 2 题，8 种语言覆盖相同内容，共 256 个语言版本。选项会打乱，解析包含思路、错误选项的问题、建议复习章节或认证指南和 Microsoft Learn 来源。来源链接使用英文页面。
 
 ## 开始
 
@@ -12,6 +12,14 @@ Python 3.9+ · es / en / it / de / fr / ru / ja / zh
 python tools/quiz.py demo --lang zh
 python tools/quiz.py run --lang zh --exam AZ-104 --count 2
 ```
+
+不指定 --count 时，默认从可用场景中选择最多 8 题。使用 --count 32 且不加考试筛选，即可练习整个题库；每条单独路线仍只有 2 题。
+
+```bash
+python tools/quiz.py run --lang zh --mode exam --count 32
+```
+
+新增的 24 个场景链接到相同语言的认证指南，例如 [AI-103](../certifications/zh/AI-103.md)。最初的 8 个场景保留原有章节链接。扩展前保存的报告仍然兼容：review 使用各报告中保存的题目和引用快照。
 
 ## 带解析练习
 
@@ -45,7 +53,7 @@ python tools/quiz.py review --lang zh --report .study-reports/first-quiz.json --
 
 ## 分数的含义
 
-这只有 8 道练习题，不是官方题库、完整模拟考试或通过率预测，也不覆盖四条学习路线的全部范围。不要只把相同题目的答案背下来；应检查题目假设，回到章节和来源重新推理。这个分数也不能证明已经完成 Azure 部署或具备实际操作能力。
+每条路线只有 2 道练习题，共 32 题，不是官方题库、完整模拟考试或通过率预测，也不覆盖 16 条学习路线的全部范围。不要只把相同题目的答案背下来；应检查题目假设，回到章节和来源重新推理。这个分数也不能证明已经完成 Azure 部署或具备实际操作能力。
 
 ```bash
 python tools/quiz.py doctor --lang zh

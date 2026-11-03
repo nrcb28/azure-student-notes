@@ -35,7 +35,7 @@ DP-900, SC-900, AZ-700 e DP-300 hanno spiegazioni, casi e consegne equivalenti n
 
 ## Ripasso con il trainer
 
-Il trainer di autovalutazione consente di scegliere tutti i sedici percorsi e di esportare i casi in Anki. Confronta la tua spiegazione con la risposta e valuta il ricordo. Il mini quiz a scelta multipla conserva le sue otto domande sui quattro percorsi iniziali.
+Il trainer di autovalutazione consente di scegliere tutti i sedici percorsi e di esportare i casi in Anki. Confronta la tua spiegazione con la risposta e valuta il ricordo. Il mini quiz a scelta multipla comprende 32 scenari originali per tutti i sedici percorsi, due per percorso, tradotti in otto lingue: 256 varianti.
 
 ```bash
 python tools/study.py demo --lang it --exam AI-103

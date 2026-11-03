@@ -2,7 +2,7 @@
 
 [←](README.md) · [CLI](../QUIZ.md) · [Leggere le domande su GitHub](20-quiz-cases.md)
 
-Questa mini simulazione contiene otto scenari originali, due per ciascun percorso: AZ-900, AZ-104, AZ-305 e AZ-400. Serve a esercitarsi su decisioni concrete di Azure senza account né connessione. Gli scenari sono originali; le spiegazioni rimandano a Microsoft Learn e le fonti restano in inglese.
+Trentadue scenari originali, due per ciascuno dei [sedici percorsi](../certifications/it/README.md), disponibili in otto lingue: 256 varianti. Questa mini simulazione serve a esercitarsi su decisioni concrete di Azure senza account né connessione. Gli scenari sono originali; le spiegazioni rimandano a Microsoft Learn e le fonti restano in inglese.
 
 ## Inizia
 
@@ -13,9 +13,17 @@ python tools/quiz.py demo --lang it
 python tools/quiz.py run --lang it --exam AZ-104 --count 2
 ```
 
+Senza --count vengono scelti fino a otto scenari disponibili. Usa --count 32 senza filtro per esame per esercitarti sull’intera banca; ogni singolo percorso contiene due scenari.
+
+```bash
+python tools/quiz.py run --lang it --mode exam --count 32
+```
+
+I 24 scenari aggiunti rimandano alle guide di certificazione nella stessa lingua, come [AI-103](../certifications/it/AI-103.md). Gli otto iniziali mantengono i collegamenti ai capitoli. I rapporti salvati prima dell’ampliamento restano compatibili: review usa le copie di domande e riferimenti conservate in ogni rapporto.
+
 ## Pratica con correzione
 
-Nella modalità practice ricevi la correzione dopo ogni risposta, con il motivo della soluzione, il problema della tua alternativa e un capitolo da ripassare. Domande e opzioni cambiano ordine. Rispondi con A–D, premi S o Invio per saltare e Q per terminare; puoi filtrare per esame.
+Nella modalità practice ricevi la correzione dopo ogni risposta, con il motivo della soluzione, il problema della tua alternativa e un capitolo o una guida da ripassare. Domande e opzioni cambiano ordine. Rispondi con A–D, premi S o Invio per saltare e Q per terminare; puoi filtrare per esame.
 
 ```bash
 python tools/quiz.py run --lang it --exam AZ-900 --exam AZ-104 --count 4 --seed 42
@@ -45,7 +53,7 @@ Al termine viene salvato un rapporto JSON locale in .study-reports/, cartella es
 
 ## Cosa misura il risultato
 
-Otto scenari coprono solo una piccola parte del programma e non costituiscono un esame ufficiale o completo. Il risultato misura soltanto le risposte corrette di questa sessione e non prevede il superamento dell’esame. Usa spiegazioni e fonti per ripassare i temi difficili e consulta gli obiettivi ufficiali aggiornati prima di preparare una certificazione.
+Due scenari per percorso coprono solo una piccola parte del programma e non costituiscono un esame ufficiale o completo. Il risultato misura soltanto le risposte corrette di questa sessione e non prevede il superamento dell’esame. Usa spiegazioni e fonti per ripassare i temi difficili e consulta gli obiettivi ufficiali aggiornati prima di preparare una certificazione.
 
 ```bash
 python tools/quiz.py doctor --lang it
