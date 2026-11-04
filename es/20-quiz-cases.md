@@ -1,4 +1,4 @@
-# 32 escenarios para practicar
+# 34 escenarios para practicar
 
 [←](19-mini-quiz.md) · [CLI](../QUIZ.md)
 
@@ -833,5 +833,57 @@ Una vez que el destino acepta escrituras, revertir es también una decisión sob
 - **D.** Permitir escrituras en ambos entornos crea historiales de transacciones divergentes, dificulta la conciliación y rompe el control requerido de un escritor autorizado.
 
 [Fuente:](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/execute-migration) · [Para repasar:](../certifications/es/AZ-120.md)
+
+</details>
+
+<a id="quiz-q33"></a>
+
+## AZ-802 · Descubrimiento de servicios AD
+
+Tras un cambio de red del aula, un cliente Windows de dominio resuelve webs públicas pero no descubre su controlador. Utiliza un resolver DNS público; el DNS de AD previsto es accesible y tiene registros SRV correctos. El reloj del cliente está bien. ¿Qué respuesta aborda mejor esta evidencia?
+
+- **A.** Restablecer las contraseñas de todos los estudiantes antes de inspeccionar el camino del resolver.
+- **B.** Recuperar la resolución DNS aprobada que conoce AD y validar descubrimiento SRV, acceso al controlador e inicio de sesión afectado.
+- **C.** Desactivar las comprobaciones temporales de autenticación manteniendo el mismo resolver exclusivamente público.
+- **D.** Añadir al estudiante a Domain Admins sin cambiar el descubrimiento del controlador.
+
+<details>
+<summary>Por qué:</summary>
+
+**B. Recuperar la resolución DNS aprobada que conoce AD y validar descubrimiento SRV, acceso al controlador e inicio de sesión afectado.**
+
+Resolver webs públicas no demuestra que se descubran los servicios privados de AD. El camino del resolver es el desajuste identificado; los registros sanos y el reloj correcto delimitan este caso. Recupera la configuración DNS prevista mediante un cambio aprobado y valida por separado descubrimiento, conectividad e inicio de sesión. Si aún falla la autenticación, investiga su evidencia concreta sin asumir que todos los incidentes reales tienen la misma causa.
+
+- **A.** Cambiar contraseñas no aporta el camino de descubrimiento de AD que falta; un restablecimiento masivo introduce cambios ajenos antes de corregir el desajuste DNS observado.
+- **C.** El caso ya establece que el reloj es correcto; debilitar la autenticación no hace que el resolver público descubra los servicios privados del dominio.
+- **D.** Ampliar privilegios no repara el descubrimiento del controlador y concede autoridad desproporcionada sin resolver la configuración DNS identificada en el cliente.
+
+[Fuente:](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created) · [Para repasar:](../certifications/es/AZ-802.md)
+
+</details>
+
+<a id="quiz-q34"></a>
+
+## AZ-802 · Límites de recuperación en Hyper-V
+
+Un laboratorio Hyper-V exige checkpoints Production con consistencia del invitado, sin recurrir a Standard, y una copia protegida que sobreviva a perder el almacenamiento de la VM. La configuración Production ha terminado creando un Standard en ese mismo almacenamiento. ¿Qué plan cubre ambos límites?
+
+- **A.** Aceptar el Standard porque haber solicitado Production demuestra que el procesamiento de consistencia funcionó.
+- **B.** Activar únicamente Hyper-V Replica y asumir que aporta todos los puntos históricos independientes necesarios.
+- **C.** Borrar AVHDX a mano y conservar el checkpoint del mismo almacenamiento como copia de recuperación protegida.
+- **D.** Evaluar ProductionOnly y reparar los requisitos de consistencia del invitado; mantener además un backup protegido con restauración validada.
+
+<details>
+<summary>Por qué:</summary>
+
+**D. Evaluar ProductionOnly y reparar los requisitos de consistencia del invitado; mantener además un backup protegido con restauración validada.**
+
+Production puede permitir recurrir a Standard, así que el resultado observado contradice el comportamiento de consistencia requerido. ProductionOnly puede rechazar esa alternativa mientras se investigan los requisitos del invitado. Incluso un checkpoint Production válido es distinto de un backup independiente retenido: su cadena puede perderse con la VM. Una copia protegida separada y una restauración compatible validada cubren el segundo requisito; cambiar el modo de checkpoint no demuestra ese límite.
+
+- **A.** El ajuste solicitado aporta menos evidencia que el tipo obtenido; recurrir a Standard no demuestra que el procesamiento de consistencia Production haya terminado correctamente.
+- **B.** Replica permite recuperar una VM replicada, pero puede copiar cambios indeseados; por sí sola no establece el backup histórico independiente y la restauración probada requeridos.
+- **C.** Borrar AVHDX manualmente puede dañar la cadena de discos; una copia en el almacenamiento perdido tampoco cubre la independencia de recuperación exigida.
+
+[Fuente:](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints) · [Para repasar:](../certifications/es/AZ-802.md)
 
 </details>

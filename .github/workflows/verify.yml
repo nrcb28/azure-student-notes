@@ -37,3 +37,20 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Run offline verification
         run: python tools/verify.py
+
+  az802-powershell:
+    name: AZ-802 PowerShell syntax
+    runs-on: windows-2025
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Parse AZ-802 PowerShell examples without executing them
+        run: pwsh -NoProfile -File tools/check_az802_powershell.ps1

@@ -2,7 +2,7 @@
 
 [←](README.md) · [CLI](../QUIZ.md) · [Preguntas para leer en GitHub](20-quiz-cases.md)
 
-Treinta y dos escenarios originales, dos por cada una de las [dieciséis rutas](../certifications/es/README.md), disponibles en ocho idiomas: 256 variantes. Este mini simulacro sirve para practicar decisiones concretas de Azure sin cuenta ni conexión. Los escenarios son propios; las explicaciones enlazan a Microsoft Learn y las fuentes se conservan en inglés.
+Treinta y cuatro escenarios originales, dos por cada una de las [diecisiete rutas](../certifications/es/README.md), disponibles en ocho idiomas: 272 variantes. Este mini simulacro sirve para practicar decisiones concretas de Azure sin cuenta ni conexión. Los escenarios son propios; las explicaciones enlazan a Microsoft Learn y las fuentes se conservan en inglés.
 
 ## Empezar
 
@@ -13,13 +13,13 @@ python tools/quiz.py demo --lang es
 python tools/quiz.py run --lang es --exam AZ-104 --count 2
 ```
 
-Sin --count se eligen hasta ocho escenarios disponibles. Usa --count 32 sin filtrar por examen para practicar el banco completo; cada ruta individual sigue teniendo dos escenarios.
+Sin --count se eligen hasta ocho escenarios disponibles. Usa --count 34 sin filtrar por examen para practicar el banco completo; cada ruta individual sigue teniendo dos escenarios.
 
 ```bash
-python tools/quiz.py run --lang es --mode exam --count 32
+python tools/quiz.py run --lang es --mode exam --count 34
 ```
 
-Los 24 escenarios añadidos enlazan a guías de certificación del mismo idioma, como [AI-103](../certifications/es/AI-103.md). Los ocho iniciales conservan sus enlaces a capítulos. Los informes anteriores a la ampliación siguen siendo compatibles: review usa las copias de las preguntas y referencias guardadas en cada informe.
+Los 26 escenarios añadidos enlazan a guías de certificación del mismo idioma, como [AI-103](../certifications/es/AI-103.md). Los ocho iniciales conservan sus enlaces a capítulos. Los informes anteriores a la ampliación siguen siendo compatibles: review usa las copias de las preguntas y referencias guardadas en cada informe.
 
 ## Práctica con corrección
 

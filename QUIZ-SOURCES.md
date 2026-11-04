@@ -1,8 +1,8 @@
 # Fuentes del mini simulacro / Mini quiz sources
 
-El banco contiene 32 escenarios originales, dos por cada una de las dieciséis rutas, con 256 variantes en ocho idiomas. Las preguntas y distractores son material propio de estudio; no proceden de exámenes reales. Cada variante conserva la misma referencia técnica.
+El banco contiene 34 escenarios originales, dos por cada una de las diecisiete rutas, con 272 variantes en ocho idiomas. Las preguntas y distractores son material propio de estudio; no proceden de exámenes reales. Cada variante conserva la misma referencia técnica.
 
-The bank contains 32 original scenarios, two per route across sixteen routes, with 256 variants in eight languages. Questions and distractors are original teaching material. Each language variant retains the same technical reference. Source review does not establish full exam coverage or Azure execution.
+The bank contains 34 original scenarios, two per route across seventeen routes, with 272 variants in eight languages. Questions and distractors are original teaching material. Each language variant retains the same technical reference. Source review does not establish full exam coverage or Azure execution.
 
 ## q01–q08 · 2026-10-29
 
@@ -51,6 +51,21 @@ All 24 new cases, options and explanations were read. References were opened, wi
 | q30 | SC-100 | Validación de objetivos de recuperación / Recovery objective validation | [Business continuity in Azure SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview) |
 | q31 | AZ-120 | Aislamiento y escritor único de SAP / SAP fencing and single writers | [High availability for SAP HANA on Azure VMs on SUSE Linux Enterprise Server](https://learn.microsoft.com/en-us/azure/sap/workloads/sap-hana-high-availability) |
 | q32 | AZ-120 | Escrituras de SAP después del cambio / SAP writes after cutover | [Execute migration to cloud](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/execute-migration) |
+
+## q33–q34 · AZ-802 · 2026-11-04
+
+Se contrastaron de nuevo las referencias de descubrimiento de servicios AD y checkpoints Hyper-V. Las dos preguntas añaden AZ-802 a las diecisiete rutas del banco; sus condiciones son sintéticas y no describen resultados observados en Windows.
+
+AD service discovery and Hyper-V checkpoint references were checked again on 2026-11-04. These two questions add AZ-802 to the seventeen-route bank. Their conditions are synthetic, not observations from an executed Windows lab.
+
+| Caso / Scenario | Ruta / Route | Concepto / Concept | Fuente / Source |
+|---|---|---|---|
+| q33 | AZ-802 | Resolución SRV y descubrimiento de controladores / SRV resolution and domain-controller discovery | [Verify SRV DNS records](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created) |
+| q34 | AZ-802 | ProductionOnly, fallback y copia independiente / ProductionOnly, fallback and independent recovery copy | [Using checkpoints](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints) |
+
+q33 identifica un camino DNS incompatible con los servicios privados de AD a partir de las condiciones dadas; no afirma que todos los fallos de inicio de sesión sean DNS. q34 separa la consistencia del checkpoint y la protección independiente del almacenamiento. La política configurada y la clasificación SnapshotType no prueban por sí solas el procesamiento del invitado ni una restauración válida.
+
+q33 applies the supplied evidence rather than assigning DNS as the cause of every logon failure. q34 separates checkpoint consistency from storage-independent recovery. Configured policy and SnapshotType classification alone do not prove guest processing or a successful restore.
 
 ## Cómo interpretar las fuentes / Interpreting references
 

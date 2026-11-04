@@ -2,7 +2,7 @@
 
 [←](README.md) · [CLI](../QUIZ.md) · [Read the questions on GitHub](20-quiz-cases.md)
 
-32 original scenarios, two for each of the [sixteen routes](../certifications/en/README.md). Questions, options, explanations, and interface are available in all eight languages: 256 locale variants. This small bank practises decisions from the notes; it is independent of Microsoft and does not reproduce real exam questions. Requires Python 3.9+ and its standard library. No Azure account or connection is needed.
+34 original scenarios, two for each of the [seventeen routes](../certifications/en/README.md). Questions, options, explanations, and interface are available in all eight languages: 272 locale variants. This small bank practises decisions from the notes; it is independent of Microsoft and does not reproduce real exam questions. Requires Python 3.9+ and its standard library. No Azure account or connection is needed.
 
 ## Start
 
@@ -13,13 +13,13 @@ python tools/quiz.py demo --lang en
 python tools/quiz.py run --lang en --exam AZ-104 --count 2
 ```
 
-Without --count, a session selects up to eight available scenarios. Use --count 32 without an exam filter to practise the complete bank; each single route still has two scenarios.
+Without --count, a session selects up to eight available scenarios. Use --count 34 without an exam filter to practise the complete bank; each single route still has two scenarios.
 
 ```bash
-python tools/quiz.py run --lang en --mode exam --count 32
+python tools/quiz.py run --lang en --mode exam --count 34
 ```
 
-The 24 added scenarios link to certification guides in the same language, such as [AI-103](../certifications/en/AI-103.md). The original eight keep their chapter links. Reports saved before the expansion remain compatible: review uses the question and reference snapshots stored in each report.
+The 26 added scenarios link to certification guides in the same language, such as [AI-103](../certifications/en/AI-103.md). The original eight keep their chapter links. Reports saved before the expansion remain compatible: review uses the question and reference snapshots stored in each report.
 
 ## Practice with feedback
 

@@ -1,4 +1,4 @@
-# 32 scenari per esercitarsi
+# 34 scenari per esercitarsi
 
 [←](19-mini-quiz.md) · [CLI](../QUIZ.md)
 
@@ -833,5 +833,57 @@ Quando la destinazione accetta nuove scritture, il rollback diventa anche una de
 - **D.** Consentire scritture in entrambi gli ambienti crea storie di transazioni divergenti, rende più difficile la riconciliazione e interrompe il controllo richiesto di un unico sistema di scrittura di riferimento.
 
 [Fonte:](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/execute-migration) · [Da ripassare:](../certifications/it/AZ-120.md)
+
+</details>
+
+<a id="quiz-q33"></a>
+
+## AZ-802 · Individuazione dei servizi AD
+
+Dopo una modifica alla rete dell’aula, un client Windows di dominio risolve i siti pubblici ma non riesce a individuare il controller di dominio. Usa un resolver DNS pubblico; il server DNS AD previsto è raggiungibile e ha record SRV integri. Il suo orologio è corretto. Quale risposta affronta meglio le prove fornite?
+
+- **A.** Reimpostare le password di tutti gli studenti prima di esaminare il percorso del resolver.
+- **B.** Ripristinare il percorso DNS approvato che conosce AD, poi convalidare individuazione SRV, raggiungibilità del controller e accesso interessato.
+- **C.** Disabilitare i controlli temporali dell’autenticazione mantenendo lo stesso percorso con resolver soltanto pubblico.
+- **D.** Aggiungere lo studente a Domain Admins lasciando invariata l’individuazione del controller.
+
+<details>
+<summary>Perché:</summary>
+
+**B. Ripristinare il percorso DNS approvato che conosce AD, poi convalidare individuazione SRV, raggiungibilità del controller e accesso interessato.**
+
+La risoluzione dei siti pubblici non dimostra l’individuazione dei servizi AD privati. Il percorso del resolver è l’incongruenza individuata, mentre record AD integri e orologio corretto circoscrivono questo caso specifico. Ripristina la configurazione DNS prevista con una modifica approvata e convalida separatamente individuazione dei servizi, raggiungibilità e accesso. Se l’autenticazione fallisce ancora, indagane le prove precise invece di presumere che ogni incidente reale di accesso abbia la stessa causa.
+
+- **A.** Cambiare le password non fornisce il percorso mancante per individuare i servizi AD; reimpostazioni generalizzate introducono modifiche estranee prima di affrontare l’incongruenza DNS osservata.
+- **C.** Lo scenario stabilisce già che l’orologio è corretto; indebolire i controlli di autenticazione non permette al resolver pubblico configurato di individuare i servizi privati del dominio.
+- **D.** Privilegi più ampi nella directory non correggono l’individuazione del controller e concederebbero un’autorità sproporzionata senza affrontare il problema individuato nella configurazione DNS del client.
+
+[Fonte:](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created) · [Da ripassare:](../certifications/it/AZ-802.md)
+
+</details>
+
+<a id="quiz-q34"></a>
+
+## AZ-802 · Perimetri di recupero Hyper-V
+
+Un laboratorio Hyper-V richiede checkpoint di produzione con coerenza gestita dal guest senza ripiego su Standard, oltre a una copia di recupero protetta che sopravviva alla perdita dell’archiviazione VM. Un’impostazione Production ha creato invece un checkpoint Standard sulla stessa archiviazione. Quale piano soddisfa entrambi i perimetri indicati?
+
+- **A.** Accettare il checkpoint Standard perché richiedere Production dimostra che l’elaborazione della coerenza guest è riuscita.
+- **B.** Abilitare soltanto Hyper-V Replica e presumere che fornisca tutti i punti storici indipendenti di ripristino richiesti.
+- **C.** Eliminare manualmente i file AVHDX e conservare il checkpoint sulla stessa archiviazione come copia protetta di recupero.
+- **D.** Valutare ProductionOnly e correggere i prerequisiti di coerenza guest; mantenere separatamente un backup protetto con un processo di ripristino convalidato.
+
+<details>
+<summary>Perché:</summary>
+
+**D. Valutare ProductionOnly e correggere i prerequisiti di coerenza guest; mantenere separatamente un backup protetto con un processo di ripristino convalidato.**
+
+La modalità Production può consentire il ripiego, quindi il checkpoint Standard effettivo contraddice il comportamento di coerenza richiesto. ProductionOnly può rifiutare quel ripiego mentre si indagano i prerequisiti guest. Anche un checkpoint di produzione valido rimane diverso da un backup indipendente conservato: la sua catena di archiviazione può andare persa insieme alla VM. Una copia protetta separata e la convalida di un ripristino supportato affrontano il secondo requisito; cambiare soltanto modalità di checkpoint non dimostra quel perimetro.
+
+- **A.** L’impostazione richiesta è una prova più debole del tipo di checkpoint risultante; un ripiego su Standard non dimostra che l’elaborazione della coerenza di produzione sia terminata correttamente.
+- **B.** Replica affronta il recupero della VM replicata ma può propagare modifiche indesiderate; da sola non dimostra il backup storico indipendente richiesto e un ripristino provato.
+- **C.** Eliminare manualmente gli AVHDX può danneggiare la catena dei dischi VM, mentre una copia sulla stessa archiviazione guasta non può fornire il perimetro indipendente di recupero specificato.
+
+[Fonte:](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints) · [Da ripassare:](../certifications/it/AZ-802.md)
 
 </details>

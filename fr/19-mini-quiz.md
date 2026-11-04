@@ -2,7 +2,7 @@
 
 [←](README.md) · [CLI](../QUIZ.md) · [Lire les questions sur GitHub](20-quiz-cases.md)
 
-32 scénarios originaux, deux pour chacun des [seize parcours](../certifications/fr/README.md), sont disponibles en huit langues : 256 variantes. Cette mini simulation permet de travailler des décisions concrètes sur Azure, sans compte ni connexion. Les scénarios sont originaux ; les explications renvoient à Microsoft Learn et les sources restent en anglais.
+34 scénarios originaux, deux pour chacun des [dix-sept parcours](../certifications/fr/README.md), sont disponibles en huit langues : 272 variantes. Cette mini simulation permet de travailler des décisions concrètes sur Azure, sans compte ni connexion. Les scénarios sont originaux ; les explications renvoient à Microsoft Learn et les sources restent en anglais.
 
 ## Commencer
 
@@ -13,13 +13,13 @@ python tools/quiz.py demo --lang fr
 python tools/quiz.py run --lang fr --exam AZ-104 --count 2
 ```
 
-Sans --count, la session sélectionne jusqu’à huit scénarios disponibles. Utilisez --count 32 sans filtre d’examen pour travailler toute la banque ; chaque parcours contient deux scénarios.
+Sans --count, la session sélectionne jusqu’à huit scénarios disponibles. Utilisez --count 34 sans filtre d’examen pour travailler toute la banque ; chaque parcours contient deux scénarios.
 
 ```bash
-python tools/quiz.py run --lang fr --mode exam --count 32
+python tools/quiz.py run --lang fr --mode exam --count 34
 ```
 
-Les 24 scénarios ajoutés renvoient à des guides de certification dans la même langue, comme [AI-103](../certifications/fr/AI-103.md). Les huit scénarios initiaux conservent leurs liens vers les chapitres. Les rapports enregistrés avant l’extension restent compatibles : review utilise les copies des questions et références conservées dans chaque rapport.
+Les 26 scénarios ajoutés renvoient à des guides de certification dans la même langue, comme [AI-103](../certifications/fr/AI-103.md). Les huit scénarios initiaux conservent leurs liens vers les chapitres. Les rapports enregistrés avant l’extension restent compatibles : review utilise les copies des questions et références conservées dans chaque rapport.
 
 ## Pratique avec correction
 

@@ -55,7 +55,9 @@
       "residual-risk-ownership": "Residual risk ownership",
       "recovery-objective-validation": "Recovery objective validation",
       "sap-fencing-single-writer": "SAP fencing and single writers",
-      "sap-post-cutover-writes": "SAP writes after cutover"
+      "sap-post-cutover-writes": "SAP writes after cutover",
+      "ad-service-discovery": "AD service discovery",
+      "hyperv-recovery-boundaries": "Hyper-V recovery boundaries"
     },
     "statuses": {
       "completed": "completed",
@@ -120,7 +122,9 @@
       "residual-risk-ownership": "Responsabilidad del riesgo residual",
       "recovery-objective-validation": "Validación de objetivos de recuperación",
       "sap-fencing-single-writer": "Aislamiento y escritor único de SAP",
-      "sap-post-cutover-writes": "Escrituras de SAP después del cambio"
+      "sap-post-cutover-writes": "Escrituras de SAP después del cambio",
+      "ad-service-discovery": "Descubrimiento de servicios AD",
+      "hyperv-recovery-boundaries": "Límites de recuperación en Hyper-V"
     },
     "statuses": {
       "completed": "completada",
@@ -185,7 +189,9 @@
       "residual-risk-ownership": "Responsabilità per il rischio residuo",
       "recovery-objective-validation": "Verifica degli obiettivi di ripristino",
       "sap-fencing-single-writer": "Fencing SAP e singolo nodo di scrittura",
-      "sap-post-cutover-writes": "Scritture SAP dopo il passaggio"
+      "sap-post-cutover-writes": "Scritture SAP dopo il passaggio",
+      "ad-service-discovery": "Individuazione dei servizi AD",
+      "hyperv-recovery-boundaries": "Perimetri di recupero Hyper-V"
     },
     "statuses": {
       "completed": "completata",
@@ -250,7 +256,9 @@
       "residual-risk-ownership": "Responsabilité du risque résiduel",
       "recovery-objective-validation": "Validation des objectifs de reprise",
       "sap-fencing-single-writer": "Fencing SAP et nœud unique en écriture",
-      "sap-post-cutover-writes": "Écritures SAP après la bascule"
+      "sap-post-cutover-writes": "Écritures SAP après la bascule",
+      "ad-service-discovery": "Découverte des services AD",
+      "hyperv-recovery-boundaries": "Périmètres de récupération Hyper-V"
     },
     "statuses": {
       "completed": "terminée",
@@ -315,7 +323,9 @@
       "residual-risk-ownership": "Verantwortung für Restrisiken",
       "recovery-objective-validation": "Wiederherstellungsziele prüfen",
       "sap-fencing-single-writer": "SAP-Fencing und einzelner Schreiber",
-      "sap-post-cutover-writes": "SAP-Schreibzugriffe nach der Umstellung"
+      "sap-post-cutover-writes": "SAP-Schreibzugriffe nach der Umstellung",
+      "ad-service-discovery": "AD-Dienstsuche",
+      "hyperv-recovery-boundaries": "Hyper-V-Wiederherstellungsgrenzen"
     },
     "statuses": {
       "completed": "abgeschlossen",
@@ -380,7 +390,9 @@
       "residual-risk-ownership": "Ответственность за остаточный риск",
       "recovery-objective-validation": "Проверка целей восстановления",
       "sap-fencing-single-writer": "Fencing SAP и единственный пишущий узел",
-      "sap-post-cutover-writes": "Записи SAP после переключения"
+      "sap-post-cutover-writes": "Записи SAP после переключения",
+      "ad-service-discovery": "Обнаружение служб AD",
+      "hyperv-recovery-boundaries": "Границы восстановления Hyper-V"
     },
     "statuses": {
       "completed": "завершён",
@@ -445,7 +457,9 @@
       "residual-risk-ownership": "残存リスクの所有者",
       "recovery-objective-validation": "復旧目標の検証",
       "sap-fencing-single-writer": "SAP のフェンシングと単一の書き込み主体",
-      "sap-post-cutover-writes": "SAP 切り替え後の書き込み"
+      "sap-post-cutover-writes": "SAP 切り替え後の書き込み",
+      "ad-service-discovery": "AD サービスの検出",
+      "hyperv-recovery-boundaries": "Hyper-V の復旧の境界"
     },
     "statuses": {
       "completed": "完了",
@@ -510,7 +524,9 @@
       "residual-risk-ownership": "残余风险责任归属",
       "recovery-objective-validation": "恢复目标验证",
       "sap-fencing-single-writer": "SAP 隔离与单一写入节点",
-      "sap-post-cutover-writes": "SAP 切换后的写入"
+      "sap-post-cutover-writes": "SAP 切换后的写入",
+      "ad-service-discovery": "AD 服务发现",
+      "hyperv-recovery-boundaries": "Hyper-V 恢复边界"
     },
     "statuses": {
       "completed": "已完成",

@@ -1,4 +1,4 @@
-# 32 个场景练习
+# 34 个场景练习
 
 [←](19-mini-quiz.md) · [CLI](../QUIZ.md)
 
@@ -833,5 +833,57 @@ SAP HANA 群集桌面推演中，与主节点的通信丢失，辅助节点无�
 - **D.** 同时允许两个系统接受写入，会形成分歧的事务历史，增加核对难度，并破坏对权威写入节点的必要控制。
 
 [Microsoft Learn：](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/execute-migration) · [建议复习章节：](../certifications/zh/AZ-120.md)
+
+</details>
+
+<a id="quiz-q33"></a>
+
+## AZ-802 · AD 服务发现
+
+教室网络更改后，Windows 域客户端能解析公用网站，却无法发现域控制器。它使用公用 DNS 解析器；预期 AD DNS 服务器可达，SRV 记录健康，客户端时钟也正确。哪种响应最符合所给证据？
+
+- **A.** 检查解析器路径前，先重置所有学生的密码。
+- **B.** 恢复获批的、支持 AD 解析的 DNS 路径，然后验证 SRV 发现、控制器可达性和受影响的登录。
+- **C.** 保留相同的仅公用解析器路径，同时禁用与时间有关的身份验证检查。
+- **D.** 不改变控制器发现，直接给学生授予 Domain Admin 成员身份。
+
+<details>
+<summary>思路：</summary>
+
+**B. 恢复获批的、支持 AD 解析的 DNS 路径，然后验证 SRV 发现、控制器可达性和受影响的登录。**
+
+能够解析公用网站，并不能证明可以发现私有 AD 服务。题目中的解析器路径是已确认的不匹配，而健康的 AD 记录和正确时钟缩小了这个具体案例的调查范围。通过获批更改恢复预期 DNS 配置，并分别验证服务发现、可达性和登录。如果身份验证仍失败，应调查其准确证据，不要假定现实中每个登录事件都有相同原因。
+
+- **A.** 更改密码不能补上缺失的 AD 服务发现路径；大范围重置会在解决已观察到的 DNS 不匹配之前引入无关更改。
+- **C.** 场景已经说明时钟正确；削弱身份验证检查，不会让已配置的公用解析器发现私有域服务。
+- **D.** 扩大目录权限不能修复控制器发现，反而在未解决客户端已确认 DNS 配置问题的情况下授予不相称的权限。
+
+[Microsoft Learn：](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created) · [建议复习章节：](../certifications/zh/AZ-802.md)
+
+</details>
+
+<a id="quiz-q34"></a>
+
+## AZ-802 · Hyper-V 恢复边界
+
+Hyper-V 实验要求使用能与来宾协同、且不回退到 Standard 的生产检查点，还要求保留一份能在 VM 存储丢失后存续的受保护恢复副本。当前 Production 设置已回退，在同一存储上创建了 Standard 检查点。哪项计划能够满足这两个指定边界？
+
+- **A.** 接受 Standard 检查点，因为请求了 Production 就能证明来宾一致性处理已成功。
+- **B.** 仅启用 Hyper-V 副本，并认为它能提供所有所需的独立历史恢复点。
+- **C.** 手动删除 AVHDX 文件，并将同一存储上的检查点保留为受保护恢复副本。
+- **D.** 评估 ProductionOnly 并修复来宾一致性前提条件；另外保留具有已验证还原流程的受保护备份。
+
+<details>
+<summary>思路：</summary>
+
+**D. 评估 ProductionOnly 并修复来宾一致性前提条件；另外保留具有已验证还原流程的受保护备份。**
+
+Production 模式可能允许回退，所以实际产生的 Standard 检查点不符合要求的一致性行为。调查来宾前提条件时，ProductionOnly 可以拒绝这种回退。即使是有效的生产检查点，也不同于独立保留的备份：其存储链可能随 VM 一起丢失。单独的受保护副本和受支持的还原验证，才能解决第二项要求；仅改变检查点模式不能建立该边界。
+
+- **A.** 请求的设置不如最终检查点类型有说服力；回退到 Standard 不能证明生产一致性处理已成功完成。
+- **B.** 副本用于恢复已复制的 VM，但可能传播不需要的更改；它本身不能确立所需的独立历史备份和经过测试的还原。
+- **C.** 手动删除 AVHDX 可能损坏 VM 磁盘链，而同一故障存储上的副本也无法提供指定的独立恢复边界。
+
+[Microsoft Learn：](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints) · [建议复习章节：](../certifications/zh/AZ-802.md)
 
 </details>

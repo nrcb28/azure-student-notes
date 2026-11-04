@@ -1,4 +1,4 @@
-# 32 scenarios to practise
+# 34 scenarios to practise
 
 [←](19-mini-quiz.md) · [CLI](../QUIZ.md)
 
@@ -833,5 +833,57 @@ Once the target accepts new writes, rollback becomes a data-handling decision as
 - **D.** Allowing both landscapes to accept writes creates divergent transaction histories, making reconciliation harder and breaking the required control of an authoritative writer.
 
 [Microsoft Learn:](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/execute-migration) · [Review chapter:](../certifications/en/AZ-120.md)
+
+</details>
+
+<a id="quiz-q33"></a>
+
+## AZ-802 · AD service discovery
+
+After a classroom network change, a Windows domain client resolves public websites but cannot discover its domain controller. It uses a public DNS resolver; the intended AD DNS server is reachable and has healthy SRV records. Its clock is correct. Which response best addresses the supplied evidence?
+
+- **A.** Reset every student's password before inspecting the resolver path.
+- **B.** Restore the approved AD-aware DNS path, then validate SRV discovery, controller reachability, and the affected logon.
+- **C.** Disable time-related authentication checks while retaining the same public-only resolver path.
+- **D.** Give the student Domain Admin membership while leaving controller discovery unchanged.
+
+<details>
+<summary>Why:</summary>
+
+**B. Restore the approved AD-aware DNS path, then validate SRV discovery, controller reachability, and the affected logon.**
+
+Public website resolution does not establish discovery of private AD services. The stated resolver path is the identified mismatch, while the healthy AD records and correct clock narrow this particular case. Restore the intended DNS configuration through an approved change and validate service discovery, reachability, and logon separately. If authentication still fails, investigate its precise evidence rather than assuming that every real logon incident has the same cause.
+
+- **A.** Changing passwords does not provide the missing AD service-discovery path, and broad resets introduce unrelated changes before addressing the observed DNS mismatch.
+- **C.** The scenario already establishes a correct clock; weakening authentication checks does not make the configured public resolver discover the private domain services.
+- **D.** Broader directory privilege does not repair controller discovery and would grant disproportionate authority without addressing the client's identified DNS configuration problem.
+
+[Microsoft Learn:](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created) · [Review chapter:](../certifications/en/AZ-802.md)
+
+</details>
+
+<a id="quiz-q34"></a>
+
+## AZ-802 · Hyper-V recovery boundaries
+
+A Hyper-V lab requires guest-aware production checkpoints without Standard fallback, plus a protected recovery copy that survives loss of the VM storage. A Production setting has fallen back to a Standard checkpoint on that same storage. Which plan meets both stated boundaries?
+
+- **A.** Accept the Standard checkpoint because requesting Production proves that guest consistency processing succeeded.
+- **B.** Enable Hyper-V Replica alone and assume it supplies every independent historical recovery point required.
+- **C.** Delete AVHDX files manually and keep the same-storage checkpoint as the protected recovery copy.
+- **D.** Evaluate ProductionOnly and repair guest consistency prerequisites; separately maintain a protected backup with a validated restore process.
+
+<details>
+<summary>Why:</summary>
+
+**D. Evaluate ProductionOnly and repair guest consistency prerequisites; separately maintain a protected backup with a validated restore process.**
+
+Production mode can permit fallback, so the actual Standard checkpoint contradicts the required consistency behaviour. ProductionOnly can reject that fallback while the guest prerequisites are investigated. Even a valid production checkpoint remains different from an independent retained backup: its storage chain can be lost with the VM. A separate protected copy and supported restore validation address the second requirement; changing checkpoint mode alone does not establish that boundary.
+
+- **A.** The requested setting is weaker evidence than the resulting checkpoint type; a Standard fallback does not establish that production consistency processing completed successfully.
+- **B.** Replica addresses replicated-VM recovery but can propagate unwanted changes; it does not by itself establish the required independent historical backup and tested restoration.
+- **C.** Manual AVHDX deletion can damage the VM disk chain, while a copy on the same failed storage cannot supply the specified independent recovery boundary.
+
+[Microsoft Learn:](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints) · [Review chapter:](../certifications/en/AZ-802.md)
 
 </details>

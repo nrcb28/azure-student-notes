@@ -1,10 +1,10 @@
-# Certifications: sixteen study routes
+# Certifications: seventeen study routes
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [General notes](../../en/README.md) · [Source register](../../CERTIFICATION-SOURCES.md)
 
-Sixteen exam routes, each with a guide that explains decisions, ten original cases with reasoned answers, and a five-unit evidence workbook. Pick the area you want to understand before trying to study everything.
+Seventeen exam routes, each with a guide that explains decisions, ten original cases with reasoned answers, and a five-unit evidence workbook. Pick the area you want to understand before trying to study everything.
 
 | Route | Focus | Guide | Cases | Workbook |
 |---|---|---|---|---|
@@ -24,6 +24,7 @@ Sixteen exam routes, each with a guide that explains decisions, ten original cas
 | DP-700 | Fabric data engineering | [Read](DP-700.md) | [10 cases](DP-700-cases.md) | [5 units](DP-700-workbook.md) |
 | SC-100 | Cybersecurity architecture | [Read](SC-100.md) | [10 cases](SC-100-cases.md) | [5 units](SC-100-workbook.md) |
 | AZ-120 | SAP workloads on Azure | [Read](AZ-120.md) | [10 cases](AZ-120-cases.md) | [5 units](AZ-120-workbook.md) |
+| AZ-802 | Windows Server administration | [Read](AZ-802.md) | [10 cases](AZ-802-cases.md) | [5 units](AZ-802-workbook.md) |
 
 ## Where to start
 
@@ -31,14 +32,14 @@ Use AZ-900 as a general map when starting. DP-900 introduces data and workloads 
 
 ## What has expanded
 
-DP-900, SC-900, AZ-700, and DP-300 have matching explanations, cases, and deliverables in all eight languages. Older supplementary notes in other routes retain different lengths. There are 160 scenarios per language, 1280 variants overall; these are not real exam questions.
+DP-900, SC-900, AZ-700, and DP-300 have matching explanations, cases, and deliverables in all eight languages. Older supplementary notes in other routes retain different lengths. There are 170 scenarios per language, 1360 variants overall; these are not real exam questions.
 
 ## Practise with the trainer
 
-Choose any of the sixteen routes in the self-rating trainer or export cases to Anki. Compare your explanation with the answer and rate recall. The multiple-choice mini quiz includes 32 original scenarios across all sixteen routes, two per route, translated into eight languages: 256 variants.
+Choose any of the seventeen routes in the self-rating trainer or export cases to Anki. Compare your explanation with the answer and rate recall. The multiple-choice mini quiz includes 34 original scenarios across all seventeen routes, two per route, translated into eight languages: 272 variants.
 
 ```bash
-python tools/study.py demo --lang en --exam AI-103
+python tools/study.py demo --lang en --exam AZ-802
 python tools/study.py study --lang en --exam DP-700 --limit 5
 python tools/study.py export --lang en --exam SC-100 --output exports/en-sc100.tsv
 ```
@@ -56,3 +57,7 @@ AI-901, SC-200, SC-300, and AZ-140 add guides, ten cases, and five units per rou
 ## Applied AI, data engineering, security architecture, and SAP
 
 AI-103, DP-700, SC-100, and AZ-120 add guides, ten cases, and five units per route in all eight languages. Study Foundry development, Fabric engineering, security capabilities, and SAP infrastructure operations. References checked on 1 November 2026. Credential requirements and page-update metadata are checked separately.
+
+## Windows Server on premises and in hybrid environments
+
+AZ-802 develops Windows Server administration across on-premises and hybrid environments through seven areas: AD DS, hybrid management, virtual machines, networking, storage and file services, security, and monitoring/troubleshooting. The [guide](AZ-802.md), [ten cases](AZ-802-cases.md), and [five-unit workbook](AZ-802-workbook.md) connect identity, permissions, recovery, and evidence from an isolated lab. Official sources were checked on **2026-11-03**; the [study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-802) has an undated “Skills measured” heading and **2026-10-19** page-update metadata, which is not an objective-effective date.

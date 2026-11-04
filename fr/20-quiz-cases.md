@@ -1,4 +1,4 @@
-# 32 scénarios pour s’entraîner
+# 34 scénarios pour s’entraîner
 
 [←](19-mini-quiz.md) · [CLI](../QUIZ.md)
 
@@ -833,5 +833,57 @@ Dès que la cible accepte de nouvelles écritures, le retour arrière devient un
 - **D.** Autoriser les deux environnements à écrire crée des historiques de transactions divergents, complique le rapprochement et rompt le contrôle requis d'un nœud d'écriture de référence.
 
 [Source :](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/execute-migration) · [À revoir :](../certifications/fr/AZ-120.md)
+
+</details>
+
+<a id="quiz-q33"></a>
+
+## AZ-802 · Découverte des services AD
+
+Après une modification du réseau de la salle de cours, un client Windows de domaine résout les sites publics, mais ne découvre pas son contrôleur de domaine. Il utilise un résolveur DNS public ; le serveur DNS AD prévu est joignable et ses enregistrements SRV sont sains. Son horloge est correcte. Quelle réponse traite le mieux ces éléments ?
+
+- **A.** Réinitialiser tous les mots de passe étudiants avant d'inspecter le chemin du résolveur.
+- **B.** Rétablir le chemin DNS approuvé connaissant AD, puis valider la découverte SRV, la joignabilité du contrôleur et la connexion affectée.
+- **C.** Désactiver les vérifications temporelles d'authentification en conservant le même résolveur exclusivement public.
+- **D.** Ajouter l'étudiant au groupe Administrateurs du domaine sans changer la découverte du contrôleur.
+
+<details>
+<summary>Pourquoi :</summary>
+
+**B. Rétablir le chemin DNS approuvé connaissant AD, puis valider la découverte SRV, la joignabilité du contrôleur et la connexion affectée.**
+
+La résolution de sites publics ne démontre pas la découverte des services privés AD. Le chemin de résolution indiqué est l'écart identifié, tandis que les enregistrements AD sains et l'horloge correcte précisent ce cas particulier. Rétablir la configuration DNS prévue par un changement approuvé, puis valider séparément découverte, joignabilité et connexion. Si l'authentification échoue encore, examiner ses éléments précis plutôt que supposer que tout incident réel de connexion a la même cause.
+
+- **A.** Changer les mots de passe ne fournit pas le chemin manquant de découverte des services AD ; des réinitialisations massives introduisent des modifications sans rapport avant de traiter l'écart DNS observé.
+- **C.** Le scénario établit déjà une horloge correcte ; affaiblir l'authentification ne permet pas au résolveur public configuré de découvrir les services privés du domaine.
+- **D.** Des privilèges d'annuaire plus étendus ne réparent pas la découverte du contrôleur et accorderaient une autorité disproportionnée sans corriger le problème DNS identifié sur le client.
+
+[Source :](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created) · [À revoir :](../certifications/fr/AZ-802.md)
+
+</details>
+
+<a id="quiz-q34"></a>
+
+## AZ-802 · Périmètres de récupération Hyper-V
+
+Un laboratoire Hyper-V exige des points de contrôle de production tenant compte de l'invité, sans repli vers Standard, ainsi qu'une copie de récupération protégée survivant à la perte du stockage de la VM. Le réglage Production a créé un point standard sur ce même stockage. Quel plan respecte les deux périmètres exigés ?
+
+- **A.** Accepter le point standard, car demander Production prouve la réussite du traitement de cohérence invité.
+- **B.** Activer seulement Hyper-V Replica et supposer qu'il fournit tous les points historiques indépendants nécessaires.
+- **C.** Supprimer manuellement les fichiers AVHDX et conserver le point sur le même stockage comme copie protégée de récupération.
+- **D.** Évaluer ProductionOnly et corriger les prérequis de cohérence invité ; conserver séparément une sauvegarde protégée avec une restauration validée.
+
+<details>
+<summary>Pourquoi :</summary>
+
+**D. Évaluer ProductionOnly et corriger les prérequis de cohérence invité ; conserver séparément une sauvegarde protégée avec une restauration validée.**
+
+Le mode Production peut autoriser un repli : le point standard réellement créé contredit donc le comportement de cohérence requis. ProductionOnly peut refuser ce repli pendant l'examen des prérequis invités. Même un point de production valide reste différent d'une sauvegarde indépendante conservée : sa chaîne de stockage peut disparaître avec la VM. Une copie protégée séparée et une validation de restauration prise en charge répondent au second besoin ; changer seulement le mode du point ne crée pas ce périmètre.
+
+- **A.** Le réglage demandé est une preuve plus faible que le type obtenu ; un repli vers Standard n'établit pas que le traitement de cohérence de production a réussi.
+- **B.** Replica traite la récupération d'une VM répliquée, mais peut propager des changements indésirables ; il ne garantit pas seul la sauvegarde historique indépendante et la restauration testée requises.
+- **C.** Supprimer manuellement des AVHDX peut endommager la chaîne de disques de la VM ; une copie sur le même stockage perdu ne satisfait pas le périmètre indépendant de récupération exigé.
+
+[Source :](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints) · [À revoir :](../certifications/fr/AZ-802.md)
 
 </details>

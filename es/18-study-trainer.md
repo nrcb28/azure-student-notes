@@ -2,10 +2,10 @@
 
 [←](README.md) · [Anki](../flashcards/es.tsv)
 
-Practica con los 160 casos de tu idioma: diez por certificación. Funciona con Python 3.9 o posterior y solo su biblioteca estándar. No necesita cuenta cloud, paquetes externos ni conexión durante el uso.
+Practica con los 170 casos de tu idioma: diez por certificación. Funciona con Python 3.9 o posterior y solo su biblioteca estándar. No necesita cuenta cloud, paquetes externos ni conexión durante el uso.
 
 ```bash
-python tools/study.py demo --lang es --exam AZ-104
+python tools/study.py demo --lang es --exam AZ-802
 python tools/study.py study --lang es --exam AZ-104 --limit 5
 ```
 

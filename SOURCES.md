@@ -79,9 +79,9 @@ Scenarios, exercises and the SQLite simulator are original teaching material. Cl
 
 ## Mini quiz / Mini simulacro
 
-Thirty-two original scenarios cover sixteen routes, with two scenarios per route and matching sources and answer structure in all eight languages: 256 language variants. The original eight scenarios retain their 2026-10-29 source review; the expansion has its own review record in the [scenario-to-source map](QUIZ-SOURCES.md).
+Thirty-four original scenarios cover seventeen routes, with two scenarios per route and matching sources and answer structure in all eight languages: 272 language variants. The original eight scenarios retain their 2026-10-29 source review; the expansion has its own review record in the [scenario-to-source map](QUIZ-SOURCES.md).
 
-Treinta y dos escenarios originales cubren dieciséis rutas, dos por ruta, con 256 variantes en los ocho idiomas. Se conserva la revisión del 29 de octubre de 2026 para los ocho casos iniciales; el [mapa de fuentes](QUIZ-SOURCES.md) registra por separado la ampliación y el concepto utilizado en cada caso.
+Treinta y cuatro escenarios originales cubren diecisiete rutas, dos por ruta, con 272 variantes en los ocho idiomas. Se conserva la revisión del 29 de octubre de 2026 para los ocho casos iniciales; el [mapa de fuentes](QUIZ-SOURCES.md) registra por separado la ampliación y el concepto utilizado en cada caso.
 
 ## Four additional certification routes / Cuatro rutas adicionales
 
@@ -100,3 +100,9 @@ Se añaden AI-901, SC-200, SC-300 y AZ-140 en los ocho idiomas. Las fuentes de o
 AI-103, DP-700, SC-100, and AZ-120 guides and associated credentials were checked on 2026-11-01. The [register](CERTIFICATION-SOURCES.md) distinguishes DP-700's undated live skills heading from update metadata, SC-100's current Expert prerequisites, and the recommended preparation for AZ-120. New guides cite primary technical sources for their original scenarios and workbook evidence.
 
 Se añaden AI-103, DP-700, SC-100 y AZ-120 en los ocho idiomas, con fuentes oficiales consultadas el 1 de noviembre de 2026 y límites explícitos sobre fechas, requisitos y pruebas. No se atribuyen ejecuciones de Foundry, Fabric, controles de seguridad ni SAP.
+
+## AZ-802 Windows Server · 2026-11-03
+
+Opened the current [AZ-802 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-802), [exam page](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-802/), and [credential page](https://learn.microsoft.com/en-us/credentials/certifications/windows-server-hybrid-administrator/). The route uses the exam-specific seven-area guide. Its live Skills measured heading is undated; the 2026-10-19 footer is page metadata. The credential's older ten-area overview is not treated as the AZ-802 objective list. Technical references, boundaries and dates are recorded in [CERTIFICATION-SOURCES.md](CERTIFICATION-SOURCES.md).
+
+La ruta de Windows Server utiliza la guía específica de AZ-802 consultada el 3 de noviembre de 2026. Las explicaciones y escenarios son propios; las referencias técnicas se abrieron para comprobar sus conceptos, compatibilidad y límites. Los ejemplos de PowerShell no se ejecutaron contra Windows, Hyper-V, AD DS ni Azure.

@@ -14,9 +14,9 @@ Azure study notes for computer science students. Short explanations, practical d
 
 **[Entrenador en español](es/18-study-trainer.md) · [English trainer](en/18-study-trainer.md) · [Anki en ocho idiomas](flashcards/README.md)**
 
-Un entrenador local convierte 160 casos por idioma —1280 variantes entre los ocho idiomas— en sesiones de repaso. Guarda valoraciones, prioriza repasos pendientes, recupera dificultades, propone un plan y exporta a Anki. Funciona sin Azure, cuenta ni paquetes externos. Es autoevaluación, no corrección automática ni predicción de aprobar.
+Un entrenador local convierte 170 casos por idioma —1360 variantes entre los ocho idiomas— en sesiones de repaso. Guarda valoraciones, prioriza repasos pendientes, recupera dificultades, propone un plan y exporta a Anki. Funciona sin Azure, cuenta ni paquetes externos. Es autoevaluación, no corrección automática ni predicción de aprobar.
 
-An offline trainer turns 160 cases per language, 1280 language variants overall, into review sessions. It saves ratings, prioritises due reviews, revisits difficulties, suggests a plan, and exports to Anki. No Azure account or external packages. Self-assessment, not automatic grading or a pass prediction.
+An offline trainer turns 170 cases per language, 1360 language variants overall, into review sessions. It saves ratings, prioritises due reviews, revisits difficulties, suggests a plan, and exports to Anki. No Azure account or external packages. Self-assessment, not automatic grading or a pass prediction.
 
 ```bash
 python tools/study.py demo --lang es --exam AZ-104
@@ -26,29 +26,43 @@ python tools/study.py stats --lang es
 
 [Manual completo / Full manual](TRAINER.md). El progreso personal no se sube a Git / Personal progress is excluded from Git.
 
+## AZ-802: Windows Server en profundidad / Windows Server in depth
+
+[Español](certifications/es/AZ-802.md) · [English](certifications/en/AZ-802.md) · [Italiano](certifications/it/AZ-802.md) · [Deutsch](certifications/de/AZ-802.md) · [Français](certifications/fr/AZ-802.md) · [Русский](certifications/ru/AZ-802.md) · [日本語](certifications/ja/AZ-802.md) · [简体中文](certifications/zh/AZ-802.md)
+
+Una ruta completa para estudiar Windows Server local, híbrido y en Azure: quince apartados, diez casos razonados, cinco investigaciones con entregables y un plan de veinte sesiones. Trabaja AD DS, DNS y tiempo, administración remota, Hyper-V, redes, almacenamiento, seguridad y diagnóstico. Los comandos de consulta indican sus requisitos; se comparan checkpoints, réplica y copias de seguridad, y se explican límites concretos de JEA, File Sync, SMB over QUIC y OSConfig.
+
+A full route for on-premises, hybrid, and Azure Windows Server: fifteen guide sections, ten reasoned cases, five evidence-based investigations, and a twenty-session study plan. The guide follows AZ-802's seven-area study guide checked on 2026-11-03, preserves feature/version boundaries, and separates predicted lab observations from actual execution. Start with the [cases](certifications/en/AZ-802-cases.md) or [workbook](certifications/en/AZ-802-workbook.md).
+
+```bash
+python tools/study.py demo --lang es --exam AZ-802
+python tools/study.py study --lang es --exam AZ-802 --limit 5
+python tools/quiz.py run --lang es --exam AZ-802 --count 2
+```
+
 ## Mini simulacro con corrección / Mini quiz with marking
 
 **[Practicar en español](es/19-mini-quiz.md) · [Read in English](en/19-mini-quiz.md) · [Preguntas en GitHub](es/20-quiz-cases.md)**
 
-32 escenarios originales para las dieciséis rutas, dos por ruta, en ocho idiomas: 256 variantes. Elige una respuesta y revisa su explicación, el motivo del error, una fuente de Microsoft Learn y la lectura relacionada. Incluye modos practice y exam, tiempo opcional, informes JSON locales y repaso de errores. Es un banco pequeño para practicar decisiones.
+34 escenarios originales para las diecisiete rutas, dos por ruta, en ocho idiomas: 272 variantes. Elige una respuesta y revisa su explicación, el motivo del error, una fuente de Microsoft Learn y la lectura relacionada. Incluye modos practice y exam, tiempo opcional, informes JSON locales y repaso de errores. Es un banco pequeño para practicar decisiones.
 
-32 original scenarios cover all sixteen certification routes, two per route, in eight languages: 256 variants. Practise with immediate explanations or defer marking until the end, save a local report, and revisit mistakes by topic. Two scenarios per route do not cover a complete exam or predict passing.
+34 original scenarios cover all seventeen certification routes, two per route, in eight languages: 272 variants. Practise with immediate explanations or defer marking until the end, save a local report, and revisit mistakes by topic. Two scenarios per route do not cover a complete exam or predict passing.
 
 ```bash
 python tools/quiz.py demo --lang es
 python tools/quiz.py run --lang es --exam AZ-104 --count 2
 python tools/quiz.py run --lang es --mode exam --count 8 --minutes 12
-python tools/quiz.py run --lang es --mode exam --count 32
+python tools/quiz.py run --lang es --mode exam --count 34
 ```
 
-Sin --count se eligen hasta ocho escenarios; --count 32 recorre el banco completo. / Omitting --count selects up to eight scenarios; --count 32 uses the complete bank.
+Sin --count se eligen hasta ocho escenarios; --count 34 recorre el banco completo. / Omitting --count selects up to eight scenarios; --count 34 uses the complete bank.
 
 [Manual / Manual](QUIZ.md) · [Fuentes de cada caso / Scenario sources](QUIZ-SOURCES.md). El temporizador se comprueba al recibir la entrada; pulsa Intro al vencer el plazo. / Time is checked after terminal input; press Enter when it expires.
 
 ## Ruta común ampliada / Expanded common route
 
 - [Doce unidades básicas en ocho idiomas / Twelve foundation units](STUDY-PARITY.md).
-- [80 unidades avanzadas por idioma / 80 advanced units per language](certifications/es/README.md).
+- [85 unidades avanzadas por idioma / 85 advanced units per language](certifications/es/README.md).
 - [Tres laboratorios nuevos / Three new labs](es/17-advanced-labs.md): recuperación de blobs, inspección de roles y simulación local de reintentos.
 
 Cada unidad avanzada incluye explicación, escenario y evidencia solicitada. Las notas anteriores se conservan; el núcleo nuevo tiene los mismos objetivos y entregables en los ocho idiomas. No se afirma traducción literal completa de cada párrafo anterior.
@@ -71,14 +85,14 @@ New topics: blob recovery, retries and idempotency, RBAC diagnosis, and Key Vaul
 
 | Idioma / Language | Apuntes / Notes | Certificaciones / Certifications |
 |---|---|---|
-| Español | [Español](es/README.md) | [16 rutas / 16 routes](certifications/es/README.md) |
-| English | [English](en/README.md) | [16 rutas / 16 routes](certifications/en/README.md) |
-| Italiano | [Italiano](it/README.md) | [16 rutas / 16 routes](certifications/it/README.md) |
-| Deutsch | [Deutsch](de/README.md) | [16 rutas / 16 routes](certifications/de/README.md) |
-| Français | [Français](fr/README.md) | [16 rutas / 16 routes](certifications/fr/README.md) |
-| Русский | [Русский](ru/README.md) | [16 rutas / 16 routes](certifications/ru/README.md) |
-| 日本語 | [日本語](ja/README.md) | [16 rutas / 16 routes](certifications/ja/README.md) |
-| 简体中文 | [简体中文](zh/README.md) | [16 rutas / 16 routes](certifications/zh/README.md) |
+| Español | [Español](es/README.md) | [17 rutas / 17 routes](certifications/es/README.md) |
+| English | [English](en/README.md) | [17 rutas / 17 routes](certifications/en/README.md) |
+| Italiano | [Italiano](it/README.md) | [17 rutas / 17 routes](certifications/it/README.md) |
+| Deutsch | [Deutsch](de/README.md) | [17 rutas / 17 routes](certifications/de/README.md) |
+| Français | [Français](fr/README.md) | [17 rutas / 17 routes](certifications/fr/README.md) |
+| Русский | [Русский](ru/README.md) | [17 rutas / 17 routes](certifications/ru/README.md) |
+| 日本語 | [日本語](ja/README.md) | [17 rutas / 17 routes](certifications/ja/README.md) |
+| 简体中文 | [简体中文](zh/README.md) | [17 rutas / 17 routes](certifications/zh/README.md) |
 
 Los capítulos anteriores y las notas complementarias de las cuatro rutas iniciales son más compactos en italiano, alemán, francés, ruso, japonés y chino simplificado. Las doce rutas añadidas después —datos, seguridad, redes, SQL, IA, escritorios, arquitectura de ciberseguridad y SAP— desarrollan los mismos temas, casos y entregables en los ocho idiomas. [Detalles de las ediciones](LOCALIZATION.md).
 
@@ -97,7 +111,7 @@ python tools/study.py demo --lang es --exam AI-103
 python tools/study.py study --lang es --exam DP-700 --limit 5
 ```
 
-[Las dieciséis rutas / Sixteen routes](certifications/es/README.md) · [Fuentes, fechas y requisitos / Sources, dates, requirements](CERTIFICATION-SOURCES.md)
+[Las diecisiete rutas / Seventeen routes](certifications/es/README.md) · [Fuentes, fechas y requisitos / Sources, dates, requirements](CERTIFICATION-SOURCES.md)
 
 ## Más rutas: IA, seguridad y escritorios / More routes
 
@@ -145,10 +159,11 @@ python tools/study.py study --lang es --exam AZ-700 --limit 5
 | DP-700 · Fabric Data Engineering | [Guía](certifications/es/DP-700.md) | [Guide](certifications/en/DP-700.md) |
 | SC-100 · Cybersecurity Architecture | [Guía](certifications/es/SC-100.md) | [Guide](certifications/en/SC-100.md) |
 | AZ-120 · SAP Workloads | [Guía](certifications/es/AZ-120.md) | [Guide](certifications/en/AZ-120.md) |
+| AZ-802 · Windows Server | [Guía](certifications/es/AZ-802.md) | [Guide](certifications/en/AZ-802.md) |
 
-Cada guía desarrolla conceptos, decisiones, diagnóstico, práctica y repaso. Hay 10 casos de certificación por examen y por idioma: 1280 variantes en los ocho idiomas, a partir de 160 escenarios originales. Las referencias se registran por versión: 27 y 30 de octubre, y 1 de noviembre de 2026; consulta las páginas oficiales antes de reservar un examen.
+Cada guía desarrolla conceptos, decisiones, diagnóstico, práctica y repaso. Hay 10 casos de certificación por examen y por idioma: 1360 variantes en los ocho idiomas, a partir de 170 escenarios originales. Las referencias se registran por versión: 27 y 30 de octubre, y 1 y 3 de noviembre de 2026; consulta las páginas oficiales antes de reservar un examen.
 
-Each guide develops concepts, decisions, troubleshooting, practice, and review. There are ten certification cases per exam and language: 1280 language variants from 160 original scenarios. References are versioned by review date: 27 and 30 October, and 1 November 2026; consult official pages before booking an exam.
+Each guide develops concepts, decisions, troubleshooting, practice, and review. There are ten certification cases per exam and language: 1360 language variants from 170 original scenarios. References are versioned by review date: 27 and 30 October, and 1 and 3 November 2026; consult official pages before booking an exam.
 
 ## Qué hay aquí / What's inside
 

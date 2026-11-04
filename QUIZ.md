@@ -1,8 +1,8 @@
 # Mini simulacro local / Offline mini quiz
 
-32 escenarios originales, dos por cada una de las dieciséis rutas, traducidos a ocho idiomas: 256 variantes. Corrección por opción elegida, explicación del error y lecturas para repasar. Python 3.9+ y biblioteca estándar; funciona sin cuenta de Azure ni conexión.
+34 escenarios originales, dos por cada una de las diecisiete rutas, traducidos a ocho idiomas: 272 variantes. Corrección por opción elegida, explicación del error y lecturas para repasar. Python 3.9+ y biblioteca estándar; funciona sin cuenta de Azure ni conexión.
 
-32 original scenarios, two per route across all sixteen routes, with questions, explanations, and interface in eight languages: 256 variants. This is a small practice bank, independent of Microsoft and separate from the 1280 open-response language variants used by the [self-rating trainer](TRAINER.md).
+34 original scenarios, two per route across all seventeen routes, with questions, explanations, and interface in eight languages: 272 variants. This is a small practice bank, independent of Microsoft and separate from the 1360 open-response language variants used by the [self-rating trainer](TRAINER.md).
 
 [Español](es/19-mini-quiz.md) · [English](en/19-mini-quiz.md) · [Italiano](it/19-mini-quiz.md) · [Deutsch](de/19-mini-quiz.md) · [Français](fr/19-mini-quiz.md) · [Русский](ru/19-mini-quiz.md) · [日本語](ja/19-mini-quiz.md) · [简体中文](zh/19-mini-quiz.md)
 
@@ -16,12 +16,12 @@ Rutas disponibles / Available routes: AZ-900, AZ-104, AZ-305, AZ-400, DP-900, SC
 python tools/quiz.py demo --lang es
 python tools/quiz.py run --lang es --exam AZ-104 --count 2
 python tools/quiz.py run --lang en --mode exam --count 8 --minutes 12
-python tools/quiz.py run --lang en --mode exam --count 32
+python tools/quiz.py run --lang en --mode exam --count 34
 ```
 
-A–D responde; S o Intro salta; Q termina. El orden de preguntas y opciones cambia. La selección reparte preguntas entre las rutas elegidas, sin repetir escenarios. Repite --exam para combinar rutas y usa --seed 42 para reproducir una selección y su orden. Cada ruta contiene dos escenarios: --count 4 con una sola ruta se rechaza; sin --count se usan hasta ocho escenarios disponibles. Usa --count 32 sin filtrar rutas para recorrer todo el banco.
+A–D responde; S o Intro salta; Q termina. El orden de preguntas y opciones cambia. La selección reparte preguntas entre las rutas elegidas, sin repetir escenarios. Repite --exam para combinar rutas y usa --seed 42 para reproducir una selección y su orden. Cada ruta contiene dos escenarios: --count 4 con una sola ruta se rechaza; sin --count se usan hasta ocho escenarios disponibles. Usa --count 34 sin filtrar rutas para recorrer todo el banco.
 
-A–D answers; S or Enter skips; Q finishes. Selection balances the chosen routes and never repeats a scenario within a session. A fixed seed reproduces both question and option order. With two questions in one route, an explicit count of four is rejected. Omitting --count selects up to eight available scenarios. Use --count 32 without an exam filter to practise the complete bank.
+A–D answers; S or Enter skips; Q finishes. Selection balances the chosen routes and never repeats a scenario within a session. A fixed seed reproduces both question and option order. With two questions in one route, an explicit count of four is rejected. Omitting --count selects up to eight available scenarios. Use --count 34 without an exam filter to practise the complete bank.
 
 | Modo / Mode | Comportamiento / Behaviour |
 |---|---|
@@ -29,7 +29,7 @@ A–D answers; S or Enter skips; Q finishes. Selection balances the chosen route
 | exam | Explicaciones al terminar / Explanations after the session |
 | review | Repasar errores y preguntas sin responder / Revisit incorrect and unanswered questions |
 | demo | Ejemplo sin guardar / Read-only example |
-| doctor | Comprobar las 256 variantes y sus referencias / Validate all 256 variants and their references |
+| doctor | Comprobar las 272 variantes y sus referencias / Validate all 272 variants and their references |
 
 El resultado muestra aciertos sobre todas las preguntas seleccionadas, errores y preguntas sin responder. Salir antes no reduce el denominador. No hay nota de aprobado ni predicción sobre una certificación: dos preguntas por ruta cubren una parte pequeña del temario.
 
@@ -37,9 +37,9 @@ Results show correct answers out of all selected questions, incorrect answers, a
 
 ## Lecturas relacionadas / Related reading
 
-Los 24 escenarios añadidos enlazan a guías de certificación del mismo idioma en `certifications/<idioma>/<examen>.md`, por ejemplo [AI-103 en español](certifications/es/AI-103.md). Los ocho escenarios iniciales conservan sus enlaces a capítulos. Los informes anteriores a la ampliación siguen siendo compatibles: review usa las preguntas y referencias guardadas en cada informe.
+Los 26 escenarios añadidos enlazan a guías de certificación del mismo idioma en `certifications/<idioma>/<examen>.md`, por ejemplo [AI-103 en español](certifications/es/AI-103.md). Los ocho escenarios iniciales conservan sus enlaces a capítulos. Los informes anteriores a la ampliación siguen siendo compatibles: review usa las preguntas y referencias guardadas en cada informe.
 
-The 24 added scenarios link to certification guides in the same language at `certifications/<language>/<exam>.md`, such as [AI-103 in English](certifications/en/AI-103.md). The original eight scenarios keep their chapter links. Reports saved before the expansion remain compatible: review uses the question and reference snapshots stored in each report.
+The 26 added scenarios link to certification guides in the same language at `certifications/<language>/<exam>.md`, such as [AI-103 in English](certifications/en/AI-103.md). The original eight scenarios keep their chapter links. Reports saved before the expansion remain compatible: review uses the question and reference snapshots stored in each report.
 
 ## Temporizador / Timer
 

@@ -11,9 +11,9 @@ python tools/study.py demo --lang es --exam AZ-104
 python tools/study.py study --lang es --exam AZ-104 --limit 5
 ```
 
-Supported routes: AZ-900, AZ-104, AZ-305, AZ-400, DP-900, SC-900, AZ-700, DP-300, AI-901, SC-200, SC-300, AZ-140, AI-103, DP-700, SC-100, and AZ-120. There are 160 cases per language, ten per route.
+Supported routes: AZ-900, AZ-104, AZ-305, AZ-400, DP-900, SC-900, AZ-700, DP-300, AI-901, SC-200, SC-300, AZ-140, AI-103, DP-700, SC-100, AZ-120, and AZ-802. There are 170 cases per language, ten per route.
 
-Rutas disponibles: las dieciséis del índice de certificaciones, con 160 casos por idioma y diez por ruta.
+Rutas disponibles: las diecisiete del índice de certificaciones, con 170 casos por idioma y diez por ruta.
 
 Choose es, en, it, de, fr, ru, ja, or zh. Repeat --exam to combine certifications. Question and answer text come directly from the Markdown case files. Press Enter to reveal, then rate 0–3; q leaves. Ratings are saved after each completed card. This is manual self-assessment, not automated answer grading.
 
@@ -28,7 +28,7 @@ Selecciona idioma y combina exámenes repitiendo --exam. Las preguntas proceden 
 | plan | Suggested sessions with --days and --minutes; not a prediction of future due dates |
 | export | Anki TSV with --output; existing files are never overwritten |
 | demo | One example without saving progress |
-| doctor | Validate 1280 source-case variants across eight languages |
+| doctor | Validate 1360 source-case variants across eight languages |
 
 Consolidated means two consecutive ratings of at least 2. It is not a pass prediction. Weak mode can include a case with a past lapse even after a later successful rating.
 
@@ -73,6 +73,6 @@ Si no están disponibles los datos horarios del sistema, usa --timezone UTC. No 
 
 ## Preguntas con corrección / Questions with marking
 
-El [mini simulacro](QUIZ.md) añade 32 escenarios originales de opción múltiple para las dieciséis rutas, dos por ruta, traducidos a ocho idiomas: 256 variantes. Incluye explicación por distractor, informe local y repaso de errores. Es una herramienta separada: este entrenador sigue usando autoevaluación para sus casos abiertos.
+El [mini simulacro](QUIZ.md) añade 34 escenarios originales de opción múltiple para las diecisiete rutas, dos por ruta, traducidos a ocho idiomas: 272 variantes. Incluye explicación por distractor, informe local y repaso de errores. Es una herramienta separada: este entrenador sigue usando autoevaluación para sus casos abiertos.
 
-The [mini quiz](QUIZ.md) adds 32 original multiple-choice scenarios across all sixteen routes, two per route, translated into eight languages: 256 variants. It includes distractor reasoning, local reports, and mistake review. Its results are separate from this trainer's open-case self-ratings.
+The [mini quiz](QUIZ.md) adds 34 original multiple-choice scenarios across all seventeen routes, two per route, translated into eight languages: 272 variants. It includes distractor reasoning, local reports, and mistake review. Its results are separate from this trainer's open-case self-ratings.

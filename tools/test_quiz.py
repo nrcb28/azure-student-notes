@@ -45,8 +45,8 @@ class QuizTests(unittest.TestCase):
 
     def test_all_eight_languages_have_matching_complete_scenarios_and_ui(self):
         self.assertEqual(len(self.bank), 8)
-        self.assertEqual(len(self.full_bank), 32)
-        self.assertEqual({q['id'] for q in self.full_bank}, {f'q{number:02d}' for number in range(1, 33)})
+        self.assertEqual(len(self.full_bank), 34)
+        self.assertEqual({q['id'] for q in self.full_bank}, {f'q{number:02d}' for number in range(1, 35)})
         for lang in quiz.LANGUAGES:
             texts = quiz.text_for(lang)
             self.assertEqual(set(texts), set(self.texts))
@@ -54,7 +54,7 @@ class QuizTests(unittest.TestCase):
             self.assertEqual(set(texts['topics']), {q['topic'] for q in self.full_bank})
             for card in self.full_bank:
                 self.assertEqual(card['variants'][lang]['correct'], card['variants']['en']['correct'])
-        self.assertEqual(sum(len(q['variants']) for q in self.full_bank), 256)
+        self.assertEqual(sum(len(q['variants']) for q in self.full_bank), 272)
 
     def test_invalid_ui_templates_are_rejected_before_questions_or_input(self):
         bundle = json.loads((quiz.ROOT/'tools/quiz_ui.json').read_text(encoding='utf-8'))
@@ -190,8 +190,8 @@ class QuizTests(unittest.TestCase):
         for lang in quiz.LANGUAGES:
             with self.subTest(language=lang):
                 rendered = quiz_docs.render(self.full_bank, lang)
-                self.assertIn('32', rendered.splitlines()[0])
-                self.assertEqual(rendered.count('<a id="quiz-'), 32)
+                self.assertIn('34', rendered.splitlines()[0])
+                self.assertEqual(rendered.count('<a id="quiz-'), 34)
                 self.assertIn(f'](../certifications/{lang}/DP-900.md)', rendered)
                 self.assertIn('](03-compute.md)', rendered)
                 fixture = quiz_docs.render(self.bank, lang)
@@ -208,15 +208,15 @@ class QuizTests(unittest.TestCase):
         self.assertNotEqual(self.questions, quiz.select_questions(self.bank, 'en', self.exams, 8, 90))
 
     def test_full_bank_sampling_is_balanced_and_includes_every_route(self):
-        for count in range(1, 33):
+        for count in range(1, 35):
             chosen = quiz.select_questions(self.full_bank, 'en', quiz.EXAMS, count, 19)
             self.assertEqual(chosen, quiz.select_questions(self.full_bank, 'en', quiz.EXAMS, count, 19))
             self.assertEqual(len({q['id'] for q in chosen}), count)
             counts = [sum(q['exam'] == exam for q in chosen) for exam in quiz.EXAMS]
             self.assertLessEqual(max(counts)-min(counts), 1)
-        self.assertEqual(counts, [2]*16)
+        self.assertEqual(counts, [2]*17)
 
-    def test_all_sixteen_routes_have_two_distinct_questions_in_every_language(self):
+    def test_all_seventeen_routes_have_two_distinct_questions_in_every_language(self):
         for lang in quiz.LANGUAGES:
             for exam in quiz.EXAMS:
                 with self.subTest(language=lang, exam=exam):
@@ -238,7 +238,7 @@ class QuizTests(unittest.TestCase):
                 self.assertEqual(len({q['id'] for q in report['questions']}), 2)
 
     def test_cli_keeps_eight_question_default_and_accepts_explicit_full_bank(self):
-        for options, count in (([], 8), (['--count', '32'], 32)):
+        for options, count in (([], 8), (['--count', '34'], 34)):
             with self.subTest(count=count), patch('builtins.input', return_value='q'), \
                     contextlib.redirect_stdout(io.StringIO()):
                 destination = self.path.with_name(f'count-{count}.json')

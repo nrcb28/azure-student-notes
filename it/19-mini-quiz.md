@@ -2,7 +2,7 @@
 
 [←](README.md) · [CLI](../QUIZ.md) · [Leggere le domande su GitHub](20-quiz-cases.md)
 
-Trentadue scenari originali, due per ciascuno dei [sedici percorsi](../certifications/it/README.md), disponibili in otto lingue: 256 varianti. Questa mini simulazione serve a esercitarsi su decisioni concrete di Azure senza account né connessione. Gli scenari sono originali; le spiegazioni rimandano a Microsoft Learn e le fonti restano in inglese.
+Trentaquattro scenari originali, due per ciascuno dei [diciassette percorsi](../certifications/it/README.md), disponibili in otto lingue: 272 varianti. Questa mini simulazione serve a esercitarsi su decisioni concrete di Azure senza account né connessione. Gli scenari sono originali; le spiegazioni rimandano a Microsoft Learn e le fonti restano in inglese.
 
 ## Inizia
 
@@ -13,13 +13,13 @@ python tools/quiz.py demo --lang it
 python tools/quiz.py run --lang it --exam AZ-104 --count 2
 ```
 
-Senza --count vengono scelti fino a otto scenari disponibili. Usa --count 32 senza filtro per esame per esercitarti sull’intera banca; ogni singolo percorso contiene due scenari.
+Senza --count vengono scelti fino a otto scenari disponibili. Usa --count 34 senza filtro per esame per esercitarti sull’intera banca; ogni singolo percorso contiene due scenari.
 
 ```bash
-python tools/quiz.py run --lang it --mode exam --count 32
+python tools/quiz.py run --lang it --mode exam --count 34
 ```
 
-I 24 scenari aggiunti rimandano alle guide di certificazione nella stessa lingua, come [AI-103](../certifications/it/AI-103.md). Gli otto iniziali mantengono i collegamenti ai capitoli. I rapporti salvati prima dell’ampliamento restano compatibili: review usa le copie di domande e riferimenti conservate in ogni rapporto.
+I 26 scenari aggiunti rimandano alle guide di certificazione nella stessa lingua, come [AI-103](../certifications/it/AI-103.md). Gli otto iniziali mantengono i collegamenti ai capitoli. I rapporti salvati prima dell’ampliamento restano compatibili: review usa le copie di domande e riferimenti conservate in ogni rapporto.
 
 ## Pratica con correzione
 

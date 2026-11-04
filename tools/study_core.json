@@ -135,6 +135,13 @@
       "az-120-unit-3",
       "az-120-unit-4",
       "az-120-unit-5"
+    ],
+    "AZ-802": [
+      "az-802-unit-1",
+      "az-802-unit-2",
+      "az-802-unit-3",
+      "az-802-unit-4",
+      "az-802-unit-5"
     ]
   },
   "labs": [

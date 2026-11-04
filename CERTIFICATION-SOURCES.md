@@ -122,6 +122,50 @@ AI-103 estudia desarrollo con Foundry; DP-700 es una ruta de Microsoft Fabric, q
 
 AI-103 covers Foundry development; DP-700 covers Microsoft Fabric rather than treating it as an Azure Synapse deployment. Recheck product and exam availability before hands-on practice or booking.
 
+## AZ-802 · Windows Server · 2026-11-03
+
+Se abrieron la [guía específica de AZ-802](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-802), la [página del examen](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-802/) y la [credencial Windows Server Administrator Associate](https://learn.microsoft.com/en-us/credentials/certifications/windows-server-hybrid-administrator/). El nombre del examen consultado es Administering Windows Server. La página del examen enumera inglés y no indica fecha de retirada en esta consulta; las ocho traducciones del repositorio no establecen disponibilidad del examen en otros idiomas.
+
+The specific AZ-802 study guide, exam page and associated credential were opened on 2026-11-03. The course follows the exam guide's seven areas. Its live Skills measured heading is undated; the footer's 2026-10-19 update is page metadata, not an announced objective-effective date. The credential page retains a broader ten-area overview and 2026-01-21 metadata; those are not substituted for AZ-802's current list. Older AZ-800/AZ-801 material is background rather than a confirmed equivalent syllabus.
+
+| Área de AZ-802 / AZ-802 area | Peso publicado / Published weight |
+|---|---|
+| AD DS | 20–25% |
+| Administración híbrida / Hybrid management | 10–15% |
+| Máquinas virtuales / Virtual machines | 10–15% |
+| Redes locales e híbridas / On-premises and hybrid networking | 10–15% |
+| Almacenamiento y archivos / Storage and file services | 15–20% |
+| Seguridad de Windows Server / Windows Server security | 10–15% |
+| Supervisión y diagnóstico / Monitoring and troubleshooting | 15–20% |
+
+### Referencias técnicas abiertas / Opened technical references
+
+| Referencia / Reference | Concepto contrastado / Checked concept |
+|---|---|
+| [Diagnose Active Directory replication failures](https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/diagnose-replication-failures) | Diagnóstico por conectividad, DNS, autenticación, tiempo y topología / Connectivity, DNS, authentication, time and topology diagnosis |
+| [How the Windows Time Service works](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/how-the-windows-time-service-works) | Jerarquía y calidad del tiempo de AD / AD time hierarchy and reference quality |
+| [Active Directory security groups](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-groups) | Política de caché RODC y precedencia de denegación / RODC caching policy and deny precedence |
+| [Making the second hop in PowerShell Remoting](https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/ps-remoting-second-hop) | Exposición de CredSSP y límites del segundo salto WinRM / CredSSP exposure and WinRM second-hop limits |
+| [JEA Session Configurations](https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/jea/session-configurations) | Identidad de ejecución y grupos predeterminados / Execution identity and default groups |
+| [Security overview for Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/security-overview) | Relación de administración, identidad y privilegios de extensiones / Management relationship, identity and extension privileges |
+| [Using checkpoints to revert virtual machines to a previous state](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints) | Producción, fallback y dependencia de la cadena de discos / Production, fallback and disk-chain dependence |
+| [Overview of Azure Files authorization and access control](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-authorization-overview) | Separación entre permisos del recurso compartido y ACL / Share-level and filesystem ACL separation |
+| [Disaster recovery best practices with Azure File Sync](https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-disaster-recovery-best-practices) | Recuperación compatible y límites del sistema operativo registrado / Supported recovery and registered-server OS restrictions |
+| [SMB over QUIC](https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-over-quic) | Ediciones, clientes, UDP 443, certificados y configuración / Editions, clients, UDP 443, certificates and configuration |
+| [Key concepts in Windows LAPS](https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-concepts-overview) | Rotación, respaldo y recuperación autorizada separados / Separate rotation, backup and authorized recovery |
+| [Deploy Windows Server 2025 security baselines locally with OSConfig](https://learn.microsoft.com/en-us/windows-server/security/osconfig/osconfig-how-to-configure-security-baselines) | Windows Server 2025, reinicio y límites de retirada / Windows Server 2025, restart and removal limits |
+| [Troubleshooting guidance for the Azure Monitor agent on Windows Arc-enabled server](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-troubleshoot-windows-arc) | Agente, DCR, asociación, origen y destino / Agent, DCR, association, source and destination |
+
+La revisión también comprobó las referencias enlazadas en la guía para gMSA, Group Policy, DHCP, réplica Hyper-V, Storage Replica y recuperación del bosque. Se corrigieron tres rutas de referencia que no correspondían a páginas vigentes. JEA distingue los grupos predeterminados de un servidor miembro y un controlador; OSConfig conserva el requisito Windows Server 2025 y los reinicios; File Sync distingue la recuperación de datos de las reversiones de sistema operativo no admitidas. Las ediciones de SMB over QUIC se identifican expresamente.
+
+The material preserves concrete compatibility and recovery boundaries. A checkpoint chain, replica, clustered VM and independent tested backup address different failures. File Sync is not treated as historical backup, Arc does not create AD trust, and a healthy agent heartbeat does not prove collection of the intended event source. Commands inspect state and require the named Windows roles/modules and permissions. No Windows, AD DS, Hyper-V, Azure Arc or cloud lab execution is claimed.
+
+Revisión final del 4 de noviembre: la referencia de [Get-VMSnapshot](https://learn.microsoft.com/en-us/powershell/module/hyper-v/get-vmsnapshot) distingue la clasificación del cmdlet de la configuración de la VM. Los apuntes explican expresamente que esos datos no bastan para demostrar que se completó el procesamiento de consistencia del invitado. La guía específica de AZ-802 conserva las mismas siete áreas en esta nueva consulta.
+
+Final review on 2026-11-04 retains the same seven-area AZ-802 scope. Checkpoint inventory and configured policy are not treated as evidence of successful guest processing; creation results and the relevant consistency evidence require their own inspection.
+
+[Guía española](certifications/es/AZ-802.md) · [English guide](certifications/en/AZ-802.md) · [Casos / Cases](certifications/es/AZ-802-cases.md) · [Cuaderno / Workbook](certifications/en/AZ-802-workbook.md)
+
 ## Límites de esta revisión / Review limits
 
 La revisión de [retiradas de credenciales](https://learn.microsoft.com/en-us/credentials/support/credential-retirement) del 30 de octubre no mostraba las cuatro certificaciones de la ampliación de datos, seguridad, redes y SQL como retiradas ni con retirada programada. Es una comprobación con fecha, no una promesa de disponibilidad futura. La certificación es una credencial; el código identifica su examen y no describe por sí solo todos sus requisitos.

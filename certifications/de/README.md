@@ -1,10 +1,10 @@
-# Zertifizierungen: sechzehn Lernwege
+# Zertifizierungen: siebzehn Lernwege
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [Allgemeine Notizen](../../de/README.md) · [Quellenverzeichnis](../../CERTIFICATION-SOURCES.md)
 
-Sechzehn Prüfungswege mit jeweils einem Leitfaden für begründete Entscheidungen, zehn eigenen Fällen mit Lösungen und einem Arbeitsbuch mit fünf Einheiten und überprüfbaren Ergebnissen. Wähle zuerst das Gebiet, das du verstehen möchtest.
+Siebzehn Prüfungswege mit jeweils einem Leitfaden für begründete Entscheidungen, zehn eigenen Fällen mit Lösungen und einem Arbeitsbuch mit fünf Einheiten und überprüfbaren Ergebnissen. Wähle zuerst das Gebiet, das du verstehen möchtest.
 
 | Prüfung | Schwerpunkt | Leitfaden | Fälle | Arbeitsbuch |
 |---|---|---|---|---|
@@ -24,6 +24,7 @@ Sechzehn Prüfungswege mit jeweils einem Leitfaden für begründete Entscheidung
 | DP-700 | Data Engineering mit Fabric | [Lesen](DP-700.md) | [10 Fälle](DP-700-cases.md) | [5 Einheiten](DP-700-workbook.md) |
 | SC-100 | Cybersicherheitsarchitektur | [Lesen](SC-100.md) | [10 Fälle](SC-100-cases.md) | [5 Einheiten](SC-100-workbook.md) |
 | AZ-120 | SAP-Workloads in Azure | [Lesen](AZ-120.md) | [10 Fälle](AZ-120-cases.md) | [5 Einheiten](AZ-120-workbook.md) |
+| AZ-802 | Windows-Server-Administration | [Lesen](AZ-802.md) | [10 Fälle](AZ-802-cases.md) | [5 Einheiten](AZ-802-workbook.md) |
 
 ## Einstieg wählen
 
@@ -31,14 +32,14 @@ AZ-900 gibt einen allgemeinen Überblick. DP-900 erklärt Daten und Workloads vo
 
 ## Was neu hinzugekommen ist
 
-DP-900, SC-900, AZ-700 und DP-300 enthalten in allen acht Sprachen entsprechende Erklärungen, Fälle und Abgaben. Ältere ergänzende Notizen anderer Wege bleiben unterschiedlich lang. Es gibt 160 Szenarien pro Sprache und 1280 Sprachvarianten insgesamt, keine echten Prüfungsfragen.
+DP-900, SC-900, AZ-700 und DP-300 enthalten in allen acht Sprachen entsprechende Erklärungen, Fälle und Abgaben. Ältere ergänzende Notizen anderer Wege bleiben unterschiedlich lang. Es gibt 170 Szenarien pro Sprache und 1360 Sprachvarianten insgesamt, keine echten Prüfungsfragen.
 
 ## Mit dem Trainer wiederholen
 
-Der Trainer zur Selbsteinschätzung unterstützt alle sechzehn Wege und den Export nach Anki. Vergleiche deine Erklärung mit der Lösung und bewerte dein Erinnern. Das Multiple-Choice-Miniquiz enthält 32 eigens verfasste Szenarien zu allen sechzehn Wegen, zwei pro Weg, übersetzt in acht Sprachen: 256 Sprachvarianten.
+Der Trainer zur Selbsteinschätzung unterstützt alle siebzehn Wege und den Export nach Anki. Vergleiche deine Erklärung mit der Lösung und bewerte dein Erinnern. Das Multiple-Choice-Miniquiz enthält 34 eigens verfasste Szenarien zu allen siebzehn Wegen, zwei pro Weg, übersetzt in acht Sprachen: 272 Sprachvarianten.
 
 ```bash
-python tools/study.py demo --lang de --exam AI-103
+python tools/study.py demo --lang de --exam AZ-802
 python tools/study.py study --lang de --exam DP-700 --limit 5
 python tools/study.py export --lang de --exam SC-100 --output exports/de-sc100.tsv
 ```
@@ -56,3 +57,7 @@ AI-901, SC-200, SC-300 und AZ-140 ergänzen Leitfäden, zehn Fälle und fünf Ei
 ## Angewandte KI, Data Engineering, Sicherheitsarchitektur und SAP
 
 AI-103, DP-700, SC-100 und AZ-120 ergänzen Leitfäden, zehn Fälle und fünf Einheiten je Weg in allen acht Sprachen. Themen sind Foundry-Entwicklung, Fabric-Datenverarbeitung, Sicherheitsfähigkeiten und SAP-Infrastruktur. Quellenprüfung am 1. November 2026; Zertifikatsvoraussetzungen und Seitenaktualisierungen sind getrennte Angaben.
+
+## Windows Server lokal und in hybriden Umgebungen
+
+AZ-802 behandelt die Administration von Windows Server in lokalen und hybriden Umgebungen in sieben Bereichen: AD DS, hybride Verwaltung, virtuelle Maschinen, Netzwerke, Speicher und Dateidienste, Sicherheit sowie Überwachung und Fehlerbehebung. Der [Leitfaden](AZ-802.md), die [zehn Fälle](AZ-802-cases.md) und das [Arbeitsbuch mit fünf Einheiten](AZ-802-workbook.md) verbinden Identitäten, Berechtigungen, Wiederherstellung und Nachweise aus einem isolierten Labor. Die offiziellen Quellen wurden am **2026-11-03** geprüft; der [Prüfungsleitfaden](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-802) hat eine undatierte Überschrift „Skills measured“ und das Seitenaktualisierungsdatum **2026-10-19**, das keinen Gültigkeitsbeginn der Prüfungsziele angibt.

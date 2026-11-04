@@ -2,7 +2,7 @@
 
 [←](README.md) · [CLI](../QUIZ.md) · [Fragen auf GitHub lesen](20-quiz-cases.md)
 
-32 eigene Szenarien helfen dir, Azure-Entscheidungen zu begründen: je zwei für alle [sechzehn Lernwege](../certifications/de/README.md). Fragen, Antworten und Erläuterungen gibt es in acht Sprachen, insgesamt 256 Sprachvarianten. Das Werkzeug läuft lokal mit Python und benötigt weder ein Azure-Konto noch zusätzliche Pakete.
+34 eigene Szenarien helfen dir, Azure-Entscheidungen zu begründen: je zwei für alle [siebzehn Lernwege](../certifications/de/README.md). Fragen, Antworten und Erläuterungen gibt es in acht Sprachen, insgesamt 272 Sprachvarianten. Das Werkzeug läuft lokal mit Python und benötigt weder ein Azure-Konto noch zusätzliche Pakete.
 
 ## Start
 
@@ -13,13 +13,13 @@ python tools/quiz.py demo --lang de
 python tools/quiz.py run --lang de --exam AZ-104 --count 2
 ```
 
-Ohne --count werden bis zu acht verfügbare Szenarien ausgewählt. Mit --count 32 ohne Prüfungsfilter übst du den gesamten Fragenbestand; jeder einzelne Lernweg enthält zwei Szenarien.
+Ohne --count werden bis zu acht verfügbare Szenarien ausgewählt. Mit --count 34 ohne Prüfungsfilter übst du den gesamten Fragenbestand; jeder einzelne Lernweg enthält zwei Szenarien.
 
 ```bash
-python tools/quiz.py run --lang de --mode exam --count 32
+python tools/quiz.py run --lang de --mode exam --count 34
 ```
 
-Die 24 ergänzten Szenarien verweisen auf Zertifizierungsleitfäden in derselben Sprache, etwa [AI-103](../certifications/de/AI-103.md). Die ursprünglichen acht behalten ihre Kapitelverweise. Vor der Erweiterung gespeicherte Berichte bleiben kompatibel: review verwendet die darin gespeicherten Kopien der Fragen und Quellenverweise.
+Die 26 ergänzten Szenarien verweisen auf Zertifizierungsleitfäden in derselben Sprache, etwa [AI-103](../certifications/de/AI-103.md). Die ursprünglichen acht behalten ihre Kapitelverweise. Vor der Erweiterung gespeicherte Berichte bleiben kompatibel: review verwendet die darin gespeicherten Kopien der Fragen und Quellenverweise.
 
 ## Üben mit Erklärung
 

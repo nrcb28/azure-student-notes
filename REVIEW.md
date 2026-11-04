@@ -40,3 +40,13 @@ El mini simulacro pasa de ocho a 32 escenarios originales: dos por cada una de l
 The quiz now covers all sixteen routes with two original scenarios each. New reference validation supports certification guides while preserving old chapter references and archived reports. Eleven additional regressions bring the suite to 109 passing tests. The source review replaced twelve broad or mismatched citations, and explicitly bounds application-owned policies and scenario reasoning.
 
 La verificación está automatizada en [GitHub Actions](.github/workflows/verify.yml) para Python 3.9 y 3.12. El registro distingue los resultados locales de cada ejecución alojada. Dos preguntas por ruta orientan el repaso; no constituyen un temario completo ni predicen el aprobado.
+
+## AZ-802: administración y diagnóstico de Windows Server · 2026-11-04
+
+Se añadió una ruta completa en ocho idiomas: quince apartados de explicación, diez casos razonados y cinco investigaciones con evidencias. El material parte de un laboratorio universitario inventado y pregunta qué capa falla, qué observación distingue las hipótesis y cómo conservar el acceso o los datos. Incluye un plan de veinte sesiones, requisitos de los comandos y una comparación entre checkpoints, réplica, clúster y copias de seguridad.
+
+The course follows AZ-802's seven-area guide rather than substituting older AZ-800/AZ-801 objectives or credential-page metadata. Reviews clarified JEA defaults on domain controllers, WinRM second-hop limits, supported File Sync recovery, Windows Server 2025 OSConfig restarts/removal, QUIC editions and certificates, and source-to-workspace monitoring. SnapshotType inventory is explicitly separated from proof of production consistency.
+
+AZ-802 está integrado en el entrenador, Anki y el mini simulacro. El total pasa a diecisiete rutas, 170 casos abiertos por idioma y 34 preguntas de opción múltiple. Las 110 pruebas locales pasan; un trabajo independiente de Windows analiza la sintaxis de los 72 bloques PowerShell sin ejecutarlos. El registro de validación distingue esas comprobaciones de una práctica real en Windows o Azure.
+
+[Guía de AZ-802](certifications/es/AZ-802.md) · [Casos](certifications/es/AZ-802-cases.md) · [Cuaderno](certifications/es/AZ-802-workbook.md)

@@ -2,10 +2,10 @@
 
 [←](README.md) · [Anki](../flashcards/fr.tsv)
 
-Travaille les 160 cas de ta langue, dix par certification. Python 3.9 ou supérieur et sa bibliothèque standard suffisent. Aucun compte cloud, paquet externe ou connexion pendant l'utilisation.
+Travaille les 170 cas de ta langue, dix par certification. Python 3.9 ou supérieur et sa bibliothèque standard suffisent. Aucun compte cloud, paquet externe ou connexion pendant l'utilisation.
 
 ```bash
-python tools/study.py demo --lang fr --exam AZ-104
+python tools/study.py demo --lang fr --exam AZ-802
 python tools/study.py study --lang fr --exam AZ-104 --limit 5
 ```
 

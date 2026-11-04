@@ -1,4 +1,4 @@
-# 32 Szenarien zum Üben
+# 34 Szenarien zum Üben
 
 [←](19-mini-quiz.md) · [CLI](../QUIZ.md)
 
@@ -833,5 +833,57 @@ Sobald das Ziel neue Schreibzugriffe annimmt, wird der Rollback neben einer Infr
 - **D.** Wenn beide Landschaften Schreibzugriffe annehmen, entstehen abweichende Transaktionsverläufe. Das erschwert den Abgleich und verletzt die nötige Kontrolle eines maßgeblichen Schreibsystems.
 
 [Quelle](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/execute-migration) · [Zum Nachlesen](../certifications/de/AZ-120.md)
+
+</details>
+
+<a id="quiz-q33"></a>
+
+## AZ-802 · AD-Dienstsuche
+
+Nach einer Änderung am Unterrichtsnetz kann ein Windows-Domänenclient öffentliche Websites auflösen, seinen Domänencontroller aber nicht finden. Er verwendet einen öffentlichen DNS-Resolver. Der vorgesehene AD-DNS-Server ist erreichbar und hat gesunde SRV-Einträge. Die Uhr des Clients stimmt. Welche Reaktion passt am besten zu diesen Nachweisen?
+
+- **A.** Alle Studierendenkennwörter zurücksetzen, bevor der Resolverpfad untersucht wird.
+- **B.** Den genehmigten AD-fähigen DNS-Pfad wiederherstellen und danach SRV-Dienstsuche, Controllererreichbarkeit und betroffene Anmeldung prüfen.
+- **C.** Zeitbezogene Authentifizierungsprüfungen deaktivieren und denselben ausschließlich öffentlichen Resolverpfad beibehalten.
+- **D.** Dem Studenten die Mitgliedschaft in „Domänen-Admins“ geben und die Controllersuche unverändert lassen.
+
+<details>
+<summary>Warum diese Antwort passt</summary>
+
+**B. Den genehmigten AD-fähigen DNS-Pfad wiederherstellen und danach SRV-Dienstsuche, Controllererreichbarkeit und betroffene Anmeldung prüfen.**
+
+Öffentliche Websites aufzulösen belegt nicht, dass private AD-Dienste gefunden werden. Der genannte Resolverpfad ist die erkannte Abweichung. Gesunde AD-Einträge und korrekte Uhrzeit grenzen diesen konkreten Fall ein. Stelle die vorgesehene DNS-Konfiguration über eine genehmigte Änderung wieder her und prüfe Dienstsuche, Erreichbarkeit und Anmeldung getrennt. Scheitert die Authentifizierung weiterhin, untersuche ihre genauen Nachweise, statt anzunehmen, dass jeder echte Anmeldevorfall dieselbe Ursache hat.
+
+- **A.** Kennwörter zu ändern schafft den fehlenden AD-Dienstsuchpfad nicht. Umfassende Rücksetzungen führen unbeteiligte Änderungen ein, bevor die beobachtete DNS-Abweichung behandelt wird.
+- **C.** Das Szenario stellt bereits eine korrekte Uhrzeit fest. Schwächere Authentifizierungsprüfungen bringen den konfigurierten öffentlichen Resolver nicht dazu, private Domänendienste zu finden.
+- **D.** Umfassendere Verzeichnisprivilegien reparieren die Controllersuche nicht. Sie würden unverhältnismäßige Befugnisse gewähren, ohne das erkannte DNS-Konfigurationsproblem des Clients zu beheben.
+
+[Quelle](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created) · [Zum Nachlesen](../certifications/de/AZ-802.md)
+
+</details>
+
+<a id="quiz-q34"></a>
+
+## AZ-802 · Hyper-V-Wiederherstellungsgrenzen
+
+Ein Hyper-V-Labor verlangt gastbezogene Produktionsprüfpunkte ohne Rückfall auf Standard sowie eine geschützte Wiederherstellungskopie, die den Verlust des VM-Speichers übersteht. Mit der Einstellung Production ist ein Standardprüfpunkt auf demselben Speicher entstanden. Welcher Plan erfüllt beide verlangten Schutzgrenzen?
+
+- **A.** Den Standardprüfpunkt akzeptieren, weil die Auswahl von Production beweist, dass die Konsistenzverarbeitung im Gast erfolgreich war.
+- **B.** Nur Hyper-V Replica aktivieren und annehmen, dass es alle benötigten unabhängigen historischen Wiederherstellungspunkte liefert.
+- **C.** AVHDX-Dateien manuell löschen und den Prüfpunkt auf demselben Speicher als geschützte Wiederherstellungskopie behalten.
+- **D.** ProductionOnly prüfen und die Voraussetzungen der Gastkonsistenz reparieren; getrennt eine geschützte Sicherung mit validiertem Wiederherstellungsverfahren vorhalten.
+
+<details>
+<summary>Warum diese Antwort passt</summary>
+
+**D. ProductionOnly prüfen und die Voraussetzungen der Gastkonsistenz reparieren; getrennt eine geschützte Sicherung mit validiertem Wiederherstellungsverfahren vorhalten.**
+
+Der Modus Production kann einen Rückfall erlauben. Der tatsächlich erstellte Standardprüfpunkt widerspricht deshalb dem verlangten Konsistenzverhalten. ProductionOnly kann diesen Rückfall verweigern, während die Gastvoraussetzungen untersucht werden. Selbst ein gültiger Produktionsprüfpunkt unterscheidet sich von einer unabhängigen aufbewahrten Sicherung: Seine Speicherkette kann mit der VM verloren gehen. Eine separate geschützte Kopie und eine unterstützte Wiederherstellungsprüfung erfüllen die zweite Anforderung. Nur den Prüfpunktmodus zu ändern stellt diese Grenze nicht her.
+
+- **A.** Die gewünschte Einstellung ist ein schwächerer Beleg als der resultierende Prüfpunktstyp. Ein Rückfall auf Standard belegt keine erfolgreiche Produktionskonsistenzverarbeitung.
+- **B.** Replica unterstützt die Wiederherstellung replizierter VMs, kann aber unerwünschte Änderungen weitergeben. Es stellt allein keine erforderliche unabhängige historische Sicherung mit getesteter Wiederherstellung her.
+- **C.** AVHDX-Dateien manuell zu löschen kann die VM-Datenträgerkette beschädigen. Eine Kopie auf demselben ausgefallenen Speicher kann zudem die verlangte unabhängige Wiederherstellungsgrenze nicht liefern.
+
+[Quelle](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints) · [Zum Nachlesen](../certifications/de/AZ-802.md)
 
 </details>

@@ -1,8 +1,8 @@
 # Common learning route / Ruta común de estudio
 
-The new learning route uses the same twelve foundation units, eighty advanced certification units, scenarios, requested evidence, and three new lab procedures in all eight languages. This is parity of the new learning core, not a claim that every older explanatory paragraph has been translated verbatim or that equal word counts indicate quality.
+The new learning route uses the same twelve foundation units, eighty-five advanced certification units, scenarios, requested evidence, and three new lab procedures in all eight languages. This is parity of the new learning core, not a claim that every older explanatory paragraph has been translated verbatim or that equal word counts indicate quality.
 
-La nueva ruta comparte doce unidades básicas, ochenta unidades avanzadas, escenarios, evidencias y tres procedimientos de laboratorio en los ocho idiomas. La igualdad corresponde a este núcleo nuevo. No se afirma que cada párrafo histórico esté traducido literalmente ni que contar palabras demuestre calidad.
+La nueva ruta comparte doce unidades básicas, ochenta y cinco unidades avanzadas, escenarios, evidencias y tres procedimientos de laboratorio en los ocho idiomas. La igualdad corresponde a este núcleo nuevo. No se afirma que cada párrafo histórico esté traducido literalmente ni que contar palabras demuestre calidad.
 
 | Language | Core | Advanced labs | Certification workbooks |
 |---|---|---|---|
@@ -60,14 +60,24 @@ AI-901, SC-200, SC-300 y AZ-140 añaden cuatro rutas completas por idioma. Esa r
 
 ## Advanced development, data, security architecture and SAP · 2026-11-01
 
-AI-103, DP-700, SC-100, and AZ-120 add guides, ten cases and five workbook units per route in all eight languages. The current total is **sixteen routes, 160 original scenarios and eighty certification units per language**, yielding 1280 locale/case variants. Source and prerequisite qualifications remain part of the translated material. Historical expansion counts above describe earlier revisions.
+AI-103, DP-700, SC-100, and AZ-120 add guides, ten cases and five workbook units per route in all eight languages. At that revision, the total was **sixteen routes, 160 original scenarios and eighty certification units per language**, yielding 1280 locale/case variants. Source and prerequisite qualifications remain part of the translated material. Historical expansion counts above describe earlier revisions.
 
-AI-103, DP-700, SC-100 y AZ-120 llevan el total actual a dieciséis rutas, 160 escenarios y ochenta unidades de certificación por idioma. Las 1280 variantes conservan fuentes y límites de los metadatos consultados. En esa revisión, el banco de opción múltiple aún conservaba su alcance anterior; las nuevas rutas se incorporaron al entrenador de autoevaluación y a Anki.
+AI-103, DP-700, SC-100 y AZ-120 llevaron el total de esa revisión a dieciséis rutas, 160 escenarios y ochenta unidades de certificación por idioma. Las 1280 variantes conservan fuentes y límites de los metadatos consultados. En esa revisión, el banco de opción múltiple aún conservaba su alcance anterior; las nuevas rutas se incorporaron al entrenador de autoevaluación y a Anki.
 
 ## Current multiple-choice coverage / Alcance actual de opción múltiple
 
-The mini quiz now provides **32 original scenarios across all sixteen routes, two per route, in eight languages: 256 locale variants**. Questions, options, correct-answer indices, distractor reasoning, sources, guides, and generated question sheets share the same scope. The 24 added scenarios point to certification guides in their language; the original chapter references and reports saved before the expansion remain compatible. Review reads the snapshots saved in each report. The default session still selects up to eight scenarios; --count 32 selects the complete bank without an exam filter.
+At that revision, the mini quiz provided **32 original scenarios across all sixteen routes, two per route, in eight languages: 256 locale variants**. Questions, options, correct-answer indices, distractor reasoning, sources, guides, and generated question sheets share the same scope. The 24 added scenarios point to certification guides in their language; the original chapter references and reports saved before the expansion remain compatible. Review reads the snapshots saved in each report. The default session still selects up to eight scenarios; --count 32 selected that complete bank without an exam filter.
 
-El mini simulacro ofrece ahora **32 escenarios originales para las dieciséis rutas, dos por ruta, en ocho idiomas: 256 variantes**. Preguntas, opciones, índices correctos, motivos de los distractores, fuentes, guías y hojas generadas comparten el mismo alcance. Los 24 escenarios añadidos enlazan a guías de certificación de su idioma; las referencias iniciales a capítulos y los informes anteriores siguen siendo compatibles. review lee las copias guardadas en cada informe. La sesión predeterminada sigue eligiendo hasta ocho escenarios; --count 32 selecciona el banco completo sin filtro de examen.
+En esa revisión, el mini simulacro ofrecía **32 escenarios originales para las dieciséis rutas, dos por ruta, en ocho idiomas: 256 variantes**. Preguntas, opciones, índices correctos, motivos de los distractores, fuentes, guías y hojas generadas comparten el mismo alcance. Los 24 escenarios añadidos enlazan a guías de certificación de su idioma; las referencias iniciales a capítulos y los informes anteriores siguen siendo compatibles. review lee las copias guardadas en cada informe. La sesión predeterminada sigue eligiendo hasta ocho escenarios; --count 32 seleccionaba aquel banco completo sin filtro de examen.
 
 Two scenarios per route do not cover a full syllabus or predict passing. Structural parity does not certify translation quality. / Dos escenarios por ruta no cubren todo el temario ni predicen aprobar. La paridad estructural no certifica la calidad de las traducciones.
+
+## Windows Server AZ-802 expansion · 2026-11-03
+
+The current total is **seventeen routes, 170 original open-response cases and eighty-five certification units per language**, yielding 1360 locale/case variants. AZ-802 adds the same fifteen guide sections, ten complete reasoned cases and five workbook investigations in all eight languages. Commands, source references, unit anchors, scenario assumptions, evidence requirements and version qualifications are preserved. The seven-area AZ-802 study guide determines the route's scope; older credential-overview categories are not silently substituted.
+
+El total actual es de **diecisiete rutas, 170 casos originales de respuesta abierta y 85 unidades de certificación por idioma**, con 1360 variantes. AZ-802 desarrolla los mismos quince apartados, diez casos y cinco investigaciones en los ocho idiomas. Se conservan comandos, referencias, anclajes, condiciones, entregables y requisitos de versión. Las instrucciones de Windows describen comprobaciones previstas; no se presentan como ejecutadas en este entorno.
+
+The multiple-choice bank now contains **34 original scenarios and 272 language variants**, two questions per route. The default remains up to eight; --count 34 selects the full unfiltered bank. The original eight questions, chapter links and saved reports remain compatible. These selected scenarios do not establish exhaustive exam coverage or professional translation certification.
+
+El banco de opción múltiple contiene ahora **34 escenarios y 272 variantes**, dos preguntas por ruta. La sesión predeterminada mantiene hasta ocho preguntas y --count 34 recorre todo el banco sin filtrar. Las primeras ocho preguntas y los informes anteriores conservan su compatibilidad.

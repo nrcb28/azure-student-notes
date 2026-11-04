@@ -1,10 +1,10 @@
-# Certificazioni: sedici percorsi di studio
+# Certificazioni: diciassette percorsi di studio
 
 [Español](../es/README.md) · [English](../en/README.md) · [Italiano](../it/README.md) · [Deutsch](../de/README.md) · [Français](../fr/README.md) · [Русский](../ru/README.md) · [日本語](../ja/README.md) · [简体中文](../zh/README.md)
 
 [Appunti generali](../../it/README.md) · [Registro delle fonti](../../CERTIFICATION-SOURCES.md)
 
-Sedici percorsi d’esame, ciascuno con una guida per capire le decisioni, dieci casi originali con risposte ragionate e un quaderno di cinque unità con prove da consegnare. Scegli prima l’area che vuoi approfondire.
+Diciassette percorsi d’esame, ciascuno con una guida per capire le decisioni, dieci casi originali con risposte ragionate e un quaderno di cinque unità con prove da consegnare. Scegli prima l’area che vuoi approfondire.
 
 | Percorso | Tema | Guida | Casi | Quaderno |
 |---|---|---|---|---|
@@ -24,6 +24,7 @@ Sedici percorsi d’esame, ciascuno con una guida per capire le decisioni, dieci
 | DP-700 | Ingegneria dei dati con Fabric | [Leggi](DP-700.md) | [10 casi](DP-700-cases.md) | [5 unità](DP-700-workbook.md) |
 | SC-100 | Architettura della cybersicurezza | [Leggi](SC-100.md) | [10 casi](SC-100-cases.md) | [5 unità](SC-100-workbook.md) |
 | AZ-120 | Carichi SAP in Azure | [Leggi](AZ-120.md) | [10 casi](AZ-120-cases.md) | [5 unità](AZ-120-workbook.md) |
+| AZ-802 | Amministrazione di Windows Server | [Leggi](AZ-802.md) | [10 casi](AZ-802-cases.md) | [5 unità](AZ-802-workbook.md) |
 
 ## Da dove iniziare
 
@@ -31,14 +32,14 @@ AZ-900 offre una mappa generale. DP-900 chiarisce dati e carichi prima di DP-300
 
 ## Cosa è stato ampliato
 
-DP-900, SC-900, AZ-700 e DP-300 hanno spiegazioni, casi e consegne equivalenti nelle otto lingue. Le note supplementari precedenti degli altri percorsi mantengono lunghezze diverse. Ci sono 160 scenari per lingua, 1280 varianti in totale; non sono domande reali d’esame.
+DP-900, SC-900, AZ-700 e DP-300 hanno spiegazioni, casi e consegne equivalenti nelle otto lingue. Le note supplementari precedenti degli altri percorsi mantengono lunghezze diverse. Ci sono 170 scenari per lingua, 1360 varianti in totale; non sono domande reali d’esame.
 
 ## Ripasso con il trainer
 
-Il trainer di autovalutazione consente di scegliere tutti i sedici percorsi e di esportare i casi in Anki. Confronta la tua spiegazione con la risposta e valuta il ricordo. Il mini quiz a scelta multipla comprende 32 scenari originali per tutti i sedici percorsi, due per percorso, tradotti in otto lingue: 256 varianti.
+Il trainer di autovalutazione consente di scegliere tutti i diciassette percorsi e di esportare i casi in Anki. Confronta la tua spiegazione con la risposta e valuta il ricordo. Il mini quiz a scelta multipla comprende 34 scenari originali per tutti i diciassette percorsi, due per percorso, tradotti in otto lingue: 272 varianti.
 
 ```bash
-python tools/study.py demo --lang it --exam AI-103
+python tools/study.py demo --lang it --exam AZ-802
 python tools/study.py study --lang it --exam DP-700 --limit 5
 python tools/study.py export --lang it --exam SC-100 --output exports/it-sc100.tsv
 ```
@@ -56,3 +57,7 @@ AI-901, SC-200, SC-300 e AZ-140 aggiungono guide, dieci casi e cinque unità per
 ## IA applicata, dati, architettura di sicurezza e SAP
 
 AI-103, DP-700, SC-100 e AZ-120 aggiungono guide, dieci casi e cinque unità per percorso nelle otto lingue. Si approfondiscono sviluppo con Foundry, ingegneria con Fabric, capacità di sicurezza e infrastruttura SAP. Fonti consultate il 1º novembre 2026; requisiti delle credenziali e date di aggiornamento delle pagine sono distinti.
+
+## Windows Server locale e ibrido
+
+AZ-802 approfondisce l’amministrazione di Windows Server in ambienti locali e ibridi attraverso sette aree: AD DS, gestione ibrida, macchine virtuali, reti, archiviazione e servizi file, sicurezza, monitoraggio e risoluzione dei problemi. La [guida](AZ-802.md), i [dieci casi](AZ-802-cases.md) e il [quaderno di cinque unità](AZ-802-workbook.md) collegano identità, autorizzazioni, ripristino e prove raccolte in un laboratorio isolato. Le fonti ufficiali sono state consultate il **2026-11-03**; la [guida dell’esame](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-802) ha il titolo «Skills measured» senza data e metadati di aggiornamento del **2026-10-19**, che non indicano la data di validità degli obiettivi.

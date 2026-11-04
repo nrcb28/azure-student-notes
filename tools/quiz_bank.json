@@ -5086,5 +5086,323 @@
         "chapter": "certifications/AZ-120.md"
       }
     }
+  },
+  {
+    "id": "q33",
+    "exam": "AZ-802",
+    "topic": "ad-service-discovery",
+    "variants": {
+      "en": {
+        "question": "After a classroom network change, a Windows domain client resolves public websites but cannot discover its domain controller. It uses a public DNS resolver; the intended AD DNS server is reachable and has healthy SRV records. Its clock is correct. Which response best addresses the supplied evidence?",
+        "options": [
+          "Reset every student's password before inspecting the resolver path.",
+          "Restore the approved AD-aware DNS path, then validate SRV discovery, controller reachability, and the affected logon.",
+          "Disable time-related authentication checks while retaining the same public-only resolver path.",
+          "Give the student Domain Admin membership while leaving controller discovery unchanged."
+        ],
+        "correct": 1,
+        "explanation": "Public website resolution does not establish discovery of private AD services. The stated resolver path is the identified mismatch, while the healthy AD records and correct clock narrow this particular case. Restore the intended DNS configuration through an approved change and validate service discovery, reachability, and logon separately. If authentication still fails, investigate its precise evidence rather than assuming that every real logon incident has the same cause.",
+        "distractors": [
+          "Changing passwords does not provide the missing AD service-discovery path, and broad resets introduce unrelated changes before addressing the observed DNS mismatch.",
+          "",
+          "The scenario already establishes a correct clock; weakening authentication checks does not make the configured public resolver discover the private domain services.",
+          "Broader directory privilege does not repair controller discovery and would grant disproportionate authority without addressing the client's identified DNS configuration problem."
+        ],
+        "source": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "es": {
+        "question": "Tras un cambio de red del aula, un cliente Windows de dominio resuelve webs públicas pero no descubre su controlador. Utiliza un resolver DNS público; el DNS de AD previsto es accesible y tiene registros SRV correctos. El reloj del cliente está bien. ¿Qué respuesta aborda mejor esta evidencia?",
+        "options": [
+          "Restablecer las contraseñas de todos los estudiantes antes de inspeccionar el camino del resolver.",
+          "Recuperar la resolución DNS aprobada que conoce AD y validar descubrimiento SRV, acceso al controlador e inicio de sesión afectado.",
+          "Desactivar las comprobaciones temporales de autenticación manteniendo el mismo resolver exclusivamente público.",
+          "Añadir al estudiante a Domain Admins sin cambiar el descubrimiento del controlador."
+        ],
+        "correct": 1,
+        "explanation": "Resolver webs públicas no demuestra que se descubran los servicios privados de AD. El camino del resolver es el desajuste identificado; los registros sanos y el reloj correcto delimitan este caso. Recupera la configuración DNS prevista mediante un cambio aprobado y valida por separado descubrimiento, conectividad e inicio de sesión. Si aún falla la autenticación, investiga su evidencia concreta sin asumir que todos los incidentes reales tienen la misma causa.",
+        "distractors": [
+          "Cambiar contraseñas no aporta el camino de descubrimiento de AD que falta; un restablecimiento masivo introduce cambios ajenos antes de corregir el desajuste DNS observado.",
+          "",
+          "El caso ya establece que el reloj es correcto; debilitar la autenticación no hace que el resolver público descubra los servicios privados del dominio.",
+          "Ampliar privilegios no repara el descubrimiento del controlador y concede autoridad desproporcionada sin resolver la configuración DNS identificada en el cliente."
+        ],
+        "source": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "it": {
+        "question": "Dopo una modifica alla rete dell’aula, un client Windows di dominio risolve i siti pubblici ma non riesce a individuare il controller di dominio. Usa un resolver DNS pubblico; il server DNS AD previsto è raggiungibile e ha record SRV integri. Il suo orologio è corretto. Quale risposta affronta meglio le prove fornite?",
+        "options": [
+          "Reimpostare le password di tutti gli studenti prima di esaminare il percorso del resolver.",
+          "Ripristinare il percorso DNS approvato che conosce AD, poi convalidare individuazione SRV, raggiungibilità del controller e accesso interessato.",
+          "Disabilitare i controlli temporali dell’autenticazione mantenendo lo stesso percorso con resolver soltanto pubblico.",
+          "Aggiungere lo studente a Domain Admins lasciando invariata l’individuazione del controller."
+        ],
+        "correct": 1,
+        "explanation": "La risoluzione dei siti pubblici non dimostra l’individuazione dei servizi AD privati. Il percorso del resolver è l’incongruenza individuata, mentre record AD integri e orologio corretto circoscrivono questo caso specifico. Ripristina la configurazione DNS prevista con una modifica approvata e convalida separatamente individuazione dei servizi, raggiungibilità e accesso. Se l’autenticazione fallisce ancora, indagane le prove precise invece di presumere che ogni incidente reale di accesso abbia la stessa causa.",
+        "distractors": [
+          "Cambiare le password non fornisce il percorso mancante per individuare i servizi AD; reimpostazioni generalizzate introducono modifiche estranee prima di affrontare l’incongruenza DNS osservata.",
+          "",
+          "Lo scenario stabilisce già che l’orologio è corretto; indebolire i controlli di autenticazione non permette al resolver pubblico configurato di individuare i servizi privati del dominio.",
+          "Privilegi più ampi nella directory non correggono l’individuazione del controller e concederebbero un’autorità sproporzionata senza affrontare il problema individuato nella configurazione DNS del client."
+        ],
+        "source": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "de": {
+        "question": "Nach einer Änderung am Unterrichtsnetz kann ein Windows-Domänenclient öffentliche Websites auflösen, seinen Domänencontroller aber nicht finden. Er verwendet einen öffentlichen DNS-Resolver. Der vorgesehene AD-DNS-Server ist erreichbar und hat gesunde SRV-Einträge. Die Uhr des Clients stimmt. Welche Reaktion passt am besten zu diesen Nachweisen?",
+        "options": [
+          "Alle Studierendenkennwörter zurücksetzen, bevor der Resolverpfad untersucht wird.",
+          "Den genehmigten AD-fähigen DNS-Pfad wiederherstellen und danach SRV-Dienstsuche, Controllererreichbarkeit und betroffene Anmeldung prüfen.",
+          "Zeitbezogene Authentifizierungsprüfungen deaktivieren und denselben ausschließlich öffentlichen Resolverpfad beibehalten.",
+          "Dem Studenten die Mitgliedschaft in „Domänen-Admins“ geben und die Controllersuche unverändert lassen."
+        ],
+        "correct": 1,
+        "explanation": "Öffentliche Websites aufzulösen belegt nicht, dass private AD-Dienste gefunden werden. Der genannte Resolverpfad ist die erkannte Abweichung. Gesunde AD-Einträge und korrekte Uhrzeit grenzen diesen konkreten Fall ein. Stelle die vorgesehene DNS-Konfiguration über eine genehmigte Änderung wieder her und prüfe Dienstsuche, Erreichbarkeit und Anmeldung getrennt. Scheitert die Authentifizierung weiterhin, untersuche ihre genauen Nachweise, statt anzunehmen, dass jeder echte Anmeldevorfall dieselbe Ursache hat.",
+        "distractors": [
+          "Kennwörter zu ändern schafft den fehlenden AD-Dienstsuchpfad nicht. Umfassende Rücksetzungen führen unbeteiligte Änderungen ein, bevor die beobachtete DNS-Abweichung behandelt wird.",
+          "",
+          "Das Szenario stellt bereits eine korrekte Uhrzeit fest. Schwächere Authentifizierungsprüfungen bringen den konfigurierten öffentlichen Resolver nicht dazu, private Domänendienste zu finden.",
+          "Umfassendere Verzeichnisprivilegien reparieren die Controllersuche nicht. Sie würden unverhältnismäßige Befugnisse gewähren, ohne das erkannte DNS-Konfigurationsproblem des Clients zu beheben."
+        ],
+        "source": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "fr": {
+        "question": "Après une modification du réseau de la salle de cours, un client Windows de domaine résout les sites publics, mais ne découvre pas son contrôleur de domaine. Il utilise un résolveur DNS public ; le serveur DNS AD prévu est joignable et ses enregistrements SRV sont sains. Son horloge est correcte. Quelle réponse traite le mieux ces éléments ?",
+        "options": [
+          "Réinitialiser tous les mots de passe étudiants avant d'inspecter le chemin du résolveur.",
+          "Rétablir le chemin DNS approuvé connaissant AD, puis valider la découverte SRV, la joignabilité du contrôleur et la connexion affectée.",
+          "Désactiver les vérifications temporelles d'authentification en conservant le même résolveur exclusivement public.",
+          "Ajouter l'étudiant au groupe Administrateurs du domaine sans changer la découverte du contrôleur."
+        ],
+        "correct": 1,
+        "explanation": "La résolution de sites publics ne démontre pas la découverte des services privés AD. Le chemin de résolution indiqué est l'écart identifié, tandis que les enregistrements AD sains et l'horloge correcte précisent ce cas particulier. Rétablir la configuration DNS prévue par un changement approuvé, puis valider séparément découverte, joignabilité et connexion. Si l'authentification échoue encore, examiner ses éléments précis plutôt que supposer que tout incident réel de connexion a la même cause.",
+        "distractors": [
+          "Changer les mots de passe ne fournit pas le chemin manquant de découverte des services AD ; des réinitialisations massives introduisent des modifications sans rapport avant de traiter l'écart DNS observé.",
+          "",
+          "Le scénario établit déjà une horloge correcte ; affaiblir l'authentification ne permet pas au résolveur public configuré de découvrir les services privés du domaine.",
+          "Des privilèges d'annuaire plus étendus ne réparent pas la découverte du contrôleur et accorderaient une autorité disproportionnée sans corriger le problème DNS identifié sur le client."
+        ],
+        "source": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "ru": {
+        "question": "После изменения сети аудитории клиент домена Windows разрешает публичные сайты, но не обнаруживает контроллер домена. Он использует публичный DNS-резолвер; нужный DNS-сервер AD доступен и содержит исправные записи SRV. Часы клиента верны. Какое действие лучше всего соответствует указанным данным?",
+        "options": [
+          "Сбросить пароли всех студентов до проверки пути резолвера.",
+          "Восстановить одобренный путь DNS с поддержкой AD, затем проверить обнаружение SRV, доступность контроллера и затронутый вход.",
+          "Отключить проверки времени при аутентификации, сохранив тот же путь только через публичный резолвер.",
+          "Добавить студента в Domain Admins, оставив обнаружение контроллера без изменений."
+        ],
+        "correct": 1,
+        "explanation": "Разрешение публичных сайтов не доказывает обнаружение частных служб AD. Указанный путь резолвера — выявленное несоответствие, а исправные записи AD и верные часы сужают этот конкретный случай. Восстанови нужную конфигурацию DNS через одобренное изменение и отдельно проверь обнаружение служб, доступность и вход. Если аутентификация всё ещё не проходит, исследуй её конкретные данные, не предполагая одну причину для всех реальных инцидентов входа.",
+        "distractors": [
+          "Изменение паролей не создаёт отсутствующий путь обнаружения служб AD, а массовый сброс вносит посторонние изменения до устранения наблюдаемого несоответствия DNS.",
+          "",
+          "Сценарий уже устанавливает верное время; ослабление проверок аутентификации не заставит настроенный публичный резолвер обнаруживать частные службы домена.",
+          "Расширенные привилегии каталога не исправляют обнаружение контроллера и дали бы несоразмерные полномочия, не устраняя выявленную проблему конфигурации DNS клиента."
+        ],
+        "source": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "ja": {
+        "question": "教室のネットワーク変更後、Windows のドメインクライアントは公開 Web サイトを名前解決できるが、ドメインコントローラーを検出できない。公開 DNS リゾルバーを使っており、想定した AD DNS サーバーには到達でき、SRV レコードも正常。時刻も正しい。示された証拠に最も合う対応はどれ？",
+        "options": [
+          "リゾルバーの経路を調べる前に、全学生のパスワードをリセットする。",
+          "承認済みの AD 対応 DNS 経路を戻し、SRV による検出、コントローラーへの到達、影響を受けたログオンを検証する。",
+          "公開リゾルバーだけを使う経路を残したまま、認証の時刻関連の確認を無効にする。",
+          "コントローラーの検出を変えずに、学生を Domain Admins に追加する。"
+        ],
+        "correct": 1,
+        "explanation": "公開 Web サイトの名前解決だけでは、非公開の AD サービスを検出できる証明にはならない。ここで判明した不一致はリゾルバーの経路であり、AD レコードが正常で時刻が正しいという条件は、このケースの調査範囲を絞る。承認された変更で意図した DNS 構成を戻し、サービスの検出、到達、ログオンを別々に検証する。まだ認証に失敗するなら、実際のすべてのログオン障害が同じ原因だと考えず、その正確な証拠を調べる。",
+        "distractors": [
+          "パスワードを変えても、欠けた AD サービスの検出経路は得られない。一斉リセットは、観察された DNS の不一致に対応する前に無関係な変更を加えてしまう。",
+          "",
+          "このシナリオでは時刻が正しいと明示されている。認証の確認を弱めても、設定済みの公開リゾルバーで非公開のドメインサービスを検出できるようにはならない。",
+          "ディレクトリ権限を広げてもコントローラーの検出は直らず、判明したクライアントの DNS 設定の問題に対応しないまま、過剰な権限を与えてしまう。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "zh": {
+        "question": "教室网络更改后，Windows 域客户端能解析公用网站，却无法发现域控制器。它使用公用 DNS 解析器；预期 AD DNS 服务器可达，SRV 记录健康，客户端时钟也正确。哪种响应最符合所给证据？",
+        "options": [
+          "检查解析器路径前，先重置所有学生的密码。",
+          "恢复获批的、支持 AD 解析的 DNS 路径，然后验证 SRV 发现、控制器可达性和受影响的登录。",
+          "保留相同的仅公用解析器路径，同时禁用与时间有关的身份验证检查。",
+          "不改变控制器发现，直接给学生授予 Domain Admin 成员身份。"
+        ],
+        "correct": 1,
+        "explanation": "能够解析公用网站，并不能证明可以发现私有 AD 服务。题目中的解析器路径是已确认的不匹配，而健康的 AD 记录和正确时钟缩小了这个具体案例的调查范围。通过获批更改恢复预期 DNS 配置，并分别验证服务发现、可达性和登录。如果身份验证仍失败，应调查其准确证据，不要假定现实中每个登录事件都有相同原因。",
+        "distractors": [
+          "更改密码不能补上缺失的 AD 服务发现路径；大范围重置会在解决已观察到的 DNS 不匹配之前引入无关更改。",
+          "",
+          "场景已经说明时钟正确；削弱身份验证检查，不会让已配置的公用解析器发现私有域服务。",
+          "扩大目录权限不能修复控制器发现，反而在未解决客户端已确认 DNS 配置问题的情况下授予不相称的权限。"
+        ],
+        "source": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created",
+        "chapter": "certifications/AZ-802.md"
+      }
+    }
+  },
+  {
+    "id": "q34",
+    "exam": "AZ-802",
+    "topic": "hyperv-recovery-boundaries",
+    "variants": {
+      "en": {
+        "question": "A Hyper-V lab requires guest-aware production checkpoints without Standard fallback, plus a protected recovery copy that survives loss of the VM storage. A Production setting has fallen back to a Standard checkpoint on that same storage. Which plan meets both stated boundaries?",
+        "options": [
+          "Accept the Standard checkpoint because requesting Production proves that guest consistency processing succeeded.",
+          "Enable Hyper-V Replica alone and assume it supplies every independent historical recovery point required.",
+          "Delete AVHDX files manually and keep the same-storage checkpoint as the protected recovery copy.",
+          "Evaluate ProductionOnly and repair guest consistency prerequisites; separately maintain a protected backup with a validated restore process."
+        ],
+        "correct": 3,
+        "explanation": "Production mode can permit fallback, so the actual Standard checkpoint contradicts the required consistency behaviour. ProductionOnly can reject that fallback while the guest prerequisites are investigated. Even a valid production checkpoint remains different from an independent retained backup: its storage chain can be lost with the VM. A separate protected copy and supported restore validation address the second requirement; changing checkpoint mode alone does not establish that boundary.",
+        "distractors": [
+          "The requested setting is weaker evidence than the resulting checkpoint type; a Standard fallback does not establish that production consistency processing completed successfully.",
+          "Replica addresses replicated-VM recovery but can propagate unwanted changes; it does not by itself establish the required independent historical backup and tested restoration.",
+          "Manual AVHDX deletion can damage the VM disk chain, while a copy on the same failed storage cannot supply the specified independent recovery boundary.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "es": {
+        "question": "Un laboratorio Hyper-V exige checkpoints Production con consistencia del invitado, sin recurrir a Standard, y una copia protegida que sobreviva a perder el almacenamiento de la VM. La configuración Production ha terminado creando un Standard en ese mismo almacenamiento. ¿Qué plan cubre ambos límites?",
+        "options": [
+          "Aceptar el Standard porque haber solicitado Production demuestra que el procesamiento de consistencia funcionó.",
+          "Activar únicamente Hyper-V Replica y asumir que aporta todos los puntos históricos independientes necesarios.",
+          "Borrar AVHDX a mano y conservar el checkpoint del mismo almacenamiento como copia de recuperación protegida.",
+          "Evaluar ProductionOnly y reparar los requisitos de consistencia del invitado; mantener además un backup protegido con restauración validada."
+        ],
+        "correct": 3,
+        "explanation": "Production puede permitir recurrir a Standard, así que el resultado observado contradice el comportamiento de consistencia requerido. ProductionOnly puede rechazar esa alternativa mientras se investigan los requisitos del invitado. Incluso un checkpoint Production válido es distinto de un backup independiente retenido: su cadena puede perderse con la VM. Una copia protegida separada y una restauración compatible validada cubren el segundo requisito; cambiar el modo de checkpoint no demuestra ese límite.",
+        "distractors": [
+          "El ajuste solicitado aporta menos evidencia que el tipo obtenido; recurrir a Standard no demuestra que el procesamiento de consistencia Production haya terminado correctamente.",
+          "Replica permite recuperar una VM replicada, pero puede copiar cambios indeseados; por sí sola no establece el backup histórico independiente y la restauración probada requeridos.",
+          "Borrar AVHDX manualmente puede dañar la cadena de discos; una copia en el almacenamiento perdido tampoco cubre la independencia de recuperación exigida.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "it": {
+        "question": "Un laboratorio Hyper-V richiede checkpoint di produzione con coerenza gestita dal guest senza ripiego su Standard, oltre a una copia di recupero protetta che sopravviva alla perdita dell’archiviazione VM. Un’impostazione Production ha creato invece un checkpoint Standard sulla stessa archiviazione. Quale piano soddisfa entrambi i perimetri indicati?",
+        "options": [
+          "Accettare il checkpoint Standard perché richiedere Production dimostra che l’elaborazione della coerenza guest è riuscita.",
+          "Abilitare soltanto Hyper-V Replica e presumere che fornisca tutti i punti storici indipendenti di ripristino richiesti.",
+          "Eliminare manualmente i file AVHDX e conservare il checkpoint sulla stessa archiviazione come copia protetta di recupero.",
+          "Valutare ProductionOnly e correggere i prerequisiti di coerenza guest; mantenere separatamente un backup protetto con un processo di ripristino convalidato."
+        ],
+        "correct": 3,
+        "explanation": "La modalità Production può consentire il ripiego, quindi il checkpoint Standard effettivo contraddice il comportamento di coerenza richiesto. ProductionOnly può rifiutare quel ripiego mentre si indagano i prerequisiti guest. Anche un checkpoint di produzione valido rimane diverso da un backup indipendente conservato: la sua catena di archiviazione può andare persa insieme alla VM. Una copia protetta separata e la convalida di un ripristino supportato affrontano il secondo requisito; cambiare soltanto modalità di checkpoint non dimostra quel perimetro.",
+        "distractors": [
+          "L’impostazione richiesta è una prova più debole del tipo di checkpoint risultante; un ripiego su Standard non dimostra che l’elaborazione della coerenza di produzione sia terminata correttamente.",
+          "Replica affronta il recupero della VM replicata ma può propagare modifiche indesiderate; da sola non dimostra il backup storico indipendente richiesto e un ripristino provato.",
+          "Eliminare manualmente gli AVHDX può danneggiare la catena dei dischi VM, mentre una copia sulla stessa archiviazione guasta non può fornire il perimetro indipendente di recupero specificato.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "de": {
+        "question": "Ein Hyper-V-Labor verlangt gastbezogene Produktionsprüfpunkte ohne Rückfall auf Standard sowie eine geschützte Wiederherstellungskopie, die den Verlust des VM-Speichers übersteht. Mit der Einstellung Production ist ein Standardprüfpunkt auf demselben Speicher entstanden. Welcher Plan erfüllt beide verlangten Schutzgrenzen?",
+        "options": [
+          "Den Standardprüfpunkt akzeptieren, weil die Auswahl von Production beweist, dass die Konsistenzverarbeitung im Gast erfolgreich war.",
+          "Nur Hyper-V Replica aktivieren und annehmen, dass es alle benötigten unabhängigen historischen Wiederherstellungspunkte liefert.",
+          "AVHDX-Dateien manuell löschen und den Prüfpunkt auf demselben Speicher als geschützte Wiederherstellungskopie behalten.",
+          "ProductionOnly prüfen und die Voraussetzungen der Gastkonsistenz reparieren; getrennt eine geschützte Sicherung mit validiertem Wiederherstellungsverfahren vorhalten."
+        ],
+        "correct": 3,
+        "explanation": "Der Modus Production kann einen Rückfall erlauben. Der tatsächlich erstellte Standardprüfpunkt widerspricht deshalb dem verlangten Konsistenzverhalten. ProductionOnly kann diesen Rückfall verweigern, während die Gastvoraussetzungen untersucht werden. Selbst ein gültiger Produktionsprüfpunkt unterscheidet sich von einer unabhängigen aufbewahrten Sicherung: Seine Speicherkette kann mit der VM verloren gehen. Eine separate geschützte Kopie und eine unterstützte Wiederherstellungsprüfung erfüllen die zweite Anforderung. Nur den Prüfpunktmodus zu ändern stellt diese Grenze nicht her.",
+        "distractors": [
+          "Die gewünschte Einstellung ist ein schwächerer Beleg als der resultierende Prüfpunktstyp. Ein Rückfall auf Standard belegt keine erfolgreiche Produktionskonsistenzverarbeitung.",
+          "Replica unterstützt die Wiederherstellung replizierter VMs, kann aber unerwünschte Änderungen weitergeben. Es stellt allein keine erforderliche unabhängige historische Sicherung mit getesteter Wiederherstellung her.",
+          "AVHDX-Dateien manuell zu löschen kann die VM-Datenträgerkette beschädigen. Eine Kopie auf demselben ausgefallenen Speicher kann zudem die verlangte unabhängige Wiederherstellungsgrenze nicht liefern.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "fr": {
+        "question": "Un laboratoire Hyper-V exige des points de contrôle de production tenant compte de l'invité, sans repli vers Standard, ainsi qu'une copie de récupération protégée survivant à la perte du stockage de la VM. Le réglage Production a créé un point standard sur ce même stockage. Quel plan respecte les deux périmètres exigés ?",
+        "options": [
+          "Accepter le point standard, car demander Production prouve la réussite du traitement de cohérence invité.",
+          "Activer seulement Hyper-V Replica et supposer qu'il fournit tous les points historiques indépendants nécessaires.",
+          "Supprimer manuellement les fichiers AVHDX et conserver le point sur le même stockage comme copie protégée de récupération.",
+          "Évaluer ProductionOnly et corriger les prérequis de cohérence invité ; conserver séparément une sauvegarde protégée avec une restauration validée."
+        ],
+        "correct": 3,
+        "explanation": "Le mode Production peut autoriser un repli : le point standard réellement créé contredit donc le comportement de cohérence requis. ProductionOnly peut refuser ce repli pendant l'examen des prérequis invités. Même un point de production valide reste différent d'une sauvegarde indépendante conservée : sa chaîne de stockage peut disparaître avec la VM. Une copie protégée séparée et une validation de restauration prise en charge répondent au second besoin ; changer seulement le mode du point ne crée pas ce périmètre.",
+        "distractors": [
+          "Le réglage demandé est une preuve plus faible que le type obtenu ; un repli vers Standard n'établit pas que le traitement de cohérence de production a réussi.",
+          "Replica traite la récupération d'une VM répliquée, mais peut propager des changements indésirables ; il ne garantit pas seul la sauvegarde historique indépendante et la restauration testée requises.",
+          "Supprimer manuellement des AVHDX peut endommager la chaîne de disques de la VM ; une copie sur le même stockage perdu ne satisfait pas le périmètre indépendant de récupération exigé.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "ru": {
+        "question": "Лаборатории Hyper-V нужны производственные контрольные точки с участием гостевой системы без перехода к Standard, а также защищённая копия восстановления, переживающая потерю хранилища ВМ. Настройка Production привела к созданию Standard в том же хранилище. Какой план выполняет оба указанных требования?",
+        "options": [
+          "Принять Standard, поскольку запрос Production доказывает успешную обработку гостевой согласованности.",
+          "Включить только Hyper-V Replica и считать, что она даёт все необходимые независимые исторические точки восстановления.",
+          "Удалить файлы AVHDX вручную и сохранить точку в том же хранилище как защищённую копию восстановления.",
+          "Рассмотреть ProductionOnly и исправить предварительные требования гостевой согласованности; отдельно хранить защищённую резервную копию с проверенным процессом восстановления."
+        ],
+        "correct": 3,
+        "explanation": "Режим Production может допускать переход к другому типу, поэтому фактическая точка Standard противоречит требуемому поведению согласованности. ProductionOnly может запретить такой переход, пока исследуются требования гостевой системы. Даже корректная производственная точка отличается от независимой сохранённой копии: её цепочка хранения может потеряться вместе с ВМ. Отдельная защищённая копия и проверка поддерживаемого восстановления выполняют второе требование; одна смена режима точек не обеспечивает эту границу.",
+        "distractors": [
+          "Запрошенная настройка — более слабое доказательство, чем полученный тип точки; переход к Standard не устанавливает успешное завершение обработки производственной согласованности.",
+          "Replica решает задачу восстановления реплицированной ВМ, но может распространить нежелательные изменения; сама по себе она не обеспечивает требуемую независимую историческую копию и проверенный возврат из неё.",
+          "Ручное удаление AVHDX может повредить цепочку дисков ВМ, а копия в том же отказавшем хранилище не обеспечивает указанную независимую границу восстановления.",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "ja": {
+        "question": "Hyper-V 実習では、標準へのフォールバックを許さないゲスト対応の運用チェックポイントと、VM ストレージを失っても残る保護済み復旧コピーが必要。Production 設定が、同じストレージ上の標準チェックポイントへフォールバックした。指定された二つの境界を満たす計画はどれ？",
+        "options": [
+          "Production を指定したことがゲストの整合性処理の成功を証明すると考え、標準チェックポイントを受け入れる。",
+          "Hyper-V レプリカだけを有効にし、必要な独立した過去の復旧ポイントがすべて得られると考える。",
+          "AVHDX ファイルを手動で削除し、同じストレージのチェックポイントを保護済み復旧コピーとして残す。",
+          "ProductionOnly を検討してゲストの整合性の前提条件を修復し、それとは別に、復元の手順を検証した保護済みバックアップを維持する。"
+        ],
+        "correct": 3,
+        "explanation": "Production モードはフォールバックを許可できるため、実際の標準チェックポイントは、要求された整合性の動作と食い違う。ゲストの前提条件を調べる間、ProductionOnly ならそのフォールバックを拒否できる。有効な運用チェックポイントでも、独立して保持されたバックアップとは違い、VM と一緒にストレージチェーンを失い得る。別の保護済みコピーと、サポートされる復元の検証が二つ目の要件に対応する。チェックポイントのモードを変えるだけでは、その境界は得られない。",
+        "distractors": [
+          "指定した設定より、結果としてのチェックポイントの種類のほうが強い証拠。標準へのフォールバックでは、運用の整合性処理が正常完了したとは示せない。",
+          "レプリカは複製した VM の復旧に対応するが、望ましくない変更も伝播し得る。それだけでは、必要な独立した過去のバックアップとテスト済みの復元は確立しない。",
+          "AVHDX の手動削除は VM のディスクチェーンを壊す可能性があり、同じ故障したストレージ上のコピーでは、指定された独立した復旧の境界を満たせない。",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints",
+        "chapter": "certifications/AZ-802.md"
+      },
+      "zh": {
+        "question": "Hyper-V 实验要求使用能与来宾协同、且不回退到 Standard 的生产检查点，还要求保留一份能在 VM 存储丢失后存续的受保护恢复副本。当前 Production 设置已回退，在同一存储上创建了 Standard 检查点。哪项计划能够满足这两个指定边界？",
+        "options": [
+          "接受 Standard 检查点，因为请求了 Production 就能证明来宾一致性处理已成功。",
+          "仅启用 Hyper-V 副本，并认为它能提供所有所需的独立历史恢复点。",
+          "手动删除 AVHDX 文件，并将同一存储上的检查点保留为受保护恢复副本。",
+          "评估 ProductionOnly 并修复来宾一致性前提条件；另外保留具有已验证还原流程的受保护备份。"
+        ],
+        "correct": 3,
+        "explanation": "Production 模式可能允许回退，所以实际产生的 Standard 检查点不符合要求的一致性行为。调查来宾前提条件时，ProductionOnly 可以拒绝这种回退。即使是有效的生产检查点，也不同于独立保留的备份：其存储链可能随 VM 一起丢失。单独的受保护副本和受支持的还原验证，才能解决第二项要求；仅改变检查点模式不能建立该边界。",
+        "distractors": [
+          "请求的设置不如最终检查点类型有说服力；回退到 Standard 不能证明生产一致性处理已成功完成。",
+          "副本用于恢复已复制的 VM，但可能传播不需要的更改；它本身不能确立所需的独立历史备份和经过测试的还原。",
+          "手动删除 AVHDX 可能损坏 VM 磁盘链，而同一故障存储上的副本也无法提供指定的独立恢复边界。",
+          ""
+        ],
+        "source": "https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/checkpoints",
+        "chapter": "certifications/AZ-802.md"
+      }
+    }
   }
 ]
